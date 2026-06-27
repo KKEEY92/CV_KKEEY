@@ -261,21 +261,27 @@ function initSkillBars() {
   document.querySelectorAll('.skill-card').forEach(el => obs.observe(el));
 }
 
-// ─── CONTACT FORM ────────────────────────────────────────────────────
-document.addEventListener('DOMContentLoaded', () => {
-  const form = document.getElementById('contactForm');
-  if (form) form.addEventListener('submit', e => {
+// ─── CONTACT FORM (Web3Forms) ────────────────────────────────────────
+// Sendet echte E-Mails via Web3Forms → kuck_kevin@icloud.com
+const form = document.getElementById('contactForm');
+if (form) {
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
-    const name = document.getElementById('formName').value;
-    const email = document.getElementById('formEmail').value;
-    const msg = document.getElementById('formMsg').value;
-    const subject = encodeURIComponent(`Portfolio Kontakt von ${name}`);
-    const body = encodeURIComponent(`Von: ${name} (${email})\n\n${msg}`);
-    window.open(`mailto:kuck_kevin@icloud.com?subject=${subject}&body=${body}`);
-    document.getElementById('formSent').classList.add('show');
-    setTimeout(() => document.getElementById('formSent').classList.remove('show'), 4000);
+    const btn = document.getElementById('formSubmit');
+    btn.textContent = 'Wird gesendet…';
+    btn.disabled = true;
+    const data = new FormData(form);
+    const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: data });
+    const json = await res.json();
+    if (json.success) {
+      document.getElementById('formSent').style.display = 'block';
+      form.reset();
+    } else {
+      btn.textContent = 'Fehler — bitte direkt mailen';
+    }
+    btn.disabled = false;
   });
-});
+}
 
 // ─── WEBGL BACKGROUND ────────────────────────────────────────────────
 let gl, uTime, uRes, uIntensity, uLight, rafId;
