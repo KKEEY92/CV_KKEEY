@@ -1,189 +1,257 @@
-const CV_DATA = {
-  meta: {
-    name: "Kevin Kuck",
-    email: "kuck_kevin@icloud.com",
-    phone: "+49 170 413 05 92",
-    location: "Butzbach, Deutschland",
-    github: "https://github.com/KKEEY92",
-    linkedin: "https://linkedin.com/in/kevin-kuck",
-    available: { de: "Verfügbar ab sofort — Remote / Hybrid", en: "Available now — Remote / Hybrid" }
-  },
+/**
+ * KKEEY Portfolio — Inhaltsdatei
+ * Hier alle Texte, Projekte, Skills und Timeline pflegen.
+ * Kein Code-Wissen nötig. Einfach Werte ändern und speichern.
+ */
+window.KK_DATA = {
 
+  // ─── HERO ───────────────────────────────────────────────────────────────────
   hero: {
-    greeting: { de: "Hallo, ich bin", en: "Hi, I'm" },
+    name: 'Kevin Kuck',
+    greeting: { de: 'Hallo, ich bin', en: "Hi, I'm" },
+    tagline: 'IT · AI · AUDIO · 15+ JAHRE PRAXIS',
     roles: {
-      de: ["IT Systems Engineer", "KI-Integrator", "Sole Developer"],
-      en: ["IT Systems Engineer", "AI Integrator", "Sole Developer"]
-    }
+      de: [
+        'IT Systems Engineer',
+        'AI Agent Architekt',
+        'Neurodivergenter Systemdenker',
+        'DJ & Audio Engineer',
+        'KMU Prozess-Automatisierer',
+      ],
+      en: [
+        'IT Systems Engineer',
+        'AI Agent Architect',
+        'Neurodivergent Systems Thinker',
+        'DJ & Audio Engineer',
+        'SME Automation Expert',
+      ],
+    },
+    cta1: { de: 'Projekte ansehen', en: 'View Projects' },
+    cta2: { de: 'Kontakt aufnehmen', en: 'Get in touch' },
+    available: { de: 'Verfügbar ab sofort', en: 'Available now' },
   },
 
-  about: {
-    bio: {
-      de: "IT Systems Engineer mit 15 Jahren Praxis an der Schnittstelle von Systemadministration, Prozessoptimierung und KI-Entwicklung. Mein Antrieb ist der Dienst am Helfer: Ich halte Infrastruktur stabil, damit andere ihren Dienst am Menschen leisten. In einer KRITIS-Umgebung administriere ich Active Directory, Entra ID und Citrix und automatisiere Abläufe per PowerShell. Parallel entwickle ich als Sole Developer KI-Anwendungen auf Basis von React, TypeScript und Google Gemini. Ich verwalte nicht nur Systeme — ich baue sie.",
-      en: "IT Systems Engineer with 15 years of hands-on experience at the intersection of system administration, process optimization, and AI development. My drive is to serve those who serve others: I keep infrastructure stable so that people can focus on their mission. In a critical infrastructure environment, I administer Active Directory, Entra ID, and Citrix while automating workflows with PowerShell. In parallel, I build AI applications as a sole developer using React, TypeScript, and Google Gemini. I don't just manage systems — I build them."
-    },
-    stats: [
-      { value: "15+", label: { de: "Jahre Praxis", en: "Years Experience" } },
-      { value: "10+", label: { de: "Parallele Systeme", en: "Parallel Systems" } },
-      { value: "6", label: { de: "Zertifizierungen", en: "Certifications" } }
-    ]
-  },
-
-  skills: [
+  // ─── TRIO ───────────────────────────────────────────────────────────────────
+  trio: [
     {
-      category: { de: "Cloud & Identity", en: "Cloud & Identity" },
-      items: [
-        { name: "Active Directory", level: 95 },
-        { name: "Microsoft Entra ID", level: 90 },
-        { name: "Azure", level: 85 },
-        { name: "Citrix", level: 88 },
-        { name: "Windows 11", level: 92 },
-        { name: "Intune / ABM", level: 80 }
-      ]
+      icon: '⚙️',
+      label: { de: 'Operationale Tiefe', en: 'Operational Depth' },
+      sub:   { de: '15 J. Inventory & Supply Chain · BAUHAUS', en: '15 Yrs Inventory & Supply Chain · BAUHAUS' },
+      detail: {
+        de: 'Systemdenken aus dem echten Handelsbetrieb. Ich weiß wie operative KMU wirklich funktionieren — nicht aus Büchern, sondern aus 15 Jahren täglicher Praxis.',
+        en: 'Systems thinking from real-world operations. I know how SMEs actually function — not from theory, but 15 years of hands-on practice.',
+      },
     },
     {
-      category: { de: "Automatisierung", en: "Automation" },
-      items: [
-        { name: "PowerShell", level: 90 },
-        { name: "OmniTracker", level: 85 },
-        { name: "Python", level: 75 },
-        { name: "CI/CD · SLSA", level: 70 }
-      ]
+      icon: '🤖',
+      label: { de: 'AI Agent Architekt', en: 'AI Agent Architect' },
+      sub:   { de: 'Python · TypeScript · Gemini · ComfyUI · LM Studio', en: 'Python · TypeScript · Gemini · ComfyUI · LM Studio' },
+      detail: {
+        de: 'Baut und deployt eigenständige AI-Agentensysteme. Claire V2.5, AuraTone, Sortier-Pipelines — Code der funktioniert und sichtbar ist.',
+        en: 'Builds and deploys autonomous AI agent systems. Claire V2.5, AuraTone, sorting pipelines — code that works and is visible.',
+      },
     },
     {
-      category: { de: "KI & Development", en: "AI & Development" },
-      items: [
-        { name: "React", level: 82 },
-        { name: "TypeScript", level: 80 },
-        { name: "Google Gemini", level: 78 },
-        { name: "Vertex AI", level: 72 },
-        { name: "RAG", level: 75 },
-        { name: "HTML / JS / CSS", level: 92 }
-      ]
-    }
+      icon: '🎚️',
+      label: { de: 'Audio & DJ Engineering', en: 'Audio & DJ Engineering' },
+      sub:   { de: '10 Jahre · 5.000+ Tracks · Traktor Pro · Rekordbox', en: '10 Years · 5,000+ Tracks · Traktor Pro · Rekordbox' },
+      detail: {
+        de: 'Tiefe Domainkenntnis in Audio-DSP, harmonischem Mixen und Musikanalyse. Fundament für AuraTone.',
+        en: 'Deep domain knowledge in audio DSP, harmonic mixing, and music analysis. The foundation of AuraTone.',
+      },
+    },
   ],
 
-  languages: [
-    { name: "Deutsch", level: { de: "Muttersprache", en: "Native" }, percent: 100 },
-    { name: "Englisch", level: { de: "Verhandlungssicher", en: "Business fluent" }, percent: 85 }
-  ],
-
-  strengths: {
-    de: [
-      "Hyperfokus in Krisen & Eskalationen",
-      "Paralleles Arbeiten über 10+ Systeme",
-      "Prozessautomatisierung & Eigenentwicklung",
-      "Stakeholder-Kommunikation bis C-Level"
-    ],
-    en: [
-      "Hyperfocus during crises & escalations",
-      "Parallel operations across 10+ systems",
-      "Process automation & in-house development",
-      "Stakeholder communication up to C-Level"
-    ]
-  },
-
-  experience: [
-    {
-      title: { de: "IT Systems Engineer", en: "IT Systems Engineer" },
-      subtitle: { de: "Junior IT Support Agent", en: "Junior IT Support Agent" },
-      org: "Johanniter Bundes-IT-Services (JoBITS)",
-      period: "Dez 2025 – Mai 2026",
-      bullets: {
-        de: [
-          "Systemadministration in einer KRITIS-Umgebung: Active Directory, Microsoft Entra ID, Citrix, OmniTracker, Windows-11-Rollouts.",
-          "Eigenständige Entwicklung des 'JoBIT Tracker V12' (HTML/JS/CSS) zur automatisierten Ticket-Zuweisung.",
-          "Einführung des 'KKEEY-Standards' zur strukturierten Fehlerdiagnose.",
-          "Paralleler Betrieb von 10+ Systemen für Notärzte und Rettungswachen unter Echtzeit-Druck."
-        ],
-        en: [
-          "System administration in a critical infrastructure environment: Active Directory, Microsoft Entra ID, Citrix, OmniTracker, Windows 11 rollouts.",
-          "Independent development of the 'JoBIT Tracker V12' (HTML/JS/CSS) for automated ticket assignment.",
-          "Introduction of the 'KKEEY Standard' for structured error diagnosis.",
-          "Parallel operation of 10+ systems for emergency physicians and rescue stations under real-time pressure."
-        ]
-      }
-    },
-    {
-      title: { de: "IT-Beauftragter & Warenwirtschaft", en: "IT Officer & Inventory Management" },
-      subtitle: null,
-      org: "BAUHAUS GmbH & Co. KG",
-      period: "Aug 2010 – Dez 2024",
-      bullets: {
-        de: [
-          "Primärer IT-Support (Tier 1–3) für 200+ Mitarbeitende: Hardware, Software, Incident- & Problem-Management.",
-          "Systemintegration und Optimierung der Warenwirtschaft; deutliche Reduktion von Lagerverlusten durch IT-gestützte Prozesse.",
-          "Analyse & Redesign von Abläufen, Schulungen und Rollout neuer Tools — tiefes Endanwender- und Prozessverständnis über 14 Jahre."
-        ],
-        en: [
-          "Primary IT support (Tier 1–3) for 200+ employees: hardware, software, incident & problem management.",
-          "System integration and inventory optimization; significant reduction of warehouse losses through IT-driven processes.",
-          "Analysis & redesign of workflows, training, and rollout of new tools — deep end-user and process understanding over 14 years."
-        ]
-      }
-    }
-  ],
-
+  // ─── PROJEKTE ───────────────────────────────────────────────────────────────
   projects: [
     {
-      name: "AuraTone AI",
-      role: { de: "Sole Developer", en: "Sole Developer" },
-      tech: ["React", "TypeScript", "Google Gemini", "Vertex AI", "SLSA L3"],
-      description: {
-        de: "KI-gestützte Audio-Mastering-Engine mit Google Gemini über Vertex AI für Echtzeit-Audioanalyse und Traktor-Pro-4-Bibliotheksverwaltung. Entwickelt auf Apple M1 Pro, inkl. SLSA-Level-3-Security-Workflow.",
-        en: "AI-powered audio mastering engine using Google Gemini via Vertex AI for real-time audio analysis and Traktor Pro 4 library management. Built on Apple M1 Pro, including SLSA Level 3 security workflow."
+      name: 'Claire V2.5',
+      color: '#00d4aa',
+      colorRgb: '0,212,170',
+      tag: 'Open Source · MIT',
+      sub: { de: 'Voice AI Agent · Full-Duplex · ~200ms Latenz', en: 'Voice AI Agent · Full-Duplex · ~200ms Latency' },
+      desc: {
+        de: 'Standalone Voice Agent auf Basis von Gemini Native Audio. Ersetzt STT→LLM→TTS durch eine einzige Echtzeit-Session (~200ms). EmotionEngine v2, persistentes SQLite-Memory, WebGL Shader Cockpit — startet per Doppelklick.',
+        en: 'Standalone voice agent built on Gemini Native Audio. Replaces STT→LLM→TTS with a single real-time session (~200ms). EmotionEngine v2, persistent SQLite memory, WebGL shader cockpit — starts with a double-click.',
       },
-      github: "https://github.com/KKEEY92"
+      stack: ['Python', 'FastAPI', 'Gemini Native Audio', 'WebGL Shaders', 'SQLite', 'Vertex AI'],
+      link: 'https://github.com/KKEEY92/claire-v2.5-native-audio',
+      linkLabel: { de: 'Auf GitHub ansehen →', en: 'View on GitHub →' },
     },
     {
-      name: "Claire V2",
-      role: { de: "KI-Assistenzsystem", en: "AI Assistant System" },
-      tech: ["RAG", "Multimodal AI", "Python", "TypeScript"],
-      description: {
-        de: "Multimodale Interaktion mit Retrieval-Augmented Generation (RAG) als Wissens- und Steuerungslayer.",
-        en: "Multimodal interaction with Retrieval-Augmented Generation (RAG) as knowledge and control layer."
+      name: 'AuraTone AI',
+      color: '#f7a841',
+      colorRgb: '247,168,65',
+      tag: 'Architecture Showcase',
+      sub: { de: 'DJ Mastering & Harmonic Mixing Engine', en: 'DJ Mastering & Harmonic Mixing Engine' },
+      desc: {
+        de: 'AI-gestützte Audio-Mastering & Harmonic-Mixing Engine. Analysiert Tracks (Key, BPM, Energy), normalisiert auf LUFS-Ziel, baut harmonisch kohärente Sets via Camelot Wheel. Hybrid TypeScript + Python DSP.',
+        en: 'AI-assisted audio mastering & harmonic mixing engine. Analyzes tracks (key, BPM, energy), normalizes to LUFS target, builds harmonically coherent sets via Camelot Wheel. Hybrid TypeScript + Python DSP.',
       },
-      github: "https://github.com/KKEEY92"
+      stack: ['TypeScript', 'React / Vite', 'Python DSP', 'librosa / ffmpeg', 'Google Gemini', 'Firebase'],
+      link: 'https://github.com/KKEEY92/AuraTone-Architecture',
+      linkLabel: { de: 'Architektur ansehen →', en: 'View Architecture →' },
     },
     {
-      name: "Claire v2.5",
-      role: { de: "Native Audio Lokal", en: "Native Audio Local" },
-      tech: ["Native Audio", "Local AI", "Python", "Real-time Processing"],
-      description: {
-        de: "Weiterentwicklung von Claire mit nativem Audio-Processing — vollständig lokale KI-Verarbeitung ohne Cloud-Abhängigkeit.",
-        en: "Evolution of Claire with native audio processing — fully local AI processing without cloud dependency."
+      name: 'AFM Chat',
+      color: '#3b82f6',
+      colorRgb: '59,130,246',
+      tag: 'macOS Native · Local AI',
+      sub: { de: 'Swift WKWebView · Apple Foundation Model · Komplett offline', en: 'Swift WKWebView · Apple Foundation Model · Fully offline' },
+      desc: {
+        de: 'Native macOS-App mit eigenem UI für das Apple Foundation Model (AFM-3-Core) — komplett lokal, kein Cloud-Abo. Matrix Rain UI, RAG mit Obsidian-Vault-Indexierung, Neural TTS via macOS say, ComfyUI Bildgenerierung, Push-to-Talk.',
+        en: 'Native macOS app with custom UI for Apple Foundation Model (AFM-3-Core) — fully local, no cloud subscription. Matrix Rain UI, RAG with Obsidian Vault indexing, Neural TTS via macOS say, ComfyUI image gen, Push-to-Talk.',
       },
-      github: "https://github.com/KKEEY92"
-    }
-  ],
-
-  certifications: [
-    { name: "Microsoft Azure Fundamentals", code: "AZ-900", status: "done" },
-    { name: "Microsoft 365 Fundamentals", code: "MS-900", status: "done" },
-    { name: "Microsoft Entra ID", code: "", status: "done" },
-    { name: "Cisco Certified Support Technician", code: "CCST", status: "done" },
-    { name: "ITIL 4 Foundation", code: "", status: "done" },
-    { name: { de: "Umschulung KI-Engineer", en: "Retraining AI Engineer" }, code: "", status: "progress" }
-  ],
-
-  education: [
+      stack: ['Swift / WKWebView', 'Python http.server', 'Apple AFM-3-Core', 'ComfyUI API', 'Web Speech API', 'Canvas 2D'],
+      link: 'https://github.com/KKEEY92/afm-chat',
+      linkLabel: { de: 'GitHub ansehen →', en: 'View on GitHub →' },
+    },
     {
-      degree: { de: "Kaufmann im Einzelhandel", en: "Retail Business Administrator" },
-      school: "BAUHAUS GmbH & Co. KG",
-      period: "2010 – 2013",
-      detail: {
-        de: "Schwerpunkt digitale Warenwirtschaft & IT-gestützte Geschäftsprozesse.",
-        en: "Focus on digital inventory management & IT-driven business processes."
-      }
-    }
+      name: 'PersonaOS',
+      color: '#8b5cf6',
+      colorRgb: '139,92,246',
+      tag: 'Proprietary · React',
+      sub: { de: 'Prompt & Persona Engineering Studio · Gemini-powered', en: 'Prompt & Persona Engineering Studio · Gemini-powered' },
+      desc: {
+        de: 'Workbench für AI-Persona-Engineering. Strukturiert Personas als konfigurierbare Layer (YAML/JSON), testet sie live gegen Gemini und versioniert sie sauber — Grundlage für glaubwürdige, konsistente AI-Charaktere.',
+        en: 'Workbench for AI persona engineering. Structures personas as configurable layers (YAML/JSON), tests them live against Gemini, and versions them cleanly — the foundation for believable, consistent AI characters.',
+      },
+      stack: ['React', 'TypeScript', 'Vite', 'Tailwind', 'Gemini API', 'Express', 'zod', 'js-yaml'],
+      link: null,
+      linkLabel: { de: 'Proprietär · Auf Anfrage', en: 'Proprietary · On request' },
+    },
+    {
+      name: 'sortiere.py',
+      color: '#22c55e',
+      colorRgb: '34,197,94',
+      tag: '✓ Abgeschlossen',
+      sub: { de: 'Universeller CLI Datei-Organizer · Python · 5-Pillar-Struktur', en: 'Universal CLI File Organizer · Python · 5-Pillar Structure' },
+      desc: {
+        de: 'Intelligenter Datei-Organizer mit token-basiertem Matching, Dry-Run-Modus und 5-Pillar-Kategorisierung. Sortiert beliebige Verzeichnisse nach konfigurierbaren Regeln — erster shipped open-source Build.',
+        en: 'Smart file organizer with token-based matching, dry-run mode, and 5-pillar categorization. Sorts any directory by configurable rules — first shipped open-source build.',
+      },
+      stack: ['Python 3.12', 'CLI / argparse', 'OS / Pathlib', 'Token Matching', 'Dry-Run Mode'],
+      link: 'https://github.com/KKEEY92',
+      linkLabel: { de: 'GitHub ansehen →', en: 'View on GitHub →' },
+    },
+    {
+      name: 'ComfyUI Pipeline System',
+      color: '#e879f9',
+      colorRgb: '232,121,249',
+      tag: 'Aktiv',
+      sub: { de: 'AI Character Generator · ComfyUI · FaceID + IPAdapter', en: 'AI Character Generator · ComfyUI · FaceID + IPAdapter' },
+      desc: {
+        de: 'Eigenständige ComfyUI-Pipeline für konsistente AI-Character-Generierung. Master-Script mit 5 Extensions: --reference Foto-Injektion, LoRA-Steuerung, Validierung, --dry-run und Prompt-Injection.',
+        en: 'Autonomous ComfyUI pipeline for consistent AI character generation. Master script with 5 extensions: --reference photo injection, LoRA control, validation, --dry-run, and prompt injection.',
+      },
+      stack: ['Python', 'ComfyUI API', 'FaceID', 'IPAdapter', 'LoRA', 'Stable Diffusion'],
+      link: 'https://github.com/KKEEY92',
+      linkLabel: { de: 'GitHub ansehen →', en: 'View on GitHub →' },
+    },
   ],
 
-  nav: {
-    about: { de: "Über mich", en: "About" },
-    skills: { de: "Skills", en: "Skills" },
-    experience: { de: "Erfahrung", en: "Experience" },
-    projects: { de: "Projekte", en: "Projects" },
-    certs: { de: "Zertifizierungen", en: "Certifications" },
-    contact: { de: "Kontakt", en: "Contact" }
-  }
+  // ─── SKILLS ─────────────────────────────────────────────────────────────────
+  skillGroups: [
+    {
+      label: { de: 'Sprachen & Code', en: 'Languages & Code' },
+      skills: [
+        { name: 'Python',              pct: 90 },
+        { name: 'TypeScript',          pct: 75 },
+        { name: 'JavaScript / React',  pct: 78 },
+        { name: 'PowerShell',          pct: 80 },
+        { name: 'HTML / CSS',          pct: 85 },
+      ],
+    },
+    {
+      label: { de: 'AI & Agents', en: 'AI & Agents' },
+      skills: [
+        { name: 'Gemini API / Vertex AI', pct: 92 },
+        { name: 'LLM Orchestration',       pct: 88 },
+        { name: 'Prompt Engineering',      pct: 90 },
+        { name: 'ComfyUI / Image AI',      pct: 80 },
+        { name: 'LM Studio (Local LLMs)',  pct: 82 },
+      ],
+    },
+    {
+      label: { de: 'Systeme & Infra', en: 'Systems & Infrastructure' },
+      skills: [
+        { name: 'Active Directory / IAM', pct: 82 },
+        { name: 'Docker / Linux',         pct: 70 },
+        { name: 'FastAPI / Node.js',      pct: 72 },
+        { name: 'Firebase / Cloud',       pct: 68 },
+      ],
+    },
+    {
+      label: { de: 'Audio & Ops Domäne', en: 'Audio & Operational Domain' },
+      skills: [
+        { name: 'Traktor Pro / Rekordbox', pct: 95 },
+        { name: 'Audio DSP (librosa)',     pct: 78 },
+        { name: 'Inventory Management',   pct: 95 },
+        { name: 'Supply Chain / Ops',     pct: 90 },
+      ],
+    },
+  ],
+
+  // ─── KARRIERE TIMELINE ──────────────────────────────────────────────────────
+  timeline: [
+    {
+      period:  { de: 'bis Ende 2024 · 15 Jahre', en: 'Until end 2024 · 15 years' },
+      role:    { de: 'Inventory Management', en: 'Inventory Management' },
+      company: 'BAUHAUS',
+      color:   '#7c6af7',
+      active:  false,
+      desc: {
+        de: '15 Jahre operative Tiefe in Inventory Management und Supply Chain. Systemdenken im Handelsbetrieb — diese Erfahrung wirkt heute als direkter AI-Differenziator.',
+        en: '15 years of operational depth in inventory management and supply chain. Systems thinking that is now a direct AI differentiator.',
+      },
+      tags: ['Inventory', 'Supply Chain', 'Prozessoptimierung', 'Systemdenken'],
+    },
+    {
+      period:  { de: 'Dez 2025 – Mai 2026', en: 'Dec 2025 – May 2026' },
+      role:    { de: 'IT-Administrator', en: 'IT Administrator' },
+      company: 'Johanniter Bundes-IT',
+      color:   '#7c6af7',
+      active:  false,
+      desc: {
+        de: 'Active Directory, Entra ID, IAM, Omnitracker, Innovaphone PBX, Windows 11 Migration. Erste Praxis in einer bundesweiten KRITIS-Infrastrukturumgebung.',
+        en: 'Active Directory, Entra ID, IAM, Omnitracker, Innovaphone PBX, Windows 11 migration. First hands-on experience in a national critical infrastructure environment.',
+      },
+      tags: ['Active Directory', 'IAM', 'Windows 11', 'Omnitracker', 'KRITIS'],
+    },
+    {
+      period:  { de: 'Juni 2026 · aktuell', en: 'June 2026 · present' },
+      role:    { de: 'AI-Architekt & Entwickler', en: 'AI Architect & Developer' },
+      company: { de: 'Selbstständig / Freelance', en: 'Self-employed / Freelance' },
+      color:   '#00d4aa',
+      active:  true,
+      desc: {
+        de: 'Aufbau von AI-Agent-Systemen für KMU. Claire V2.5 und AuraTone als öffentliche Proof-of-Work-Projekte.',
+        en: 'Building AI agent systems for SMEs. Claire V2.5 and AuraTone as public proof-of-work projects.',
+      },
+      tags: ['AI Agents', 'Python', 'Gemini API', 'KMU Automation', 'Freelance'],
+    },
+  ],
+
+  // ─── I18N STRINGS ────────────────────────────────────────────────────────────
+  i18n: {
+    trioLabel:     { de: 'Differenziator',              en: 'Differentiator' },
+    trioTitle:     { de: 'Das seltene Dreierpaket',     en: 'The Rare Trio' },
+    trioSub:       { de: 'Drei Domänen. Eine Person. Diese Kombination gibt es kaum.', en: 'Three domains. One person. Almost no one has this combination.' },
+    projTitle:     { de: 'Projekte & Showcase',         en: 'Projects & Showcase' },
+    projSub:       { de: 'Gebaut. Deployed. Öffentlich.', en: 'Built. Deployed. Public.' },
+    skillsTitle:   { de: 'Skills & Kompetenzprofil',   en: 'Skills & Expertise' },
+    careerLabel:   { de: 'Karriere',                    en: 'Career' },
+    careerTitle:   { de: 'Beruflicher Werdegang',       en: 'Career Story' },
+    contactLabel:  { de: 'Kontakt',                     en: 'Contact' },
+    contactTitle:  { de: 'Lass uns sprechen.',          en: "Let's talk." },
+    contactDesc:   { de: 'Offen für Festanstellungen, Freelance-Projekte und Kollaborationen. Remote · Hybrid · DE & EN.', en: 'Open for full-time roles, freelance projects, and collaborations. Remote · Hybrid · DE & EN.' },
+    namePH:        { de: 'Dein Name',                   en: 'Your name' },
+    emailPH:       { de: 'Deine E-Mail',                en: 'Your email' },
+    msgPH:         { de: 'Deine Nachricht...',          en: 'Your message...' },
+    submitLabel:   { de: 'Nachricht senden →',          en: 'Send message →' },
+    sentMsg:       { de: '✓ E-Mail-Client geöffnet — bis bald.', en: '✓ Email client opened — talk soon.' },
+    darkBtnLight:  { de: 'Hellmodus',                   en: 'Light mode' },
+    darkBtnDark:   { de: 'Dunkelmodus',                 en: 'Dark mode' },
+  },
+
 };

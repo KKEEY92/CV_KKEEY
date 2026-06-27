@@ -1,181 +1,153 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kevin Kuck — IT Systems Engineer & KI-Integrator</title>
-  <meta name="description" content="Portfolio von Kevin Kuck — IT Systems Engineer, KI-Integrator und Sole Developer mit 15+ Jahren Erfahrung.">
-  <meta property="og:title" content="Kevin Kuck — IT Systems Engineer & KI-Integrator">
-  <meta property="og:description" content="Portfolio von Kevin Kuck — IT Systems Engineer mit 15+ Jahren Praxis in Systemadministration, Prozessoptimierung und KI-Entwicklung.">
+  <title>Kevin Kuck — IT Systems Engineer & AI Agent Architekt</title>
+  <meta name="description" content="Portfolio von Kevin Kuck — IT Systems Engineer, AI Agent Architekt und Audio Engineer mit 15+ Jahren Erfahrung.">
+  <meta property="og:title" content="Kevin Kuck — IT · AI · Audio">
+  <meta property="og:description" content="IT Systems Engineer mit 15+ Jahren Praxis. AI Agent Architekt, DJ & Audio Engineer.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://kkeey92.github.io/CV_KKEEY/">
   <link rel="stylesheet" href="css/style.css">
-  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js" defer></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Kevin Kuck",
-    "jobTitle": "IT Systems Engineer & KI-Integrator",
+    "jobTitle": "IT Systems Engineer & AI Agent Architekt",
     "url": "https://kkeey92.github.io/CV_KKEEY/",
     "email": "kuck_kevin@icloud.com",
-    "telephone": "+4917041305 92",
     "address": { "@type": "PostalAddress", "addressLocality": "Butzbach", "addressCountry": "DE" },
-    "sameAs": [
-      "https://github.com/KKEEY92",
-      "https://linkedin.com/in/kevin-kuck"
-    ]
+    "sameAs": ["https://github.com/KKEEY92", "https://linkedin.com/in/kevin-kuck-it/"]
   }
   </script>
 </head>
 <body>
 
-  <!-- ===== NAV ===== -->
-  <nav class="nav" id="nav">
-    <div class="nav-inner">
-      <a href="#" class="nav-logo">KK</a>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#about" data-de="Über mich" data-en="About">Über mich</a></li>
-        <li><a href="#skills" data-de="Skills" data-en="Skills">Skills</a></li>
-        <li><a href="#experience" data-de="Erfahrung" data-en="Experience">Erfahrung</a></li>
-        <li><a href="#projects" data-de="Projekte" data-en="Projects">Projekte</a></li>
-        <li><a href="#certs" data-de="Zertifizierungen" data-en="Certifications">Zertifizierungen</a></li>
-        <li><a href="#contact" data-de="Kontakt" data-en="Contact">Kontakt</a></li>
-      </ul>
-      <div class="nav-controls">
-        <button class="nav-btn" id="langToggle" aria-label="Sprache wechseln">EN</button>
-        <button class="nav-btn" id="darkToggle" aria-label="Dark Mode"></button>
-        <button class="hamburger" id="hamburger" aria-label="Menu">☰</button>
+<!-- BG -->
+<canvas id="kk-bg"></canvas>
+<div class="scanlines"></div>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <span class="nav-logo">KK</span>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">Über mich</a></li>
+      <li><a href="#projects">Projekte</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#career">Karriere</a></li>
+      <li><a href="#contact">Kontakt</a></li>
+    </ul>
+    <div class="nav-controls">
+      <div class="available-badge">
+        <span class="available-dot"></span>
+        <span id="availableText">Verfügbar ab sofort</span>
       </div>
+      <button class="nav-btn nav-btn-icon" id="darkToggle" aria-label="Theme"></button>
+      <button class="nav-btn" id="langToggle">EN</button>
+      <button class="hamburger" id="hamburger" aria-label="Menu">☰</button>
     </div>
-  </nav>
+  </div>
+</nav>
 
-  <!-- ===== HERO ===== -->
-  <section class="hero" id="hero">
-    <div class="container hero-content">
-      <p class="hero-greeting" data-de="Hallo, ich bin" data-en="Hi, I'm">Hallo, ich bin</p>
-      <h1 class="hero-name">Kevin Kuck</h1>
-      <div class="hero-typed"><span id="typed-output"></span></div>
-      <div class="hero-ctas">
-        <a href="#projects" class="btn btn-primary" data-de="Projekte ansehen" data-en="View Projects">Projekte ansehen</a>
-        <a href="assets/Kevin_Kuck_CV.pdf" download class="btn btn-outline" data-de="CV herunterladen" data-en="Download CV">CV herunterladen</a>
-      </div>
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-content">
+    <div class="hero-avatar">
+      <img src="assets/avatar.jpg" alt="Kevin Kuck">
     </div>
-  </section>
-
-  <!-- ===== ABOUT ===== -->
-  <section id="about">
-    <div class="container">
-      <p class="section-title" data-de="Über mich" data-en="About me">Über mich</p>
-      <h2 class="section-heading" data-de="Wer ich bin" data-en="Who I am">Wer ich bin</h2>
-      <div class="about-grid">
-        <div class="profile-img-wrap reveal">
-          <div class="profile-placeholder" id="profileImg">KK</div>
-        </div>
-        <div>
-          <p class="about-text reveal" id="aboutText"
-             data-de="IT Systems Engineer mit 15 Jahren Praxis an der Schnittstelle von Systemadministration, Prozessoptimierung und KI-Entwicklung. Mein Antrieb ist der Dienst am Helfer: Ich halte Infrastruktur stabil, damit andere ihren Dienst am Menschen leisten. In einer KRITIS-Umgebung administriere ich Active Directory, Entra ID und Citrix und automatisiere Abläufe per PowerShell. Parallel entwickle ich als Sole Developer KI-Anwendungen auf Basis von React, TypeScript und Google Gemini. Ich verwalte nicht nur Systeme — ich baue sie."
-             data-en="IT Systems Engineer with 15 years of hands-on experience at the intersection of system administration, process optimization, and AI development. My drive is to serve those who serve others: I keep infrastructure stable so that people can focus on their mission. In a critical infrastructure environment, I administer Active Directory, Entra ID, and Citrix while automating workflows with PowerShell. In parallel, I build AI applications as a sole developer using React, TypeScript, and Google Gemini. I don't just manage systems — I build them.">
-            IT Systems Engineer mit 15 Jahren Praxis an der Schnittstelle von Systemadministration, Prozessoptimierung und KI-Entwicklung. Mein Antrieb ist der Dienst am Helfer: Ich halte Infrastruktur stabil, damit andere ihren Dienst am Menschen leisten. In einer KRITIS-Umgebung administriere ich Active Directory, Entra ID und Citrix und automatisiere Abläufe per PowerShell. Parallel entwickle ich als Sole Developer KI-Anwendungen auf Basis von React, TypeScript und Google Gemini. Ich verwalte nicht nur Systeme — ich baue sie.
-          </p>
-          <div class="stats-grid">
-            <div class="stat-card reveal">
-              <div class="stat-value" data-count="15+">0</div>
-              <div class="stat-label" data-de="Jahre Praxis" data-en="Years Experience">Jahre Praxis</div>
-            </div>
-            <div class="stat-card reveal">
-              <div class="stat-value" data-count="10+">0</div>
-              <div class="stat-label" data-de="Parallele Systeme" data-en="Parallel Systems">Parallele Systeme</div>
-            </div>
-            <div class="stat-card reveal">
-              <div class="stat-value" data-count="6">0</div>
-              <div class="stat-label" data-de="Zertifizierungen" data-en="Certifications">Zertifizierungen</div>
-            </div>
-          </div>
-
-          <div id="strengths-container" class="strengths-list"></div>
-        </div>
-      </div>
+    <p class="hero-label" id="heroGreeting">Hallo, ich bin</p>
+    <h1 class="hero-name">Kevin Kuck</h1>
+    <div class="hero-typed-wrap">
+      <span class="hero-typed-text" id="typedOutput"></span>
+      <span class="hero-cursor"></span>
     </div>
-  </section>
-
-  <!-- ===== SKILLS ===== -->
-  <section id="skills">
-    <div class="container">
-      <p class="section-title" data-de="Fähigkeiten" data-en="Skills">Fähigkeiten</p>
-      <h2 class="section-heading" data-de="Mein Tech-Stack" data-en="My Tech Stack">Mein Tech-Stack</h2>
-      <div class="skills-grid" id="skills-container"></div>
+    <p class="hero-tagline">IT · AI · AUDIO · 15+ JAHRE PRAXIS</p>
+    <div class="hero-ctas">
+      <a href="#projects" class="btn-primary" id="heroCta1">Projekte ansehen</a>
+      <a href="#contact" class="btn-outline" id="heroCta2">Kontakt aufnehmen</a>
     </div>
-  </section>
+  </div>
+  <div class="hero-arrow">↓</div>
+</section>
 
-  <!-- ===== EXPERIENCE ===== -->
-  <section id="experience">
-    <div class="container">
-      <p class="section-title" data-de="Karriere" data-en="Career">Karriere</p>
-      <h2 class="section-heading" data-de="Berufserfahrung" data-en="Work Experience">Berufserfahrung</h2>
-      <div class="timeline" id="experience-container"></div>
+<!-- TRIO / ABOUT -->
+<section id="about">
+  <div class="container">
+    <p class="section-label" id="trioLabel">Differenziator</p>
+    <h2 class="section-title" id="trioTitle">Das seltene Dreierpaket</h2>
+    <p class="section-sub" id="trioSub">Drei Domänen. Eine Person. Diese Kombination gibt es kaum.</p>
+    <div class="trio-grid" id="trioContainer"></div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="container">
+    <p class="section-label">Proof of Work</p>
+    <h2 class="section-title" id="projTitle">Projekte & Showcase</h2>
+    <p class="section-sub" id="projSub">Gebaut. Deployed. Öffentlich.</p>
+    <div class="projects-grid" id="projContainer"></div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="container">
+    <p class="section-label">Tech Stack</p>
+    <h2 class="section-title" id="skillsTitle">Skills & Kompetenzprofil</h2>
+    <div class="skills-grid" id="skillsContainer"></div>
+  </div>
+</section>
+
+<!-- CAREER -->
+<section id="career">
+  <div class="container" style="max-width:860px">
+    <p class="section-label" id="careerLabel">Karriere</p>
+    <h2 class="section-title" id="careerTitle">Beruflicher Werdegang</h2>
+    <div class="timeline" id="timelineContainer">
+      <div class="timeline-line"></div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ===== PROJECTS ===== -->
-  <section id="projects">
-    <div class="container">
-      <p class="section-title" data-de="Portfolio" data-en="Portfolio">Portfolio</p>
-      <h2 class="section-heading" data-de="Projekte & Proof of Work" data-en="Projects & Proof of Work">Projekte & Proof of Work</h2>
-      <div class="projects-grid" id="projects-container"></div>
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-inner">
+    <p class="section-label" id="contactLabel">Kontakt</p>
+    <h2 class="section-title" id="contactTitle">Lass uns sprechen.</h2>
+    <p class="contact-desc" id="contactDesc">Offen für Festanstellungen, Freelance-Projekte und Kollaborationen. Remote · Hybrid · DE & EN.</p>
+    <form class="contact-form" id="contactForm">
+      <input type="text" required class="contact-input" id="formName" placeholder="Dein Name">
+      <input type="email" required class="contact-input" id="formEmail" placeholder="Deine E-Mail">
+      <textarea required class="contact-input" id="formMsg" rows="5" placeholder="Deine Nachricht..."></textarea>
+      <button type="submit" class="contact-submit" id="formSubmit">Nachricht senden →</button>
+      <p class="contact-sent" id="formSent">✓ E-Mail-Client geöffnet — bis bald.</p>
+    </form>
+    <div class="contact-links">
+      <a href="mailto:kuck_kevin@icloud.com">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        kuck_kevin@icloud.com
+      </a>
+      <a href="https://github.com/KKEEY92" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        github.com/KKEEY92
+      </a>
+      <a href="https://www.linkedin.com/in/kevin-kuck-it/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+        LinkedIn
+      </a>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ===== CERTIFICATIONS ===== -->
-  <section id="certs">
-    <div class="container">
-      <p class="section-title" data-de="Nachweise" data-en="Credentials">Nachweise</p>
-      <h2 class="section-heading" data-de="Zertifizierungen" data-en="Certifications">Zertifizierungen</h2>
-      <div class="certs-grid" id="certs-container"></div>
-    </div>
-  </section>
+<footer class="footer">
+  <p>&copy; 2026 Kevin Kuck · kkeey92.github.io/CV_KKEEY</p>
+</footer>
 
-  <!-- ===== CONTACT ===== -->
-  <section id="contact">
-    <div class="container">
-      <div class="contact-content">
-        <p class="section-title" data-de="Kontakt" data-en="Contact">Kontakt</p>
-        <h2 class="section-heading" data-de="Lass uns sprechen" data-en="Let's talk">Lass uns sprechen</h2>
-        <p class="contact-text" data-de="Interesse an einer Zusammenarbeit? Ich freue mich auf Ihre Nachricht." data-en="Interested in working together? I'd love to hear from you.">Interesse an einer Zusammenarbeit? Ich freue mich auf Ihre Nachricht.</p>
-        <div class="contact-links">
-          <a href="mailto:kuck_kevin@icloud.com" class="contact-btn">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-            E-Mail
-          </a>
-          <a href="https://github.com/KKEEY92" target="_blank" rel="noopener" class="contact-btn">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-            GitHub
-          </a>
-          <a href="https://linkedin.com/in/kevin-kuck" target="_blank" rel="noopener" class="contact-btn">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
-            LinkedIn
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== FOOTER ===== -->
-  <footer class="footer">
-    <div class="container">
-      <p class="footer-text">&copy; 2026 Kevin Kuck</p>
-      <p class="footer-available" data-de="Verfügbar ab sofort — Remote / Hybrid" data-en="Available now — Remote / Hybrid">Verfügbar ab sofort — Remote / Hybrid</p>
-    </div>
-  </footer>
-
-  <script src="js/data.js"></script>
-  <script src="js/i18n.js"></script>
-  <script src="js/main.js"></script>
-  <script src="js/animations.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      initTyped(localStorage.getItem('lang') || 'de');
-    });
-  </script>
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
