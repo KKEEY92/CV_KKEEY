@@ -28,6 +28,7 @@ window.KK_DATA = {
     },
     cta1: { de: 'Projekte ansehen', en: 'View Projects' },
     cta2: { de: 'Kontakt aufnehmen', en: 'Get in touch' },
+    cta3: { de: 'CV herunterladen', en: 'Download CV' },
     available: { de: 'Verfügbar ab sofort', en: 'Available now' },
   },
 

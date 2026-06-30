@@ -191,6 +191,8 @@ a { color: inherit; text-decoration: none; }
   transition: all 0.25s; cursor: pointer; font-family: inherit;
 }
 .btn-outline:hover { border-color: rgba(124,106,247,0.42); color: #b2aaf8; background: rgba(124,106,247,0.07); }
+.btn-cv { display: inline-flex; align-items: center; gap: 9px; }
+.btn-cv svg { width: 16px; height: 16px; flex-shrink: 0; }
 .hero-arrow {
   position: absolute; bottom: 38px; left: 50%;
   animation: floatArrow 3s ease-in-out infinite;

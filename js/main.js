@@ -114,6 +114,7 @@ function render() {
   document.getElementById('heroGreeting').textContent = t(D.hero.greeting);
   document.getElementById('heroCta1').textContent = t(D.hero.cta1);
   document.getElementById('heroCta2').textContent = t(D.hero.cta2);
+  document.querySelector('#heroCta3 span').textContent = t(D.hero.cta3);
   document.getElementById('availableText').textContent = t(D.hero.available);
 
   // Trio
