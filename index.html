@@ -4,14 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kevin Kuck — IT Systems Engineer & AI Agent Architekt</title>
-  <meta name="description" content="Portfolio von Kevin Kuck — IT Systems Engineer, AI Agent Architekt und Audio Engineer mit 15+ Jahren Erfahrung.">
+  <meta name="description" content="Portfolio von Kevin Kuck — IT Systems Engineer, AI Agent Architekt und Audio Engineer mit 15+ Jahren Erfahrung. Active Directory, Microsoft Entra ID, IAM, PowerShell, KRITIS, Gemini & Vertex AI.">
+  <meta name="theme-color" content="#07070f">
+  <link rel="canonical" href="https://kkeey92.github.io/CV_KKEEY/">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2307070f'/%3E%3Ctext x='32' y='43' font-family='system-ui,sans-serif' font-size='28' font-weight='700' fill='%237c6af7' text-anchor='middle'%3EKK%3C/text%3E%3C/svg%3E">
   <!-- Open Graph / Social Sharing -->
   <meta property="og:title" content="Kevin Kuck — IT Systems Engineer & AI Agent Architekt">
   <meta property="og:description" content="15 Jahre Operational Expertise. AI Agent Architekt. Claire V2.5, AuraTone AI, AFM Chat. Verfügbar ab sofort.">
   <meta property="og:image" content="https://kkeey92.github.io/CV_KKEEY/assets/avatar.jpg">
   <meta property="og:url" content="https://kkeey92.github.io/CV_KKEEY/">
   <meta property="og:type" content="website">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:locale:alternate" content="en_US">
   <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap">
   <link rel="stylesheet" href="css/style.css">
   <script type="application/ld+json">
   {
@@ -22,7 +30,8 @@
     "url": "https://kkeey92.github.io/CV_KKEEY/",
     "email": "kuck_kevin@icloud.com",
     "address": { "@type": "PostalAddress", "addressLocality": "Butzbach", "addressCountry": "DE" },
-    "sameAs": ["https://github.com/KKEEY92", "https://www.linkedin.com/in/kevinkuck/"]
+    "knowsAbout": ["Identity & Access Management", "Active Directory", "Microsoft Entra ID", "PowerShell", "KRITIS-Infrastruktur", "Windows 11", "AI Agents", "Google Gemini", "Vertex AI", "Prompt Engineering", "Python", "TypeScript", "Audio DSP", "Harmonic Mixing"],
+    "sameAs": ["https://github.com/KKEEY92", "https://www.linkedin.com/in/kevin-kuck-it/"]
   }
   </script>
 </head>
@@ -49,8 +58,8 @@
         <span id="availableText">Verfügbar ab sofort</span>
       </div>
       <button class="nav-btn nav-btn-icon" id="darkToggle" aria-label="Theme"></button>
-      <button class="nav-btn" id="langToggle">EN</button>
-      <button class="hamburger" id="hamburger" aria-label="Menu">☰</button>
+      <button class="nav-btn" id="langToggle" aria-label="Sprache wechseln / Switch language">EN</button>
+      <button class="hamburger" id="hamburger" aria-label="Menü" aria-expanded="false" aria-controls="navLinks">☰</button>
     </div>
   </div>
 </nav>
@@ -59,7 +68,7 @@
 <section class="hero" id="hero">
   <div class="hero-content">
     <div class="hero-avatar">
-      <img src="assets/avatar.jpg" alt="Kevin Kuck">
+      <img src="assets/avatar.jpg" alt="Kevin Kuck" width="800" height="800" decoding="async" fetchpriority="high">
     </div>
     <p class="hero-label" id="heroGreeting">Hallo, ich bin</p>
     <h1 class="hero-name">Kevin Kuck</h1>
@@ -72,7 +81,7 @@
       <a href="#projects" class="btn-primary" id="heroCta1">Projekte ansehen</a>
       <a href="#contact" class="btn-outline" id="heroCta2">Kontakt aufnehmen</a>
       <a href="assets/Kevin_Kuck_CV.pdf" download class="btn-outline btn-cv" id="heroCta3">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
         <span>CV herunterladen</span>
       </a>
     </div>
@@ -135,19 +144,19 @@
       <input type="email" name="email" required class="contact-input" id="formEmail" placeholder="Deine E-Mail">
       <textarea name="message" required class="contact-input" id="formMsg" rows="5" placeholder="Deine Nachricht..."></textarea>
       <button type="submit" class="contact-submit" id="formSubmit">Nachricht senden →</button>
-      <p class="contact-sent" id="formSent">✓ Nachricht gesendet — bis bald!</p>
+      <p class="contact-sent" id="formSent" role="status">✓ Nachricht gesendet — bis bald!</p>
     </form>
     <div class="contact-links">
       <a href="mailto:kuck_kevin@icloud.com">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
         kuck_kevin@icloud.com
       </a>
       <a href="https://github.com/KKEEY92" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
         github.com/KKEEY92
       </a>
-      <a href="https://www.linkedin.com/in/kevinkuck/" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+      <a href="https://www.linkedin.com/in/kevin-kuck-it/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
         LinkedIn
       </a>
     </div>
@@ -156,6 +165,7 @@
 
 <footer class="footer">
   <p>&copy; 2026 Kevin Kuck · kkeey92.github.io/CV_KKEEY</p>
+  <p class="footer-cross"><a href="https://kkeey92.github.io/CV_IT_KKEEY/" id="footerCross">IT-Profil ansehen: Systemadministration · IAM →</a></p>
 </footer>
 
 <script src="js/data.js"></script>
