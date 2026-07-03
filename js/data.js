@@ -214,8 +214,8 @@ window.KK_DATA = {
       color:   '#7c6af7',
       active:  false,
       desc: {
-        de: 'Active Directory, Entra ID, IAM, Citrix, Omnitracker, Innovaphone PBX, Windows-11-Migration und PowerShell-Automatisierung in einer bundesweiten KRITIS-Infrastrukturumgebung. Eigenentwicklungen: JoBIT Tracker V12 (automatisierte Ticket-Zuweisung) und der KKEEY-Standard für reproduzierbare Fehlerdiagnose.',
-        en: 'Active Directory, Entra ID, IAM, Citrix, Omnitracker, Innovaphone PBX, Windows 11 migration, and PowerShell automation in a national critical infrastructure environment. Built the JoBIT Tracker V12 (automated ticket assignment) and the KKEEY Standard for reproducible fault diagnosis.',
+        de: 'Active Directory, Entra ID, IAM, Citrix, Omnitracker, Innovaphone PBX, Windows-11-Migration und PowerShell-Automatisierung in einer bundesweiten KRITIS-Infrastrukturumgebung. Eigenentwicklungen: ein Tool zur automatisierten Ticket-Zuweisung sowie der KKEEY-Standard für reproduzierbare Fehlerdiagnose.',
+        en: 'Active Directory, Entra ID, IAM, Citrix, Omnitracker, Innovaphone PBX, Windows 11 migration, and PowerShell automation in a national critical infrastructure environment. Own developments: a tool for automated ticket assignment and the KKEEY Standard for reproducible fault diagnosis.',
       },
       tags: ['Active Directory', 'IAM', 'Citrix', 'PowerShell', 'Windows 11', 'KRITIS'],
     },
