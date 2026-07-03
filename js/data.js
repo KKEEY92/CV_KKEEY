@@ -193,6 +193,12 @@ window.KK_DATA = {
     },
   ],
 
+  // ─── ZERTIFIZIERUNGEN ───────────────────────────────────────────────────────
+  // Fallback-Zustand: noch keine echten Einträge. Sobald Zertifikate/Badges
+  // vorliegen, hier Objekte im gleichen Schema wie `projects` ergänzen
+  // (name, color, colorRgb, tag = Status-Label, sub, desc, link, linkLabel).
+  certifications: [],
+
   // ─── KARRIERE TIMELINE ──────────────────────────────────────────────────────
   timeline: [
     {
@@ -241,6 +247,9 @@ window.KK_DATA = {
     projTitle:     { de: 'Projekte & Showcase',         en: 'Projects & Showcase' },
     projSub:       { de: 'Gebaut. Deployed. Öffentlich.', en: 'Built. Deployed. Public.' },
     skillsTitle:   { de: 'Skills & Kompetenzprofil',   en: 'Skills & Expertise' },
+    certLabel:     { de: 'Verifiziert',                 en: 'Verified' },
+    certTitle:     { de: 'Zertifizierungen',            en: 'Certifications' },
+    certEmpty:     { de: 'Zertifizierungen werden aktuell ergänzt — schau bald wieder vorbei.', en: 'Certifications are being added soon — check back shortly.' },
     careerLabel:   { de: 'Karriere',                    en: 'Career' },
     careerTitle:   { de: 'Beruflicher Werdegang',       en: 'Career Story' },
     contactLabel:  { de: 'Kontakt',                     en: 'Contact' },

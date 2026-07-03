@@ -283,6 +283,19 @@ section { padding: 120px 24px; position: relative; z-index: 2; }
   transition: transform 1.5s ease;
 }
 
+/* CERTIFICATIONS */
+.certifications-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); gap: 22px; }
+.cert-card {
+  padding: 26px 26px 22px; display: flex; flex-direction: column; gap: 12px;
+  text-decoration: none; cursor: pointer;
+}
+.cert-card:hover { text-decoration: none; }
+.cert-empty {
+  grid-column: 1 / -1; text-align: center; padding: 40px 20px;
+  color: var(--kk-text-muted); font-size: 14px; font-family: 'JetBrains Mono', monospace;
+  border: 1px dashed var(--kk-border); border-radius: 20px;
+}
+
 /* TIMELINE */
 .timeline { position: relative; }
 .timeline-line {
