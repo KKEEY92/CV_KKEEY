@@ -194,10 +194,41 @@ window.KK_DATA = {
   ],
 
   // ─── ZERTIFIZIERUNGEN ───────────────────────────────────────────────────────
-  // Fallback-Zustand: noch keine echten Einträge. Sobald Zertifikate/Badges
-  // vorliegen, hier Objekte im gleichen Schema wie `projects` ergänzen
-  // (name, color, colorRgb, tag = Status-Label, sub, desc, link, linkLabel).
-  certifications: [],
+  // Nur echte, geprüfte Zertifizierungen als Karten. Kursabschlüsse (LinkedIn
+  // Learning etc.) stehen als kompakte Liste weiter unten unter `education`.
+  certifications: [
+    {
+      name: 'Microsoft KI-Grundlagen',
+      color: '#0ea5e9',
+      colorRgb: '14,165,233',
+      tag: '✓ Microsoft Certified',
+      sub: { de: 'Zertifizierung · 2026', en: 'Certification · 2026' },
+      desc: {
+        de: 'Offizielle Microsoft-Zertifizierung zu KI-Grundlagen — Konzepte, Einsatzbereiche und verantwortungsvoller Umgang mit generativer KI.',
+        en: 'Official Microsoft certification covering AI fundamentals — concepts, use cases, and responsible use of generative AI.',
+      },
+      link: 'https://www.linkedin.com/in/kevin-kuck-it/details/certifications/',
+      linkLabel: { de: 'Nachweis auf LinkedIn →', en: 'View credential on LinkedIn →' },
+    },
+  ],
+
+  // ─── WEITERBILDUNG ──────────────────────────────────────────────────────────
+  // Kursabschlüsse ohne formale Prüfung (LinkedIn Learning etc.) — kompakte
+  // Liste statt Karten, um sie von echten Zertifizierungen abzugrenzen.
+  education: {
+    label: { de: 'Weiterbildung', en: 'Further education' },
+    linkedinLink: 'https://www.linkedin.com/in/kevin-kuck-it/details/certifications/',
+    linkedinLabel: { de: 'Alle Nachweise auf LinkedIn ansehen →', en: 'View all credentials on LinkedIn →' },
+    items: [
+      { de: 'Grundwissen Generative KI · Microsoft & LinkedIn Learning Lernpfad (4 Std. 25 Min.) — Mai 2026', en: 'Generative AI Foundations · Microsoft & LinkedIn Learning path (4h 25min) — May 2026' },
+      { de: 'Was ist Generative KI? · LinkedIn Learning + PMI — Mai 2026', en: 'What Is Generative AI? · LinkedIn Learning + PMI — May 2026' },
+      { de: 'Generative KI: Die Entwicklung einer durchdachten Online-Suche · LinkedIn Learning + PMI — Mai 2026', en: 'Generative AI: Developing Thoughtful Online Search · LinkedIn Learning + PMI — May 2026' },
+      { de: 'Künstliche Intelligenz Grundlagen · LinkedIn Learning — 2026', en: 'Artificial Intelligence Foundations · LinkedIn Learning — 2026' },
+      { de: 'Mit KI zusammenarbeiten · LinkedIn Learning — 2026', en: 'Collaborating with AI · LinkedIn Learning — 2026' },
+      { de: 'Medienkompetenz im KI-Zeitalter — 2026', en: 'Media Literacy in the AI Era — 2026' },
+      { de: 'Active Directory-Verwaltung automatisieren mit PowerShell · LinkedIn Learning — Mai 2026', en: 'Automating Active Directory Management with PowerShell · LinkedIn Learning — May 2026' },
+    ],
+  },
 
   // ─── KARRIERE TIMELINE ──────────────────────────────────────────────────────
   timeline: [

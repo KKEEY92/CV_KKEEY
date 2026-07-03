@@ -141,6 +141,7 @@ function render() {
   document.getElementById('certLabel').textContent = t(D.i18n.certLabel);
   document.getElementById('certTitle').textContent = t(D.i18n.certTitle);
   renderCertifications();
+  renderEducation();
 
   // Career
   document.getElementById('careerLabel').textContent = t(D.i18n.careerLabel);
@@ -247,6 +248,17 @@ function renderCertifications() {
       <p class="project-desc">${t(cert.desc)}</p>
     </a>`;
   }).join('');
+}
+
+function renderEducation() {
+  const label = document.getElementById('eduLabel');
+  const list = document.getElementById('eduList');
+  const link = document.getElementById('eduLink');
+  if (!label || !list || !link) return;
+  label.textContent = t(D.education.label);
+  list.innerHTML = D.education.items.map(item => `<li class="reveal">${t(item)}</li>`).join('');
+  link.href = D.education.linkedinLink;
+  link.textContent = t(D.education.linkedinLabel);
 }
 
 function renderTimeline() {
