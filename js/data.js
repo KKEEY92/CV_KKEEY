@@ -93,7 +93,7 @@ window.KK_DATA = {
       linkLabel: { de: 'Architektur ansehen →', en: 'View Architecture →' },
     },
     {
-      name: 'AFM Chat',
+      name: 'AFM-3-Chat',
       color: '#3b82f6',
       colorRgb: '59,130,246',
       tag: 'macOS Native · Local AI',
@@ -184,7 +184,7 @@ window.KK_DATA = {
     {
       label: { de: 'Audio & Ops Domäne', en: 'Audio & Operational Domain' },
       skills: [
-        { name: 'Traktor Pro / Rekordbox', pct: 95 },
+        { name: 'Traktor 4 Pro / Rekordbox', pct: 95 },
         { name: 'Audio DSP (librosa)',     pct: 78 },
         { name: 'Inventory Management',   pct: 95 },
         { name: 'Supply Chain / Ops',     pct: 90 },
