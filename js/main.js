@@ -19,6 +19,7 @@ function applyTheme() {
   document.documentElement.setAttribute('data-theme', darkMode ? 'dark' : 'light');
   localStorage.setItem('kk_dark', darkMode);
   const btn = document.getElementById('darkToggle');
+  if (btn) btn.setAttribute('aria-label', darkMode ? t(D.i18n.darkBtnLight) : t(D.i18n.darkBtnDark));
   if (btn) btn.innerHTML = darkMode
     ? '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="13" height="13"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>'
     : '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="13" height="13"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
@@ -36,12 +37,16 @@ function initNav() {
 
   if (hamburger) {
     hamburger.addEventListener('click', () => {
-      links.classList.toggle('open');
-      hamburger.textContent = links.classList.contains('open') ? '✕' : '☰';
+      const open = links.classList.toggle('open');
+      hamburger.textContent = open ? '✕' : '☰';
+      hamburger.setAttribute('aria-expanded', open);
     });
   }
   document.querySelectorAll('#navLinks a').forEach(a => {
-    a.addEventListener('click', () => { links.classList.remove('open'); if (hamburger) hamburger.textContent = '☰'; });
+    a.addEventListener('click', () => {
+      links.classList.remove('open');
+      if (hamburger) { hamburger.textContent = '☰'; hamburger.setAttribute('aria-expanded', 'false'); }
+    });
   });
 
   document.getElementById('darkToggle').addEventListener('click', () => {
@@ -114,6 +119,7 @@ function render() {
   document.getElementById('heroGreeting').textContent = t(D.hero.greeting);
   document.getElementById('heroCta1').textContent = t(D.hero.cta1);
   document.getElementById('heroCta2').textContent = t(D.hero.cta2);
+  document.querySelector('#heroCta3 span').textContent = t(D.hero.cta3);
   document.getElementById('availableText').textContent = t(D.hero.available);
 
   // Trio
@@ -144,6 +150,13 @@ function render() {
   document.getElementById('formEmail').placeholder = t(D.i18n.emailPH);
   document.getElementById('formMsg').placeholder = t(D.i18n.msgPH);
   document.getElementById('formSubmit').textContent = t(D.i18n.submitLabel);
+  document.getElementById('formSent').textContent = t(D.i18n.sentMsg);
+
+  // Footer crosslink + dark-toggle label follow the active language
+  const cross = document.getElementById('footerCross');
+  if (cross) cross.textContent = t(D.i18n.footerCross);
+  const darkBtn = document.getElementById('darkToggle');
+  if (darkBtn) darkBtn.setAttribute('aria-label', darkMode ? t(D.i18n.darkBtnLight) : t(D.i18n.darkBtnDark));
 
   initReveal();
   initSkillBars();
@@ -268,16 +281,21 @@ if (form) {
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
     const btn = document.getElementById('formSubmit');
-    btn.textContent = 'Wird gesendet…';
+    btn.textContent = t(D.i18n.sendingLabel);
     btn.disabled = true;
-    const data = new FormData(form);
-    const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: data });
-    const json = await res.json();
-    if (json.success) {
-      document.getElementById('formSent').style.display = 'block';
-      form.reset();
-    } else {
-      btn.textContent = 'Fehler — bitte direkt mailen';
+    try {
+      const data = new FormData(form);
+      const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: data });
+      const json = await res.json();
+      if (json.success) {
+        document.getElementById('formSent').style.display = 'block';
+        form.reset();
+        btn.textContent = t(D.i18n.submitLabel);
+      } else {
+        btn.textContent = t(D.i18n.sendErr);
+      }
+    } catch (err) {
+      btn.textContent = t(D.i18n.sendErr);
     }
     btn.disabled = false;
   });

@@ -28,6 +28,7 @@ window.KK_DATA = {
     },
     cta1: { de: 'Projekte ansehen', en: 'View Projects' },
     cta2: { de: 'Kontakt aufnehmen', en: 'Get in touch' },
+    cta3: { de: 'CV herunterladen', en: 'Download CV' },
     available: { de: 'Verfügbar ab sofort', en: 'Available now' },
   },
 
@@ -103,8 +104,8 @@ window.KK_DATA = {
         en: 'Native macOS app with custom UI for Apple Foundation Model (AFM-3-Core) — fully local, no cloud subscription. Matrix Rain UI, RAG with Obsidian Vault indexing, Neural TTS via macOS say, ComfyUI image gen, Push-to-Talk.',
       },
       stack: ['Swift / WKWebView', 'Python http.server', 'Apple AFM-3-Core', 'ComfyUI API', 'Web Speech API', 'Canvas 2D'],
-      link: 'https://github.com/KKEEY92/afm-chat',
-      linkLabel: { de: 'GitHub ansehen →', en: 'View on GitHub →' },
+      link: null,
+      linkLabel: { de: 'Privat · Demo auf Anfrage', en: 'Private · Demo on request' },
     },
     {
       name: 'PersonaOS',
@@ -132,7 +133,7 @@ window.KK_DATA = {
       },
       stack: ['Python 3.12', 'CLI / argparse', 'OS / Pathlib', 'Token Matching', 'Dry-Run Mode'],
       link: 'https://github.com/KKEEY92',
-      linkLabel: { de: 'GitHub ansehen →', en: 'View on GitHub →' },
+      linkLabel: { de: 'GitHub-Profil →', en: 'GitHub profile →' },
     },
     {
       name: 'ComfyUI Pipeline System',
@@ -146,7 +147,7 @@ window.KK_DATA = {
       },
       stack: ['Python', 'ComfyUI API', 'FaceID', 'IPAdapter', 'LoRA', 'Stable Diffusion'],
       link: 'https://github.com/KKEEY92',
-      linkLabel: { de: 'GitHub ansehen →', en: 'View on GitHub →' },
+      linkLabel: { de: 'GitHub-Profil →', en: 'GitHub profile →' },
     },
   ],
 
@@ -213,10 +214,10 @@ window.KK_DATA = {
       color:   '#7c6af7',
       active:  false,
       desc: {
-        de: 'Active Directory, Entra ID, IAM, Omnitracker, Innovaphone PBX, Windows 11 Migration. Erste Praxis in einer bundesweiten KRITIS-Infrastrukturumgebung.',
-        en: 'Active Directory, Entra ID, IAM, Omnitracker, Innovaphone PBX, Windows 11 migration. First hands-on experience in a national critical infrastructure environment.',
+        de: 'Active Directory, Entra ID, IAM, Citrix, Omnitracker, Innovaphone PBX, Windows-11-Migration und PowerShell-Automatisierung in einer bundesweiten KRITIS-Infrastrukturumgebung. Eigenentwicklungen: JoBIT Tracker V12 (automatisierte Ticket-Zuweisung) und der KKEEY-Standard für reproduzierbare Fehlerdiagnose.',
+        en: 'Active Directory, Entra ID, IAM, Citrix, Omnitracker, Innovaphone PBX, Windows 11 migration, and PowerShell automation in a national critical infrastructure environment. Built the JoBIT Tracker V12 (automated ticket assignment) and the KKEEY Standard for reproducible fault diagnosis.',
       },
-      tags: ['Active Directory', 'IAM', 'Windows 11', 'Omnitracker', 'KRITIS'],
+      tags: ['Active Directory', 'IAM', 'Citrix', 'PowerShell', 'Windows 11', 'KRITIS'],
     },
     {
       period:  { de: 'Juni 2026 · aktuell', en: 'June 2026 · present' },
@@ -249,9 +250,12 @@ window.KK_DATA = {
     emailPH:       { de: 'Deine E-Mail',                en: 'Your email' },
     msgPH:         { de: 'Deine Nachricht...',          en: 'Your message...' },
     submitLabel:   { de: 'Nachricht senden →',          en: 'Send message →' },
-    sentMsg:       { de: '✓ E-Mail-Client geöffnet — bis bald.', en: '✓ Email client opened — talk soon.' },
-    darkBtnLight:  { de: 'Hellmodus',                   en: 'Light mode' },
-    darkBtnDark:   { de: 'Dunkelmodus',                 en: 'Dark mode' },
+    sentMsg:       { de: '✓ Nachricht gesendet — ich melde mich.', en: '✓ Message sent — I\'ll get back to you.' },
+    sendingLabel:  { de: 'Wird gesendet…',              en: 'Sending…' },
+    sendErr:       { de: 'Fehler — bitte direkt mailen', en: 'Error — please email directly' },
+    darkBtnLight:  { de: 'Hellmodus aktivieren',        en: 'Switch to light mode' },
+    darkBtnDark:   { de: 'Dunkelmodus aktivieren',      en: 'Switch to dark mode' },
+    footerCross:   { de: 'IT-Profil ansehen: Systemadministration · IAM →', en: 'View IT profile: system administration · IAM →' },
   },
 
 };
