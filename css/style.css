@@ -432,6 +432,7 @@ textarea.contact-input { resize: vertical; min-height: 130px; }
     padding: 0 !important;
   }
 
+
   section {
     padding: 20px 0 !important;
     page-break-inside: avoid;
@@ -450,4 +451,18 @@ textarea.contact-input { resize: vertical; min-height: 130px; }
     -webkit-backdrop-filter: none !important;
     page-break-inside: avoid;
   }
+}
+
+/* Legal Footer Links */
+.footer-legal {
+  margin-top: 10px;
+}
+.footer-legal a {
+  color: var(--accent-primary);
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 0.9rem;
+}
+.footer-legal a:hover {
+  text-decoration: underline;
 }

@@ -1,0 +1,79 @@
+---
+# kki:
+#   name: github-to-gitlab-mirror
+#   version: 1.1.0
+#   source_of_truth: GitHub/main
+#   mirror_target: GitLab
+#   deployment: GitHub Pages only
+#   secrets:
+#     - GITLAB_MIRROR_TOKEN
+#   destructive_operations: disabled
+#   sync_scope: main only
+#   review_required_before_push: true
+
+name: Mirror main to GitLab
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Nur Verbindung prüfen, GitLab nicht verändern"
+        required: true
+        default: true
+        type: boolean
+
+permissions:
+  contents: read
+
+concurrency:
+  group: gitlab-mirror-${{ github.repository }}
+  cancel-in-progress: false
+
+jobs:
+  mirror-main:
+    name: Mirror main branch
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Validate required secret
+        env:
+          GITLAB_MIRROR_TOKEN: ${{ secrets.GITLAB_MIRROR_TOKEN }}
+        run: |
+          set -euo pipefail
+          test -n "${GITLAB_MIRROR_TOKEN}"
+          echo "Mirror secret is available."
+
+      - name: Checkout full main history
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: main
+
+      - name: Validate GitLab target access
+        env:
+          GITLAB_MIRROR_TOKEN: ${{ secrets.GITLAB_MIRROR_TOKEN }}
+          TARGET_URL: https://oauth2:${{ secrets.GITLAB_MIRROR_TOKEN }}@gitlab.com/${{ github.repository }}.git
+        run: |
+          set -euo pipefail
+          git ls-remote "${TARGET_URL}" >/dev/null
+          echo "GitLab target is reachable."
+
+      - name: Push main to GitLab
+        if: ${{ github.event_name != 'workflow_dispatch' || inputs.dry_run == false }}
+        env:
+          GITLAB_MIRROR_TOKEN: ${{ secrets.GITLAB_MIRROR_TOKEN }}
+          TARGET_URL: https://oauth2:${{ secrets.GITLAB_MIRROR_TOKEN }}@gitlab.com/${{ github.repository }}.git
+        run: |
+          set -euo pipefail
+          git remote add gitlab "${TARGET_URL}"
+          git push gitlab HEAD:refs/heads/main
+          echo "main branch mirrored successfully."
+
+      - name: Report dry-run
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run == true }}
+        run: |
+          echo "Dry-run passed. No GitLab changes were made."
