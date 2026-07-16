@@ -396,3 +396,61 @@ textarea.contact-input { resize: vertical; min-height: 130px; }
   --accent-1-rgb: 255, 122, 0;
   --accent-2-rgb: 0, 229, 255;
 }
+
+/* ==========================================================================
+   PRINT STYLES
+   ========================================================================== */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    font-size: 12pt;
+    line-height: 1.5;
+  }
+  
+  [data-theme="dark"] {
+    --kk-bg: #ffffff;
+    --kk-surface: #ffffff;
+    --kk-heading: #000000;
+    --kk-text: #333333;
+    --kk-muted: #666666;
+    --kk-border-lo: #cccccc;
+    --kk-border-hi: #999999;
+    --accent-1: #000000;
+    --accent-2: #000000;
+  }
+
+  .nav, .hero-controls, .available-badge, .btn-primary, #darkToggle, #colorToggle, #langToggle, #hamburger, #bgCanvas {
+    display: none !important;
+  }
+
+  .section-alt {
+    background: transparent !important;
+    border: none !important;
+  }
+
+  .container {
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  section {
+    padding: 20px 0 !important;
+    page-break-inside: avoid;
+  }
+
+  h1, h2, h3, .section-title {
+    color: #000000 !important;
+    page-break-after: avoid;
+  }
+  
+  .hero-card, .timeline-item, .card, .glass-panel {
+    box-shadow: none !important;
+    border: 1px solid #cccccc !important;
+    background: transparent !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    page-break-inside: avoid;
+  }
+}
