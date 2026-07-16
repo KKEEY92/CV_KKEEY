@@ -94,6 +94,20 @@ window.KK_DATA = {
       linkLabel: { de: 'Architektur ansehen →', en: 'View Architecture →' },
     },
     {
+      name: 'AI Virtual Calling',
+      color: '#f43f5e',
+      colorRgb: '244,63,94',
+      tag: 'WebRTC · React',
+      sub: { de: 'Gemini Live Voice UI mit Video-Avatar', en: 'Gemini Live Voice UI with Video Avatar' },
+      desc: {
+        de: 'Full-Stack WebRTC-Applikation. React-Frontend mit Tailwind (Liquid Glass Design) kommuniziert über WebSockets und FastAPI mit der Gemini Multimodal Live API. Unterstützt Echtzeit-Sprache und Screen-Sharing.',
+        en: 'Full-stack WebRTC application. React frontend with Tailwind (Liquid Glass Design) communicates via WebSockets and FastAPI with the Gemini Multimodal Live API. Supports real-time voice and screen sharing.',
+      },
+      stack: ['React', 'TypeScript', 'WebRTC', 'Python FastAPI', 'Gemini Live API'],
+      link: 'https://github.com/KKEEY92/AI-Virtual-Calling-and-Write-a-friend',
+      linkLabel: { de: 'Auf GitHub ansehen →', en: 'View on GitHub →' },
+    },
+    {
       name: 'AFM-3-Chat',
       color: '#3b82f6',
       colorRgb: '59,130,246',
