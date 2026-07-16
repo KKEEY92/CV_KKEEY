@@ -46,10 +46,10 @@ window.KK_DATA = {
     {
       icon: '🤖',
       label: { de: 'AI Agent Architekt', en: 'AI Agent Architect' },
-      sub:   { de: 'Python · TypeScript · Gemini · ComfyUI · LM Studio', en: 'Python · TypeScript · Gemini · ComfyUI · LM Studio' },
+      sub:   { de: '100% From Scratch · GitHub Actions · Cloud Run', en: '100% From Scratch · GitHub Actions · Cloud Run' },
       detail: {
-        de: 'Baut und deployt eigenständige AI-Agentensysteme. Claire V2.5, AuraTone, Sortier-Pipelines — Code der funktioniert und sichtbar ist.',
-        en: 'Builds and deploys autonomous AI agent systems. Claire V2.5, AuraTone, sorting pipelines — code that works and is visible.',
+        de: 'Ich baue Agentensysteme komplett ohne Frameworks auf der grünen Wiese – jeder Code-Ordner startet leer mit einer CLAUDE.md oder AGENT.md. Deployments laufen via Docker, GitHub Actions und Google Cloud Run.',
+        en: 'I build agent systems entirely from scratch without frameworks – every code folder starts empty with a CLAUDE.md or AGENT.md. Deployments run via Docker, GitHub Actions, and Google Cloud Run.',
       },
     },
     {
@@ -181,7 +181,7 @@ window.KK_DATA = {
       label: { de: 'AI & Agents', en: 'AI & Agents' },
       skills: [
         { name: 'Gemini API / Vertex AI', pct: 92 },
-        { name: 'LLM Orchestration',       pct: 88 },
+        { name: 'From-Scratch Architekturen', pct: 95 },
         { name: 'Prompt Engineering',      pct: 90 },
         { name: 'ComfyUI / Image AI',      pct: 80 },
         { name: 'LM Studio (Local LLMs)',  pct: 82 },
@@ -191,9 +191,9 @@ window.KK_DATA = {
       label: { de: 'Systeme & Infra', en: 'Systems & Infrastructure' },
       skills: [
         { name: 'Active Directory / IAM', pct: 82 },
-        { name: 'Docker / Linux',         pct: 70 },
+        { name: 'Docker / Cloud Run',     pct: 85 },
+        { name: 'GitHub Actions (CI/CD)', pct: 80 },
         { name: 'FastAPI / Node.js',      pct: 72 },
-        { name: 'Firebase / Cloud',       pct: 68 },
       ],
     },
     {
@@ -228,10 +228,10 @@ window.KK_DATA = {
       color:   '#7c6af7',
       active:  false,
       desc: {
-        de: 'Active Directory, Entra ID, IAM, Citrix, Omnitracker, Innovaphone PBX, Windows-11-Migration und PowerShell-Automatisierung in einer bundesweiten KRITIS-Infrastrukturumgebung. Eigenentwicklungen: ein Tool zur automatisierten Ticket-Zuweisung sowie der KKEEY-Standard für reproduzierbare Fehlerdiagnose.',
-        en: 'Active Directory, Entra ID, IAM, Citrix, Omnitracker, Innovaphone PBX, Windows 11 migration, and PowerShell automation in a national critical infrastructure environment. Own developments: a tool for automated ticket assignment and the KKEEY Standard for reproducible fault diagnosis.',
+        de: 'Active Directory, Entra ID, Citrix (NetScaler), Omnitracker, Innovaphone PBX. Windows-11-Rollouts via Deskcenter Studio & Custom-PowerShell (Pausierung 46%-Update zur Speed-Optimierung). Endpoint-Security via FortiClient & Sophos. Eigene Ticket-Automation & der KKEEY-Standard.',
+        en: 'Active Directory, Entra ID, Citrix (NetScaler), Omnitracker, Innovaphone PBX. Windows 11 rollouts via Deskcenter Studio & custom PowerShell (pausing 46% update for speed optimization). Endpoint security via FortiClient & Sophos. Custom ticket automation & the KKEEY Standard.',
       },
-      tags: ['Active Directory', 'IAM', 'Citrix', 'PowerShell', 'Windows 11', 'KRITIS'],
+      tags: ['Active Directory', 'Citrix', 'Deskcenter Studio', 'PowerShell', 'KRITIS', 'FortiClient'],
     },
     {
       period:  { de: 'Juni 2026 · aktuell', en: 'June 2026 · present' },
