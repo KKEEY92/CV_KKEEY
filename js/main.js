@@ -1,6 +1,7 @@
 const D = window.KK_DATA;
 let lang = localStorage.getItem('kk_lang') || 'de';
 let darkMode = localStorage.getItem('kk_dark') !== 'false';
+let colorTheme = localStorage.getItem('kk_color') || 'purple';
 
 document.addEventListener('DOMContentLoaded', () => {
   applyTheme();
@@ -17,7 +18,10 @@ function t(obj) { return typeof obj === 'object' ? (obj[lang] || obj.de || '') :
 // ─── THEME ────────────────────────────────────────────────────────────
 function applyTheme() {
   document.documentElement.setAttribute('data-theme', darkMode ? 'dark' : 'light');
+  document.documentElement.setAttribute('data-color-theme', colorTheme === 'orange' ? 'orange' : '');
   localStorage.setItem('kk_dark', darkMode);
+  localStorage.setItem('kk_color', colorTheme);
+  if (typeof updateBgLight === 'function') updateBgLight();
   const btn = document.getElementById('darkToggle');
   if (btn) btn.setAttribute('aria-label', darkMode ? t(D.i18n.darkBtnLight) : t(D.i18n.darkBtnDark));
   if (btn) btn.innerHTML = darkMode
@@ -54,6 +58,14 @@ function initNav() {
     applyTheme();
     updateBgLight();
   });
+
+  const colorToggle = document.getElementById('colorToggle');
+  if (colorToggle) {
+    colorToggle.addEventListener('click', () => {
+      colorTheme = colorTheme === 'purple' ? 'orange' : 'purple';
+      applyTheme();
+    });
+  }
 
   document.getElementById('langToggle').addEventListener('click', () => {
     lang = lang === 'de' ? 'en' : 'de';
@@ -302,7 +314,7 @@ if (form) {
 }
 
 // ─── WEBGL BACKGROUND ────────────────────────────────────────────────
-let gl, uTime, uRes, uIntensity, uLight, rafId;
+let gl, uTime, uRes, uIntensity, uLight, uC1, uC2, rafId;
 
 function initBg() {
   const c = document.getElementById('kk-bg');
@@ -318,6 +330,7 @@ function initBg() {
   const FS = [
     'precision mediump float;',
     'uniform float u_t,u_i,u_l;',
+    'uniform vec3 u_c1,u_c2;',
     'uniform vec2 u_r;',
     'void main(){',
     '  vec2 uv=gl_FragCoord.xy/u_r;',
@@ -331,8 +344,8 @@ function initBg() {
     '  vec3 dark=vec3(.027,.027,.059);',
     '  vec3 lite=vec3(.933,.933,.973);',
     '  vec3 base=mix(dark,lite,u_l);',
-    '  vec3 pur=vec3(.486,.416,.969);',
-    '  vec3 teal=vec3(0.,.831,.667);',
+    '  vec3 pur=u_c1;',
+    '  vec3 teal=u_c2;',
     '  float db=1.-u_l;',
     '  vec3 col=base;',
     '  col+=pur*m1*w3*(.28+.18*db)*u_i;',
@@ -360,10 +373,19 @@ function initBg() {
   uRes = gl.getUniformLocation(prog, 'u_r');
   uIntensity = gl.getUniformLocation(prog, 'u_i');
   uLight = gl.getUniformLocation(prog, 'u_l');
+  uC1 = gl.getUniformLocation(prog, 'u_c1');
+  uC2 = gl.getUniformLocation(prog, 'u_c2');
 
   gl.uniform2f(uRes, W, H);
   gl.uniform1f(uIntensity, 1.0);
   gl.uniform1f(uLight, darkMode ? 0.0 : 1.0);
+  if (colorTheme === 'orange') {
+    gl.uniform3f(uC1, 1.0, 0.478, 0.0);
+    gl.uniform3f(uC2, 0.0, 0.898, 1.0);
+  } else {
+    gl.uniform3f(uC1, 0.486, 0.416, 0.969);
+    gl.uniform3f(uC2, 0.0, 0.831, 0.667);
+  }
 
   let t0 = null;
   const loop = ts => {
@@ -383,5 +405,15 @@ function initBg() {
 }
 
 function updateBgLight() {
-  if (gl && uLight !== null) gl.uniform1f(uLight, darkMode ? 0.0 : 1.0);
+  if (!gl) return;
+  if (uLight !== null) gl.uniform1f(uLight, darkMode ? 0.0 : 1.0);
+  if (uC1 !== null && uC2 !== null) {
+    if (colorTheme === 'orange') {
+      gl.uniform3f(uC1, 1.0, 0.478, 0.0);
+      gl.uniform3f(uC2, 0.0, 0.898, 1.0);
+    } else {
+      gl.uniform3f(uC1, 0.486, 0.416, 0.969);
+      gl.uniform3f(uC2, 0.0, 0.831, 0.667);
+    }
+  }
 }
