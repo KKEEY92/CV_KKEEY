@@ -90,7 +90,8 @@ a { color: inherit; text-decoration: none; }
   display: flex; align-items: center; justify-content: space-between; gap: 20px;
 }
 .nav-logo-img {
-  height: 38px; width: auto; border-radius: 4px; display: block;
+  height: 38px; width: 38px; border-radius: 4px; display: block;
+  object-fit: cover; flex-shrink: 0;
 }
 .nav-links {
   display: flex; gap: 22px; align-items: center; flex: 1; justify-content: center;
@@ -139,7 +140,7 @@ a { color: inherit; text-decoration: none; }
   margin: 0 auto 28px; animation: fadeInUp 0.7s ease both;
 }
 .hero-avatar img {
-  width: 100%; height: 100%; border-radius: 50%;
+  width: 100%; height: 100%; border-radius: 50%; display: block;
   object-fit: cover; object-position: center top;
   border: 2px solid var(--kk-bg);
 }
