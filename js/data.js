@@ -110,12 +110,12 @@ window.KK_DATA = {
       color: '#8b5cf6',
       colorRgb: '139,92,246',
       tag: 'Architecture Showcase',
-      sub: { de: 'DJ Mastering & Harmonic Mixing Engine', en: 'DJ Mastering & Harmonic Mixing Engine' },
+      sub: { de: 'Local-First Audio Intelligence Workstation', en: 'Local-First Audio Intelligence Workstation' },
       desc: {
-        de: 'AI-gestützte Audio-Mastering & Harmonic-Mixing Engine. Analysiert Tracks (Key, BPM, Energy), normalisiert auf LUFS-Ziel, baut harmonisch kohärente Sets.',
-        en: 'AI-assisted audio mastering & harmonic mixing engine. Analyzes tracks (key, BPM, energy), normalizes to LUFS target, builds harmonically coherent sets.',
+        de: 'Native Apple-Silicon macOS-Workstation für lokale Audioanalyse, harmonische Playlist-Curation und kontrolliertes Mastering. Rust/Tauri orchestriert Dateisystem, Job-Pipeline, SQLite-Katalog und macOS-Integration; React/TypeScript liefert die interaktive Workstation inklusive GPU-optimierter Waveform-Visualisierung. Proprietär — Demo auf Anfrage.',
+        en: 'Native Apple-Silicon macOS workstation for local audio analysis, harmonic playlist curation, and controlled mastering. Rust/Tauri orchestrates file systems, job pipelines, SQLite catalogs, and macOS integration; React/TypeScript provides the interactive UI including GPU-optimized waveform visualization. Proprietary — demo on request.',
       },
-      stack: ['TypeScript', 'React', 'Python DSP', 'librosa', 'Firebase'],
+      stack: ['Rust', 'Tauri 2.0', 'React', 'TypeScript', 'Metal GPU', 'SQLite'],
       link: 'https://github.com/KKEEY92/AuraTone-Architecture',
       linkLabel: { de: 'Architektur ansehen →', en: 'View Architecture →' },
     }
