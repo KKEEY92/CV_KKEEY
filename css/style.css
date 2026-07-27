@@ -345,26 +345,36 @@ textarea.contact-input { resize: vertical; min-height: 130px; }
 }
 .contact-links a:hover { color: var(--kk-text-bright); }
 .contact-links svg { width: 15px; height: 15px; }
-.freelancermap-badge-link {
+.btn-freelancermap-contact {
   display: inline-flex !important;
   align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, #0284c7 0%, #0066a1 100%);
-  padding: 6px 14px;
-  border-radius: 8px;
-  box-shadow: 0 4px 14px rgba(2, 132, 199, 0.38);
-  transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease !important;
-  height: 38px;
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  gap: 8px;
+  background: linear-gradient(135deg, #0284c7 0%, #0066a1 100%) !important;
+  color: #ffffff !important;
+  padding: 8px 16px !important;
+  border-radius: 8px !important;
+  font-size: 13.5px !important;
+  font-weight: 600 !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+  box-shadow: 0 3px 12px rgba(2, 132, 199, 0.35) !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+  text-decoration: none !important;
 }
-.freelancermap-badge-link img {
+.btn-freelancermap-contact:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 5px 16px rgba(2, 132, 199, 0.55) !important;
+  color: #ffffff !important;
+  text-decoration: none !important;
+}
+.btn-freelancermap-contact .fm-logo-img {
+  height: 18px;
+  width: auto;
   filter: brightness(0) invert(1);
-  transition: transform 0.2s ease;
+  display: inline-block;
 }
-.freelancermap-badge-link:hover {
-  transform: translateY(-2px) scale(1.02);
-  box-shadow: 0 6px 20px rgba(2, 132, 199, 0.55);
-  filter: brightness(1.1);
+.btn-freelancermap-contact .fm-text {
+  font-weight: 700;
+  color: #ffffff;
 }
 
 /* FOOTER */
