@@ -349,16 +349,22 @@ textarea.contact-input { resize: vertical; min-height: 130px; }
   display: inline-flex !important;
   align-items: center;
   justify-content: center;
-  background: #ffffff;
-  padding: 4px 10px;
-  border-radius: 6px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
-  height: 32px;
+  background: linear-gradient(135deg, #0284c7 0%, #0066a1 100%);
+  padding: 6px 14px;
+  border-radius: 8px;
+  box-shadow: 0 4px 14px rgba(2, 132, 199, 0.38);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease !important;
+  height: 38px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+.freelancermap-badge-link img {
+  filter: brightness(0) invert(1);
+  transition: transform 0.2s ease;
 }
 .freelancermap-badge-link:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 6px 20px rgba(2, 132, 199, 0.55);
+  filter: brightness(1.1);
 }
 
 /* FOOTER */
