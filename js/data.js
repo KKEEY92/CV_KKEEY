@@ -69,7 +69,7 @@ window.KK_DATA = {
       name: 'Claire V2.5 Native Audio',
       color: '#00d4aa',
       colorRgb: '0,212,170',
-      tag: 'Open Source · LiveKit 2.x',
+      tag: '● Produktiv v2.5 · Open Source · LiveKit 2.x',
       sub: { de: 'Voice AI Agent · Full-Duplex · ~200ms Latenz · Local LLM Switch', en: 'Voice AI Agent · Full-Duplex · ~200ms Latency · Local LLM Switch' },
       desc: {
         de: 'Echtzeit Voice AI Agent auf LiveKit 2.x Agents Basis. Unterstützt Google Speech/TTS, Gemini 2.5 Flash sowie per .env Switch ein lokales LM Studio LLM (Qwen2.5-7B). Enthält EmotionEngine v2 (±0.08 Energy Clamp), Silero VAD, Google Drive RAG Gedächtnis und WebGL Audio Visualizer.',
@@ -83,7 +83,7 @@ window.KK_DATA = {
       name: 'AuraTone AI v2.0',
       color: '#f7a841',
       colorRgb: '247,168,65',
-      tag: 'Tauri 2.0 · Rust · Metal GPU',
+      tag: '● Standalone v2.0 · Tauri 2.0 · Metal GPU',
       sub: { de: 'Native Standalone Workstation · Audio Mastering & Harmonic Mixing', en: 'Native Standalone Workstation · Audio Mastering & Harmonic Mixing' },
       desc: {
         de: 'AI-gestützte Audio-Mastering & Harmonic-Mixing Workstation. Native Desktop-App unter Tauri 2.0 (Rust-Kernel) mit Metal GPU Unified Memory Waveform-Rendering (120Hz), 3-Way SQLite Triade, Python DSP (librosa, ffmpeg) und Google Gemini 1.5 Pro Musikologie-Orchestrierung.',
@@ -97,7 +97,7 @@ window.KK_DATA = {
       name: 'AI Virtual Calling',
       color: '#f43f5e',
       colorRgb: '244,63,94',
-      tag: 'WebRTC · React',
+      tag: '● Demo / Prototype · WebRTC · React',
       sub: { de: 'Gemini Live Voice UI mit Video-Avatar', en: 'Gemini Live Voice UI with Video Avatar' },
       desc: {
         de: 'Full-Stack WebRTC-Applikation. React-Frontend mit Tailwind (Liquid Glass Design) kommuniziert über WebSockets und FastAPI mit der Gemini Multimodal Live API. Echtzeit-Sprache, Avatar-Animation und Screen-Sharing.',
@@ -111,7 +111,7 @@ window.KK_DATA = {
       name: 'AFM-3 Chat',
       color: '#3b82f6',
       colorRgb: '59,130,246',
-      tag: 'macOS Native · Local AI',
+      tag: '● Local macOS App · Apple Foundation Model',
       sub: { de: 'Swift WKWebView · Apple Foundation Model · Offline', en: 'Swift WKWebView · Apple Foundation Model · Offline' },
       desc: {
         de: 'Native macOS-App mit Swift WKWebView für das Apple Foundation Model (AFM-3-Core) — 100% lokal ohne Cloud. Matrix Rain UI, Obsidian Vault RAG, macOS say Neural TTS, ComfyUI Bildgenerierung & Push-to-Talk.',
@@ -125,7 +125,7 @@ window.KK_DATA = {
       name: 'Architecture Showcases',
       color: '#8b5cf6',
       colorRgb: '139,92,246',
-      tag: 'Public Documentation',
+      tag: '● C4 Spec & Blueprint · Public Docs',
       sub: { de: 'Claire V2 & AuraTone Systemarchitekturen', en: 'Claire V2 & AuraTone System Architecture' },
       desc: {
         de: 'Öffentliche Architektur-Repositories (Claire-V2-Architecture & AuraTone-Architecture) zur Demonstration von C4 / Mermaid Systemdesign, SLSA Level 3 Provenance und Serverless Cloud Run / Container Setups.',
@@ -139,7 +139,7 @@ window.KK_DATA = {
       name: 'sortiere.py',
       color: '#22c55e',
       colorRgb: '34,197,94',
-      tag: 'Open Source CLI',
+      tag: '● CLI Utility v1.0 · Open Source',
       sub: { de: 'Universeller CLI Datei-Organizer · Python 3.12', en: 'Universal CLI File Organizer · Python 3.12' },
       desc: {
         de: 'Intelligenter Datei-Organizer mit token-basiertem Matching, Dry-Run-Modus und 5-Pillar-Kategorisierung. Sortiert beliebige Verzeichnisse nach konfigurierbaren Regeln.',
