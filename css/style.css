@@ -345,6 +345,21 @@ textarea.contact-input { resize: vertical; min-height: 130px; }
 }
 .contact-links a:hover { color: var(--kk-text-bright); }
 .contact-links svg { width: 15px; height: 15px; }
+.freelancermap-badge-link {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  padding: 4px 10px;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+  height: 32px;
+}
+.freelancermap-badge-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
 
 /* FOOTER */
 .footer {
