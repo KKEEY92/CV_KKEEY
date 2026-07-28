@@ -1,107 +1,190 @@
-# CV_KKEEY: Agentic AI & Systems Engineering Portfolio
-
 <div align="center">
-  <img src="https://kkeey92.github.io/CV_KKEEY/assets/avatar.jpg" alt="Kevin Kuck" width="140" style="border-radius:50%">
-  <h3>Kevin Kuck — IT Systems Engineer & Agentic AI Architect</h3>
-  
-  [![Live Demo](https://img.shields.io/badge/Live_Portfolio-CV__KKEEY-FF7A00?style=for-the-badge&logo=github&logoColor=white)](https://kkeey92.github.io/CV_KKEEY/)
-  [![Language: DE/EN](https://img.shields.io/badge/Language-Bilingual_DE%2FEN-00E5FF?style=for-the-badge)]()
-  [![Framework: KKI Glass](https://img.shields.io/badge/Framework-KKI_Liquid_Glass-7c6af7?style=for-the-badge)]()
-  [![Compliance: DSGVO](https://img.shields.io/badge/Compliance-DSGVO_%2F_DDG-34A853?style=for-the-badge)]()
+  <img src="https://kkeey92.github.io/CV_KKEEY/assets/avatar.jpg" alt="Kevin Kuck" width="120" style="border-radius:50%">
+  <h1>Kevin Kuck</h1>
+  <p><strong>IT Systems Engineer · Agentic AI Architect · Voice AI & Automation Specialist</strong></p>
+
+  [![Portfolio](https://img.shields.io/badge/🌐_Live_Portfolio-kkeey92.github.io-FF7A00?style=for-the-badge)](https://kkeey92.github.io/CV_KKEEY/)
+  [![IT Portfolio](https://img.shields.io/badge/🖥️_IT_Portfolio-CV__IT__KKEEY-00E5FF?style=for-the-badge)](https://kkeey92.github.io/CV_IT_KKEEY/)
+  [![Freelancermap](https://img.shields.io/badge/Freelancermap-Profil-3D9CED?style=for-the-badge&logo=data:image/svg+xml;base64,)](https://www.freelancermap.de/profil/kevin-kuck)
+  [![LinkedIn](https://img.shields.io/badge/LinkedIn-kevin--kuck--it-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/kevin-kuck-it/)
+  [![Verfügbar](https://img.shields.io/badge/Status-Verfügbar_·_Remote_%2F_DACH-00C853?style=for-the-badge)]()
+  [![Stundensatz](https://img.shields.io/badge/Rate-ab_70_EUR%2Fh-FF7A00?style=for-the-badge)]()
 </div>
 
 ---
 
-## 🇩🇪 Deutsch
+## 🇩🇪 Über dieses Profil
 
-### Über dieses Repository
-Dieses Repository beherbergt das offizielle interaktive Web-Portfolio von **Kevin Kuck** (IT Systems Engineer & Agentic AI Architekt). Es repräsentiert über 15 Jahre Praxiserfahrung an der Schnittstelle zwischen klassischer IT-Systemadministration (Active Directory, IAM, Entra ID, KRITIS) und modernster KI-Entwicklung (Vertex AI, LiveKit, Autonomous Agent Workflows, Audio DSP).
+Dieses Repository beherbergt das offizielle interaktive Web-Portfolio von **Kevin Kuck** — IT Systems Engineer & Agentic AI Architekt mit **14+ Jahren Praxiserfahrung** an der Schnittstelle zwischen Enterprise-IT (Active Directory, IAM, KRITIS) und modernster KI-Entwicklung (Voice AI Agents, RAG, Vertex AI, Python).
 
-Das Interface basiert auf dem **KKI Liquid Glass Framework** (Neon Orange `#FF7A00`, Electric Cyan `#00E5FF`) mit dynamischen Theme-Switches, barrierefreier Typografie und responsiven Performance-Animationen.
+Aktuell als **Freelancer im DACH-Raum** verfügbar — Remote & Hybrid.
 
-### Core-Features & Highlights
-- 🧠 **Agentic AI Showcase:** Live-Referenzen zu autonome Sprachagenten (*Claire V2.5 Native Audio*), Audio-Mastering (*AuraTone AI*) und multi-modalen Workflows (*AFM Chat*).
-- 🔒 **DSGVO & DDG Compliance:** Integrierte rechtssichere Seiten für Impressum (§ 5 DDG) und Datenschutz (Art. 13 DSGVO).
-- 🌐 **Zweisprachig (DE / EN):** Vollständig synchronisierter Sprachumschalter für internationale B2B-Anfragen und Stakeholder.
-- ⚡ **High Performance:** Puristischer Tech-Stack ohne Framework-Overhead für minimale Ladezeiten.
+## 🇬🇧 About This Portfolio
 
----
+Official interactive portfolio of **Kevin Kuck** — IT Systems Engineer & Agentic AI Architect with 14+ years of enterprise experience spanning Microsoft infrastructure, KRITIS security environments, and cutting-edge AI agent engineering (Voice AI, LiveKit, RAG, Vertex AI).
 
-## 🇬🇧 English
-
-### Overview
-This repository hosts the official interactive portfolio of **Kevin Kuck** (IT Systems Engineer & Agentic AI Architect). It highlights 15+ years of operational experience spanning enterprise IT system administration (Active Directory, IAM, Microsoft Entra ID, KRITIS security) and state-of-the-art AI engineering (Vertex AI, LiveKit Agents 2.x, Autonomous AI Agents, Audio DSP).
-
-The web interface is built using the **KKI Liquid Glass Framework** featuring fluid neon themes, accessibility-first semantics, and real-time interactive micro-animations.
-
-### Key Features
-- 🧠 **Agentic AI Showcase:** Live references for autonomous voice companions (*Claire V2.5 Native Audio*), DSP audio mastering (*AuraTone AI*), and multimodal chat (*AFM Chat*).
-- 🔒 **GDPR & Legal Compliance:** Built-in legal notice (Impressum) and GDPR-compliant privacy policy.
-- 🌐 **Bilingual (DE / EN):** Instant language switching tailored for international enterprise clients and freelance contracts.
-- ⚡ **Zero-Overhead Performance:** Native HTML5, vanilla CSS3 variables, and clean ES6 JavaScript modules.
+Currently available for **freelance engagements across the DACH region** — Remote & Hybrid.
 
 ---
 
-## 🏗 Systemarchitektur / System Architecture
+## 🎯 Skill Matrix
+
+### Agentic AI & Voice Systems
+![Python](https://img.shields.io/badge/Python-3.12%2B-3776AB?style=flat-square&logo=python&logoColor=white)
+![LiveKit](https://img.shields.io/badge/LiveKit-2.x_Agents-FF6B35?style=flat-square)
+![Gemini](https://img.shields.io/badge/Gemini-2.5_Flash_/_Pro-4285F4?style=flat-square&logo=googlegemini&logoColor=white)
+![Vertex AI](https://img.shields.io/badge/Vertex_AI-GCP-4285F4?style=flat-square&logo=googlecloud&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-Async-009688?style=flat-square&logo=fastapi)
+![LLM](https://img.shields.io/badge/LLM-Local_%26_Cloud-7C3AED?style=flat-square)
+![RAG](https://img.shields.io/badge/RAG-Obsidian_%2F_Drive-00BCD4?style=flat-square)
+![Docker](https://img.shields.io/badge/Docker-Cloud_Run-2496ED?style=flat-square&logo=docker&logoColor=white)
+
+### Enterprise IT & Infrastructure
+![Active Directory](https://img.shields.io/badge/Active_Directory-Entra_ID-0078D4?style=flat-square&logo=microsoft&logoColor=white)
+![PowerShell](https://img.shields.io/badge/PowerShell-Automation-5391FE?style=flat-square&logo=powershell&logoColor=white)
+![Windows Server](https://img.shields.io/badge/Windows_Server-KRITIS-0078D4?style=flat-square&logo=windows&logoColor=white)
+![IAM](https://img.shields.io/badge/IAM-Identity_Lifecycle-00897B?style=flat-square)
+![ITIL](https://img.shields.io/badge/ITIL-4-6D4C41?style=flat-square)
+![MDM](https://img.shields.io/badge/MDM-Deskcenter-455A64?style=flat-square)
+
+### Native & Web Development
+![Rust](https://img.shields.io/badge/Rust-Tauri_2.0-E57324?style=flat-square&logo=rust&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-React_19-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![SQLite](https://img.shields.io/badge/SQLite-3--Way_Triade-003B57?style=flat-square&logo=sqlite&logoColor=white)
+![Metal](https://img.shields.io/badge/Metal_GPU-Apple_Silicon-999999?style=flat-square&logo=apple)
+![WebRTC](https://img.shields.io/badge/WebRTC-Real--time-FF6D00?style=flat-square)
+
+---
+
+## 🚀 Flagship Projects
+
+### 🌌 Claire V2.5 — Enterprise Voice AI Agent
+> Autonomes, emotionales Voice-AI-System mit ~200ms Latenz über WebRTC.
+
+- **Stack:** Python 3.12+ · LiveKit 2.x · Gemini 2.5 Flash · Silero VAD · FastAPI · Google STT/TTS Chirp3-HD
+- **Features:** Hybride Cloud/Local-Inferenz · Drive & Obsidian RAG · EmotionEngine · Multi-Modal
+- **Repo:** [claire-v2.5-native-audio](https://github.com/KKEEY92/claire-v2.5-native-audio)
+
+### 🎚️ AuraTone AI v2.0 — Native Audio Processing Engine
+> Lokale macOS-Workstation für KI-gestützte Musik-Analyse & Metadaten-Management.
+
+- **Stack:** Rust · Tauri 2.0 · SQLite Triade · Apple Metal GPU · Python DSP (librosa/ffmpeg) · Gemini 1.5 Pro
+- **Features:** 120Hz Waveform-Visualisierung · Privacy-first (100% lokal) · Hermetische DSP-Sidecars
+- **Repo:** [AuraTone-Architecture](https://github.com/KKEEY92/AuraTone-Architecture) *(Architecture Showcase)*
+
+### 🏢 Johanniter KRITIS IAM — Enterprise Identity Management
+> Administration von 70.000+ Benutzer-Identitäten in KRITIS-Infrastruktur.
+
+- **Stack:** Active Directory · Microsoft Entra ID · PowerShell · LAPS · Deskcenter MDM · Exchange Admin
+- **Scope:** Windows 11 Bundesrollout · OUs & Berechtigungsgruppen · Automatisierte Audit-Workflows
+
+---
+
+## 🏗️ Portfolio Architecture
 
 ```mermaid
 graph TD
     subgraph Client["🖥️ Client Browser"]
-        UI["KKI Liquid Glass UI"]
-        LANG["DE / EN Language Engine"]
-        THEME["Dark / Light / Accent Theme FSM"]
-    end
-    
-    subgraph Host["🔴 Hosting & Delivery"]
-        GH["GitHub Pages (CDN & SSL)"]
-        ASSETS["Static Assets (HTML / CSS / WebP)"]
+        UI["KKI Liquid Glass UI\n(Neon Orange / Cyan)"]
+        LANG["DE ⇄ EN Language FSM"]
+        THEME["Dark / Light / Accent Theme"]
     end
 
-    subgraph Service["⚡ Serverless Services"]
-        W3F["Web3Forms API"]
-        MAIL["kuck_kevin@icloud.com"]
+    subgraph CI["⚙️ CI/CD Pipeline"]
+        GHA["GitHub Actions\n(sync + mirror)"]
+        SYNC["sync_projects.py\n(tägl. 04:00 UTC)"]
+        MIRROR["mirror-to-gitlab.yml"]
     end
 
-    subgraph Showcase["🤖 Agentic AI Showcase Repositories"]
-        CLAIRE["Claire V2.5 (Voice AI Agent)"]
-        AURA["AuraTone AI (Audio DSP)"]
-        AFM["AFM Chat (Multimodal)"]
+    subgraph Host["☁️ Hosting"]
+        GHP["GitHub Pages (CDN + SSL)"]
+        GL["GitLab Mirror (KKEEY92)"]
     end
 
-    UI --> GH
-    GH --> ASSETS
+    subgraph Ext["🔗 Externe Services"]
+        W3F["Web3Forms API\n(serverless contact)"]
+        GH_API["GitHub API\n(release tags)"]
+    end
+
+    UI --> GHP
+    GHA --> SYNC --> GH_API
+    GHA --> MIRROR --> GL
     UI --> LANG & THEME
-    UI -->|Contact Request| W3F --> MAIL
-    UI -.-> Showcase
+    UI -->|Contact| W3F
 ```
 
 ---
 
-## 🛠 Local Development & Testing
+## 📂 Repository Structure
+
+```
+CV_KKEEY/
+├── index.html                  — Single Page Application (SPA)
+├── css/
+│   ├── style.css               — KKI Liquid Glass Design System
+│   └── fonts.css               — Custom typography
+├── js/
+│   ├── main.js                 — App core, router, i18n, theme FSM
+│   └── data.js                 — Project data (auto-updated via CI)
+├── assets/                     — Images, avatar, project screenshots
+├── scripts/
+│   └── sync_projects.py        — GitHub API sync script
+├── .github/workflows/
+│   ├── sync-project-status.yml — Daily auto-update (04:00 UTC)
+│   └── mirror-to-gitlab.yml    — GitLab mirror pipeline
+└── legal/
+    ├── impressum.html           — § 5 DDG Impressum
+    └── datenschutz.html         — Art. 13 DSGVO Datenschutz
+```
+
+---
+
+## ⚙️ Local Development
 
 ```bash
-# 1. Repository klonen / Clone repo
+# Repository klonen
 git clone https://github.com/KKEEY92/CV_KKEEY.git
 cd CV_KKEEY
 
-# 2. Lokalen Webserver starten / Start local webserver
+# Lokalen Dev-Server starten
 python3 -m http.server 3000
+# → http://localhost:3000
 
-# 3. Im Browser öffnen / Open in browser
-# http://localhost:3000
+# CI/CD Sync manuell triggern (optional)
+python3 scripts/sync_projects.py
 ```
 
 ---
 
-## 💼 Freelance & Contact Information
+## 📜 Zertifizierungen / Certifications
 
-**Kevin Kuck** — *IT Systems Engineer & Agentic AI Architect*  
-Available for freelance architecture consulting, AI agent implementation, and enterprise IT engineering.
-
-- 🌐 **Live Portfolio:** [kkeey92.github.io/CV_KKEEY/](https://kkeey92.github.io/CV_KKEEY/)
-- 👔 **LinkedIn:** [linkedin.com/in/kevin-kuck-it/](https://www.linkedin.com/in/kevin-kuck-it/)
-- 🦊 **GitLab:** [gitlab.com/KKEEY92](https://gitlab.com/KKEEY92)
-- 🐙 **GitHub:** [github.com/KKEEY92](https://github.com/KKEEY92)
+| Zertifikat | Aussteller | Jahr |
+|---|---|---|
+| Cisco Certified Support Technician IT Support | Pearson / Coursera | 2026 |
+| Microsoft Generative AI Fundamentals (PMI®) | Microsoft | 2026 |
+| ITIL 4 vs. ITIL 2011 | — | 2026 |
+| Microsoft 365 Fundamentals MS-900 (I + II) | Microsoft | 2026 |
+| Microsoft 365 Admin — Benutzersupport | Microsoft | 2026 |
+| Windows 11 Troubleshooting IT Support | — | 2026 |
 
 ---
-&copy; 2026 Kevin Kuck. All rights reserved. / Alle Rechte vorbehalten.
+
+## 💼 Freelance & Contact
+
+**Kevin Kuck** — *IT Systems Engineer & Agentic AI Architect*  
+📍 Butzbach, DE · Remote verfügbar · DACH-Raum  
+💶 Stundensatz: ab **70 EUR/h** · verhandelbar
+
+| Kanal | Link |
+|---|---|
+| 🌐 AI Portfolio | [kkeey92.github.io/CV_KKEEY](https://kkeey92.github.io/CV_KKEEY/) |
+| 🖥️ IT Portfolio | [kkeey92.github.io/CV_IT_KKEEY](https://kkeey92.github.io/CV_IT_KKEEY/) |
+| 🗂️ Freelancermap | [freelancermap.de/profil/kevin-kuck](https://www.freelancermap.de/profil/kevin-kuck) |
+| 👔 LinkedIn | [linkedin.com/in/kevin-kuck-it](https://www.linkedin.com/in/kevin-kuck-it/) |
+| 🦊 GitLab | [gitlab.com/KKEEY92](https://gitlab.com/KKEEY92) |
+
+---
+
+<div align="center">
+  <sub>© 2026 Kevin Kuck · All rights reserved · KKI-Standard v3.0</sub>
+</div>
