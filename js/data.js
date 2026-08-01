@@ -85,25 +85,25 @@ window.KK_DATA = {
     {
       id: 'auratone-ai',
       repo: 'KKEEY92/AuraTone-AI-by-KKEEy',
-      status: { type: 'implemented', codeVersion: '2.0.0', latestTag: 'v1.3.0' },
+      status: { type: 'implemented', codeVersion: '2.0.0', latestTag: 'v1.3.0', sourceVisibility: 'private', publicBinaryRelease: false },
       name: 'AuraTone AI Desktop',
       color: '#f7a841',
       colorRgb: '247,168,65',
       sub: { de: 'Native Audio-Analyse-Workstation · Tauri · Rust · Python DSP', en: 'Native Audio Analysis Workstation · Tauri · Rust · Python DSP' },
       desc: {
-        de: 'Native Desktop-Anwendung für Audioanalyse und harmonische Musikorganisation. Der Tauri-/Rust-Kern verwaltet lokale Dateien, SQLite-Datenbestände und Waveform-Peaks. Die Python-DSP-Pipeline analysiert Lautheit, BPM und Tonart mit ffmpeg, librosa und NumPy.',
-        en: 'Native desktop app for audio analysis and harmonic music organization. The Tauri/Rust core manages local files, SQLite data, and waveform peaks. The Python DSP pipeline analyzes loudness, BPM, and key using ffmpeg, librosa, and NumPy.',
+        de: 'Native Desktop-Anwendung mit Tauri-/Rust-Kern und Python-DSP-Pipeline für lokale Audioanalyse. Die Implementierung ist privat. Öffentliche Architekturdokumentation und bereinigte technische Nachweise stehen zur externen Prüfung bereit.',
+        en: 'Native desktop application with a Tauri/Rust core and a Python DSP pipeline for local audio analysis. The implementation is private. Public architecture documentation and sanitized technical evidence are available for external review.',
       },
       stack: ['Tauri 2', 'Rust', 'React 19', 'Python DSP', 'ffmpeg ebur128', 'librosa', 'SQLite', 'Metal Shader + CPU-Fallback'],
       note: {
-        de: 'Codeversion 2.0.0, aktueller Git-Tag v1.3.0. CI-Workflow vorhanden; Release-, Signierungs- und Notarisierungsstatus werden separat ausgewiesen.',
-        en: 'Code version 2.0.0, current git tag v1.3.0. CI workflow in place; release, signing, and notarization status tracked separately.',
+        de: 'Die private Codebasis führt Version 2.0.0. Der im technischen Audit zuletzt festgestellte Git-Tag ist v1.3.0. Ein öffentlicher Binärrelease liegt derzeit nicht vor.',
+        en: 'The private codebase identifies as version 2.0.0. The latest Git tag identified during the technical audit is v1.3.0. No public binary release is currently available.',
       },
       links: [
-        { href: 'https://github.com/KKEEY92/AuraTone-AI-by-KKEEy', label: { de: 'Quellcode ansehen →', en: 'View source →' } },
-        { href: 'https://github.com/KKEEY92/AuraTone-AI-by-KKEEy/blob/main/aura_tone_dsp/BENCHMARK.md', label: { de: 'Beispielanalyse & Benchmark →', en: 'View example analysis & benchmark →' } },
-        { href: 'https://github.com/KKEEY92/AuraTone-AI-by-KKEEy/blob/main/docs/auratone-dashboard.png', label: { de: 'Screenshot ansehen →', en: 'View screenshot →' } },
-        { href: 'https://github.com/KKEEY92/AuraTone-AI-by-KKEEy/blob/main/CHANGELOG.md', label: { de: 'Release-Status (Changelog) →', en: 'Release status (changelog) →' } },
+        { href: 'https://github.com/KKEEY92/AuraTone-Architecture/blob/master/evidence/README.md', label: { de: 'Architektur →', en: 'Architecture →' } },
+        { href: 'https://github.com/KKEEY92/AuraTone-Architecture/blob/master/evidence/DSP_VALIDATION.md', label: { de: 'DSP-Nachweis →', en: 'DSP Validation →' } },
+        { href: 'https://github.com/KKEEY92/AuraTone-Architecture/blob/master/evidence/examples/library_analysis.sample.json', label: { de: 'Beispielanalyse →', en: 'Example Analysis →' } },
+        { href: 'https://github.com/KKEEY92/AuraTone-Architecture/blob/master/evidence/LIMITATIONS.md', label: { de: 'Evidenzgrenzen →', en: 'Evidence Limitations →' } },
       ],
     },
     {
@@ -149,8 +149,8 @@ window.KK_DATA = {
       colorRgb: '148,163,184',
       sub: { de: 'C4-Architekturdokumentation zu Claire V2 & AuraTone AI', en: 'C4 architecture documentation for Claire V2 & AuraTone AI' },
       desc: {
-        de: 'Öffentliche Architekturdokumentation zu den privaten Implementierungen von Claire V2 (LiveKit-Backend) und AuraTone AI — zeigt Systemgrenzen, Komponenten, Datenflüsse und technische Entscheidungen, ohne den privaten Quellcode offenzulegen. Die separate Standalone-Variante Claire V2.5 Native Audio ist ein eigenes, öffentliches Repository (siehe eigene Karte).',
-        en: 'Public architecture documentation for the private Claire V2 (LiveKit backend) and AuraTone AI implementations — shows system boundaries, components, data flows, and technical decisions without exposing the private source code. The separate standalone Claire V2.5 Native Audio variant is its own public repository (see its own card).',
+        de: 'Öffentliche Architekturdokumentation für private und öffentlich einsehbare Implementierungsvarianten.',
+        en: 'Public architecture documentation for private and publicly accessible implementation variants.',
       },
       stack: ['C4-Modell', 'Mermaid', 'System Context', 'Container Architecture', 'Voice Pipeline', 'Memory Architecture', 'Desktop Architecture'],
       links: [

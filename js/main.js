@@ -209,6 +209,9 @@ const STATUS_TYPE_LABELS = {
 function statusTagText(status) {
   if (!status || !status.type) return '';
   const label = t(STATUS_TYPE_LABELS[status.type]) || status.type;
+  if (status.sourceVisibility === 'private') {
+    return `● ${label} · Private Source · Public Evidence`;
+  }
   return status.latestTag ? `● ${label} · Tag ${status.latestTag}` : `● ${label}`;
 }
 
