@@ -66,6 +66,9 @@ window.KK_DATA = {
   // ─── PROJEKTE ───────────────────────────────────────────────────────────────
   projects: [
     {
+      id: 'claire-v25-native-audio',
+      repo: 'KKEEY92/claire-v2.5-native-audio',
+      status: { latestTag: null }, // no git tag exists on this repo yet — do not fabricate one
       name: 'Claire V2.5 Native Audio',
       color: '#00d4aa',
       colorRgb: '0,212,170',
@@ -80,10 +83,12 @@ window.KK_DATA = {
       linkLabel: { de: 'Auf GitHub ansehen →', en: 'View on GitHub →' },
     },
     {
+      id: 'auratone-ai',
+      repo: 'KKEEY92/AuraTone-AI-by-KKEEy',
+      status: { type: 'implemented', codeVersion: '2.0.0', latestTag: 'v1.3.0' },
       name: 'AuraTone AI Desktop',
       color: '#f7a841',
       colorRgb: '247,168,65',
-      tag: '● Implemented · Tag v1.3.0',
       sub: { de: 'Native Audio-Analyse-Workstation · Tauri · Rust · Python DSP', en: 'Native Audio Analysis Workstation · Tauri · Rust · Python DSP' },
       desc: {
         de: 'Native Desktop-Anwendung für Audioanalyse und harmonische Musikorganisation. Der Tauri-/Rust-Kern verwaltet lokale Dateien, SQLite-Datenbestände und Waveform-Peaks. Die Python-DSP-Pipeline analysiert Lautheit, BPM und Tonart mit ffmpeg, librosa und NumPy.',
@@ -102,6 +107,9 @@ window.KK_DATA = {
       ],
     },
     {
+      id: 'ai-virtual-calling',
+      repo: 'KKEEY92/AI-Virtual-Calling-and-Write-a-friend',
+      status: { latestTag: null },
       name: 'AI Virtual Calling',
       color: '#f43f5e',
       colorRgb: '244,63,94',
@@ -116,6 +124,9 @@ window.KK_DATA = {
       linkLabel: { de: 'Auf GitHub ansehen →', en: 'View on GitHub →' },
     },
     {
+      id: 'afm-3-chat',
+      repo: 'KKEEY92/afm-chat',
+      status: { latestTag: null },
       name: 'AFM-3 Chat',
       color: '#3b82f6',
       colorRgb: '59,130,246',
@@ -130,14 +141,16 @@ window.KK_DATA = {
       linkLabel: { de: 'Auf GitHub ansehen →', en: 'View on GitHub →' },
     },
     {
+      id: 'architecture-documentation',
+      repo: 'KKEEY92/Claire-V2-Architecture',
+      status: { type: 'documentation', codeVersion: null, latestTag: null },
       name: 'Architecture Documentation',
       color: '#94a3b8',
       colorRgb: '148,163,184',
-      tag: '● Public Documentation · Proprietary Implementations',
       sub: { de: 'C4-Architekturdokumentation zu Claire V2 & AuraTone AI', en: 'C4 architecture documentation for Claire V2 & AuraTone AI' },
       desc: {
-        de: 'Öffentliche Architekturdokumentationen zu Claire V2 und AuraTone AI. Zeigen Systemgrenzen, Komponenten, Datenflüsse und technische Entscheidungen, ohne proprietären Quellcode offenzulegen.',
-        en: 'Public architecture documentation for Claire V2 and AuraTone AI. Shows system boundaries, components, data flows, and technical decisions without exposing proprietary source code.',
+        de: 'Öffentliche Architekturdokumentation zu den privaten Implementierungen von Claire V2 (LiveKit-Backend) und AuraTone AI — zeigt Systemgrenzen, Komponenten, Datenflüsse und technische Entscheidungen, ohne den privaten Quellcode offenzulegen. Die separate Standalone-Variante Claire V2.5 Native Audio ist ein eigenes, öffentliches Repository (siehe eigene Karte).',
+        en: 'Public architecture documentation for the private Claire V2 (LiveKit backend) and AuraTone AI implementations — shows system boundaries, components, data flows, and technical decisions without exposing the private source code. The separate standalone Claire V2.5 Native Audio variant is its own public repository (see its own card).',
       },
       stack: ['C4-Modell', 'Mermaid', 'System Context', 'Container Architecture', 'Voice Pipeline', 'Memory Architecture', 'Desktop Architecture'],
       links: [
@@ -146,6 +159,9 @@ window.KK_DATA = {
       ],
     },
     {
+      id: 'sortiere-py',
+      repo: 'KKEEY92/sortiere.py',
+      status: { latestTag: null },
       name: 'sortiere.py',
       color: '#22c55e',
       colorRgb: '34,197,94',

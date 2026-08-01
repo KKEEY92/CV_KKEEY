@@ -193,11 +193,31 @@ function renderTrio() {
   `).join('');
 }
 
+// Human-readable labels for structured status.type — only used when a project
+// has no literal `tag` string (i.e. its visible status is meant to be computed
+// from `status` rather than hand-authored). Keep in sync with the controlled
+// vocabulary scripts/sync_projects.py expects to find under `status`.
+const STATUS_TYPE_LABELS = {
+  released:      { de: 'Released', en: 'Released' },
+  implemented:   { de: 'Implemented', en: 'Implemented' },
+  prototype:     { de: 'Prototype', en: 'Prototype' },
+  experiment:    { de: 'Experiment', en: 'Experiment' },
+  documentation: { de: 'Public Documentation · Proprietary Implementations', en: 'Public Documentation · Proprietary Implementations' },
+  demo:          { de: 'Demo', en: 'Demo' },
+};
+
+function statusTagText(status) {
+  if (!status || !status.type) return '';
+  const label = t(STATUS_TYPE_LABELS[status.type]) || status.type;
+  return status.latestTag ? `● ${label} · Tag ${status.latestTag}` : `● ${label}`;
+}
+
 function renderProjects() {
   const c = document.getElementById('projContainer');
   c.innerHTML = D.projects.map(p => {
     const rgb = p.colorRgb;
     const col = p.color;
+    const tagText = p.tag || statusTagText(p.status);
     const noteEl = p.note
       ? `<p class="project-note">${t(p.note)}</p>`
       : '';
@@ -214,7 +234,7 @@ function renderProjects() {
       <div>
         <div class="project-header">
           <h3 class="project-name">${p.name}</h3>
-          <span class="project-tag" style="border:1px solid rgba(${rgb},0.45);color:${col};background:rgba(${rgb},0.07)">${p.tag}</span>
+          <span class="project-tag" style="border:1px solid rgba(${rgb},0.45);color:${col};background:rgba(${rgb},0.07)">${tagText}</span>
         </div>
         <p class="project-sub">${t(p.sub)}</p>
       </div>
