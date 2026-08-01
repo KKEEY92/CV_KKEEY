@@ -13,12 +13,13 @@ import urllib.request
 from pathlib import Path
 
 # Repositories to track for CV_KKEEY
+# Keys must match the exact `name:` string of the project card in js/data.js.
 REPOS = {
     'Claire V2.5 Native Audio': 'KKEEY92/claire-v2.5-native-audio',
-    'AuraTone AI v2.0': 'KKEEY92/AuraTone-AI-by-KKEEy',
+    'AuraTone AI Desktop': 'KKEEY92/AuraTone-AI-by-KKEEy',
     'AI Virtual Calling': 'KKEEY92/AI-Virtual-Calling-and-Write-a-friend',
     'AFM-3 Chat': 'KKEEY92/afm-chat',
-    'Architecture Showcases': 'KKEEY92/Claire-V2-Architecture',
+    'Architecture Documentation': 'KKEEY92/Claire-V2-Architecture',
     'sortiere.py': 'KKEEY92/sortiere.py',
 }
 
@@ -75,14 +76,16 @@ def main():
     content = DATA_JS_PATH.read_text(encoding='utf-8')
     original_content = content
 
+    version_re = re.compile(r'v\d+\.\d+(\.\d+)?')
     for proj_name, tag in updates.items():
         clean_tag = tag.lstrip('v')
         pattern = re.compile(rf"(name:\s*'{re.escape(proj_name)}'.*?tag:\s*').*?(')", re.DOTALL)
         def repl(match):
             old_tag = match.group(0)
-            if '●' in old_tag:
-                new_tag = re.sub(r'v\d+\.\d+(\.\d+)?', f'v{clean_tag}', old_tag)
-                return new_tag
+            # Only touch tags that actually carry a version number (e.g. "Tag v1.3.0").
+            # Status-only tags (e.g. docs-only cards without a release) are left alone.
+            if version_re.search(old_tag):
+                return version_re.sub(f'v{clean_tag}', old_tag, count=1)
             return old_tag
         content = pattern.sub(repl, content)
 
