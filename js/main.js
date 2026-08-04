@@ -384,7 +384,13 @@ if (form) {
 }
 
 // ─── WEBGL BACKGROUND ────────────────────────────────────────────────
-let gl, uTime, uRes, uIntensity, uLight, uC1, uC2, rafId;
+// KKEEY-LAB: additiver Uplevel des Original-Shaders (siehe main-Branch für
+// die unveraendert 1:1 Basisversion). Zusaetzlich zur bestehenden Basis:
+// +2 Detail-Oktaven (feinere Struktur), Mausparallaxe (Wellenzentrum folgt
+// dezent dem Cursor), duenner Bloom-Layer auf den hellsten Punkten.
+// Gleiche Uniforms, gleiche Grundfarben/Theme-Logik -- nichts entfernt.
+let gl, uTime, uRes, uIntensity, uLight, uC1, uC2, uMouse, rafId;
+let mouseX = 0, mouseY = 0;
 
 function initBg() {
   const c = document.getElementById('kk-bg');
@@ -398,18 +404,21 @@ function initBg() {
 
   const VS = 'attribute vec2 a;void main(){gl_Position=vec4(a,0,1);}';
   const FS = [
-    'precision mediump float;',
+    'precision highp float;',
     'uniform float u_t,u_i,u_l;',
     'uniform vec3 u_c1,u_c2;',
-    'uniform vec2 u_r;',
+    'uniform vec2 u_r,u_m;',
     'void main(){',
     '  vec2 uv=gl_FragCoord.xy/u_r;',
     '  vec2 p=uv*2.-1.;',
     '  p.x*=u_r.x/u_r.y;',
+    '  vec2 par=p-u_m*0.12;', // additive Mausparallaxe: verschiebt nur das Wellenzentrum
     '  float t=u_t*.2;',
-    '  float w1=sin(p.x*2.5+t)*cos(p.y*1.8-t*.6);',
-    '  float w2=cos(p.x*1.5-t*.4)*sin(p.y*2.2+t);',
-    '  float w3=sin(length(p)*3.-t*1.2)*.5+.5;',
+    '  float w1=sin(par.x*2.5+t)*cos(par.y*1.8-t*.6);',
+    '  float w2=cos(par.x*1.5-t*.4)*sin(par.y*2.2+t);',
+    '  float w3=sin(length(par)*3.-t*1.2)*.5+.5;',
+    '  float w4=sin(par.x*5.2-t*1.4)*cos(par.y*4.1+t*.8)*.5+.5;', // Detail-Oktave 1
+    '  float w5=cos(length(par*1.7)*6.-t*1.8)*.5+.5;', // Detail-Oktave 2
     '  float m1=w1*.5+.5,m2=w2*.5+.5;',
     '  vec3 dark=vec3(.027,.027,.059);',
     '  vec3 lite=vec3(.933,.933,.973);',
@@ -421,6 +430,10 @@ function initBg() {
     '  col+=pur*m1*w3*(.28+.18*db)*u_i;',
     '  col+=teal*m2*w3*(.16+.1*db)*u_i;',
     '  col+=vec3(.08,.05,.22)*m1*m2*.35*u_i*db;',
+    '  col+=pur*w4*w5*0.06*u_i*db;', // additive Feinstruktur
+    '  col+=teal*w5*0.04*u_i*db;',
+    '  float bloom=smoothstep(0.72,1.0,max(m1*w3,m2*w3));', // dezenter Glow
+    '  col+=(pur+teal)*0.5*bloom*0.18*db;',
     '  gl_FragColor=vec4(clamp(col,0.,1.),1.);',
     '}'
   ].join('\n');
@@ -445,10 +458,12 @@ function initBg() {
   uLight = gl.getUniformLocation(prog, 'u_l');
   uC1 = gl.getUniformLocation(prog, 'u_c1');
   uC2 = gl.getUniformLocation(prog, 'u_c2');
+  uMouse = gl.getUniformLocation(prog, 'u_m');
 
   gl.uniform2f(uRes, W, H);
   gl.uniform1f(uIntensity, 1.0);
   gl.uniform1f(uLight, darkMode ? 0.0 : 1.0);
+  gl.uniform2f(uMouse, 0, 0);
   if (colorTheme === 'orange') {
     gl.uniform3f(uC1, 1.0, 0.478, 0.0);
     gl.uniform3f(uC2, 0.0, 0.898, 1.0);
@@ -457,11 +472,21 @@ function initBg() {
     gl.uniform3f(uC2, 0.0, 0.831, 0.667);
   }
 
+  // Mausparallaxe: nur Zielwerte setzen, im Loop sanft interpolieren
+  let targetMX = 0, targetMY = 0;
+  window.addEventListener('mousemove', e => {
+    targetMX = (e.clientX / window.innerWidth) * 2 - 1;
+    targetMY = -((e.clientY / window.innerHeight) * 2 - 1);
+  }, { passive: true });
+
   let t0 = null;
   const loop = ts => {
     if (!gl) return;
     if (!t0) t0 = ts;
+    mouseX += (targetMX - mouseX) * 0.04;
+    mouseY += (targetMY - mouseY) * 0.04;
     gl.uniform1f(uTime, (ts - t0) * 0.001);
+    gl.uniform2f(uMouse, mouseX, mouseY);
     gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
     rafId = requestAnimationFrame(loop);
   };

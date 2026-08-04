@@ -149,6 +149,20 @@ a { color: inherit; text-decoration: none; }
   color: var(--accent-1); letter-spacing: 4.5px; text-transform: uppercase;
   margin-bottom: 24px; animation: fadeInUp 0.7s ease 0.1s both;
 }
+/* KKEEY-LAB: additiver Marken-Kicker über dem Hero-Namen. Ersetzt nichts,
+   nur eine zusätzliche Signatur-Zeile im Corporate-Style des KKEEY-Logos. */
+.kkeey-mark {
+  font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 700;
+  letter-spacing: 6px; text-transform: uppercase; margin-bottom: 14px;
+  background: linear-gradient(90deg, var(--accent-1), var(--accent-2));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  animation: fadeInUp 0.7s ease 0.05s both;
+}
+.kkeey-mark-sub {
+  display: block; font-size: 9.5px; font-weight: 500; letter-spacing: 2px;
+  color: var(--kk-text-muted); background: none; -webkit-text-fill-color: initial;
+  margin-top: 4px; text-transform: none;
+}
 .hero-name {
   font-size: clamp(56px,10vw,108px); font-weight: 700;
   letter-spacing: -5px; line-height: 0.92; margin-bottom: 32px;
