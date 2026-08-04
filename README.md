@@ -11,7 +11,7 @@
   [![Stundensatz](https://img.shields.io/badge/Rate-ab_70_EUR%2Fh-FF7A00?style=for-the-badge)]()
 </div>
 
----
+---> KKI Multi-Agent-Workflow: Design und Code dieses Portfolios werden von mehreren KI-Coding-Agenten (Claude, Copilot, Jules) nach dem gemeinsamen AGENTS.md-Standard weiterentwickelt -- additiv, mit Nachvollziehbarkeit in AGENT_LOG.md. Das dynamic-orange Glassmorphism-Design bleibt dabei unangetastete Design-Basis.
 
 ## 🇩🇪 Über dieses Profil
 
