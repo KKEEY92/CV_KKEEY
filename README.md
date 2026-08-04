@@ -1,14 +1,12 @@
 <div align="center">
   <img src="https://kkeey92.github.io/CV_KKEEY/assets/avatar.jpg" alt="Kevin Kuck" width="120" style="border-radius:50%">
   <h1>Kevin Kuck</h1>
-  <p><strong>IT Systems Engineer · Agentic AI Architect · Voice AI & Automation Specialist</strong></p>
-
   [![Portfolio](https://img.shields.io/badge/🌐_Live_Portfolio-kkeey92.github.io-FF7A00?style=for-the-badge)](https://kkeey92.github.io/CV_KKEEY/)
   [![IT Portfolio](https://img.shields.io/badge/🖥️_IT_Portfolio-CV__IT__KKEEY-00E5FF?style=for-the-badge)](https://kkeey92.github.io/CV_IT_KKEEY/)
   [![Freelancermap](https://img.shields.io/badge/Freelancermap-Profil-3D9CED?style=for-the-badge&logo=data:image/svg+xml;base64,)](https://www.freelancermap.de/profil/kevin-kuck)
   [![LinkedIn](https://img.shields.io/badge/LinkedIn-kevin--kuck--it-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/kevin-kuck-it/)
   [![Verfügbar](https://img.shields.io/badge/Status-Verfügbar_·_Remote_%2F_DACH-00C853?style=for-the-badge)]()
-  [![Stundensatz](https://img.shields.io/badge/Rate-ab_70_EUR%2Fh-FF7A00?style=for-the-badge)]()
+    [![Stundensatz](https://img.shields.io/badge/Rate-ab_110_EUR%2Fh-FF7A00?style=for-the-badge)]()
 </div>
 
 ---> KKI Multi-Agent-Workflow: Design und Code dieses Portfolios werden von mehreren KI-Coding-Agenten (Claude, Copilot, Jules) nach dem gemeinsamen AGENTS.md-Standard weiterentwickelt -- additiv, mit Nachvollziehbarkeit in AGENT_LOG.md. Das dynamic-orange Glassmorphism-Design bleibt dabei unangetastete Design-Basis.
@@ -173,7 +171,7 @@ python3 scripts/sync_projects.py
 
 **Kevin Kuck** — *IT Systems Engineer & Agentic AI Architect*  
 📍 Butzbach, DE · Remote verfügbar · DACH-Raum  
-💶 Stundensatz: ab **70 EUR/h** · verhandelbar
+💶 Stundensatz: ab **110 EUR/h** · verhandelbar
 
 | Kanal | Link |
 |---|---|
