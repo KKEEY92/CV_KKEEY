@@ -123,8 +123,8 @@ function render() {
 
   // Nav links
   const navLabels = lang === 'de'
-    ? ['Über mich','Projekte','Skills','Karriere','Kontakt']
-    : ['About','Projects','Skills','Career','Contact'];
+    ? ['Über mich','Projekte','Skills','Zertifikate','Karriere','Kontakt']
+    : ['About','Projects','Skills','Certifications','Career','Contact'];
   document.querySelectorAll('#navLinks a').forEach((a, i) => { if (navLabels[i]) a.textContent = navLabels[i]; });
 
   // Hero
@@ -148,6 +148,12 @@ function render() {
   // Skills
   document.getElementById('skillsTitle').textContent = t(D.i18n.skillsTitle);
   renderSkills();
+
+  // Certifications
+  document.getElementById('certLabel').textContent = t(D.i18n.certLabel);
+  document.getElementById('certTitle').textContent = t(D.i18n.certTitle);
+  renderCertifications();
+  renderEducation();
 
   // Career
   document.getElementById('careerLabel').textContent = t(D.i18n.careerLabel);
@@ -187,20 +193,51 @@ function renderTrio() {
   `).join('');
 }
 
+// Human-readable labels for structured status.type — only used when a project
+// has no literal `tag` string (i.e. its visible status is meant to be computed
+// from `status` rather than hand-authored). Keep in sync with the controlled
+// vocabulary scripts/sync_projects.py expects to find under `status`.
+const STATUS_TYPE_LABELS = {
+  released:      { de: 'Released', en: 'Released' },
+  implemented:   { de: 'Implemented', en: 'Implemented' },
+  prototype:     { de: 'Prototype', en: 'Prototype' },
+  experiment:    { de: 'Experiment', en: 'Experiment' },
+  documentation: { de: 'Public Documentation · Proprietary Implementations', en: 'Public Documentation · Proprietary Implementations' },
+  demo:          { de: 'Demo', en: 'Demo' },
+};
+
+function statusTagText(status) {
+  if (!status || !status.type) return '';
+  const label = t(STATUS_TYPE_LABELS[status.type]) || status.type;
+  if (status.sourceVisibility === 'private') {
+    return `● ${label} · Private Source · Public Evidence`;
+  }
+  return status.latestTag ? `● ${label} · Tag ${status.latestTag}` : `● ${label}`;
+}
+
 function renderProjects() {
   const c = document.getElementById('projContainer');
   c.innerHTML = D.projects.map(p => {
     const rgb = p.colorRgb;
     const col = p.color;
-    const linkEl = p.link
-      ? `<a href="${p.link}" target="_blank" rel="noopener" class="project-link" style="color:${col}">${t(p.linkLabel)}</a>`
-      : `<span class="project-link" style="color:var(--kk-text-muted)">${t(p.linkLabel)}</span>`;
+    const tagText = p.tag || statusTagText(p.status);
+    const noteEl = p.note
+      ? `<p class="project-note">${t(p.note)}</p>`
+      : '';
+    const linksList = p.links || (p.linkLabel ? [{ href: p.link, label: p.linkLabel }] : []);
+    const linksEl = linksList.length
+      ? `<div class="project-links">${linksList.map(l =>
+          l.href
+            ? `<a href="${l.href}" target="_blank" rel="noopener" class="project-link" style="color:${col}">${t(l.label)}</a>`
+            : `<span class="project-link" style="color:var(--kk-text-muted)">${t(l.label)}</span>`
+        ).join('')}</div>`
+      : '';
     return `
     <div class="glass-card project-card reveal" style="background:linear-gradient(135deg,rgba(${rgb},0.04) 0%,var(--kk-card));box-shadow:inset 0 1px 0 var(--kk-inset),0 8px 32px var(--kk-shadow)">
       <div>
         <div class="project-header">
           <h3 class="project-name">${p.name}</h3>
-          <span class="project-tag" style="border:1px solid rgba(${rgb},0.45);color:${col};background:rgba(${rgb},0.07)">${p.tag}</span>
+          <span class="project-tag" style="border:1px solid rgba(${rgb},0.45);color:${col};background:rgba(${rgb},0.07)">${tagText}</span>
         </div>
         <p class="project-sub">${t(p.sub)}</p>
       </div>
@@ -208,9 +245,42 @@ function renderProjects() {
       <div class="project-stack">
         ${p.stack.map(s => `<span style="background:rgba(${rgb},0.07);border:1px solid rgba(${rgb},0.18);color:rgba(${rgb},0.88)">${s}</span>`).join('')}
       </div>
-      ${linkEl}
+      ${noteEl}
+      ${linksEl}
     </div>`;
   }).join('');
+}
+
+function renderCertifications() {
+  const c = document.getElementById('certContainer');
+  if (!D.certifications || D.certifications.length === 0) {
+    c.innerHTML = `<p class="cert-empty reveal">${t(D.i18n.certEmpty)}</p>`;
+    return;
+  }
+  c.innerHTML = D.certifications.map(cert => {
+    const rgb = cert.colorRgb;
+    const col = cert.color;
+    return `
+    <a href="${cert.link}" target="_blank" rel="noopener" class="glass-card cert-card reveal" style="background:linear-gradient(135deg,rgba(${rgb},0.04) 0%,var(--kk-card));box-shadow:inset 0 1px 0 var(--kk-inset),0 8px 32px var(--kk-shadow)">
+      <div class="project-header">
+        <h3 class="project-name">${cert.name}</h3>
+        <span class="project-tag" style="border:1px solid rgba(${rgb},0.45);color:${col};background:rgba(${rgb},0.07)">${cert.tag}</span>
+      </div>
+      <p class="project-sub">${t(cert.sub)}</p>
+      <p class="project-desc">${t(cert.desc)}</p>
+    </a>`;
+  }).join('');
+}
+
+function renderEducation() {
+  const label = document.getElementById('eduLabel');
+  const list = document.getElementById('eduList');
+  const link = document.getElementById('eduLink');
+  if (!label || !list || !link) return;
+  label.textContent = t(D.education.label);
+  list.innerHTML = D.education.items.map(item => `<li class="reveal">${t(item)}</li>`).join('');
+  link.href = D.education.linkedinLink;
+  link.textContent = t(D.education.linkedinLabel);
 }
 
 function renderSkills() {

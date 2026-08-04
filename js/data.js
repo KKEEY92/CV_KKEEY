@@ -66,6 +66,9 @@ window.KK_DATA = {
   // ─── PROJEKTE ───────────────────────────────────────────────────────────────
   projects: [
     {
+      id: 'claire-v25-native-audio',
+      repo: 'KKEEY92/claire-v2.5-native-audio',
+      status: { latestTag: null }, // no git tag exists on this repo yet — do not fabricate one
       name: 'Claire V2.5 Native Audio',
       color: '#00d4aa',
       colorRgb: '0,212,170',
@@ -80,20 +83,33 @@ window.KK_DATA = {
       linkLabel: { de: 'Auf GitHub ansehen →', en: 'View on GitHub →' },
     },
     {
-      name: 'AuraTone AI v2.0',
+      id: 'auratone-ai',
+      repo: 'KKEEY92/AuraTone-AI-by-KKEEy',
+      status: { type: 'implemented', codeVersion: '2.0.0', latestTag: 'v1.3.0', sourceVisibility: 'private', publicBinaryRelease: false },
+      name: 'AuraTone AI Desktop',
       color: '#f7a841',
       colorRgb: '247,168,65',
-      tag: '● Standalone v2.0 · Tauri 2.0 · Metal GPU',
-      sub: { de: 'Native Standalone Workstation · Audio Mastering & Harmonic Mixing', en: 'Native Standalone Workstation · Audio Mastering & Harmonic Mixing' },
+      sub: { de: 'Native Audio-Analyse-Workstation · Tauri · Rust · Python DSP', en: 'Native Audio Analysis Workstation · Tauri · Rust · Python DSP' },
       desc: {
-        de: 'AI-gestützte Audio-Mastering & Harmonic-Mixing Workstation. Native Desktop-App unter Tauri 2.0 (Rust-Kernel) mit Metal GPU Unified Memory Waveform-Rendering (120Hz), 3-Way SQLite Triade, Python DSP (librosa, ffmpeg) und Google Gemini 1.5 Pro Musikologie-Orchestrierung.',
-        en: 'AI-assisted audio mastering & harmonic mixing workstation. Native desktop app built on Tauri 2.0 (Rust kernel) with Metal GPU Unified Memory waveform rendering (120Hz), 3-Way SQLite triad, Python DSP (librosa, ffmpeg), and Google Gemini 1.5 Pro musicology orchestration.',
+        de: 'Native Desktop-Anwendung mit Tauri-/Rust-Kern und Python-DSP-Pipeline für lokale Audioanalyse. Die Implementierung ist privat. Öffentliche Architekturdokumentation und bereinigte technische Nachweise stehen zur externen Prüfung bereit.',
+        en: 'Native desktop application with a Tauri/Rust core and a Python DSP pipeline for local audio analysis. The implementation is private. Public architecture documentation and sanitized technical evidence are available for external review.',
       },
-      stack: ['Tauri 2.0 (Rust)', 'Apple Silicon Metal GPU', 'React 19 / Vite 6', 'TypeScript', '3-Way SQLite', 'Python DSP (librosa/ffmpeg)', 'Google Gemini 1.5 Pro'],
-      link: 'https://github.com/KKEEY92/AuraTone-AI-by-KKEEy',
-      linkLabel: { de: 'Auf GitHub ansehen →', en: 'View on GitHub →' },
+      stack: ['Tauri 2', 'Rust', 'React 19', 'Python DSP', 'ffmpeg ebur128', 'librosa', 'SQLite', 'Metal Shader + CPU-Fallback'],
+      note: {
+        de: 'Die private Codebasis führt Version 2.0.0. Der im technischen Audit zuletzt festgestellte Git-Tag ist v1.3.0. Ein öffentlicher Binärrelease liegt derzeit nicht vor.',
+        en: 'The private codebase identifies as version 2.0.0. The latest Git tag identified during the technical audit is v1.3.0. No public binary release is currently available.',
+      },
+      links: [
+        { href: 'https://github.com/KKEEY92/AuraTone-Architecture/blob/master/evidence/README.md', label: { de: 'Architektur →', en: 'Architecture →' } },
+        { href: 'https://github.com/KKEEY92/AuraTone-Architecture/blob/master/evidence/DSP_VALIDATION.md', label: { de: 'DSP-Nachweis →', en: 'DSP Validation →' } },
+        { href: 'https://github.com/KKEEY92/AuraTone-Architecture/blob/master/evidence/examples/library_analysis.sample.json', label: { de: 'Beispielanalyse →', en: 'Example Analysis →' } },
+        { href: 'https://github.com/KKEEY92/AuraTone-Architecture/blob/master/evidence/LIMITATIONS.md', label: { de: 'Evidenzgrenzen →', en: 'Evidence Limitations →' } },
+      ],
     },
     {
+      id: 'ai-virtual-calling',
+      repo: 'KKEEY92/AI-Virtual-Calling-and-Write-a-friend',
+      status: { latestTag: null },
       name: 'AI Virtual Calling',
       color: '#f43f5e',
       colorRgb: '244,63,94',
@@ -108,6 +124,9 @@ window.KK_DATA = {
       linkLabel: { de: 'Auf GitHub ansehen →', en: 'View on GitHub →' },
     },
     {
+      id: 'afm-3-chat',
+      repo: 'KKEEY92/afm-chat',
+      status: { latestTag: null },
       name: 'AFM-3 Chat',
       color: '#3b82f6',
       colorRgb: '59,130,246',
@@ -122,20 +141,27 @@ window.KK_DATA = {
       linkLabel: { de: 'Auf GitHub ansehen →', en: 'View on GitHub →' },
     },
     {
-      name: 'Architecture Showcases',
-      color: '#8b5cf6',
-      colorRgb: '139,92,246',
-      tag: '● C4 Spec & Blueprint · Public Docs',
-      sub: { de: 'Claire V2 & AuraTone Systemarchitekturen', en: 'Claire V2 & AuraTone System Architecture' },
+      id: 'architecture-documentation',
+      repo: 'KKEEY92/Claire-V2-Architecture',
+      status: { type: 'documentation', codeVersion: null, latestTag: null },
+      name: 'Architecture Documentation',
+      color: '#94a3b8',
+      colorRgb: '148,163,184',
+      sub: { de: 'C4-Architekturdokumentation zu Claire V2 & AuraTone AI', en: 'C4 architecture documentation for Claire V2 & AuraTone AI' },
       desc: {
-        de: 'Öffentliche Architektur-Repositories (Claire-V2-Architecture & AuraTone-Architecture) zur Demonstration von C4 / Mermaid Systemdesign, SLSA Level 3 Provenance und Serverless Cloud Run / Container Setups.',
-        en: 'Public architecture repositories (Claire-V2-Architecture & AuraTone-Architecture) demonstrating C4 / Mermaid system design, SLSA Level 3 provenance, and serverless Cloud Run / container setups.',
+        de: 'Öffentliche Architekturdokumentation für private und öffentlich einsehbare Implementierungsvarianten.',
+        en: 'Public architecture documentation for private and publicly accessible implementation variants.',
       },
-      stack: ['Mermaid JS', 'C4 Architecture', 'Docker', 'Google Cloud Run', 'GitLab / GitHub Sync'],
-      link: 'https://github.com/KKEEY92/Claire-V2-Architecture',
-      linkLabel: { de: 'Architektur ansehen →', en: 'View Architecture →' },
+      stack: ['C4-Modell', 'Mermaid', 'System Context', 'Container Architecture', 'Voice Pipeline', 'Memory Architecture', 'Desktop Architecture'],
+      links: [
+        { href: 'https://github.com/KKEEY92/Claire-V2-Architecture', label: { de: 'Claire V2 Architektur →', en: 'Claire V2 architecture →' } },
+        { href: 'https://github.com/KKEEY92/AuraTone-Architecture', label: { de: 'AuraTone Architektur →', en: 'AuraTone architecture →' } },
+      ],
     },
     {
+      id: 'sortiere-py',
+      repo: 'KKEEY92/sortiere.py',
+      status: { latestTag: null },
       name: 'sortiere.py',
       color: '#22c55e',
       colorRgb: '34,197,94',
@@ -150,6 +176,43 @@ window.KK_DATA = {
       linkLabel: { de: 'GitHub-Profil →', en: 'GitHub profile →' },
     },
   ],
+
+  // ─── ZERTIFIZIERUNGEN ───────────────────────────────────────────────────────
+  // Nur echte, geprüfte Zertifizierungen als Karten. Kursabschlüsse (LinkedIn
+  // Learning etc.) stehen als kompakte Liste weiter unten unter `education`.
+  certifications: [
+    {
+      name: 'Microsoft KI-Grundlagen',
+      color: '#0ea5e9',
+      colorRgb: '14,165,233',
+      tag: '✓ Microsoft Certified',
+      sub: { de: 'Zertifizierung · 2026', en: 'Certification · 2026' },
+      desc: {
+        de: 'Offizielle Microsoft-Zertifizierung zu KI-Grundlagen — Konzepte, Einsatzbereiche und verantwortungsvoller Umgang mit generativer KI.',
+        en: 'Official Microsoft certification covering AI fundamentals — concepts, use cases, and responsible use of generative AI.',
+      },
+      link: 'https://www.linkedin.com/in/kevin-kuck-it/details/certifications/',
+      linkLabel: { de: 'Nachweis auf LinkedIn →', en: 'View credential on LinkedIn →' },
+    },
+  ],
+
+  // ─── WEITERBILDUNG ──────────────────────────────────────────────────────────
+  // Kursabschlüsse ohne formale Prüfung (LinkedIn Learning etc.) — kompakte
+  // Liste statt Karten, um sie von echten Zertifizierungen abzugrenzen.
+  education: {
+    label: { de: 'Weiterbildung', en: 'Further education' },
+    linkedinLink: 'https://www.linkedin.com/in/kevin-kuck-it/details/certifications/',
+    linkedinLabel: { de: 'Alle Nachweise auf LinkedIn ansehen →', en: 'View all credentials on LinkedIn →' },
+    items: [
+      { de: 'Grundwissen Generative KI · Microsoft & LinkedIn Learning Lernpfad (4 Std. 25 Min.) — Mai 2026', en: 'Generative AI Foundations · Microsoft & LinkedIn Learning path (4h 25min) — May 2026' },
+      { de: 'Was ist Generative KI? · LinkedIn Learning + PMI — Mai 2026', en: 'What Is Generative AI? · LinkedIn Learning + PMI — May 2026' },
+      { de: 'Generative KI: Die Entwicklung einer durchdachten Online-Suche · LinkedIn Learning + PMI — Mai 2026', en: 'Generative AI: Developing Thoughtful Online Search · LinkedIn Learning + PMI — May 2026' },
+      { de: 'Künstliche Intelligenz Grundlagen · LinkedIn Learning — 2026', en: 'Artificial Intelligence Foundations · LinkedIn Learning — 2026' },
+      { de: 'Mit KI zusammenarbeiten · LinkedIn Learning — 2026', en: 'Collaborating with AI · LinkedIn Learning — 2026' },
+      { de: 'Medienkompetenz im KI-Zeitalter — 2026', en: 'Media Literacy in the AI Era — 2026' },
+      { de: 'Active Directory-Verwaltung automatisieren mit PowerShell · LinkedIn Learning — Mai 2026', en: 'Automating Active Directory Management with PowerShell · LinkedIn Learning — May 2026' },
+    ],
+  },
 
   // ─── SKILLS ─────────────────────────────────────────────────────────────────
   skillGroups: [
@@ -246,6 +309,9 @@ window.KK_DATA = {
     projTitle:     { de: 'Projekte & Showcase',         en: 'Projects & Showcase' },
     projSub:       { de: 'Gebaut. Deployed. Öffentlich.', en: 'Built. Deployed. Public.' },
     skillsTitle:   { de: 'Skills & Kompetenzprofil',   en: 'Skills & Expertise' },
+    certLabel:     { de: 'Verifiziert',                 en: 'Verified' },
+    certTitle:     { de: 'Zertifizierungen',            en: 'Certifications' },
+    certEmpty:     { de: 'Zertifizierungen werden aktuell ergänzt — schau bald wieder vorbei.', en: 'Certifications are being added soon — check back shortly.' },
     careerLabel:   { de: 'Karriere',                    en: 'Career' },
     careerTitle:   { de: 'Beruflicher Werdegang',       en: 'Career Story' },
     contactLabel:  { de: 'Kontakt',                     en: 'Contact' },
