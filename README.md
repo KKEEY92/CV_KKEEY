@@ -9,6 +9,7 @@
   [![LinkedIn](https://img.shields.io/badge/LinkedIn-kevin--kuck--it-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/kevin-kuck-it/)
   [![Verfügbar](https://img.shields.io/badge/Status-Verfügbar_·_Remote_%2F_DACH-00C853?style=for-the-badge)]()
   [![Stundensatz](https://img.shields.io/badge/Rate-ab_70_EUR%2Fh-FF7A00?style=for-the-badge)]()
+  [![Letzte Aktualisierung](https://img.shields.io/badge/Letzte_Aktualisierung-2026--08--08-00E5FF?style=for-the-badge)]()
 </div>
 
 ---
