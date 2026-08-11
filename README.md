@@ -73,7 +73,7 @@ Available now — Remote & Hybrid.
 - **Repo:** [AuraTone-Architecture](https://github.com/KKEEY92/AuraTone-Architecture) *(Architecture Showcase)*
 
 ### 🏢 Johanniter KRITIS IAM — Enterprise Identity Management
-> Administration von 70.000+ Benutzer-Identitäten in KRITIS-Infrastruktur.
+> Administration von 90.000+ Benutzer-Identitäten & AD-Objekten in KRITIS-Infrastruktur für die gesamte Organisation.
 
 - **Stack:** Active Directory · Microsoft Entra ID · PowerShell · LAPS · Deskcenter MDM · Exchange Admin
 - **Scope:** Windows 11 Bundesrollout · OUs & Berechtigungsgruppen · Automatisierte Audit-Workflows
