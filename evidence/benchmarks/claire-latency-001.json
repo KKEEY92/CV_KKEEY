@@ -1,0 +1,12 @@
+{
+  "claimId": "claire-local-latency-001",
+  "evidenceClass": "E4",
+  "scope": "definierter lokaler Verarbeitungsschritt",
+  "reportedValue": "~200 ms",
+  "hardware": "Apple Silicon M1",
+  "environment": "lokale Entwicklungsumgebung (LiveKit WebRTC + Python 3.12+)",
+  "measurementType": "Entwicklungstest (VAD-Trigger bis Audiopuffer)",
+  "date": "2026-08-10",
+  "endToEndGuarantee": false,
+  "notes": "Hardware-, modell- und konfigurationsabhängiger Laborwert. Keine End-to-End-Garantie für öffentliche Cloud-Routen."
+}

@@ -46,5 +46,19 @@
       "title": "Independent IT & Automation Projects",
       "focus": "Selbstständige Projektentwicklung & berufliche Neuorientierung"
     }
+  },
+  "claims": {
+    "claireLocalLatency": {
+      "claimId": "claire-local-latency-001",
+      "evidenceClass": "E4",
+      "scope": "definierter lokaler Verarbeitungsschritt",
+      "reportedValue": "~200 ms",
+      "hardware": "Apple Silicon M1",
+      "environment": "lokale Entwicklungsumgebung",
+      "measurementType": "Entwicklungstest",
+      "endToEndGuarantee": false,
+      "artifact": "evidence/benchmarks/claire-latency-001.json",
+      "artifactSha256": "e4ab088c7dfc121eb4d60d5a90ca0f475d2c498007701fa455cff61a9a14e044"
+    }
   }
 }
