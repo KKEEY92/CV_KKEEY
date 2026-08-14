@@ -1,30 +1,29 @@
 <div align="center">
   <img src="https://kkeey92.github.io/CV_KKEEY/assets/avatar.jpg" alt="Kevin Kuck" width="120" style="border-radius:50%">
   <h1>Kevin Kuck</h1>
-  <p><strong>IT Systems Engineer · Agentic AI Architect · Voice AI & Automation Specialist</strong></p>
+  <p><strong>AI Systems Engineer · Automation · Voice AI · Local-First Architecture</strong></p>
 
   [![Portfolio](https://img.shields.io/badge/🌐_Live_Portfolio-kkeey92.github.io-FF7A00?style=for-the-badge)](https://kkeey92.github.io/CV_KKEEY/)
   [![IT Portfolio](https://img.shields.io/badge/🖥️_IT_Portfolio-CV__IT__KKEEY-00E5FF?style=for-the-badge)](https://kkeey92.github.io/CV_IT_KKEEY/)
-  [![Freelancermap](https://img.shields.io/badge/Freelancermap-Profil-3D9CED?style=for-the-badge&logo=data:image/svg+xml;base64,)](https://www.freelancermap.de/profil/kevin-kuck)
+  [![Bewerbungsmappe](https://img.shields.io/badge/📄_Bewerbungsmappe_AI_(PDF)-Download-FF7A00?style=for-the-badge)](https://kkeey92.github.io/CV_KKEEY/assets/Kevin_Kuck_Bewerbungsmappe_AI_2026.pdf)
+  [![Master CV](https://img.shields.io/badge/📄_Master_CV_(PDF)-Download-00E5FF?style=for-the-badge)](https://kkeey92.github.io/CV_KKEEY/assets/Kevin_Kuck_Master_CV_2026.pdf)
   [![LinkedIn](https://img.shields.io/badge/LinkedIn-kevin--kuck--it-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/kevin-kuck-it/)
   [![Verfügbar](https://img.shields.io/badge/Status-Verfügbar_·_Remote_%2F_DACH-00C853?style=for-the-badge)]()
-  [![Stundensatz](https://img.shields.io/badge/Rate-ab_70_EUR%2Fh-FF7A00?style=for-the-badge)]()
-  [![Letzte Aktualisierung](https://img.shields.io/badge/Letzte_Aktualisierung-2026--08--08-00E5FF?style=for-the-badge)]()
 </div>
 
 ---
 
 ## 🇩🇪 Über dieses Profil
 
-Dieses Repository beherbergt das offizielle interaktive Web-Portfolio von **Kevin Kuck** — IT Systems Engineer & Agentic AI Architekt mit **14+ Jahren Praxiserfahrung** an der Schnittstelle zwischen Enterprise-IT (Active Directory, IAM, KRITIS) und modernster KI-Entwicklung (Voice AI Agents, RAG, Vertex AI, Python).
+Dieses Repository beherbergt das offizielle interaktive Web-Portfolio von **Kevin Kuck** — AI Systems Engineer mit **15 Jahren operativer Praxiserfahrung** an der Schnittstelle zwischen Enterprise-IT (Active Directory, IAM, KRITIS) und modernster KI-Entwicklung (Voice AI Agents, RAG, LiveKit, Python).
 
-Aktuell als **Freelancer im DACH-Raum** verfügbar — Remote & Hybrid.
+Verfügbar ab sofort — Remote & Hybrid.
 
 ## 🇬🇧 About This Portfolio
 
-Official interactive portfolio of **Kevin Kuck** — IT Systems Engineer & Agentic AI Architect with 14+ years of enterprise experience spanning Microsoft infrastructure, KRITIS security environments, and cutting-edge AI agent engineering (Voice AI, LiveKit, RAG, Vertex AI).
+Official interactive portfolio of **Kevin Kuck** — AI Systems Engineer with 15 years of operational experience bridging enterprise IT foundations (Active Directory, IAM, KRITIS) and state-of-the-art AI systems engineering (Voice AI, LiveKit, RAG, Local-First Architecture).
 
-Currently available for **freelance engagements across the DACH region** — Remote & Hybrid.
+Available now — Remote & Hybrid.
 
 ---
 

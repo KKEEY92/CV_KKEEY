@@ -1,0 +1,50 @@
+{
+  "identity": {
+    "displayName": "Kevin Kuck",
+    "email": "kuck_kevin@icloud.com",
+    "location": "35510 Butzbach",
+    "availability": "Ab sofort · Remote / Hybrid"
+  },
+  "links": {
+    "linkedin": "https://www.linkedin.com/in/kevin-kuck-it/",
+    "github": "https://github.com/KKEEY92",
+    "gitlab": "https://gitlab.com/KKEEY92",
+    "itPortfolio": "https://kkeey92.github.io/CV_IT_KKEEY/",
+    "aiPortfolio": "https://kkeey92.github.io/CV_KKEEY/"
+  },
+  "positioning": {
+    "umbrella": "Enterprise IT · Automation · AI Systems",
+    "it": {
+      "title": "IT-Systemadministrator",
+      "focus": "Identity & Access Management · Automation",
+      "claim": "Enterprise IT aus der Praxis. Automatisierung mit System.",
+      "tagline": "Enterprise IT · Microsoft-Infrastruktur · Automation"
+    },
+    "ai": {
+      "title": "AI Systems Engineer",
+      "focus": "Automation · Voice AI · Local-First Architecture"
+    }
+  },
+  "employment": {
+    "johanniter": {
+      "start": "2025-12-01",
+      "end": "2026-05-10",
+      "formalTitle": "Junior IT-Support Agent",
+      "documentedOccupation": "IT-Organisation – Spezialist",
+      "functionalArea": "Enterprise-Systemadministration und IT Operations",
+      "company": "Johanniter Bundes-IT Services"
+    },
+    "bauhaus": {
+      "start": "2010-09",
+      "end": "2024-12",
+      "title": "Mitarbeiter Warenwirtschaft",
+      "focus": "IT-gestützte Geschäftsprozesse und Prozessqualität",
+      "company": "BAUHAUS"
+    },
+    "projects": {
+      "start": "2026-06",
+      "title": "Independent IT & Automation Projects",
+      "focus": "Selbstständige Projektentwicklung & berufliche Neuorientierung"
+    }
+  }
+}

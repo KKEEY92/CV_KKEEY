@@ -12,23 +12,23 @@ window.KK_DATA = {
     tagline: 'IT · AI · AUDIO · 15+ JAHRE PRAXIS',
     roles: {
       de: [
-        'IT Systems Engineer',
-        'AI Agent Architekt',
-        'Neurodivergenter Systemdenker',
-        'DJ & Audio Engineer',
+        'AI Systems Engineer',
+        'Voice AI & Automation Specialist',
+        'Local-First & RAG Architekturen',
+        'DJ & Audio Systems Engineer',
         'KMU Prozess-Automatisierer',
       ],
       en: [
-        'IT Systems Engineer',
-        'AI Agent Architect',
-        'Neurodivergent Systems Thinker',
-        'DJ & Audio Engineer',
-        'SME Automation Expert',
+        'AI Systems Engineer',
+        'Voice AI & Automation Specialist',
+        'Local-First & RAG Architectures',
+        'DJ & Audio Systems Engineer',
+        'SME Automation Specialist',
       ],
     },
     cta1: { de: 'Projekte ansehen', en: 'View Projects' },
     cta2: { de: 'Kontakt aufnehmen', en: 'Get in touch' },
-    cta3: { de: 'CV herunterladen', en: 'Download CV' },
+    cta3: { de: 'Bewerbungsmappe (PDF)', en: 'Application Portfolio (PDF)' },
     available: { de: 'Verfügbar ab sofort', en: 'Available now' },
   },
 
@@ -45,7 +45,7 @@ window.KK_DATA = {
     },
     {
       icon: '🤖',
-      label: { de: 'AI Agent Architekt', en: 'AI Agent Architect' },
+      label: { de: 'AI Systems & Automation', en: 'AI Systems & Automation' },
       sub:   { de: '100% From Scratch · GitHub Actions · Cloud Run', en: '100% From Scratch · GitHub Actions · Cloud Run' },
       detail: {
         de: 'Ich baue Agentensysteme komplett ohne Frameworks auf der grünen Wiese – jeder Code-Ordner startet leer mit einer CLAUDE.md oder AGENT.md. Deployments laufen via Docker, GitHub Actions und Google Cloud Run.',
