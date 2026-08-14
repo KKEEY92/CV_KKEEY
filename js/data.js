@@ -63,12 +63,12 @@ window.KK_DATA = {
     },
   ],
 
-  // ─── PROJEKTE ───────────────────────────────────────────────────────────────
+  // ─── PROJEKTE ───────────────────────────────────────────────────────────────────
   projects: [
     {
       id: 'claire-v25-native-audio',
       repo: 'KKEEY92/claire-v2.5-native-audio',
-      status: { latestTag: null }, // no git tag exists on this repo yet — do not fabricate one
+      status: { latestTag: 'v2.5.0' },
       name: 'Claire V2.5 Native Audio',
       color: '#00d4aa',
       colorRgb: '0,212,170',
@@ -177,7 +177,7 @@ window.KK_DATA = {
     },
   ],
 
-  // ─── ZERTIFIZIERUNGEN ───────────────────────────────────────────────────────
+  // ─── ZERTIFIZIERUNGEN ─────────────────────────────────────────────────────────────────
   // Nur echte, geprüfte Zertifizierungen als Karten. Kursabschlüsse (LinkedIn
   // Learning etc.) stehen als kompakte Liste weiter unten unter `education`.
   certifications: [
@@ -196,7 +196,7 @@ window.KK_DATA = {
     },
   ],
 
-  // ─── WEITERBILDUNG ──────────────────────────────────────────────────────────
+  // ─── WEITERBILDUNG ──────────────────────────────────────────────────────────────────
   // Kursabschlüsse ohne formale Prüfung (LinkedIn Learning etc.) — kompakte
   // Liste statt Karten, um sie von echten Zertifizierungen abzugrenzen.
   education: {
@@ -214,7 +214,7 @@ window.KK_DATA = {
     ],
   },
 
-  // ─── SKILLS ─────────────────────────────────────────────────────────────────
+  // ─── SKILLS ───────────────────────────────────────────────────────────────────────
   skillGroups: [
     {
       label: { de: 'Sprachen & Core Code', en: 'Languages & Core Code' },
@@ -261,7 +261,7 @@ window.KK_DATA = {
     },
   ],
 
-  // ─── KARRIERE TIMELINE ──────────────────────────────────────────────────────
+  // ─── KARRIERE TIMELINE ─────────────────────────────────────────────────────────────
   timeline: [
     {
       period:  { de: 'bis Ende 2024 · 15 Jahre', en: 'Until end 2024 · 15 years' },
@@ -282,10 +282,10 @@ window.KK_DATA = {
       color:   '#7c6af7',
       active:  false,
       desc: {
-        de: 'Active Directory, Entra ID, Citrix (NetScaler), Omnitracker, Innovaphone PBX. Windows-11-Rollouts via Deskcenter Studio & Custom-PowerShell (Pausierung 46%-Update zur Speed-Optimierung). Endpoint-Security via FortiClient & Sophos. Eigene Ticket-Automation & der KKEEY-Standard.',
-        en: 'Active Directory, Entra ID, Citrix (NetScaler), Omnitracker, Innovaphone PBX. Windows 11 rollouts via Deskcenter Studio & custom PowerShell (pausing 46% update for speed optimization). Endpoint security via FortiClient & Sophos. Custom ticket automation & the KKEEY Standard.',
+        de: 'Verantwortlich für Benutzer-, Gruppen- und Berechtigungsmanagement in Active Directory und Microsoft Entra ID sowie für die strukturierte Bearbeitung von Incidents in ITIL-orientierten Supportprozessen. Weiterer Scope: Citrix (NetScaler), Omnitracker, Innovaphone PBX. Windows-11-Rollouts via Deskcenter Studio & Custom-PowerShell (Pausierung 46%-Update zur Speed-Optimierung). Endpoint-Security via FortiClient & Sophos. Eigene Ticket-Automation & der KKEEY-Standard.',
+        en: 'Responsible for user, group and permission management in Active Directory and Microsoft Entra ID, and for structured incident resolution in ITIL-oriented support processes. Additional scope: Citrix (NetScaler), Omnitracker, Innovaphone PBX. Windows 11 rollouts via Deskcenter Studio & custom PowerShell (pausing 46% update for speed optimization). Endpoint security via FortiClient & Sophos. Custom ticket automation & the KKEEY Standard.',
       },
-      tags: ['Active Directory', 'Citrix', 'Deskcenter Studio', 'PowerShell', 'KRITIS', 'FortiClient'],
+      tags: ['Active Directory', 'Entra ID', 'IAM', 'Citrix', 'Deskcenter Studio', 'PowerShell', 'KRITIS', 'FortiClient'],
     },
     {
       period:  { de: 'Juni 2026 · aktuell', en: 'June 2026 · present' },
@@ -301,7 +301,7 @@ window.KK_DATA = {
     },
   ],
 
-  // ─── I18N STRINGS ────────────────────────────────────────────────────────────
+  // ─── I18N STRINGS ────────────────────────────────────────────────────────────────
   i18n: {
     trioLabel:     { de: 'Differenziator',              en: 'Differentiator' },
     trioTitle:     { de: 'Das seltene Dreierpaket',     en: 'The Rare Trio' },
