@@ -1,170 +1,129 @@
 <!DOCTYPE html>
-<html lang="de" data-theme="light">
+<html lang="de" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Datenschutzerklärung | Kevin Kuck — IT-Administrator</title>
-  <meta name="description" content="Datenschutzerklärung von Kevin Kuck gemäß DSGVO und DDG.">
+  <title>Datenschutzerklärung | Kevin Kuck — AI Systems Engineer</title>
+  <meta name="description" content="Datenschutzerklärung und Hinweise zum Datenschutz von Kevin Kuck.">
   <meta name="robots" content="noindex, nofollow">
-  
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231a5fa8'/%3E%3Ctext x='32' y='43' font-family='system-ui,sans-serif' font-size='28' font-weight='700' fill='%23ffffff' text-anchor='middle'%3EKK%3C/text%3E%3C/svg%3E">
-  
+  <meta name="theme-color" content="#07070F">
+
   <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="css/style.css">
-  
-  <script>
-    // Theme Initialisierung vor dem Rendern
-    (function() {
-      const isDark = localStorage.getItem('kkit_dark') === 'true';
-      const colorTheme = localStorage.getItem('kkit_color') || 'default';
-      document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
-      document.documentElement.setAttribute('data-color-theme', colorTheme);
-    })();
-  </script>
 
   <style>
-    .legal-page {
+    .legal-page-wrapper {
       min-height: 100vh;
-      padding: 60px 0 80px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 80px 24px;
+      position: relative;
+      z-index: 2;
     }
-    .legal-container {
-      max-width: 820px;
+    .legal-card {
+      max-width: 780px;
       margin: 0 auto;
-      padding: 36px 40px;
-      background: var(--it-surface);
-      border: 1px solid var(--it-border);
-      border-radius: 14px;
-      box-shadow: var(--it-shadow);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
+      padding: 40px;
+      background: var(--kk-card);
+      border: 1px solid var(--kk-border);
+      border-radius: 16px;
+      -webkit-backdrop-filter: blur(24px);
+      backdrop-filter: blur(24px);
+      box-shadow: 0 8px 32px var(--kk-shadow), inset 0 1px 1px var(--kk-inset);
     }
-    .legal-container h1 {
-      font-size: 32px;
-      font-weight: 800;
-      color: var(--it-heading);
-      letter-spacing: -0.5px;
-      margin-bottom: 24px;
-      padding-bottom: 16px;
-      border-bottom: 1px solid var(--it-border);
-    }
-    .legal-container h2 {
-      font-size: 19px;
+    .legal-card h1 {
+      font-size: clamp(28px, 4vw, 38px);
       font-weight: 700;
-      color: var(--it-heading);
-      margin-top: 28px;
-      margin-bottom: 12px;
+      color: var(--kk-text-bright);
+      letter-spacing: -1.5px;
+      margin-bottom: 24px;
+      background: linear-gradient(140deg, var(--kk-text-bright) 10%, #b2aaf8 45%, var(--accent-2) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
-    .legal-container p {
-      color: var(--it-text);
-      font-size: 15px;
+    .legal-card h2 {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--accent-1);
+      margin-top: 28px;
+      margin-bottom: 10px;
+      letter-spacing: -0.3px;
+    }
+    .legal-card p {
+      color: var(--kk-text);
+      line-height: 1.7;
+      margin-bottom: 12px;
+      font-size: 14.5px;
+    }
+    .legal-card ul {
+      color: var(--kk-text);
       line-height: 1.7;
       margin-bottom: 14px;
-    }
-    .legal-container ul {
-      color: var(--it-text);
-      font-size: 15px;
-      line-height: 1.7;
-      margin-bottom: 16px;
       padding-left: 24px;
+      font-size: 14.5px;
     }
-    .legal-container a {
-      color: var(--it-accent);
-      text-decoration: none;
-      font-weight: 500;
-    }
-    .legal-container a:hover {
-      text-decoration: underline;
-    }
-    .back-nav {
-      margin-bottom: 24px;
-    }
-    .back-link {
+    .back-btn {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
-      color: var(--it-accent);
-      font-size: 14px;
-      font-weight: 600;
-      text-decoration: none;
-      padding: 6px 12px;
+      gap: 8px;
+      margin-bottom: 28px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--accent-1);
+      background: rgba(var(--accent-1-rgb), 0.08);
+      border: 1px solid rgba(var(--accent-1-rgb), 0.22);
       border-radius: 8px;
-      border: 1px solid var(--it-border);
-      background: var(--it-surface);
-      transition: border-color 0.2s, background 0.2s;
-    }
-    .back-link:hover {
-      border-color: var(--it-accent);
+      padding: 8px 14px;
+      transition: all 0.2s ease;
       text-decoration: none;
     }
-    @media (max-width: 768px) {
-      .legal-page { padding: 32px 16px 60px; }
-      .legal-container { padding: 24px 20px; }
-      .legal-container h1 { font-size: 26px; }
+    .back-btn:hover {
+      background: rgba(var(--accent-1-rgb), 0.18);
+      color: #fff;
+      transform: translateX(-2px);
     }
   </style>
 </head>
 <body>
 
-  <main class="legal-page">
-    <div class="container">
-      <div class="back-nav">
-        <a href="index.html" class="back-link">← Zurück zum AI-Portfolio</a>
-      </div>
+  <!-- Animated WebGL Wave Background -->
+  <canvas id="kk-bg"></canvas>
+  <div class="scanlines"></div>
 
-      <article class="legal-container">
-        <h1>Datenschutzerklärung</h1>
+  <div class="legal-page-wrapper">
+    <div class="legal-card">
+      <a href="index.html" class="back-btn">← Zurück zum AI-Portfolio</a>
 
-        <h2>1. Datenschutz auf einen Blick</h2>
-        <p><strong>Allgemeine Hinweise</strong><br>
-        Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können. Ausführliche Informationen zum Thema Datenschutz entnehmen Sie unserer unter diesem Text aufgeführten Datenschutzerklärung.</p>
+      <h1>Datenschutzerklärung</h1>
 
-        <p><strong>Datenerfassung auf dieser Website</strong><br>
-        <strong>Wer ist verantwortlich für die Datenerfassung auf dieser Website?</strong><br>
-        Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber:</p>
-        <p>
-          Kevin Kuck<br>
-          Marktplatz 5<br>
-          35510 Butzbach<br>
-          E-Mail: <a href="mailto:kuck_kevin@icloud.com">kuck_kevin@icloud.com</a>
-        </p>
+      <h2>1. Datenschutz auf einen Blick</h2>
+      <p><strong>Allgemeine Hinweise</strong><br>
+      Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können.</p>
 
-        <p><strong>Wie erfassen wir Ihre Daten?</strong><br>
-        Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen. Hierbei handelt es sich z. B. um Daten, die Sie in das Kontaktformular eingeben. Andere Daten werden automatisch beim Besuch der Website durch unsere IT-Systeme erfasst. Das sind vor allem technische Daten (z. B. Internetbrowser, Betriebssystem oder Uhrzeit des Seitenaufrufs). Die Erfassung dieser Daten erfolgt automatisch, sobald Sie diese Website betreten.</p>
+      <p><strong>Datenerfassung auf dieser Website</strong><br>
+      Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber: Kevin Kuck, Marktplatz 5, 35510 Butzbach, E-Mail: <a href="mailto:kuck_kevin@icloud.com">kuck_kevin@icloud.com</a>.</p>
 
-        <h2>2. Hosting (GitHub Pages)</h2>
-        <p>Wir hosten die Inhalte unserer Website bei folgendem Anbieter:</p>
-        <p><strong>GitHub Pages</strong><br>
-        Anbieter ist die GitHub Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA (nachfolgend: GitHub).
-        Wenn Sie unsere Website besuchen, erfasst GitHub verschiedene Logfiles inklusive Ihrer IP-Adresse zur Bereitstellung und Sicherstellung des Betriebs. Details entnehmen Sie der Datenschutzerklärung von GitHub: <a href="https://docs.github.com/de/site-policy/privacy-policies/github-privacy-statement" target="_blank" rel="noopener">https://docs.github.com/de/site-policy/privacy-policies/github-privacy-statement</a>.</p>
+      <h2>2. Hosting (GitHub Pages)</h2>
+      <p>Wir hosten die Inhalte unserer Website bei folgendem Anbieter:</p>
+      <p><strong>GitHub Pages</strong><br>
+      Anbieter ist die GitHub Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA. Wenn Sie unsere Website besuchen, erfasst GitHub verschiedene Logfiles inklusive Ihrer IP-Adresse. Details: <a href="https://docs.github.com/de/site-policy/privacy-policies/github-privacy-statement" target="_blank" rel="noopener">GitHub Privacy Statement</a>.</p>
 
-        <h2>3. Kontaktformular (Web3Forms)</h2>
-        <p>Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular (Name, E-Mail-Adresse, Nachricht) zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert und verarbeitet.</p>
-        <p>Wir nutzen für unser Kontaktformular den Dienst <strong>Web3Forms</strong> (Web3Forms API). Die Datenübertragung erfolgt verschlüsselt per HTTPS. Mit dem Absenden des Formulars stimmen Sie der Weiterleitung an unsere E-Mail-Adresse zu. Weitere Informationen zum Datenschutz bei Web3Forms finden Sie unter: <a href="https://web3forms.com/privacy" target="_blank" rel="noopener">https://web3forms.com/privacy</a>.</p>
+      <h2>3. Kontaktformular (Web3Forms)</h2>
+      <p>Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular zwecks Bearbeitung der Anfrage verarbeitet.</p>
+      <p>Wir nutzen für unser Kontaktformular den Dienst <strong>Web3Forms</strong>. Die Datenübertragung erfolgt verschlüsselt über die API von Web3Forms. Weitere Informationen: <a href="https://web3forms.com/privacy" target="_blank" rel="noopener">Web3Forms Privacy Policy</a>.</p>
 
-        <h2>4. Lokales Hosting von Web Fonts</h2>
-        <p>Diese Seite nutzt zur einheitlichen und performanten Darstellung von Schriftarten Web Fonts im WOFF2-Format. Diese Schriftdateien werden <strong>vollständig lokal auf dem Webserver gehostet</strong>. Es findet <strong>keine Verbindung zu externen Servern (wie Google Fonts oder CDNs)</strong> statt. Ihre IP-Adresse wird für diesen Zweck nicht an Dritte übertragen.</p>
+      <h2>4. Lokales Hosting von Web Fonts &amp; Keine Tracking-Cookies</h2>
+      <p>Diese Seite nutzt zur einheitlichen Darstellung Schriften via Google Fonts (preconnect) bzw. system-native Web Fonts. Es werden <strong>keine Tracking-Cookies</strong>, keine Analyse-Tools (wie Google Analytics) und keine Werbe-Tracker eingesetzt.</p>
 
-        <h2>5. Ihre Rechte</h2>
-        <p>Sie haben im Rahmen der geltenden gesetzlichen Bestimmungen jederzeit das Recht auf:</p>
-        <ul>
-          <li>Unentgeltliche Auskunft über Ihre gespeicherten personenbezogenen Daten, deren Herkunft und Empfänger und den Zweck der Datenverarbeitung (Art. 15 DSGVO).</li>
-          <li>Berichtigung unrichtiger oder Vervollständigung Ihrer bei uns gespeicherten personenbezogenen Daten (Art. 16 DSGVO).</li>
-          <li>Löschung Ihrer bei uns gespeicherten personenbezogenen Daten (Art. 17 DSGVO).</li>
-          <li>Einschränkung der Datenverarbeitung (Art. 18 DSGVO).</li>
-          <li>Datenübertragbarkeit (Art. 20 DSGVO).</li>
-          <li>Widerspruch gegen die Verarbeitung Ihrer Daten (Art. 21 DSGVO).</li>
-        </ul>
-        <p>Hierzu sowie zu weiteren Fragen zum Thema Datenschutz können Sie sich jederzeit unter der im Impressum angegebenen E-Mail-Adresse an uns wenden.</p>
-      </article>
+      <h2>5. Ihre Rechte</h2>
+      <p>Sie haben jederzeit das Recht auf unentgeltliche Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten sowie ein Recht auf Berichtigung oder Löschung dieser Daten. Wenden Sie sich hierzu an: <a href="mailto:kuck_kevin@icloud.com">kuck_kevin@icloud.com</a>.</p>
     </div>
-  </main>
+  </div>
 
-  <footer class="footer">
-    <p>&copy; 2026 Kevin Kuck · <a href="index.html">kkeey92.github.io/CV_IT_KKEEY</a></p>
-    <p class="footer-legal">
-      <a href="impressum.html">Impressum</a> | <a href="datenschutz.html">Datenschutzerklärung</a>
-    </p>
-  </footer>
-
+  <script src="js/data.js" defer></script>
+  <script src="js/main.js" defer></script>
 </body>
 </html>
