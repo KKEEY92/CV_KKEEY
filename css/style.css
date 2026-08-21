@@ -231,7 +231,8 @@ section { padding: 120px 24px; position: relative; z-index: 2; }
   background: var(--kk-card); border: 1px solid var(--kk-border);
   border-radius: 20px; position: relative; overflow: hidden;
   transition: all 0.35s ease; cursor: default;
-  backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
   box-shadow: inset 0 1px 0 var(--kk-inset), 0 8px 32px var(--kk-shadow);
 }
 .glass-card:hover {
@@ -255,7 +256,8 @@ section { padding: 120px 24px; position: relative; z-index: 2; }
 .projects-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(320px,1fr)); gap: 24px; }
 .project-card {
   padding: 32px 28px; display: flex; flex-direction: column; gap: 18px;
-  backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
   transition: all 0.35s ease;
 }
 .project-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; margin-bottom: 10px; flex-wrap: wrap; }
@@ -450,7 +452,10 @@ textarea.contact-input { resize: vertical; min-height: 130px; }
   .nav-links { display: none; }
   .nav-links.open {
     display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0;
-    background: var(--kk-nav); backdrop-filter: blur(20px); padding: 16px 24px; gap: 12px;
+    background: var(--kk-nav);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    padding: 16px 24px; gap: 12px;
     border-bottom: 1px solid var(--kk-border);
   }
   .hamburger { display: block; }
@@ -529,8 +534,8 @@ textarea.contact-input { resize: vertical; min-height: 130px; }
     box-shadow: none !important;
     border: 1px solid #cccccc !important;
     background: transparent !important;
-    backdrop-filter: none !important;
     -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
     page-break-inside: avoid;
   }
 }
