@@ -1,5 +1,14 @@
+/**
+ * KKEEY Future Orchestrator Interface — main.js v3.5
+ * CV_KKEEY (AI Engineering & Systems Portfolio)
+ * Multilingual: DE / EN / FR / UK / PL
+ */
+
 const D = window.KK_DATA;
+const LANGUAGES = ['de', 'en', 'fr', 'uk', 'pl'];
 let lang = localStorage.getItem('kk_lang') || 'de';
+if (!LANGUAGES.includes(lang)) lang = 'de';
+
 let darkMode = localStorage.getItem('kk_dark') !== 'false';
 let colorTheme = localStorage.getItem('kk_color') || 'purple';
 
@@ -13,7 +22,12 @@ document.addEventListener('DOMContentLoaded', () => {
   initBg();
 });
 
-function t(obj) { return typeof obj === 'object' ? (obj[lang] || obj.de || '') : obj; }
+function t(obj) {
+  if (typeof obj === 'object' && obj !== null) {
+    return obj[lang] || obj.de || obj.en || '';
+  }
+  return obj || '';
+}
 
 // ─── THEME ────────────────────────────────────────────────────────────
 function applyTheme() {
@@ -24,9 +38,11 @@ function applyTheme() {
   if (typeof updateBgLight === 'function') updateBgLight();
   const btn = document.getElementById('darkToggle');
   if (btn) btn.setAttribute('aria-label', darkMode ? t(D.i18n.darkBtnLight) : t(D.i18n.darkBtnDark));
-  if (btn) btn.innerHTML = darkMode
-    ? '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="13" height="13"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>'
-    : '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="13" height="13"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+  if (btn) {
+    btn.innerHTML = darkMode
+      ? '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="13" height="13"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>'
+      : '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="13" height="13"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+  }
 }
 
 // ─── NAV ──────────────────────────────────────────────────────────────
@@ -49,7 +65,10 @@ function initNav() {
   document.querySelectorAll('#navLinks a').forEach(a => {
     a.addEventListener('click', () => {
       links.classList.remove('open');
-      if (hamburger) { hamburger.textContent = '☰'; hamburger.setAttribute('aria-expanded', 'false'); }
+      if (hamburger) {
+        hamburger.textContent = '☰';
+        hamburger.setAttribute('aria-expanded', 'false');
+      }
     });
   });
 
@@ -67,12 +86,16 @@ function initNav() {
     });
   }
 
-  document.getElementById('langToggle').addEventListener('click', () => {
-    lang = lang === 'de' ? 'en' : 'de';
-    localStorage.setItem('kk_lang', lang);
-    render();
-    restartTyped();
-  });
+  const langBtn = document.getElementById('langToggle');
+  if (langBtn) {
+    langBtn.addEventListener('click', () => {
+      const idx = LANGUAGES.indexOf(lang);
+      lang = LANGUAGES[(idx + 1) % LANGUAGES.length];
+      localStorage.setItem('kk_lang', lang);
+      render();
+      restartTyped();
+    });
+  }
 }
 
 // ─── TYPED ────────────────────────────────────────────────────────────
@@ -85,12 +108,14 @@ function initTyped() {
 function restartTyped() {
   clearTimeout(typedTimer);
   typedIdx = 0; typedDeleting = false; typedText = '';
-  document.getElementById('typedOutput').textContent = '';
+  const el = document.getElementById('typedOutput');
+  if (el) el.textContent = '';
   typedTimer = setTimeout(nextChar, 400);
 }
 
 function nextChar() {
-  const roles = D.hero.roles[lang];
+  const roles = (D.hero.roles && D.hero.roles[lang]) || D.hero.roles.de || [];
+  if (!roles.length) return;
   const target = roles[typedIdx % roles.length];
   const el = document.getElementById('typedOutput');
   if (!el) return;
@@ -119,56 +144,91 @@ function nextChar() {
 
 // ─── RENDER ───────────────────────────────────────────────────────────
 function render() {
-  document.getElementById('langToggle').textContent = lang === 'de' ? 'EN' : 'DE';
+  const langBtn = document.getElementById('langToggle');
+  if (langBtn) {
+    langBtn.textContent = lang.toUpperCase();
+    langBtn.setAttribute('aria-label', `Sprache wechseln (DE, EN, FR, UK, PL) — Aktuell: ${lang.toUpperCase()}`);
+    langBtn.setAttribute('title', `Sprache wechseln / Switch Language (DE, EN, FR, UK, PL)`);
+  }
 
   // Nav links
-  const navLabels = lang === 'de'
-    ? ['Über mich','Projekte','Skills','Zertifikate','Karriere','Kontakt']
-    : ['About','Projects','Skills','Certifications','Career','Contact'];
-  document.querySelectorAll('#navLinks a').forEach((a, i) => { if (navLabels[i]) a.textContent = navLabels[i]; });
+  const navKeys = [
+    D.i18n.navAbout,
+    D.i18n.navProjects,
+    D.i18n.navSkills,
+    D.i18n.navCerts,
+    D.i18n.navCareer,
+    D.i18n.navContact,
+  ];
+  document.querySelectorAll('#navLinks a').forEach((a, i) => {
+    if (navKeys[i]) a.textContent = t(navKeys[i]);
+  });
 
   // Hero
-  document.getElementById('heroGreeting').textContent = t(D.hero.greeting);
-  document.getElementById('heroCta1').textContent = t(D.hero.cta1);
-  document.getElementById('heroCta2').textContent = t(D.hero.cta2);
-  document.querySelector('#heroCta3 span').textContent = t(D.hero.cta3);
-  document.getElementById('availableText').textContent = t(D.hero.available);
+  const heroGreeting = document.getElementById('heroGreeting');
+  if (heroGreeting) heroGreeting.textContent = t(D.hero.greeting);
+  const heroCta1 = document.getElementById('heroCta1');
+  if (heroCta1) heroCta1.textContent = t(D.hero.cta1);
+  const heroCta2 = document.getElementById('heroCta2');
+  if (heroCta2) heroCta2.textContent = t(D.hero.cta2);
+  const heroCta3Span = document.querySelector('#heroCta3 span');
+  if (heroCta3Span) heroCta3Span.textContent = t(D.hero.cta3);
+  const availText = document.getElementById('availableText');
+  if (availText) availText.textContent = t(D.hero.available);
 
   // Trio
-  document.getElementById('trioLabel').textContent = t(D.i18n.trioLabel);
-  document.getElementById('trioTitle').textContent = t(D.i18n.trioTitle);
-  document.getElementById('trioSub').textContent = t(D.i18n.trioSub);
+  const trioLabel = document.getElementById('trioLabel');
+  if (trioLabel) trioLabel.textContent = t(D.i18n.trioLabel);
+  const trioTitle = document.getElementById('trioTitle');
+  if (trioTitle) trioTitle.textContent = t(D.i18n.trioTitle);
+  const trioSub = document.getElementById('trioSub');
+  if (trioSub) trioSub.textContent = t(D.i18n.trioSub);
   renderTrio();
 
   // Projects
-  document.getElementById('projTitle').textContent = t(D.i18n.projTitle);
-  document.getElementById('projSub').textContent = t(D.i18n.projSub);
+  const projTitle = document.getElementById('projTitle');
+  if (projTitle) projTitle.textContent = t(D.i18n.projTitle);
+  const projSub = document.getElementById('projSub');
+  if (projSub) projSub.textContent = t(D.i18n.projSub);
   renderProjects();
 
   // Skills
-  document.getElementById('skillsTitle').textContent = t(D.i18n.skillsTitle);
+  const skillsTitle = document.getElementById('skillsTitle');
+  if (skillsTitle) skillsTitle.textContent = t(D.i18n.skillsTitle);
   renderSkills();
 
   // Certifications
-  document.getElementById('certLabel').textContent = t(D.i18n.certLabel);
-  document.getElementById('certTitle').textContent = t(D.i18n.certTitle);
+  const certLabel = document.getElementById('certLabel');
+  if (certLabel) certLabel.textContent = t(D.i18n.certLabel);
+  const certTitle = document.getElementById('certTitle');
+  if (certTitle) certTitle.textContent = t(D.i18n.certTitle);
   renderCertifications();
   renderEducation();
 
   // Career
-  document.getElementById('careerLabel').textContent = t(D.i18n.careerLabel);
-  document.getElementById('careerTitle').textContent = t(D.i18n.careerTitle);
+  const careerLabel = document.getElementById('careerLabel');
+  if (careerLabel) careerLabel.textContent = t(D.i18n.careerLabel);
+  const careerTitle = document.getElementById('careerTitle');
+  if (careerTitle) careerTitle.textContent = t(D.i18n.careerTitle);
   renderTimeline();
 
   // Contact
-  document.getElementById('contactLabel').textContent = t(D.i18n.contactLabel);
-  document.getElementById('contactTitle').textContent = t(D.i18n.contactTitle);
-  document.getElementById('contactDesc').textContent = t(D.i18n.contactDesc);
-  document.getElementById('formName').placeholder = t(D.i18n.namePH);
-  document.getElementById('formEmail').placeholder = t(D.i18n.emailPH);
-  document.getElementById('formMsg').placeholder = t(D.i18n.msgPH);
-  document.getElementById('formSubmit').textContent = t(D.i18n.submitLabel);
-  document.getElementById('formSent').textContent = t(D.i18n.sentMsg);
+  const contactLabel = document.getElementById('contactLabel');
+  if (contactLabel) contactLabel.textContent = t(D.i18n.contactLabel);
+  const contactTitle = document.getElementById('contactTitle');
+  if (contactTitle) contactTitle.textContent = t(D.i18n.contactTitle);
+  const contactDesc = document.getElementById('contactDesc');
+  if (contactDesc) contactDesc.textContent = t(D.i18n.contactDesc);
+  const formName = document.getElementById('formName');
+  if (formName) formName.placeholder = t(D.i18n.namePH);
+  const formEmail = document.getElementById('formEmail');
+  if (formEmail) formEmail.placeholder = t(D.i18n.emailPH);
+  const formMsg = document.getElementById('formMsg');
+  if (formMsg) formMsg.placeholder = t(D.i18n.msgPH);
+  const formSubmit = document.getElementById('formSubmit');
+  if (formSubmit) formSubmit.textContent = t(D.i18n.submitLabel);
+  const formSent = document.getElementById('formSent');
+  if (formSent) formSent.textContent = t(D.i18n.sentMsg);
 
   // Footer crosslink + dark-toggle label follow the active language
   const cross = document.getElementById('footerCross');
@@ -182,6 +242,7 @@ function render() {
 
 function renderTrio() {
   const c = document.getElementById('trioContainer');
+  if (!c) return;
   c.innerHTML = D.trio.map(item => `
     <div class="glass-card trio-card reveal">
       <div class="card-accent"></div>
@@ -193,17 +254,13 @@ function renderTrio() {
   `).join('');
 }
 
-// Human-readable labels for structured status.type — only used when a project
-// has no literal `tag` string (i.e. its visible status is meant to be computed
-// from `status` rather than hand-authored). Keep in sync with the controlled
-// vocabulary scripts/sync_projects.py expects to find under `status`.
 const STATUS_TYPE_LABELS = {
-  released:      { de: 'Released', en: 'Released' },
-  implemented:   { de: 'Implemented', en: 'Implemented' },
-  prototype:     { de: 'Prototype', en: 'Prototype' },
-  experiment:    { de: 'Experiment', en: 'Experiment' },
-  documentation: { de: 'Public Documentation · Proprietary Implementations', en: 'Public Documentation · Proprietary Implementations' },
-  demo:          { de: 'Demo', en: 'Demo' },
+  released:      { de: 'Released', en: 'Released', fr: 'Publié', uk: 'Реліз', pl: 'Wydany' },
+  implemented:   { de: 'Implemented', en: 'Implemented', fr: 'Implémenté', uk: 'Реалізовано', pl: 'Wdrożony' },
+  prototype:     { de: 'Prototype', en: 'Prototype', fr: 'Prototype', uk: 'Прототип', pl: 'Prototyp' },
+  experiment:    { de: 'Experiment', en: 'Experiment', fr: 'Expérience', uk: 'Експеримент', pl: 'Eksperyment' },
+  documentation: { de: 'Öffentliche Dokumentation · Private Implementierung', en: 'Public Documentation · Proprietary Implementations', fr: 'Documentation Publique · Implémentations Privées', uk: 'Публічна документація · Приватна реалізація', pl: 'Publiczna Dokumentacja · Prywatna Implementacja' },
+  demo:          { de: 'Demo', en: 'Demo', fr: 'Démo', uk: 'Демо', pl: 'Demo' },
 };
 
 function statusTagText(status) {
@@ -217,6 +274,7 @@ function statusTagText(status) {
 
 function renderProjects() {
   const c = document.getElementById('projContainer');
+  if (!c) return;
   c.innerHTML = D.projects.map(p => {
     const rgb = p.colorRgb;
     const col = p.color;
@@ -253,6 +311,7 @@ function renderProjects() {
 
 function renderCertifications() {
   const c = document.getElementById('certContainer');
+  if (!c) return;
   if (!D.certifications || D.certifications.length === 0) {
     c.innerHTML = `<p class="cert-empty reveal">${t(D.i18n.certEmpty)}</p>`;
     return;
@@ -285,6 +344,7 @@ function renderEducation() {
 
 function renderSkills() {
   const c = document.getElementById('skillsContainer');
+  if (!c) return;
   c.innerHTML = D.skillGroups.map((group, gi) => `
     <div class="glass-card skill-card reveal">
       <h3 class="skill-group-label">${t(group.label)}</h3>
@@ -307,6 +367,7 @@ function renderSkills() {
 
 function renderTimeline() {
   const c = document.getElementById('timelineContainer');
+  if (!c) return;
   c.innerHTML = D.timeline.map(tl => {
     const col = tl.color;
     const active = tl.active;
@@ -357,7 +418,6 @@ function initSkillBars() {
 }
 
 // ─── CONTACT FORM (Web3Forms) ────────────────────────────────────────
-// Sendet echte E-Mails via Web3Forms → kuck_kevin@icloud.com
 const form = document.getElementById('contactForm');
 if (form) {
   form.addEventListener('submit', async (e) => {
