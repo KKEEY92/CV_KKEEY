@@ -4,15 +4,130 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kevin Kuck — IT Systems Engineer & AI Agent Architekt</title>
-  <meta name="description" content="Portfolio von Kevin Kuck — IT Systems Engineer, AI Agent Architekt und Audio Engineer.">
+  <meta name="description" content="Portfolio von Kevin Kuck — IT Systems Engineer, AI Agent Architekt und Audio Engineer mit 15+ Jahren Erfahrung. Active Directory, Microsoft Entra ID, IAM, PowerShell, KRITIS, Gemini & Vertex AI.">
   <link rel="canonical" href="https://kkeey92.github.io/CV_KKEEY/">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2307070f'/%3E%3Ctext x='32' y='43' font-family='system-ui,sans-serif' font-size='28' font-weight='700' fill='%237c6af7' text-anchor='middle'%3EKK%3C/text%3E%3C/svg%3E">
+  <meta property="og:title" content="Kevin Kuck — IT Systems Engineer & AI Agent Architekt">
+  <meta property="og:description" content="15 Jahre Operational Expertise. AI Agent Architekt. Claire V2.5, AuraTone AI, AFM Chat. Verfügbar ab sofort.">
+  <meta property="og:image" content="https://kkeey92.github.io/CV_KKEEY/assets/og-image.jpg">
+  <meta property="og:url" content="https://kkeey92.github.io/CV_KKEEY/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="de_DE">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="css/style.css?v=20260826">
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Person","name":"Kevin Kuck","jobTitle":"IT Systems Engineer & AI Agent Architekt","url":"https://kkeey.dev","email":"hello@kkeey.dev","address":{"@type":"PostalAddress","addressLocality":"Butzbach","addressCountry":"DE"}}
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Kevin Kuck",
+    "jobTitle": "IT Systems Engineer & AI Agent Architekt",
+    "url": "https://kkeey92.github.io/CV_KKEEY/",
+    "email": "hello@kkeey.dev",
+    "address": { "@type": "PostalAddress", "addressLocality": "Butzbach", "addressCountry": "DE" },
+    "sameAs": ["https://github.com/KKEEY92", "https://www.linkedin.com/in/kevin-kuck-it/", "https://www.freelancermap.de/profil/kevin-kuck"]
+  }
   </script>
 </head>
 <body>
-<!-- KEEP-ORIGINAL-STRUCTURE: this file was reduced risk-push; full layout remains in previous index if this overwrites too hard -->
+<canvas id="kk-bg"></canvas>
+<div class="scanlines"></div>
+<nav class="nav">
+  <div class="nav-inner">
+    <img src="assets/kkeey-logo.jpg" class="nav-logo-img" alt="KKEEY Logo">
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">Über mich</a></li>
+      <li><a href="#projects">Projekte</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#certifications">Zertifikate</a></li>
+      <li><a href="#career">Karriere</a></li>
+      <li><a href="#contact">Kontakt</a></li>
+    </ul>
+    <div class="nav-controls">
+      <div class="available-badge"><span class="available-dot"></span><span id="availableText">Verfügbar ab sofort</span></div>
+      <button class="nav-btn nav-btn-icon" id="darkToggle" aria-label="Theme"></button>
+      <button class="nav-btn nav-btn-color" id="colorToggle" aria-label="Farbthema wechseln"><span class="nav-color-indicator"></span></button>
+      <button class="nav-btn" id="langToggle" aria-label="Sprache wechseln">DE</button>
+      <button class="hamburger" id="hamburger" aria-label="Menü" aria-expanded="false" aria-controls="navLinks">☰</button>
+    </div>
+  </div>
+</nav>
+<section class="hero" id="hero">
+  <div class="hero-content">
+    <div class="hero-avatar"><img src="assets/avatar.jpg" alt="Kevin Kuck" width="800" height="800" decoding="async"></div>
+    <p class="hero-label" id="heroGreeting">Hallo, ich bin</p>
+    <h1 class="hero-name">Kevin Kuck</h1>
+    <div class="hero-typed-wrap"><span class="hero-typed-text" id="typedOutput"></span><span class="hero-cursor"></span></div>
+    <p class="hero-tagline">IT · AI · AUDIO · 15+ JAHRE PRAXIS</p>
+    <div class="hero-ctas">
+      <a href="#projects" class="btn-primary" id="heroCta1">Projekte ansehen</a>
+      <a href="#contact" class="btn-outline" id="heroCta2">Kontakt aufnehmen</a>
+      <a href="assets/Kevin_Kuck_Bewerbungsmappe_AI_2026.pdf" download class="btn-outline btn-cv" id="heroCta3"><span>Bewerbungsmappe (PDF)</span></a>
+    </div>
+  </div>
+  <div class="hero-arrow">↓</div>
+</section>
+<section id="about"><div class="container">
+  <p class="section-label" id="trioLabel">Differenziator</p>
+  <h2 class="section-title" id="trioTitle">Das seltene Dreierpaket</h2>
+  <p class="section-sub" id="trioSub">Drei Domänen. Eine Person. Diese Kombination gibt es kaum.</p>
+  <div class="trio-grid" id="trioContainer"></div>
+</div></section>
+<section id="projects"><div class="container">
+  <p class="section-label">Proof of Work</p>
+  <h2 class="section-title" id="projTitle">Projekte & Showcase</h2>
+  <p class="section-sub" id="projSub">Gebaut. Deployed. Öffentlich.</p>
+  <div class="projects-grid" id="projContainer"></div>
+</div></section>
+<section id="skills"><div class="container">
+  <p class="section-label">Tech Stack</p>
+  <h2 class="section-title" id="skillsTitle">Skills & Kompetenzprofil</h2>
+  <div class="skills-grid" id="skillsContainer"></div>
+</div></section>
+<section id="certifications"><div class="container">
+  <p class="section-label" id="certLabel">Verifiziert</p>
+  <h2 class="section-title" id="certTitle">Zertifizierungen</h2>
+  <div class="certifications-grid" id="certContainer"></div>
+  <div class="education-block">
+    <p class="education-label" id="eduLabel">Weiterbildung</p>
+    <ul class="education-list" id="eduList"></ul>
+    <a href="#" target="_blank" rel="noopener" class="education-link" id="eduLink">Alle Nachweise auf LinkedIn ansehen →</a>
+  </div>
+</div></section>
+<section id="career"><div class="container container--narrow">
+  <p class="section-label" id="careerLabel">Karriere</p>
+  <h2 class="section-title" id="careerTitle">Beruflicher Werdegang</h2>
+  <div class="timeline" id="timelineContainer"><div class="timeline-line"></div></div>
+</div></section>
+<section id="contact"><div class="contact-inner">
+  <p class="section-label" id="contactLabel">Kontakt</p>
+  <h2 class="section-title" id="contactTitle">Lass uns sprechen.</h2>
+  <p class="contact-desc" id="contactDesc">Offen für Festanstellungen, Freelance-Projekte und Kollaborationen. Remote · Hybrid · DE & EN.</p>
+  <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+    <input type="hidden" name="access_key" value="ee6d8111-b3db-4684-8460-4d57384ff3fc">
+    <input type="hidden" name="subject" value="Neue Kontaktanfrage — Kevin Kuck Portfolio">
+    <input type="hidden" name="redirect" value="false">
+    <input type="text" name="name" required class="contact-input" id="formName" placeholder="Dein Name">
+    <input type="email" name="email" required class="contact-input" id="formEmail" placeholder="Deine E-Mail">
+    <textarea name="message" required class="contact-input" id="formMsg" rows="5" placeholder="Deine Nachricht..."></textarea>
+    <p class="contact-legal" style="font-size:12px;line-height:1.5;opacity:.8;margin:8px 0 14px">Mit dem Absenden willigen Sie in die Verarbeitung Ihrer Angaben zur Beantwortung der Anfrage ein. Details: <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
+    <button type="submit" class="contact-submit" id="formSubmit">Nachricht senden →</button>
+    <p class="contact-sent" id="formSent" role="status">✓ Nachricht gesendet — bis bald!</p>
+  </form>
+  <div class="contact-links">
+    <a href="mailto:hello@kkeey.dev">hello@kkeey.dev</a>
+    <a href="https://github.com/KKEEY92" target="_blank" rel="noopener">github.com/KKEEY92</a>
+    <a href="https://gitlab.com/KKEEY92" target="_blank" rel="noopener">gitlab.com/KKEEY92</a>
+    <a href="https://www.linkedin.com/in/kevin-kuck-it/" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="https://www.freelancermap.de/profil/kevin-kuck" target="_blank" rel="noopener">freelancermap</a>
+  </div>
+</div></section>
+<footer class="footer">
+  <p>&copy; 2026 Kevin Kuck · kkeey.dev</p>
+  <p class="footer-legal"><a href="impressum.html">Impressum</a> | <a href="datenschutz.html">Datenschutzerklärung</a></p>
+  <p class="footer-cross"><a href="https://kkeey92.github.io/CV_IT_KKEEY/" id="footerCross">IT-Profil ansehen: Systemadministration · IAM →</a></p>
+</footer>
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
