@@ -7,24 +7,45 @@
   <meta name="robots" content="noindex, nofollow">
   <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    .legal-page-wrapper { min-height:100vh; display:flex; flex-direction:column; justify-content:center; padding:80px 24px; position:relative; z-index:2; }
+    .legal-card { max-width:780px; margin:0 auto; padding:40px; background:var(--kk-card); border:1px solid var(--kk-border); border-radius:16px; }
+    .legal-card h1 { font-size:clamp(28px,4vw,38px); font-weight:800; margin-bottom:24px; }
+    .legal-card h2 { font-size:18px; font-weight:700; color:var(--accent-1); margin-top:28px; margin-bottom:10px; }
+    .legal-card p { color:var(--kk-text); line-height:1.7; margin-bottom:12px; font-size:14.5px; }
+    .back-btn { display:inline-flex; align-items:center; gap:8px; margin-bottom:28px; font-size:12px; font-weight:600; color:var(--accent-1); padding:8px 14px; text-decoration:none; }
+  </style>
 </head>
 <body>
-  <canvas id="kk-bg"></canvas>
-  <div class="scanlines"></div>
-  <div class="legal-page-wrapper" style="min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:80px 24px;position:relative;z-index:2">
-    <div class="legal-card" style="max-width:780px;margin:0 auto;padding:40px;background:var(--kk-card);border:1px solid var(--kk-border);border-radius:16px">
+  <canvas id="kk-bg" aria-hidden="true"></canvas>
+  <div class="scanlines" aria-hidden="true"></div>
+  <div class="legal-page-wrapper">
+    <div class="legal-card">
       <a href="index.html" class="back-btn">← Zurück zum AI-Portfolio</a>
       <h1>Datenschutzerklärung</h1>
-      <h2>1. Datenschutz auf einen Blick</h2>
-      <p>Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber: Kevin Kuck, Marktplatz 5, 35510 Butzbach, E-Mail: <a href="mailto:hello@kkeey.dev">hello@kkeey.dev</a>.</p>
+      <h2>1. Verantwortlicher</h2>
+      <p>Verantwortlich für die Datenverarbeitung auf dieser Website:</p>
+      <p>Kevin Kuck<br>Marktplatz 5<br>35510 Butzbach<br>Deutschland<br>E-Mail: <a href="mailto:hello@kkeey.dev">hello@kkeey.dev</a><br>Telefon: +49 170 4130592</p>
       <h2>2. Hosting (GitHub Pages)</h2>
-      <p><strong>GitHub Pages</strong> — GitHub Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA. Details: <a href="https://docs.github.com/de/site-policy/privacy-policies/github-privacy-statement" target="_blank" rel="noopener">GitHub Privacy Statement</a>.</p>
+      <p>Diese Website wird bei GitHub Pages gehostet. Anbieter: GitHub Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA (für Nutzer in der EU über GitHub B.V., Niederlande).</p>
+      <p>Beim Aufruf erfasst GitHub technisch notwendige Server-Logfiles (u. a. IP-Adresse, Datum, Uhrzeit, aufgerufene Seite, User-Agent). Zweck: Auslieferung und Betrieb der Website, Sicherheit. Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse am störungsfreien Betrieb).</p>
+      <p>Eine Übermittlung in die USA ist möglich. GitHub nimmt am EU-US Data Privacy Framework teil bzw. stützt Transfers auf Standardvertragsklauseln. Details: <a href="https://docs.github.com/de/site-policy/privacy-policies/github-privacy-statement" target="_blank" rel="noopener">GitHub Privacy Statement</a>.</p>
       <h2>3. Kontaktformular (Web3Forms)</h2>
-      <p>Anfragen über das Kontaktformular werden zur Bearbeitung gespeichert. Dienstleister: <strong>Web3Forms</strong>. Policy: <a href="https://web3forms.com/privacy" target="_blank" rel="noopener">Web3Forms Privacy Policy</a>.</p>
-      <h2>4. Keine Tracking-Cookies</h2>
-      <p>Es werden keine Tracking-Cookies, keine Analyse-Tools und keine Werbe-Tracker eingesetzt.</p>
-      <h2>5. Ihre Rechte</h2>
-      <p>Auskunft, Berichtigung und Löschung: <a href="mailto:hello@kkeey.dev">hello@kkeey.dev</a>.</p>
+      <p>Wenn Sie das Formular nutzen, werden Name, E-Mail-Adresse und Nachricht an uns übermittelt, um Ihre Anfrage zu beantworten (Anbahnung eines Vertrags- oder Bewerbungsgesprächs).</p>
+      <p>Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO (vorvertragliche Maßnahmen) sowie Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Bearbeitung von Anfragen).</p>
+      <p>Technischer Dienstleister: Web3Forms (USA). Die Übertragung erfolgt verschlüsselt über deren API. Dabei ist eine Datenübermittlung in die USA möglich. Hinweise: <a href="https://web3forms.com/privacy" target="_blank" rel="noopener">Web3Forms Privacy Policy</a>.</p>
+      <p>Speicherdauer: Anfragen werden nur so lange gespeichert, wie es für die Bearbeitung erforderlich ist, längstens 12 Monate, sofern keine längere gesetzliche Aufbewahrung greift.</p>
+      <h2>4. Direkte E-Mail</h2>
+      <p>Schreiben Sie uns per E-Mail (hello@kkeey.dev oder office@kkeey.dev), werden die übermittelten Daten zur Bearbeitung gespeichert. Rechtsgrundlage und Speicherdauer analog Ziffer 3.</p>
+      <h2>5. Schriftarten</h2>
+      <p>Schriften werden lokal von dieser Website ausgeliefert. Es findet kein Aufruf von Google Fonts oder anderen Schrift-CDNs statt.</p>
+      <h2>6. Cookies und Tracking</h2>
+      <p>Es werden keine Tracking-Cookies, kein Google Analytics und keine Werbe-Tracker eingesetzt. Technisch notwendige Daten siehe Ziffer 2.</p>
+      <h2>7. Ihre Rechte</h2>
+      <p>Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch gegen Verarbeitungen auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Wenden Sie sich an <a href="mailto:hello@kkeey.dev">hello@kkeey.dev</a>.</p>
+      <p>Beschwerde: Der Hessische Beauftragte für Datenschutz und Informationsfreiheit, Gustav-Stresemann-Ring 1, 65189 Wiesbaden, sowie der Bundesbeauftragte für den Datenschutz.</p>
+      <h2>8. Pflicht zur Bereitstellung</h2>
+      <p>Sie müssen uns keine Daten bereitstellen. Ohne Kontaktdaten können wir Anfragen jedoch nicht beantworten.</p>
     </div>
   </div>
   <script src="js/data.js" defer></script>
