@@ -4,23 +4,32 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Impressum | Kevin Kuck — AI Systems Engineer</title>
-  <meta name="description" content="Impressum und rechtliche Angaben von Kevin Kuck.">
   <meta name="robots" content="noindex, nofollow">
-
   <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    .legal-page-wrapper { min-height:100vh; display:flex; flex-direction:column; justify-content:center; padding:80px 24px; position:relative; z-index:2; }
+    .legal-card { max-width:780px; margin:0 auto; padding:40px; background:var(--kk-card); border:1px solid var(--kk-border); border-radius:16px; }
+    .legal-card h1 { font-size:clamp(28px,4vw,38px); font-weight:800; margin-bottom:24px; }
+    .legal-card h2 { font-size:18px; font-weight:700; color:var(--accent-1); margin-top:28px; margin-bottom:10px; }
+    .legal-card p { color:var(--kk-text); line-height:1.7; margin-bottom:12px; font-size:14.5px; }
+    .back-btn { display:inline-flex; align-items:center; gap:8px; margin-bottom:28px; font-size:12px; font-weight:600; color:var(--accent-1); padding:8px 14px; text-decoration:none; }
+  </style>
 </head>
 <body>
-  <canvas id="kk-bg"></canvas>
-  <div class="scanlines"></div>
-  <div class="legal-page-wrapper" style="min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:80px 24px;position:relative;z-index:2">
-    <div class="legal-card" style="max-width:780px;margin:0 auto;padding:40px;background:var(--kk-card);border:1px solid var(--kk-border);border-radius:16px">
+  <canvas id="kk-bg" aria-hidden="true"></canvas>
+  <div class="scanlines" aria-hidden="true"></div>
+  <div class="legal-page-wrapper">
+    <div class="legal-card">
       <a href="index.html" class="back-btn">← Zurück zum AI-Portfolio</a>
       <h1>Impressum</h1>
       <h2>Angaben gemäß § 5 DDG</h2>
       <p>Kevin Kuck<br>Marktplatz 5<br>35510 Butzbach<br>Deutschland</p>
+      <p>Tätigkeit: Darstellung beruflicher Leistungen in IT-Systemen, Automatisierung und KI sowie Anbahnung von Projekten und Beschäftigungen. Einzelperson, keine Kapitalgesellschaft.</p>
       <h2>Kontakt</h2>
-      <p>Telefon: +49 170 4130592<br>E-Mail: <a href="mailto:hello@kkeey.dev">hello@kkeey.dev</a><br>E-Mail (Office): <a href="mailto:office@kkeey.dev">office@kkeey.dev</a></p>
+      <p>Telefon: +49 170 4130592<br>E-Mail: <a href="mailto:hello@kkeey.dev">hello@kkeey.dev</a><br>E-Mail (Office / Behörden): <a href="mailto:office@kkeey.dev">office@kkeey.dev</a></p>
+      <h2>Umsatzsteuer</h2>
+      <p>Es besteht derzeit keine Umsatzsteuer-Identifikationsnummer. Eine selbstständige Tätigkeit wird vorbereitet; Steuernummer und ggf. USt-IdNr. werden nach steuerlicher Erfassung hier ergänzt.</p>
       <h2>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
       <p>Kevin Kuck<br>Marktplatz 5<br>35510 Butzbach</p>
       <h2>Haftung für Inhalte</h2>
