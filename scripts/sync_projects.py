@@ -73,7 +73,7 @@ def fetch_json(url: str):
             'Accept': 'application/vnd.github.v3+json',
         },
     )
-    github_token = os.environ.get('GITHUB_TOKEN')
+    github_token = os.environ.get('PROJECT_SYNC_TOKEN') or os.environ.get('GITHUB_TOKEN')
     if github_token and 'github.com' in url:
         req.add_header('Authorization', f'token {github_token}')
 
