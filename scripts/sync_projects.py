@@ -17,11 +17,11 @@ Usage:
     python3 scripts/sync_projects.py --id auratone-ai # target a single project
     python3 scripts/sync_projects.py --id auratone-ai --dry-run
 
-Exit codes: 0 on success (including "nothing to update"), non-zero on any of
-the hard-failure conditions listed under `fail()` calls below. This script
-intentionally does NOT silently skip a project it can't resolve — every
-failure path prints a clear message to stderr and aborts with a non-zero
-status instead of moving on quietly.
+Exit codes: 0 on success (including "nothing to update" and skipping
+projects whose tags/releases return HTTP 403/404), non-zero on hard-failure
+conditions listed under `fail()` calls below. Inaccessible private sibling
+repos are a warning + skip so other projects still sync; genuine API/parse
+failures still abort.
 """
 
 from __future__ import annotations
@@ -101,34 +101,38 @@ def fetch_json(url: str):
 
 def fetch_latest_tag(repo_path: str):
     """
-    Returns (tag_or_none, error). tag=None with error=None means "repo exists
-    but genuinely has no releases/tags yet" — a valid, non-error state.
-    error != None means the API call itself failed or returned something we
-    can't interpret, which the caller must treat as a hard failure, not a
-    "no tag" result.
+    Returns (tag_or_none, error, skip). tag=None with error=None and skip=False
+    means "repo exists but genuinely has no releases/tags yet" — a valid,
+    non-error state. skip=True means tags/releases (or similar repo metadata)
+    returned HTTP 403/404, typically a private sibling the default GITHUB_TOKEN
+    cannot read — caller must warn and continue. error != None is a hard
+    failure; caller must abort.
     """
     rel, err, status = fetch_json(f"https://api.github.com/repos/{repo_path}/releases/latest")
     if err is not None:
-        return None, err
+        return None, err, False
     if status == 200 and isinstance(rel, dict) and 'tag_name' in rel:
-        return rel['tag_name'], None
-    if status != 404:
-        return None, f"unexpected HTTP {status} from /releases/latest for {repo_path}: {rel!r}"
+        return rel['tag_name'], None, False
+    if status not in (403, 404):
+        return None, f"unexpected HTTP {status} from /releases/latest for {repo_path}: {rel!r}", False
     # 404 here is the documented, expected way GitHub says "no release yet" —
-    # fall through and check tags instead.
+    # fall through and check tags instead. 403 is treated the same so a
+    # private sibling repo does not abort the whole job before /tags.
 
     tags, err, status = fetch_json(f"https://api.github.com/repos/{repo_path}/tags")
     if err is not None:
-        return None, err
+        return None, err, False
+    if status in (403, 404):
+        return None, None, True
     if status != 200:
-        return None, f"unexpected HTTP {status} from /tags for {repo_path}: {tags!r}"
+        return None, f"unexpected HTTP {status} from /tags for {repo_path}: {tags!r}", False
     if not isinstance(tags, list):
-        return None, f"unexpected /tags response shape for {repo_path}"
+        return None, f"unexpected /tags response shape for {repo_path}", False
     if len(tags) == 0:
-        return None, None  # genuinely no tags — valid state, not an error
+        return None, None, False  # genuinely no tags — valid state, not an error
     if 'name' not in tags[0]:
-        return None, f"malformed tag entry from {repo_path}: {tags[0]!r}"
-    return tags[0]['name'], None
+        return None, f"malformed tag entry from {repo_path}: {tags[0]!r}", False
+    return tags[0]['name'], None, False
 
 
 def find_project_span(content: str, project_id: str):
@@ -249,7 +253,18 @@ def main() -> int:
     dry_run_report = []
 
     for project_id, repo in targets.items():
-        new_tag, err = fetch_latest_tag(repo)
+        new_tag, err, skip = fetch_latest_tag(repo)
+        if skip:
+            print(
+                f"WARNING: skipping '{project_id}' ({repo}): tags/releases "
+                f"inaccessible (HTTP 403/404) — continuing with other projects",
+                file=sys.stderr,
+            )
+            dry_run_report.append({
+                'id': project_id, 'repo': repo, 'previous': None,
+                'detected': None, 'change': 'skipped (inaccessible)',
+            })
+            continue
         if err is not None:
             fail(f"invalid API response while checking '{project_id}' ({repo}): {err}")
 
