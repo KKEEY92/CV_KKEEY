@@ -65,4 +65,8 @@ window.KK_DATA = {
       de: 'Kontakt aufnehmen',
       en: 'Get in touch',
       fr: 'Me contacter',
-      uk: 'Зв\'yazaty sya WRONG
+      uk: 'Зв\'yazatysya',
+      pl: 'Skontaktuj się',
+    }
+  }
+};
