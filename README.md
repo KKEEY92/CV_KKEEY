@@ -63,7 +63,7 @@ Available now — Remote & Hybrid.
 
 - **Stack:** Python 3.12+ · LiveKit 2.x · Gemini 2.5 Flash · Silero VAD · FastAPI · Google STT/TTS Chirp3-HD
 - **Features:** Hybride Cloud/Local-Inferenz · Drive & Obsidian RAG · EmotionEngine · Multi-Modal
-- **Repo:** [claire-v2.5-native-audio](https://github.com/KKEEY92/claire-v2.5-native-audio)
+- **Repo:** [claire-v2-native](https://github.com/KKEEY92/claire-v2-native)
 
 ### 🎚️ AuraTone AI v2.0 — Native Audio Processing Engine
 > Lokale macOS-Workstation für KI-gestützte Musik-Analyse & Metadaten-Management.
