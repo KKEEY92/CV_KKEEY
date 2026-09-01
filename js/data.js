@@ -6,7 +6,7 @@
  */
 window.KK_DATA = {
 
-  // ─── HERO ───────────────────────────────────────────────────────────────────────
+  // ─── HERO ───────────────────────────────────────────────────────────────────
   hero: {
     name: 'Kevin Kuck',
     greeting: {
@@ -65,7 +65,4 @@ window.KK_DATA = {
       de: 'Kontakt aufnehmen',
       en: 'Get in touch',
       fr: 'Me contacter',
-      uk: 'Зв\'yazatysya PLACEHOLDER STOP'
-    }
-  }
-}
+      uk: 'Зв\'yazaty sya WRONG
