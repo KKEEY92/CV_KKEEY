@@ -25,7 +25,7 @@ FORBIDDEN_PATTERNS = [
     ("Bundes-IT · Johanniter-Unfall-Hilfe e.V.", "Outdated company naming - use Johanniter Bundes-IT Services"),
     ("15+ Jahre IT-Systemintegration", "Use '15 Jahre operative Erfahrung'"),
     ("15 Jahre Systemadministration", "Use '15 Jahre operative Erfahrung' / Enterprise-Systemadministration"),
-    ("sunrisekk199228@googlemail.com", "Legacy email - use kuck_kevin@icloud.com"),
+    ("sunrisekk199228@googlemail.com", "Legacy email - use hello@kkeey.dev"),
 ]
 
 PROJECT_ROOT = Path(__file__).parent.parent
@@ -35,7 +35,7 @@ CHECK_EXTENSIONS = {'.html', '.js', '.json', '.md', '.py'}
 EXCLUDE_DIRS = {'.git', 'node_modules', '__pycache__', 'backup', 'archive'}
 EXCLUDE_FILES = {'validate_consistency.py'}
 
-CANONICAL_EMAIL = "kuck_kevin@icloud.com"
+CANONICAL_EMAIL = "hello@kkeey.dev"
 
 
 def validate_canonical_json() -> list[str]:
