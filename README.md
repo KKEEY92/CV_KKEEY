@@ -1,12 +1,12 @@
 <div align="center">
-  <img src="https://kkeey92.github.io/CV_KKEEY/assets/avatar.jpg" alt="Kevin Kuck" width="120" style="border-radius:50%">
+  <img src="https://kkeey.dev/assets/avatar.jpg" alt="Kevin Kuck" width="120" style="border-radius:50%">
   <h1>Kevin Kuck</h1>
-  <p><strong>AI Systems Engineer · Automation · Voice AI · Local-First Architecture</strong></p>
+  <p><strong>IT-Administrator · Systems Engineer · AI · Automation · Voice AI · Local-First Architecture</strong></p>
 
-  [![Portfolio](https://img.shields.io/badge/🌐_Live_Portfolio-kkeey92.github.io-FF7A00?style=for-the-badge)](https://kkeey92.github.io/CV_KKEEY/)
-  [![IT Portfolio](https://img.shields.io/badge/🖥️_IT_Portfolio-CV__IT__KKEEY-00E5FF?style=for-the-badge)](https://kkeey92.github.io/CV_IT_KKEEY/)
-  [![Bewerbungsmappe](https://img.shields.io/badge/📄_Bewerbungsmappe_AI_(PDF)-Download-FF7A00?style=for-the-badge)](https://kkeey92.github.io/CV_KKEEY/assets/Kevin_Kuck_Bewerbungsmappe_AI_2026.pdf)
-  [![Master CV](https://img.shields.io/badge/📄_Master_CV_(PDF)-Download-00E5FF?style=for-the-badge)](https://kkeey92.github.io/CV_KKEEY/assets/Kevin_Kuck_Master_CV_2026.pdf)
+  [![Portfolio](https://img.shields.io/badge/🌐_Live_Portfolio-kkeey.dev-FF7A00?style=for-the-badge)](https://kkeey.dev/)
+  [![IT Portfolio](https://img.shields.io/badge/🖥️_IT_Portfolio-CV__IT__KKEEY-00E5FF?style=for-the-badge)](https://it.kkeey.dev/)
+  [![Bewerbungsmappe](https://img.shields.io/badge/📄_Bewerbungsmappe_AI_(PDF)-Download-FF7A00?style=for-the-badge)](https://kkeey.dev/assets/Kevin_Kuck_Bewerbungsmappe_AI_2026.pdf)
+  [![Master CV](https://img.shields.io/badge/📄_Master_CV_(PDF)-Download-00E5FF?style=for-the-badge)](https://kkeey.dev/assets/Kevin_Kuck_Master_CV_2026.pdf)
   [![LinkedIn](https://img.shields.io/badge/LinkedIn-kevin--kuck--it-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/kevin-kuck-it/)
   [![Verfügbar](https://img.shields.io/badge/Status-Verfügbar_·_Remote_%2F_DACH-00C853?style=for-the-badge)]()
 </div>
@@ -15,13 +15,13 @@
 
 ## 🇩🇪 Über dieses Profil
 
-Dieses Repository beherbergt das offizielle interaktive Web-Portfolio von **Kevin Kuck** — AI Systems Engineer mit **15 Jahren operativer Praxiserfahrung** an der Schnittstelle zwischen Enterprise-IT (Active Directory, IAM, KRITIS) und modernster KI-Entwicklung (Voice AI Agents, RAG, LiveKit, Python).
+Dieses Repository beherbergt das offizielle interaktive Web-Portfolio von **Kevin Kuck** — IT-Administrator · Systems Engineer · AI mit **15 Jahren operativer Praxiserfahrung** an der Schnittstelle zwischen Enterprise-IT (Active Directory, IAM, KRITIS) und modernster KI-Entwicklung (Voice AI Agents, RAG, LiveKit, Python).
 
 Verfügbar ab sofort — Remote & Hybrid.
 
 ## 🇬🇧 About This Portfolio
 
-Official interactive portfolio of **Kevin Kuck** — AI Systems Engineer with 15 years of operational experience bridging enterprise IT foundations (Active Directory, IAM, KRITIS) and state-of-the-art AI systems engineering (Voice AI, LiveKit, RAG, Local-First Architecture).
+Official interactive portfolio of **Kevin Kuck** — IT-Administrator · Systems Engineer · AI with 15 years of operational experience bridging enterprise IT foundations (Active Directory, IAM, KRITIS) and state-of-the-art AI systems engineering (Voice AI, LiveKit, RAG, Local-First Architecture).
 
 Available now — Remote & Hybrid.
 
@@ -171,14 +171,14 @@ python3 scripts/sync_projects.py
 
 ## 💼 Freelance & Contact
 
-**Kevin Kuck** — *IT Systems Engineer & Agentic AI Architect*  
+**Kevin Kuck** — *IT-Administrator · Systems Engineer · AI Agent Architekt*  
 📍 Butzbach, DE · Remote verfügbar · DACH-Raum  
 💶 Stundensatz: ab **70 EUR/h** · verhandelbar
 
 | Kanal | Link |
 |---|---|
-| 🌐 AI Portfolio | [kkeey92.github.io/CV_KKEEY](https://kkeey92.github.io/CV_KKEEY/) |
-| 🖥️ IT Portfolio | [kkeey92.github.io/CV_IT_KKEEY](https://kkeey92.github.io/CV_IT_KKEEY/) |
+| 🌐 AI Portfolio | [kkeey.dev](https://kkeey.dev/) |
+| 🖥️ IT Portfolio | [it.kkeey.dev](https://it.kkeey.dev/) |
 | 🗂️ Freelancermap | [freelancermap.de/profil/kevin-kuck](https://www.freelancermap.de/profil/kevin-kuck) |
 | 👔 LinkedIn | [linkedin.com/in/kevin-kuck-it](https://www.linkedin.com/in/kevin-kuck-it/) |
 | 🦊 GitLab | [gitlab.com/KKEEY92](https://gitlab.com/KKEEY92) |

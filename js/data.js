@@ -2,7 +2,7 @@
  * KKEEY Portfolio — Inhaltsdatei v3.5
  * Hier alle Texte, Projekte, Skills und Timeline pflegen.
  * Multilingual: DE / EN / FR / UK / PL
- * E-Mails: kuck_kevin@icloud.com · Kkeey_IT@iCloud.com
+ * E-Mails: hello@kkeey.dev · office@kkeey.dev
  */
 window.KK_DATA = {
 
@@ -19,6 +19,7 @@ window.KK_DATA = {
     tagline: 'IT · AI · AUDIO · 15+ JAHRE PRAXIS',
     roles: {
       de: [
+        'IT-Administrator · IAM · Systemadministration',
         'AI Systems Engineer',
         'Voice AI & Automation Specialist',
         'Local-First & RAG Architekturen',
@@ -26,6 +27,7 @@ window.KK_DATA = {
         'KMU Prozess-Automatisierer',
       ],
       en: [
+        'IT Administrator · IAM · Systems Engineering',
         'AI Systems Engineer',
         'Voice AI & Automation Specialist',
         'Local-First & RAG Architectures',
@@ -33,6 +35,7 @@ window.KK_DATA = {
         'SME Automation Specialist',
       ],
       fr: [
+        'Administrateur IT · IAM · Ingénierie Systèmes',
         'Ingénieur Systèmes IA',
         'Spécialiste Voice AI & Automatisation',
         'Architectures Local-First & RAG',
@@ -40,6 +43,7 @@ window.KK_DATA = {
         'Automatisation des Processus PME',
       ],
       uk: [
+        'IT-Адміністратор · IAM · Системне адміністрування',
         'AI Systems Engineer',
         'Спеціаліст із Voice AI та автоматизації',
         'Архітектури Local-First & RAG',
@@ -47,6 +51,7 @@ window.KK_DATA = {
         'Автоматизація процесів для бізнесу',
       ],
       pl: [
+        'Administrator IT · IAM · Administracja Systemami',
         'AI Systems Engineer',
         'Specjalista ds. Voice AI i Automatyzacji',
         'Architektury Local-First & RAG',
@@ -164,12 +169,12 @@ window.KK_DATA = {
   projects: [
     {
       id: 'claire-v25-native-audio',
-      repo: 'KKEEY92/claire-v2.5-native-audio',
+      repo: 'KKEEY92/claire-v2-native',
       status: { latestTag: 'v2.5.0' },
       name: 'Claire V2.5 Native Audio',
       color: '#00d4aa',
       colorRgb: '0,212,170',
-      tag: '● Produktiv v2.5 · Open Source · LiveKit 2.x',
+      tag: '● v2.5 · öffentlich · LiveKit 2.x',
       sub: {
         de: 'Voice AI Agent · Full-Duplex · ~200ms Latenz · Local LLM Switch',
         en: 'Voice AI Agent · Full-Duplex · ~200ms Latency · Local LLM Switch',
@@ -185,7 +190,7 @@ window.KK_DATA = {
         pl: 'Agent głosowy AI czasu rzeczywistego oparty na frameworku LiveKit 2.x Agents. Obsługuje Google Speech/TTS, Gemini 2.5 Flash oraz przełącznik .env na lokalne LM Studio (Qwen2.5-7B). Zawiera EmotionEngine v2, Silero VAD, pamięć RAG w Google Drive i wizualizator WebGL.',
       },
       stack: ['Python 3.13', 'LiveKit Agents 2.x', 'Gemini 2.5 Flash', 'LM Studio (Local LLM)', 'Silero VAD', 'Google Drive RAG', 'React / Vite'],
-      link: 'https://github.com/KKEEY92/claire-v2.5-native-audio',
+      link: 'https://github.com/KKEEY92/claire-v2-native',
       linkLabel: {
         de: 'Auf GitHub ansehen →',
         en: 'View on GitHub →',
@@ -253,7 +258,7 @@ window.KK_DATA = {
         pl: 'Aplikacja WebRTC full-stack. Frontend React z interfejsem Liquid Glass komunikuje się przez WebSockets i FastAPI z Gemini Multimodal Live API. Głos w czasie rzeczywistym, animacja awatara i udostępnianie ekranu.',
       },
       stack: ['React', 'TypeScript', 'WebRTC', 'Python FastAPI', 'Gemini Multimodal Live API'],
-      link: 'https://github.com/KKEEY92/AI-Virtual-Calling-and-Write-a-friend',
+      link: 'https://github.com/KKEEY92',
       linkLabel: {
         de: 'Auf GitHub ansehen →',
         en: 'View on GitHub →',
@@ -285,7 +290,7 @@ window.KK_DATA = {
         pl: 'Natywna aplikacja macOS ze Swift WKWebView dla Apple Foundation Model (AFM-3-Core) — 100% lokalna, bez chmury. Interfejs Matrix Rain, Obsidian Vault RAG, neuronowy TTS w macOS, generowanie obrazów ComfyUI i Push-to-Talk.',
       },
       stack: ['Swift / WKWebView', 'Python http.server', 'Apple AFM-3-Core', 'ComfyUI API', 'macOS Neural TTS'],
-      link: 'https://github.com/KKEEY92/afm-chat',
+      link: 'https://github.com/KKEEY92',
       linkLabel: {
         de: 'Auf GitHub ansehen →',
         en: 'View on GitHub →',
@@ -631,7 +636,7 @@ window.KK_DATA = {
     trioTitle:     { de: 'Das seltene Dreierpaket',     en: 'The Rare Trio',  fr: 'Le Trio Unique',  uk: 'Унікальне 3-в-1',  pl: 'Unikalne Trio Kompetencji' },
     trioSub:       { de: 'Drei Domänen. Eine Person. Diese Kombination gibt es kaum.', en: 'Three domains. One person. Almost no one has this combination.', fr: 'Trois domaines. Une personne. Une combinaison rare.', uk: 'Три домени. Одна людина. Рідкісна комбінація експертизи.', pl: 'Trzy domeny. Jedna osoba. Niezwykle rzadkie połączenie.' },
     projTitle:     { de: 'Projekte & Showcase',         en: 'Projects & Showcase', fr: 'Projets & Showcase', uk: 'Проєкти & Showcase', pl: 'Projekty & Portfolio' },
-    projSub:       { de: 'Gebaut. Deployed. Öffentlich.', en: 'Built. Deployed. Public.', fr: 'Conçu. Déployé. Public.', uk: 'Створено. Розгорнуто. Публічно.', pl: 'Zbudowane. Wdrożone. Publiczne.' },
+    projSub:       { de: 'Gebaut. Deployed. Evidence öffentlich, wo der Code es ist.', en: 'Built. Deployed. Public.', fr: 'Conçu. Déployé. Public.', uk: 'Створено. Розгорнуто. Публічно.', pl: 'Zbudowane. Wdrożone. Publiczne.' },
     skillsTitle:   { de: 'Skills & Kompetenzprofil',   en: 'Skills & Expertise', fr: 'Compétences & Profil', uk: 'Навички & Профіль', pl: 'Umiejętności & Profil Ekspercki' },
     certLabel:     { de: 'Verifiziert',                 en: 'Verified',       fr: 'Vérifié',         uk: 'Перевірено',       pl: 'Zweryfikowano' },
     certTitle:     { de: 'Zertifizierungen',            en: 'Certifications', fr: 'Certifications',  uk: 'Сертифікації',     pl: 'Certyfikaty' },
