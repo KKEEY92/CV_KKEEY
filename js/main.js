@@ -155,6 +155,7 @@ function render() {
   const navKeys = [
     D.i18n.navAbout,
     D.i18n.navProjects,
+    D.i18n.navContext,
     D.i18n.navSkills,
     D.i18n.navCerts,
     D.i18n.navCareer,
@@ -191,6 +192,8 @@ function render() {
   const projSub = document.getElementById('projSub');
   if (projSub) projSub.textContent = t(D.i18n.projSub);
   renderProjects();
+
+  renderContextGap();
 
   // Skills
   const skillsTitle = document.getElementById('skillsTitle');
@@ -238,6 +241,109 @@ function render() {
 
   initReveal();
   initSkillBars();
+}
+
+function esc(s) {
+  return String(s ?? '').replace(/[&<>"']/g, (c) => ({
+    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;',
+  }[c]));
+}
+
+let cgPinned = null;
+let cgHover = null;
+
+function renderContextGap() {
+  const cg = D.contextGap;
+  if (!cg) return;
+
+  const label = document.getElementById('cgLabel');
+  if (label) label.textContent = cg.label;
+
+  const idea = document.getElementById('cgIdea');
+  if (idea) idea.innerHTML = `${esc(cg.ideaA)}<br>${esc(cg.ideaB)}`;
+
+  const lead = document.getElementById('cgLead');
+  if (lead) lead.textContent = t(cg.lead);
+
+  const grid = document.getElementById('cgGrid');
+  if (grid) {
+    const steps = cg.std.steps.map((step) => `<li>${esc(t(step))}</li>`).join('');
+    const nodes = cg.kki.nodes.map((node) => `
+      <li class="cg-node" data-node="${esc(node.id)}">
+        <button type="button" class="cg-node-btn" data-node="${esc(node.id)}" aria-pressed="false" aria-describedby="cg-expl-${esc(node.id)}">
+          <span class="cg-node-title">${esc(t(node.title))}</span>
+        </button>
+        <p class="cg-node-expl" id="cg-expl-${esc(node.id)}">${esc(t(node.expl))}</p>
+      </li>
+    `).join('');
+    const pipe = cg.kki.pipeline.map((step) => `<li>${esc(t(step))}</li>`).join('');
+    grid.innerHTML = `
+      <article class="glass-card cg-col cg-col-standard reveal" aria-labelledby="cgStdTitle">
+        <div class="card-accent"></div>
+        <p class="cg-kicker" id="cgStdTitle">${esc(cg.std.kicker)}</p>
+        <p class="cg-mode">${esc(cg.std.mode)}</p>
+        <ol class="cg-flow">${steps}</ol>
+        <blockquote class="cg-quote"><p>${esc(cg.std.quote)}</p></blockquote>
+        <p class="cg-result">${esc(t(cg.std.result))}</p>
+        <p class="cg-note">${esc(t(cg.std.note))}</p>
+      </article>
+      <article class="glass-card cg-col cg-col-kki reveal" aria-labelledby="cgKkiTitle">
+        <div class="card-accent"></div>
+        <p class="cg-kicker" id="cgKkiTitle">${esc(cg.kki.kicker)}</p>
+        <p class="cg-by">${esc(cg.kki.by)}</p>
+        <ul class="cg-nodes">${nodes}</ul>
+        <p class="cg-layer" id="cgLayer">${esc(t(cg.kki.layer))}</p>
+        <div class="cg-conflict" role="status">
+          <p class="cg-conflict-kicker">${esc(cg.kki.conflictKicker)}</p>
+          <p class="cg-conflict-line">${esc(cg.kki.conflictLine)}</p>
+        </div>
+        <ol class="cg-pipeline">${pipe}</ol>
+        <p class="cg-human">${esc(t(cg.kki.human))}</p>
+        <p class="cg-brandline">${esc(cg.kki.brandline)}</p>
+        <p class="cg-art">${esc(t(cg.kki.art14))}</p>
+      </article>
+    `;
+    bindContextGap(grid);
+  }
+
+  const punch = document.getElementById('cgPunch');
+  if (punch) {
+    punch.innerHTML = `<p>${esc(cg.punch1)}</p><p>${esc(cg.punch2)}</p>`;
+  }
+}
+
+function bindContextGap(root) {
+  const fine = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  root.querySelectorAll('.cg-node-btn').forEach((btn) => {
+    const id = btn.dataset.node;
+    btn.addEventListener('click', () => {
+      cgPinned = cgPinned === id ? null : id;
+      paintContextGap();
+    });
+    if (fine) {
+      btn.addEventListener('mouseenter', () => {
+        cgHover = id;
+        paintContextGap();
+      });
+      btn.addEventListener('mouseleave', () => {
+        if (cgHover === id) cgHover = null;
+        paintContextGap();
+      });
+    }
+  });
+  paintContextGap();
+}
+
+function paintContextGap() {
+  const id = cgPinned || cgHover;
+  document.querySelectorAll('.cg-node').forEach((node) => {
+    const on = Boolean(id) && node.dataset.node === id;
+    node.classList.toggle('is-active', on);
+    const btn = node.querySelector('.cg-node-btn');
+    if (btn) btn.setAttribute('aria-pressed', node.dataset.node === cgPinned ? 'true' : 'false');
+  });
+  const col = document.querySelector('.cg-col-kki');
+  if (col) col.classList.toggle('is-linked', Boolean(id));
 }
 
 function renderTrio() {
