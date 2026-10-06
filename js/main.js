@@ -349,15 +349,9 @@ function renderSkills() {
     <div class="glass-card skill-card reveal">
       <h3 class="skill-group-label">${t(group.label)}</h3>
       <div class="skill-items">
-        ${group.skills.map((s, si) => `
-          <div>
-            <div class="skill-header">
-              <span class="skill-name">${s.name}</span>
-              <span class="skill-pct">${s.pct}%</span>
-            </div>
-            <div class="skill-bar">
-              <div class="skill-fill" data-pct="${s.pct}" style="transition-delay:${(gi * 0.1 + si * 0.08).toFixed(2)}s"></div>
-            </div>
+        ${group.skills.map((s) => `
+          <div class="skill-header">
+            <span class="skill-name">${s.name}</span>
           </div>
         `).join('')}
       </div>
