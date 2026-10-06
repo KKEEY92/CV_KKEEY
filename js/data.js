@@ -624,10 +624,107 @@ window.KK_DATA = {
     },
   ],
 
+  // ─── CASE STUDY · THE CONTEXT GAP ────────────────────────────────────────────
+  // Architecture diagram. Detection lines and the two-line close stay English.
+  contextGap: {
+    label: 'CASE STUDY · THE CONTEXT GAP',
+    ideaA: 'Same decision.',
+    ideaB: 'Different context.',
+    lead: {
+      de: 'Abstrahiertes Muster: Eine öffentliche Stelle lehnt beantragte Unterstützung ab, weil ein Nachweis fehlt — obwohl diese Unterstützung dazu dienen soll, genau diesen Nachweis zu erarbeiten. Links liest ein stateless Modell nur den aktuellen Text. Rechts setzt die KKI Architecture by KKEEY denselben Text mit Zweck, früherem Kontext, Ziel und Regeln in Beziehung. Entschieden wird von einem Menschen.',
+      en: 'Abstracted pattern: a public body refuses requested support because a piece of evidence is missing — even though that support exists to produce the evidence. On the left, a stateless model reads only the current text. On the right, KKI Architecture by KKEEY relates that same text to purpose, prior context, goal and rules. A person makes the decision.',
+      fr: 'Schéma abstrait : un organisme public refuse un soutien demandé parce qu’une preuve manque — alors que ce soutien sert à produire cette preuve. À gauche, un modèle stateless ne lit que le texte actuel. À droite, KKI Architecture by KKEEY relie ce même texte au but, au contexte antérieur, à l’objectif et aux règles. La décision reste humaine.',
+      uk: 'Абстрактна схема: публічна установа відмовляє в запитаній підтримці, бо бракує доказу — хоча саме ця підтримка має той доказ створити. Ліворуч stateless-модель читає лише поточний текст. Праворуч KKI Architecture by KKEEY пов’язує той самий текст із метою, попереднім контекстом, ціллю та правилами. Рішення ухвалює людина.',
+      pl: 'Abstrakcyjny schemat: instytucja publiczna odmawia wnioskowanego wsparcia, bo brakuje dowodu — choć to wsparcie ma właśnie ten dowód wypracować. Po lewej model stateless czyta tylko bieżący tekst. Po prawej KKI Architecture by KKEEY wiąże ten sam tekst z celem programu, wcześniejszym kontekstem, celem osoby i regułami. Decyzję podejmuje człowiek.',
+    },
+    std: {
+      kicker: 'STANDARD AI',
+      mode: 'STATELESS / CURRENT CONTEXT ONLY',
+      steps: [
+        { de: 'Aktuelle Entscheidung', en: 'Current Decision', fr: 'Décision actuelle', uk: 'Поточне рішення', pl: 'Bieżąca decyzja' },
+        { de: 'Analyse nur im Prompt', en: 'Prompt-local Analysis', fr: 'Analyse limitée au prompt', uk: 'Аналіз лише в межах промпту', pl: 'Analiza tylko w obrębie promptu' },
+        { de: 'Zusammenfassung', en: 'Summary', fr: 'Synthèse', uk: 'Підсумок', pl: 'Podsumowanie' },
+      ],
+      quote: 'The authority states that sufficient evidence has not been provided.',
+      result: {
+        de: 'Isoliert richtig. Blind für den Konflikt zwischen den Kontexten.',
+        en: 'Correct in isolation. Blind to the cross-context contradiction.',
+        fr: 'Correct, pris isolément. Aveugle à la contradiction entre les contextes.',
+        uk: 'Правильно ізольовано. Сліпе до суперечності між контекстами.',
+        pl: 'Poprawne w izolacji. Ślepe na sprzeczność między kontekstami.',
+      },
+      note: {
+        de: '„Standard AI“ meint hier nur dieses Muster: eine Antwort aus dem gerade vorliegenden Kontext. Keine Aussage über andere Systeme und kein Angriff auf ein Produkt.',
+        en: '“Standard AI” here means only this pattern: an answer drawn from the current context alone. Not a claim about other systems, and not an attack on any product.',
+        fr: '« Standard AI » désigne ici uniquement ce schéma : une réponse tirée du seul contexte actuel. Ni une affirmation sur d’autres systèmes, ni une attaque contre un produit.',
+        uk: '«Standard AI» тут — лише цей шаблон: відповідь тільки з поточного контексту. Не твердження про інші системи і не атака на продукт.',
+        pl: '„Standard AI” oznacza tu wyłącznie ten wzorzec: odpowiedź tylko z bieżącego kontekstu. To nie jest teza o innych systemach ani atak na produkt.',
+      },
+    },
+    kki: {
+      kicker: 'KKI ARCHITECTURE',
+      by: 'BY KKEEY',
+      nodes: [
+        {
+          id: 'current',
+          title: { de: 'Aktuelle Entscheidung', en: 'Current Decision', fr: 'Décision actuelle', uk: 'Поточне рішення', pl: 'Bieżąca decyzja' },
+          expl: { de: 'aktuelles Dokument oder der aktuelle Antrag', en: 'current document or request', fr: 'document ou demande en cours', uk: 'поточний документ або запит', pl: 'bieżący dokument lub wniosek' },
+        },
+        {
+          id: 'purpose',
+          title: { de: 'Zweck des Programms', en: 'Program Purpose', fr: 'But du programme', uk: 'Мета програми', pl: 'Cel programu' },
+          expl: { de: 'warum der Vorgang oder die Unterstützung existiert', en: 'why the process or support exists', fr: 'pourquoi la procédure ou le soutien existe', uk: 'навіщо існує процедура або підтримка', pl: 'dlaczego procedura lub wsparcie istnieje' },
+        },
+        {
+          id: 'prior',
+          title: { de: 'Früherer Kontext', en: 'Prior Context', fr: 'Contexte antérieur', uk: 'Попередній контекст', pl: 'Wcześniejszy kontekst' },
+          expl: { de: 'relevante frühere Interaktionen', en: 'relevant earlier interactions', fr: 'interactions antérieures pertinentes', uk: 'відповідні попередні взаємодії', pl: 'istotne wcześniejsze interakcje' },
+        },
+        {
+          id: 'goal',
+          title: { de: 'Ziel der Person', en: 'User Goal', fr: 'Objectif de la personne', uk: 'Ціль людини', pl: 'Cel osoby' },
+          expl: { de: 'beabsichtigtes Ergebnis und seine Grenzen', en: 'intended outcome and constraints', fr: 'résultat visé et ses contraintes', uk: 'бажаний результат і його межі', pl: 'zamierzony wynik i jego ograniczenia' },
+        },
+        {
+          id: 'rules',
+          title: { de: 'Relevante Regeln', en: 'Relevant Rules', fr: 'Règles pertinentes', uk: 'Відповідні правила', pl: 'Istotne reguły' },
+          expl: { de: 'anwendbarer Rahmen und Regeln', en: 'applicable policy or legal context', fr: 'cadre ou règles applicables', uk: 'застосовні правила та політика', pl: 'mające zastosowanie zasady i ramy' },
+        },
+      ],
+      layer: { de: 'Kontextschicht', en: 'Context layer', fr: 'Couche de contexte', uk: 'Шар контексту', pl: 'Warstwa kontekstu' },
+      conflictKicker: 'CONTEXT CONFLICT DETECTED',
+      conflictLine: 'The rejection cites missing evidence that the requested support exists to produce.',
+      pipeline: [
+        { de: 'Konflikt erkannt', en: 'Conflict detected', fr: 'Conflit détecté', uk: 'Конфлікт виявлено', pl: 'Konflikt wykryty' },
+        { de: 'Belege offengelegt', en: 'Evidence surfaced', fr: 'Preuves mises au jour', uk: 'Докази показано', pl: 'Dowody uwidocznione' },
+        { de: 'Prüfung durch einen Menschen', en: 'Human review', fr: 'Examen par une personne', uk: 'Перевірка людиною', pl: 'Przegląd przez człowieka' },
+        { de: 'Entscheidung der Person', en: 'User decision', fr: 'Décision de la personne', uk: 'Рішення людини', pl: 'Decyzja osoby' },
+      ],
+      human: {
+        de: 'Die Architektur legt den Konflikt offen. Sie trifft keine Entscheidung.',
+        en: 'The architecture surfaces the conflict. It does not decide.',
+        fr: 'L’architecture rend le conflit visible. Elle ne décide pas.',
+        uk: 'Архітектура показує конфлікт. Вона не ухвалює рішення.',
+        pl: 'Architektura uwidacznia konflikt. Nie podejmuje decyzji.',
+      },
+      brandline: 'Human oversight by design.',
+      art14: {
+        de: 'Human oversight by design — angelehnt an die Kontrollprinzipien, die Art. 14 EU AI Act für Hochrisiko-KI-Systeme widerspiegelt.',
+        en: 'Human oversight by design — aligned with the control principles reflected in Art. 14 EU AI Act for high-risk AI systems.',
+        fr: 'Human oversight by design — aligné sur les principes de contrôle reflétés à l’art. 14 de l’EU AI Act pour les systèmes d’IA à haut risque.',
+        uk: 'Human oversight by design — відповідно до принципів контролю, відображених у ст. 14 EU AI Act для високоризикових систем ШІ.',
+        pl: 'Human oversight by design — zgodnie z zasadami kontroli odzwierciedlonymi w art. 14 EU AI Act dla systemów AI wysokiego ryzyka.',
+      },
+    },
+    punch1: 'Standard AI answers the current prompt.',
+    punch2: 'KKI connects the current decision to the context that matters.',
+  },
+
   // ─── I18N STRINGS ────────────────────────────────────────────────────────────────
   i18n: {
     navAbout:      { de: 'Über mich',                   en: 'About',          fr: 'À propos',        uk: 'Про мене',         pl: 'O mnie' },
     navProjects:   { de: 'Projekte',                    en: 'Projects',       fr: 'Projets',         uk: 'Проєкти',          pl: 'Projekty' },
+    navContext:    { de: 'Kontext',                     en: 'Context',        fr: 'Contexte',        uk: 'Контекст',         pl: 'Kontekst' },
     navSkills:     { de: 'Skills',                      en: 'Skills',         fr: 'Compétences',     uk: 'Навички',          pl: 'Umiejętności' },
     navCerts:      { de: 'Zertifikate',                 en: 'Certifications', fr: 'Certifications',  uk: 'Сертифікати',      pl: 'Certyfikaty' },
     navCareer:     { de: 'Karriere',                    en: 'Career',         fr: 'Parcours',        uk: 'Кар\'єра',         pl: 'Kariera' },
