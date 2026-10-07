@@ -614,7 +614,7 @@ window.KK_DATA = {
         uk: 'Керування користувачами, групами та правами доступу в Active Directory та Microsoft Entra ID, вирішення інцидентів за процесами ITIL. Citrix (NetScaler), Omnitracker, PBX. Розгортання Windows 11 через Deskcenter Studio та PowerShell. Безпека FortiClient & Sophos. Власна автоматизація тікетів та стандарт KKEEY.',
         pl: 'Zarządzanie użytkownikami, grupami i uprawnieniami w Active Directory oraz Microsoft Entra ID, strukturalne rozwiązywanie incydentów w procesach ITIL. Citrix (NetScaler), Omnitracker, PBX. Wdrażanie Windows 11 przez Deskcenter Studio i PowerShell. Bezpieczeństwo FortiClient & Sophos. Autorska automatyzacja zgłoszeń i standard KKEEY.',
       },
-      tags: ['Active Directory', 'IAM', 'Citrix', 'Deskcenter Studio', 'PowerShell', 'KRITIS-Umfeld', 'FortiClient'],
+      stack: ['Active Directory', 'IAM', 'Citrix', 'Deskcenter Studio', 'PowerShell', 'KRITIS-Umfeld', 'FortiClient'],
     },
     {
       period: {
