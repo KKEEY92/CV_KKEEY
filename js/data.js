@@ -101,14 +101,14 @@ window.KK_DATA = {
         pl: 'Doświadczenie Operacyjne',
       },
       sub: {
-        de: '15 J. Inventory & Supply Chain · BAUHAUS',
+        de: '14 J. Inventory & Supply Chain · BAUHAUS',
         en: '15 Yrs Inventory & Supply Chain · BAUHAUS',
         fr: '15 ans Gestion des Stocks · BAUHAUS',
         uk: '15 років Inventory & Supply Chain · BAUHAUS',
         pl: '15 lat Zarządzanie Magazynem · BAUHAUS',
       },
       detail: {
-        de: 'Systemdenken aus dem echten Handelsbetrieb. Ich weiß wie operative KMU wirklich funktionieren — nicht aus Büchern, sondern aus 15 Jahren täglicher Praxis.',
+        de: 'Systemdenken aus dem echten Handelsbetrieb. Ich weiß wie operative KMU wirklich funktionieren — nicht aus Büchern, sondern aus 14 Jahren täglicher Praxis.',
         en: 'Systems thinking from real-world operations. I know how SMEs actually function — not from theory, but 15 years of hands-on practice.',
         fr: 'Pensée systémique issue de l\'exploitation commerciale réelle. Je connais le fonctionnement concret des PME — forgé par 15 ans de pratique quotidienne.',
         uk: 'Системне мислення з реального сектору торгівлі. Я знаю, як насправді працює бізнес — не з книжок, а з 15 років щоденної практики.',
@@ -168,6 +168,33 @@ window.KK_DATA = {
   // ─── PROJEKTE ───────────────────────────────────────────────────────────────────
   projects: [
     {
+      id: 'it-praxis-johanniter',
+      repo: '',
+      status: { latestTag: '' },
+      name: 'IT-Praxis Johanniter Bundes-IT',
+      color: '#ff791f',
+      colorRgb: '255,121,31',
+      tag: '● Belegt · Ticketauswertung · Dez 2025 bis Apr 2026',
+      sub: {
+        de: '553 Tickets · 366 Stunden · rund 200 Windows-11-Endpoints',
+        en: '553 Tickets · 366 Hours · approx. 200 Windows 11 Endpoints',
+        fr: '',
+        uk: '',
+        pl: ''
+      },
+      desc: {
+        de: 'Ausgewertet aus dem Omnitracker-Export: 553 eindeutige Tickets in 754 Vorgängen, 366 Stunden Bearbeitungszeit für 12 Organisationseinheiten. Schwerpunkt Benutzer- und Berechtigungsverwaltung im Active Directory, dazu Citrix-Support, Windows-11-Rollout und eigene Automatisierung per PowerShell.',
+        en: 'Evaluated from the Omnitracker export: 553 unique tickets in 754 processes, 366 hours processing time for 12 organizational units. Focus on user and permission management in Active Directory, plus Citrix support, Windows 11 rollout and custom automation via PowerShell.',
+        fr: '',
+        uk: '',
+        pl: ''
+      },
+      tags: ['Active Directory', 'IAM', 'Citrix', 'Windows 11', 'PowerShell', 'Omnitracker', 'ITIL'],
+      btns: [
+        { label: { de: 'IT-Profil ansehen →', en: 'View IT Profile →', fr: 'Voir Profil IT →', uk: 'Переглянути IT-профіль →', pl: 'Zobacz Profil IT →' }, url: 'https://it.kkeey.dev/#praxis', style: 'btn-repo' }
+      ]
+    },
+    {
       id: 'claire-v25-native-audio',
       repo: 'KKEEY92/claire-v2-native',
       status: { latestTag: 'v2.5.0' },
@@ -176,11 +203,11 @@ window.KK_DATA = {
       colorRgb: '0,212,170',
       tag: '● v2.5 · öffentlich · LiveKit 2.x',
       sub: {
-        de: 'Voice AI Agent · Full-Duplex · ~200ms Latenz · Local LLM Switch',
-        en: 'Voice AI Agent · Full-Duplex · ~200ms Latency · Local LLM Switch',
-        fr: 'Agent Vocal IA · Full-Duplex · Latence ~200ms · Switch LLM Local',
+        de: 'Voice AI Agent · Full-Duplex · Local LLM Switch',
+        en: 'Voice AI Agent · Full-Duplex · Local LLM Switch',
+        fr: 'Agent Vocal IA · Full-Duplex · Switch LLM Local',
         uk: 'Голосовий AI-агент · Full-Duplex · Затримка ~200мс · Локальний LLM Switch',
-        pl: 'Głosowy Agent AI · Full-Duplex · Opóźnienie ~200ms · Przełącznik Lokalnego LLM',
+        pl: 'Głosowy Agent AI · Full-Duplex · Przełącznik Lokalnego LLM',
       },
       desc: {
         de: 'Echtzeit Voice AI Agent auf LiveKit 2.x Agents Basis. Unterstützt Google Speech/TTS, Gemini 2.5 Flash sowie per .env Switch ein lokales LM Studio LLM (Qwen2.5-7B). Enthält EmotionEngine v2 (±0.08 Energy Clamp), Silero VAD, Google Drive RAG Gedächtnis und WebGL Audio Visualizer.',
@@ -507,7 +534,7 @@ window.KK_DATA = {
         pl: 'Systemy, Cloud & DevOps',
       },
       skills: [
-        { name: 'Active Directory & Entra ID (IAM)', pct: 88 },
+        { name: 'Active Directory (IAM)', pct: 88 },
         { name: 'Docker & Containerization',        pct: 85 },
         { name: 'Google Cloud Run & Serverless',    pct: 85 },
         { name: 'GitHub Actions (CI/CD Pipelines)', pct: 84 },
@@ -528,7 +555,7 @@ window.KK_DATA = {
         { name: 'Inventory Management & Supply Chain', pct: 95 },
         { name: 'Audio DSP (librosa, ffmpeg)',      pct: 85 },
         { name: 'Apple Metal GPU Acceleration',     pct: 80 },
-        { name: 'KRITIS IT & Endpoint Security',    pct: 85 },
+        { name: 'Endpoint Security (FortiClient, Sophos)',    pct: 85 },
       ],
     },
   ],
@@ -537,14 +564,14 @@ window.KK_DATA = {
   timeline: [
     {
       period: {
-        de: 'bis Ende 2024 · 15 Jahre',
+        de: '2010 – 2024 · 14 Jahre',
         en: 'Until end 2024 · 15 years',
         fr: 'jusqu\'à fin 2024 · 15 ans',
         uk: 'до кінця 2024 · 15 років',
         pl: 'do końca 2024 · 15 lat',
       },
       role: {
-        de: 'Inventory Management & IT-Operations',
+        de: 'Inventory Management & Supply Chain',
         en: 'Inventory Management & IT Operations',
         fr: 'Gestion des Stocks & Opérations IT',
         uk: 'Керування інвентарем та IT-операції',
@@ -554,7 +581,7 @@ window.KK_DATA = {
       color: '#7c6af7',
       active: false,
       desc: {
-        de: '15 Jahre operative Tiefe in Inventory Management und Supply Chain. Systemdenken im Handelsbetrieb — diese Erfahrung wirkt heute als direkter AI-Differenziator.',
+        de: '14 Jahre operative Tiefe in Inventory Management und Supply Chain. Systemdenken im Handelsbetrieb — diese Erfahrung wirkt heute als direkter AI-Differenziator.',
         en: '15 years of operational depth in inventory management and supply chain. Systems thinking that is now a direct AI differentiator.',
         fr: '15 ans d\'expérience opérationnelle en gestion des stocks et logistique. Une vision systémique qui constitue aujourd\'hui un différenciateur direct en ingénierie IA.',
         uk: '15 років практичного досвіду в управлінні запасами та ланцюгами постачання. Системне мислення, яке сьогодні є прямою перевагою в розробці ШІ.',
@@ -571,8 +598,8 @@ window.KK_DATA = {
         pl: 'Gru 2025 – Maj 2026',
       },
       role: {
-        de: 'IT-Administrator',
-        en: 'IT Administrator',
+        de: 'Junior IT-Support Agent mit Aufgaben der Systemadministration',
+        en: 'Junior IT Support Agent with system administration duties',
         fr: 'Administrateur IT',
         uk: 'IT-Адміністратор',
         pl: 'Administrator IT',
@@ -581,13 +608,13 @@ window.KK_DATA = {
       color: '#7c6af7',
       active: false,
       desc: {
-        de: 'Verantwortlich für Benutzer-, Gruppen- und Berechtigungsmanagement in Active Directory und Microsoft Entra ID sowie für die strukturierte Bearbeitung von Incidents in ITIL-orientierten Supportprozessen. Weiterer Scope: Citrix (NetScaler), Omnitracker, Innovaphone PBX. Windows-11-Rollouts via Deskcenter Studio & Custom-PowerShell (Pausierung 46%-Update zur Speed-Optimierung). Endpoint-Security via FortiClient & Sophos. Eigene Ticket-Automation & der KKEEY-Standard.',
-        en: 'Responsible for user, group and permission management in Active Directory and Microsoft Entra ID, and for structured incident resolution in ITIL-oriented support processes. Additional scope: Citrix (NetScaler), Omnitracker, Innovaphone PBX. Windows 11 rollouts via Deskcenter Studio & custom PowerShell (pausing 46% update for speed optimization). Endpoint security via FortiClient & Sophos. Custom ticket automation & the KKEEY Standard.',
+        de: '553 Tickets und 366 Stunden dokumentierte Bearbeitungszeit für 12 Organisationseinheiten. Benutzer-, Gruppen- und Berechtigungsverwaltung im Active Directory, strukturierte Bearbeitung von Incidents in ITIL-orientierten Supportprozessen. Weiterer Scope: Citrix, Omnitracker, Innovaphone PBX. Windows-11-Rollout für rund 200 Endpoints mit Deskcenter Studio und angepasstem PowerShell-Skript. Endpoint-Security mit FortiClient und Sophos. Eigene Ticket-Automation. <a href="https://it.kkeey.dev/#praxis" target="_blank" rel="noopener" style="color:var(--c-accent); text-decoration:none;">Details im IT-Profil →</a>',
+        en: '553 tickets and 366 hours documented processing time for 12 organizational units. User, group and permission management in Active Directory, structured incident resolution in ITIL-oriented support processes. Additional scope: Citrix, Omnitracker, Innovaphone PBX. Windows 11 rollout for around 200 endpoints with Deskcenter Studio and adapted PowerShell script. Endpoint security with FortiClient and Sophos. Own ticket automation. <a href="https://it.kkeey.dev/#praxis" target="_blank" rel="noopener" style="color:var(--c-accent); text-decoration:none;">Details in IT profile →</a>',
         fr: 'Gestion des identités, groupes et permissions dans Active Directory et Microsoft Entra ID, résolution structurée d\'incidents ITIL. Citrix (NetScaler), Omnitracker, téléphonie PBX. Déploiements Windows 11 via Deskcenter Studio et PowerShell. Sécurité FortiClient & Sophos. Automatisation des tickets et standard KKEEY.',
         uk: 'Керування користувачами, групами та правами доступу в Active Directory та Microsoft Entra ID, вирішення інцидентів за процесами ITIL. Citrix (NetScaler), Omnitracker, PBX. Розгортання Windows 11 через Deskcenter Studio та PowerShell. Безпека FortiClient & Sophos. Власна автоматизація тікетів та стандарт KKEEY.',
         pl: 'Zarządzanie użytkownikami, grupami i uprawnieniami w Active Directory oraz Microsoft Entra ID, strukturalne rozwiązywanie incydentów w procesach ITIL. Citrix (NetScaler), Omnitracker, PBX. Wdrażanie Windows 11 przez Deskcenter Studio i PowerShell. Bezpieczeństwo FortiClient & Sophos. Autorska automatyzacja zgłoszeń i standard KKEEY.',
       },
-      tags: ['Active Directory', 'Entra ID', 'IAM', 'Citrix', 'Deskcenter Studio', 'PowerShell', 'KRITIS', 'FortiClient'],
+      tags: ['Active Directory', 'IAM', 'Citrix', 'Deskcenter Studio', 'PowerShell', 'KRITIS-Umfeld', 'FortiClient'],
     },
     {
       period: {
