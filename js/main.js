@@ -144,6 +144,7 @@ function nextChar() {
 
 // ─── RENDER ───────────────────────────────────────────────────────────
 function render() {
+  applyTranslations();
   const langBtn = document.getElementById('langToggle');
   if (langBtn) {
     langBtn.textContent = lang.toUpperCase();
@@ -540,4 +541,23 @@ function updateBgLight() {
       gl.uniform3f(uC2, 0.0, 0.831, 0.667);
     }
   }
+}
+
+
+function applyTranslations() {
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const keys = el.getAttribute('data-i18n').split('.');
+    let obj = D;
+    for (let k of keys) {
+      if (obj && obj[k]) obj = obj[k];
+      else { obj = null; break; }
+    }
+    if (obj) {
+      if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+        el.placeholder = t(obj);
+      } else {
+        el.innerHTML = t(obj);
+      }
+    }
+  });
 }
