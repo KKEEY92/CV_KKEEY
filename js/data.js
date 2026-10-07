@@ -16,7 +16,7 @@ window.KK_DATA = {
       uk: 'Привіт, я',
       pl: 'Cześć, jestem',
     },
-    tagline: 'IT · AI · AUDIO · 15+ JAHRE PRAXIS',
+    tagline: 'IT · AI · AUDIO',
     roles: {
       de: [
         'IT-Administrator · IAM · Systemadministration',
@@ -655,9 +655,9 @@ window.KK_DATA = {
   modules: {
     m7_eyebrow: { de: 'DOPPELTE EXPERTISE', en: 'DUAL EXPERTISE', fr: 'DOUBLE EXPERTISE', uk: 'ПОДВІЙНА ЕКСПЕРТИЗА', pl: 'PODWÓJNA EKSPERTYZA' },
     m7_title: { de: 'Systemadministration, IAM & Endpoint Security.', en: 'System Administration, IAM & Endpoint Security.', fr: 'Administration Système, IAM & Sécurité des Endpoints.', uk: 'Системне адміністрування, IAM та безпека кінцевих точок.', pl: 'Administracja systemami, IAM i bezpieczeństwo punktów końcowych.' },
-    m7_p: { de: 'Ich verknüpfe Softwareentwicklung und AI mit tiefem Systemverständnis aus dem operativen IT-Betrieb in regulierten Umgebungen.', en: 'I combine software development and AI with deep system understanding from operational IT in regulated environments.', fr: 'Je combine le développement logiciel et l'IA avec une compréhension approfondie des systèmes issus de l'exploitation informatique dans des environnements réglementés.', uk: 'Я поєдную розробку програмного забезпечення та ШІ з глибоким розумінням систем з оперативного ІТ у регульованих середовищах.', pl: 'Łączę rozwój oprogramowania i sztuczną inteligencję z głębokim zrozumieniem systemów z operacyjnego IT w regulowanych środowiskach.' },
+    m7_p: { de: 'Ich verknüpfe Softwareentwicklung und AI mit tiefem Systemverständnis aus dem operativen IT-Betrieb in regulierten Umgebungen.', en: 'I combine software development and AI with deep system understanding from operational IT in regulated environments.', fr: 'Je combine le développement logiciel et l\'IA avec une compréhension approfondie des systèmes issus de l\'exploitation informatique dans des environnements réglementés.', uk: 'Я поєдную розробку програмного забезпечення та ШІ з глибоким розумінням систем з оперативного ІТ у регульованих середовищах.', pl: 'Łączę rozwój oprogramowania i sztuczną inteligencję z głębokim zrozumieniem systemów z operacyjnego IT w regulowanych środowiskach.' },
     m7_c_title: { de: 'IT-Fachprofil ansehen', en: 'View IT professional profile', fr: 'Voir le profil professionnel IT', uk: 'Переглянути професійний ІТ-профіль', pl: 'Zobacz profil zawodowy IT' },
-    m7_c_p: { de: 'Detaillierte Einblicke in Praxisprojekte, Nachweise und Kennzahlen aus dem IT-Betrieb.', en: 'Detailed insights into practical projects, credentials and metrics from IT operations.', fr: 'Aperçus détaillés des projets pratiques, certifications et métriques de l'exploitation informatique.', uk: 'Детальний огляд практичних проєктів, сертифікатів та показників ІТ-операцій.', pl: 'Szczegółowy wgląd w praktyczne projekty, poświadczenia i wskaźniki z operacji IT.' },
+    m7_c_p: { de: 'Detaillierte Einblicke in Praxisprojekte, Nachweise und Kennzahlen aus dem IT-Betrieb.', en: 'Detailed insights into practical projects, credentials and metrics from IT operations.', fr: 'Aperçus détaillés des projets pratiques, certifications et métriques de l\'exploitation informatique.', uk: 'Детальний огляд практичних проєктів, сертифікатів та показників ІТ-операцій.', pl: 'Szczegółowy wgląd w praktyczne projekty, poświadczenia i wskaźniki z operacji IT.' },
     m7_btn: { de: 'Zum IT-Profil →', en: 'To the IT profile →', fr: 'Vers le profil IT →', uk: 'До ІТ-профілю →', pl: 'Do profilu IT →' },
   },
   i18n: {
