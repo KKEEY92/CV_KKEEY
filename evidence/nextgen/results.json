@@ -1,0 +1,119 @@
+{
+  "browser": "Chromium 153 headless, Linux, software GPU",
+  "results": [
+    {
+      "name": "viewport 390×844",
+      "status": "PASS",
+      "details": {
+        "overflow": false,
+        "render": "webgl",
+        "quality": "low",
+        "metrics": {
+          "cls": 0.008905693596625967,
+          "lcp": 740
+        }
+      }
+    },
+    {
+      "name": "viewport 768×1024",
+      "status": "PASS",
+      "details": {
+        "overflow": false,
+        "render": "webgl",
+        "quality": "low",
+        "metrics": {
+          "cls": 0.009137543539206186,
+          "lcp": 236
+        }
+      }
+    },
+    {
+      "name": "viewport 1440×900",
+      "status": "PASS",
+      "details": {
+        "overflow": false,
+        "render": "webgl",
+        "quality": "medium",
+        "metrics": {
+          "cls": 0.0011826300894445516,
+          "lcp": 332
+        }
+      }
+    },
+    {
+      "name": "viewport 2560×1440",
+      "status": "PASS",
+      "details": {
+        "overflow": false,
+        "render": "webgl",
+        "quality": "medium",
+        "metrics": {
+          "cls": 0.0025568242155843313,
+          "lcp": 1940
+        }
+      }
+    },
+    {
+      "name": "themes × palettes × languages",
+      "status": "PASS",
+      "details": "de"
+    },
+    {
+      "name": "all local links and PDFs",
+      "status": "PASS",
+      "details": "35 links inspected; external URLs not fetched"
+    },
+    {
+      "name": "mobile keyboard menu",
+      "status": "PASS",
+      "details": "open, Escape close, focus restored"
+    },
+    {
+      "name": "contact success and failure UI (intercepted transport)",
+      "status": "PASS",
+      "details": "UI only; no real message sent; live delivery UNVERIFIED"
+    },
+    {
+      "name": "DPR backing store and offscreen hero pause",
+      "status": "PASS",
+      "details": {
+        "backing": {
+          "width": 1440,
+          "height": 900,
+          "cssWidth": 1440
+        },
+        "heroDrawsDuringPause": 0
+      }
+    },
+    {
+      "name": "user animation pause",
+      "status": "PASS",
+      "details": "both renderers static; toggle resumes"
+    },
+    {
+      "name": "WebGL context loss and recovery",
+      "status": "PASS",
+      "details": "both contexts restored"
+    },
+    {
+      "name": "reduced motion static frames",
+      "status": "PASS",
+      "details": "IT-Administrator · IAM · Systemadministration"
+    },
+    {
+      "name": "WebGL unavailable",
+      "status": "PASS",
+      "details": "semantic page and CSS core remain"
+    },
+    {
+      "name": "axe WCAG 2.2 AA",
+      "status": "PASS",
+      "details": "dark + light; automated scope only"
+    },
+    {
+      "name": "console and local resources",
+      "status": "PASS",
+      "details": "zero errors / local 404s"
+    }
+  ]
+}

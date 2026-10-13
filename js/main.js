@@ -10,7 +10,7 @@ let lang = localStorage.getItem('kk_lang') || 'de';
 if (!LANGUAGES.includes(lang)) lang = 'de';
 
 let darkMode = localStorage.getItem('kk_dark') !== 'false';
-let colorTheme = localStorage.getItem('kk_color') || 'purple';
+let colorTheme = localStorage.getItem('kk_color') || 'orange';
 
 document.addEventListener('DOMContentLoaded', () => {
   applyTheme();
@@ -62,6 +62,13 @@ function initNav() {
       hamburger.setAttribute('aria-expanded', open);
     });
   }
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && links.classList.contains('open')) { links.classList.remove('open'); hamburger.setAttribute('aria-expanded','false'); hamburger.textContent='☰'; hamburger.focus(); }
+  });
+  const sectionObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => { if(entry.isIntersecting) document.querySelectorAll('#navLinks a').forEach(a => { if(a.hash === '#' + entry.target.id) a.setAttribute('aria-current','location'); else a.removeAttribute('aria-current'); }); });
+  }, {rootMargin:'-20% 0px -60% 0px'});
+  document.querySelectorAll('section[id]').forEach(section => sectionObserver.observe(section));
   document.querySelectorAll('#navLinks a').forEach(a => {
     a.addEventListener('click', () => {
       links.classList.remove('open');
@@ -102,7 +109,9 @@ function initNav() {
 let typedTimer, typedIdx = 0, typedDeleting = false, typedText = '';
 
 function initTyped() {
-  typedTimer = setTimeout(nextChar, 900);
+  restartTyped();
+  window.KK_MOTION.media.addEventListener('change', restartTyped);
+  document.addEventListener('visibilitychange', () => { if (document.hidden) clearTimeout(typedTimer); else restartTyped(); });
 }
 
 function restartTyped() {
@@ -110,10 +119,15 @@ function restartTyped() {
   typedIdx = 0; typedDeleting = false; typedText = '';
   const el = document.getElementById('typedOutput');
   if (el) el.textContent = '';
+  if (window.KK_MOTION.media.matches) {
+    if (el) el.textContent = t(D.hero.roles)?.[0] || D.hero.roles.de[0];
+    return;
+  }
   typedTimer = setTimeout(nextChar, 400);
 }
 
 function nextChar() {
+  if (document.hidden || window.KK_MOTION.media.matches) return;
   const roles = (D.hero.roles && D.hero.roles[lang]) || D.hero.roles.de || [];
   if (!roles.length) return;
   const target = roles[typedIdx % roles.length];
@@ -144,6 +158,7 @@ function nextChar() {
 
 // ─── RENDER ───────────────────────────────────────────────────────────
 function render() {
+  document.documentElement.lang = lang;
   applyTranslations();
   const langBtn = document.getElementById('langToggle');
   if (langBtn) {
@@ -239,6 +254,7 @@ function render() {
 
   initReveal();
   initSkillBars();
+  ['formName', 'formEmail', 'formMsg'].forEach(id => { const field = document.getElementById(id); if(field) field.setAttribute('aria-label', field.placeholder); });
 }
 
 function renderTrio() {
@@ -420,35 +436,39 @@ if (form) {
     const btn = document.getElementById('formSubmit');
     btn.textContent = t(D.i18n.sendingLabel);
     btn.disabled = true;
+    const status = document.getElementById('formSent');
+    status.style.display = 'block'; status.textContent = t(D.i18n.sendingLabel);
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 15000);
     try {
       const data = new FormData(form);
-      const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: data });
+      const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: data, signal: controller.signal });
       const json = await res.json();
-      if (json.success) {
+      if (res.ok && json.success) {
+        status.textContent = t(D.i18n.sentMsg);
         document.getElementById('formSent').style.display = 'block';
         form.reset();
         btn.textContent = t(D.i18n.submitLabel);
       } else {
-        btn.textContent = t(D.i18n.sendErr);
+        status.textContent = t(D.i18n.sendErr);
+        btn.textContent = t(D.i18n.submitLabel);
       }
     } catch (err) {
-      btn.textContent = t(D.i18n.sendErr);
+      status.textContent = t(D.i18n.sendErr);
+      btn.textContent = t(D.i18n.submitLabel);
     }
+    clearTimeout(timeout);
     btn.disabled = false;
   });
 }
 
 // ─── WEBGL BACKGROUND ────────────────────────────────────────────────
-let gl, uTime, uRes, uIntensity, uLight, uC1, uC2, rafId;
+let gl, uTime, uRes, uIntensity, uLight, uC1, uC2;
 
 function initBg() {
   const c = document.getElementById('kk-bg');
   if (!c) return;
-  const W = window.innerWidth, H = window.innerHeight;
-  c.width = W; c.height = H;
-  c.style.width = W + 'px'; c.style.height = H + 'px';
-
-  gl = c.getContext('webgl');
+  gl = c.getContext('webgl', {alpha: false, antialias: false, powerPreference: 'low-power'});
   if (!gl) return;
 
   const VS = 'attribute vec2 a;void main(){gl_Position=vec4(a,0,1);}';
@@ -480,67 +500,54 @@ function initBg() {
     '}'
   ].join('\n');
 
-  const mk = (type, src) => { const s = gl.createShader(type); gl.shaderSource(s, src); gl.compileShader(s); return s; };
-  const prog = gl.createProgram();
-  gl.attachShader(prog, mk(gl.VERTEX_SHADER, VS));
-  gl.attachShader(prog, mk(gl.FRAGMENT_SHADER, FS));
-  gl.linkProgram(prog);
-  gl.useProgram(prog);
-
-  const buf = gl.createBuffer();
-  gl.bindBuffer(gl.ARRAY_BUFFER, buf);
-  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1,1,-1,-1,1,1,1]), gl.STATIC_DRAW);
-  const loc = gl.getAttribLocation(prog, 'a');
-  gl.enableVertexAttribArray(loc);
-  gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0);
-
-  uTime = gl.getUniformLocation(prog, 'u_t');
-  uRes = gl.getUniformLocation(prog, 'u_r');
-  uIntensity = gl.getUniformLocation(prog, 'u_i');
-  uLight = gl.getUniformLocation(prog, 'u_l');
-  uC1 = gl.getUniformLocation(prog, 'u_c1');
-  uC2 = gl.getUniformLocation(prog, 'u_c2');
-
-  gl.uniform2f(uRes, W, H);
-  gl.uniform1f(uIntensity, 1.0);
-  gl.uniform1f(uLight, darkMode ? 0.0 : 1.0);
-  if (colorTheme === 'orange') {
-    gl.uniform3f(uC1, 1.0, 0.478, 0.0);
-    gl.uniform3f(uC2, 0.0, 0.898, 1.0);
-  } else {
-    gl.uniform3f(uC1, 0.486, 0.416, 0.969);
-    gl.uniform3f(uC2, 0.0, 0.831, 0.667);
+  let ready = false, lastPaint = -1, scale = 1, elapsed = 0, frames = 0;
+  const motion = window.KK_MOTION;
+  function resize() {
+    const dpr = Math.min(window.devicePixelRatio || 1, 1.25) * scale;
+    c.width = Math.round(innerWidth * dpr); c.height = Math.round(innerHeight * dpr);
+    c.style.width = innerWidth + 'px'; c.style.height = innerHeight + 'px';
+    gl.viewport(0, 0, c.width, c.height);
+    gl.uniform2f(uRes, c.width, c.height);
   }
-
-  let t0 = null;
-  const loop = ts => {
-    if (!gl) return;
-    if (!t0) t0 = ts;
-    gl.uniform1f(uTime, (ts - t0) * 0.001);
-    gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
-    rafId = requestAnimationFrame(loop);
-  };
-  rafId = requestAnimationFrame(loop);
-
-  window.addEventListener('resize', () => {
-    const W2 = window.innerWidth, H2 = window.innerHeight;
-    c.style.width = W2 + 'px'; c.style.height = H2 + 'px';
-    if (gl && uRes) gl.uniform2f(uRes, W2, H2);
-  }, { passive: true });
+  function setup() {
+    ready = false;
+    try {
+      const shaders = [];
+      const mk = (type, src) => {
+        const shader = gl.createShader(type); gl.shaderSource(shader,src); gl.compileShader(shader);
+        if(!gl.getShaderParameter(shader,gl.COMPILE_STATUS)) { const error = gl.getShaderInfoLog(shader); gl.deleteShader(shader); throw new Error(error); }
+        shaders.push(shader); return shader;
+      };
+      const prog = gl.createProgram();
+      gl.attachShader(prog,mk(gl.VERTEX_SHADER,VS)); gl.attachShader(prog,mk(gl.FRAGMENT_SHADER,FS)); gl.linkProgram(prog);
+      if(!gl.getProgramParameter(prog,gl.LINK_STATUS)) throw new Error(gl.getProgramInfoLog(prog));
+      shaders.forEach(shader => gl.deleteShader(shader)); gl.useProgram(prog);
+      const buf = gl.createBuffer(); gl.bindBuffer(gl.ARRAY_BUFFER,buf);
+      gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,1,-1,-1,1,1,1]),gl.STATIC_DRAW);
+      const loc = gl.getAttribLocation(prog,'a'); gl.enableVertexAttribArray(loc); gl.vertexAttribPointer(loc,2,gl.FLOAT,false,0,0);
+      uTime=gl.getUniformLocation(prog,'u_t'); uRes=gl.getUniformLocation(prog,'u_r');
+      uIntensity=gl.getUniformLocation(prog,'u_i'); uLight=gl.getUniformLocation(prog,'u_l');
+      uC1=gl.getUniformLocation(prog,'u_c1'); uC2=gl.getUniformLocation(prog,'u_c2');
+      gl.uniform1f(uIntensity,.32); ready=true; resize(); updateBgLight();
+    } catch(error) { console.warn('Ambient shader fallback:',error.message); c.style.opacity='0'; }
+  }
+  setup();
+  motion.add({ visible: () => ready && !gl.isContextLost(), draw(time,dt) {
+    if(dt){elapsed+=dt;frames++;if(elapsed>2400){if(elapsed/frames>28 && scale>0.6){scale=.6;resize();}elapsed=0;frames=0;}}
+    if(dt && time-lastPaint<1/30) return;
+    lastPaint=time; gl.uniform1f(uTime,time); gl.drawArrays(gl.TRIANGLE_STRIP,0,4);
+  }});
+  window.addEventListener('resize',()=>{if(ready){resize();motion.refresh();}},{passive:true});
+  c.addEventListener('webglcontextlost',e=>{e.preventDefault();ready=false;c.style.opacity='0';motion.refresh();});
+  c.addEventListener('webglcontextrestored',()=>{c.style.opacity='';setup();motion.refresh();});
 }
 
 function updateBgLight() {
-  if (!gl) return;
-  if (uLight !== null) gl.uniform1f(uLight, darkMode ? 0.0 : 1.0);
-  if (uC1 !== null && uC2 !== null) {
-    if (colorTheme === 'orange') {
-      gl.uniform3f(uC1, 1.0, 0.478, 0.0);
-      gl.uniform3f(uC2, 0.0, 0.898, 1.0);
-    } else {
-      gl.uniform3f(uC1, 0.486, 0.416, 0.969);
-      gl.uniform3f(uC2, 0.0, 0.831, 0.667);
-    }
-  }
+  if (!gl || gl.isContextLost() || !uLight) return;
+  gl.uniform1f(uLight,darkMode?0:1);
+  if(colorTheme==='orange'){gl.uniform3f(uC1,1,.478,0);gl.uniform3f(uC2,0,.898,1);}
+  else{gl.uniform3f(uC1,.486,.416,.969);gl.uniform3f(uC2,0,.831,.667);}
+  window.KK_MOTION?.refresh();
 }
 
 

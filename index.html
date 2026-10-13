@@ -15,7 +15,7 @@
   <meta property="og:locale" content="de_DE">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="css/fonts.css">
-  <link rel="stylesheet" href="css/style.css?v=20260826">
+  <link rel="stylesheet" href="css/style.css?v=20261013">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -30,7 +30,8 @@
   </script>
 </head>
 <body>
-<canvas id="kk-bg"></canvas>
+<a class="skip-link" href="#main">Zum Inhalt / Skip to content</a>
+<canvas id="kk-bg" aria-hidden="true"></canvas>
 <div class="scanlines"></div>
 <nav class="nav">
   <div class="nav-inner">
@@ -47,17 +48,22 @@
       <div class="available-badge"><span class="available-dot"></span><span id="availableText">Verfügbar ab sofort</span></div>
       <button class="nav-btn nav-btn-icon" id="darkToggle" aria-label="Theme"></button>
       <button class="nav-btn nav-btn-color" id="colorToggle" aria-label="Farbthema wechseln"><span class="nav-color-indicator"></span></button>
+      <button class="nav-btn nav-btn-icon" id="motionToggle" aria-label="Animation pausieren / Pause animation" aria-pressed="false">Ⅱ</button>
       <button class="nav-btn" id="langToggle" aria-label="Sprache wechseln">DE</button>
       <button class="hamburger" id="hamburger" aria-label="Menü" aria-expanded="false" aria-controls="navLinks">☰</button>
     </div>
   </div>
 </nav>
-<section class="hero" id="hero">
+<main id="main">
+<section class="hero" id="hero" aria-labelledby="hero-name">
+  <div class="hero-stage">
   <div class="hero-content">
     <div class="hero-avatar"><img src="assets/avatar.jpg" alt="Kevin Kuck" width="800" height="800" decoding="async"></div>
     <p class="hero-label" id="heroGreeting">Hallo, ich bin</p>
-    <h1 class="hero-name">Kevin Kuck</h1>
-    <div class="hero-typed-wrap"><span class="hero-typed-text" id="typedOutput"></span><span class="hero-cursor"></span></div>
+    <p class="hero-eyebrow">KKEEY / SYSTEMS IN MOTION</p>
+    <h1 class="hero-name" id="hero-name">Kevin Kuck</h1>
+    <p class="hero-position">AI Architect · Systems Engineer</p>
+    <div class="hero-typed-wrap" aria-hidden="true"><span class="hero-typed-text" id="typedOutput"></span><span class="hero-cursor"></span></div>
     <p class="hero-tagline">IT · AI · AUDIO</p>
     <div class="hero-ctas">
       <a href="#projects" class="btn-primary" id="heroCta1">Projekte ansehen</a>
@@ -65,7 +71,12 @@
       <a href="assets/Kevin_Kuck_Bewerbungsmappe_AI_2026.pdf" download class="btn-outline btn-cv" id="heroCta3"><span>Bewerbungsmappe (PDF)</span></a>
     </div>
   </div>
-  <div class="hero-arrow">↓</div>
+  <div class="signal-field" id="signal-field" aria-hidden="true" data-render="fallback">
+    <div class="signal-poster"></div><canvas class="signal-canvas"></canvas>
+    <div class="signal-caption"><span>01 / AGENT CORE</span><span>IT × AI × AUDIO</span></div>
+  </div>
+  </div>
+  <a class="hero-arrow" href="#about" aria-label="Über mich / About">↓</a>
 </section>
 <section id="about"><div class="container">
   <p class="section-label" id="trioLabel">Differenziator</p>
@@ -106,9 +117,9 @@
   <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
     <input type="hidden" name="access_key" value="ee6d8111-b3db-4684-8460-4d57384ff3fc">
     <input type="hidden" name="subject" value="Neue Kontaktanfrage — Kevin Kuck Portfolio">
-    <input type="hidden" name="redirect" value="false">
-    <input type="text" name="name" required class="contact-input" id="formName" placeholder="Dein Name">
-    <input type="email" name="email" required class="contact-input" id="formEmail" placeholder="Deine E-Mail">
+    <input type="checkbox" name="botcheck" class="honeypot" tabindex="-1" aria-hidden="true">
+    <input type="text" name="name" required class="contact-input" id="formName" autocomplete="name" placeholder="Dein Name">
+    <input type="email" name="email" required class="contact-input" id="formEmail" autocomplete="email" placeholder="Deine E-Mail">
     <textarea name="message" required class="contact-input" id="formMsg" rows="5" placeholder="Deine Nachricht..."></textarea>
     <p class="contact-legal" style="font-size:12px;line-height:1.5;opacity:.8;margin:8px 0 14px">Mit dem Absenden willigen Sie in die Verarbeitung Ihrer Angaben zur Beantwortung der Anfrage ein. Details: <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
     <button type="submit" class="contact-submit" id="formSubmit">Nachricht senden →</button>
@@ -141,12 +152,15 @@
     </div>
   </div>
 </div>
+</main>
 <footer class="footer">
   <p>&copy; 2026 Kevin Kuck · kkeey.dev</p>
   <p class="footer-legal"><a href="impressum.html">Impressum</a> | <a href="datenschutz.html">Datenschutzerklärung</a></p>
   <p class="footer-cross"><a href="https://it.kkeey.dev/" id="footerCross">IT-Profil ansehen: Systemadministration · IAM →</a></p>
 </footer>
 <script src="js/data.js"></script>
+<script src="js/motion.js"></script>
 <script src="js/main.js"></script>
+<script type="module" src="js/particle-hero.js"></script>
 </body>
 </html>

@@ -1,0 +1,6 @@
+{
+  "name": "kkeey-portfolio-qa",
+  "private": true,
+  "scripts": { "test": "node scripts/test-nextgen.mjs" },
+  "devDependencies": { "playwright": "1.62.1", "@axe-core/playwright": "4.13.0" }
+}
