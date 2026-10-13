@@ -9,8 +9,94 @@
         "render": "webgl",
         "quality": "low",
         "metrics": {
-          "cls": 0.008335615460062354,
-          "lcp": 220
+          "cls": 0.00001192177243928103,
+          "lcp": 244,
+          "shifts": [
+            {
+              "value": 9.070913812496437e-7,
+              "targets": [
+                "hero-cursor"
+              ]
+            },
+            {
+              "value": 7.775068982139802e-7,
+              "targets": [
+                "hero-cursor"
+              ]
+            },
+            {
+              "value": 9.070913812496437e-7,
+              "targets": [
+                "hero-cursor"
+              ]
+            },
+            {
+              "value": 7.775068982139802e-7,
+              "targets": [
+                "hero-cursor"
+              ]
+            },
+            {
+              "value": 9.070913812496437e-7,
+              "targets": [
+                "hero-cursor"
+              ]
+            },
+            {
+              "value": 7.775068982139802e-7,
+              "targets": [
+                "hero-cursor"
+              ]
+            },
+            {
+              "value": 9.070913812496437e-7,
+              "targets": [
+                "hero-cursor"
+              ]
+            },
+            {
+              "value": 9.070913812496437e-7,
+              "targets": [
+                "hero-cursor"
+              ]
+            },
+            {
+              "value": 7.775068982139802e-7,
+              "targets": [
+                "hero-cursor"
+              ]
+            },
+            {
+              "value": 9.070913812496437e-7,
+              "targets": [
+                "hero-cursor"
+              ]
+            },
+            {
+              "value": 7.775068982139802e-7,
+              "targets": [
+                "hero-cursor"
+              ]
+            },
+            {
+              "value": 9.070913812496437e-7,
+              "targets": [
+                "hero-cursor"
+              ]
+            },
+            {
+              "value": 9.070913812496437e-7,
+              "targets": [
+                "hero-cursor"
+              ]
+            },
+            {
+              "value": 7.775068982139802e-7,
+              "targets": [
+                "hero-cursor"
+              ]
+            }
+          ]
         },
         "portraitWidth": 112
       }
@@ -23,8 +109,88 @@
         "render": "webgl",
         "quality": "low",
         "metrics": {
-          "cls": 0.0000050067901611328125,
-          "lcp": 108
+          "cls": 0.000004157423973083496,
+          "lcp": 120,
+          "shifts": [
+            {
+              "value": 3.129243850708008e-7,
+              "targets": [
+                "hero-cursor"
+              ]
+            },
+            {
+              "value": 2.682209014892578e-7,
+              "targets": [
+                "hero-cursor"
+              ]
+            },
+            {
+              "value": 3.129243850708008e-7,
+              "targets": [
+                "hero-cursor"
+              ]
+            },
+            {
+              "value": 2.682209014892578e-7,
+              "targets": [
+                "hero-cursor"
+              ]
+            },
+            {
+              "value": 3.129243850708008e-7,
+              "targets": [
+                "hero-cursor"
+              ]
+            },
+            {
+              "value": 2.682209014892578e-7,
+              "targets": [
+                "hero-cursor"
+              ]
+            },
+            {
+              "value": 3.129243850708008e-7,
+              "targets": [
+                "hero-cursor"
+              ]
+            },
+            {
+              "value": 6.258487701416016e-7,
+              "targets": [
+                "hero-cursor"
+              ]
+            },
+            {
+              "value": 2.682209014892578e-7,
+              "targets": [
+                "hero-cursor"
+              ]
+            },
+            {
+              "value": 3.129243850708008e-7,
+              "targets": [
+                "hero-cursor"
+              ]
+            },
+            {
+              "value": 2.682209014892578e-7,
+              "targets": [
+                "hero-cursor"
+              ]
+            },
+            {
+              "value": 3.129243850708008e-7,
+              "targets": [
+                "hero-cursor"
+              ]
+            },
+            {
+              "value": 3.129243850708008e-7,
+              "targets": [
+                "hero-cursor"
+              ]
+            }
+          ]
         },
         "portraitWidth": 112
       }
@@ -37,8 +203,50 @@
         "render": "webgl",
         "quality": "medium",
         "metrics": {
-          "cls": 0.013224785439238794,
-          "lcp": 116
+          "cls": 0.0011837381998697917,
+          "lcp": 64,
+          "shifts": [
+            {
+              "value": 0.0011822528603636188,
+              "targets": [
+                "nav-controls",
+                "LI",
+                "LI",
+                "LI",
+                "LI"
+              ]
+            },
+            {
+              "value": 1.8861454046639233e-7,
+              "targets": [
+                "hero-cursor"
+              ]
+            },
+            {
+              "value": 1.8861454046639233e-7,
+              "targets": [
+                "hero-cursor"
+              ]
+            },
+            {
+              "value": 3.536522633744856e-7,
+              "targets": [
+                "hero-cursor"
+              ]
+            },
+            {
+              "value": 3.7722908093278465e-7,
+              "targets": [
+                "hero-cursor"
+              ]
+            },
+            {
+              "value": 3.7722908093278465e-7,
+              "targets": [
+                "hero-cursor"
+              ]
+            }
+          ]
         },
         "portraitWidth": 144
       }
@@ -51,8 +259,40 @@
         "render": "webgl",
         "quality": "medium",
         "metrics": {
-          "cls": 0.002872494123048253,
-          "lcp": 576
+          "cls": 1.8183390299479168e-7,
+          "lcp": 704,
+          "shifts": [
+            {
+              "value": 3.7299262152777784e-8,
+              "targets": [
+                "hero-cursor"
+              ]
+            },
+            {
+              "value": 3.7299262152777784e-8,
+              "targets": [
+                "hero-cursor"
+              ]
+            },
+            {
+              "value": 3.7299262152777784e-8,
+              "targets": [
+                "hero-cursor"
+              ]
+            },
+            {
+              "value": 3.2636854383680557e-8,
+              "targets": [
+                "hero-cursor"
+              ]
+            },
+            {
+              "value": 3.7299262152777784e-8,
+              "targets": [
+                "hero-cursor"
+              ]
+            }
+          ]
         },
         "portraitWidth": 144
       }
@@ -61,9 +301,9 @@
       "name": "successive clicks preserve existing ripple fronts",
       "status": "PASS",
       "details": {
-        "firstStart": 0.11670000106096268,
-        "retainedStart": 0.11670000106096268,
-        "secondStart": 0.2500999867916107,
+        "firstStart": 0.05000000074505806,
+        "retainedStart": 0.05000000074505806,
+        "secondStart": 0.20000000298023224,
         "boundedSlots": 8
       }
     },
@@ -76,6 +316,20 @@
       "name": "transparent portfolio screenshot",
       "status": "PASS",
       "details": "actual data-driven cards captured"
+    },
+    {
+      "name": "actual GPU state and cached card topology",
+      "status": "PASS",
+      "details": {
+        "mode": "curl-sim",
+        "stateBytes": "2097152",
+        "anchors": "7"
+      }
+    },
+    {
+      "name": "float framebuffer fallback",
+      "status": "PASS",
+      "details": "curl-deform without state-buffer extension"
     },
     {
       "name": "themes × palettes × languages",

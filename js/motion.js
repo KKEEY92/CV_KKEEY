@@ -24,7 +24,7 @@
   }
   function refresh() {
     cancelAnimationFrame(frame); frame = 0; last = 0;
-    if (!document.hidden) for (const client of clients) if (client.visible()) client.draw(media.matches ? 0 : time, 0);
+    if (!document.hidden) for (const client of clients) if (client.visible()) client.draw(preference.matches ? 0 : time, 0);
     schedule();
   }
   document.addEventListener('visibilitychange', refresh);

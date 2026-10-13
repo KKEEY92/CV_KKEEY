@@ -14,8 +14,10 @@
   <meta property="og:type" content="website">
   <meta property="og:locale" content="de_DE">
   <meta name="twitter:card" content="summary_large_image">
+  <link rel="preload" href="assets/fonts/V8mDoQDjQSkFtoMM3T6r8E7mPbF4Cw.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/tDbv2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKwBNntkaToggR7BYRbKPxDcwg.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/fonts.css">
-  <link rel="stylesheet" href="css/style.css?v=20261013">
+  <link rel="stylesheet" href="css/style.css?v=20261013-topology">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -55,12 +57,15 @@
   </div>
 </nav>
 <main id="main">
+<div id="signal-scope">
+<div class="signal-layer" aria-hidden="true"><canvas class="signal-canvas"></canvas></div>
 <section class="hero" id="hero" aria-labelledby="hero-name">
   <div class="hero-stage">
   <div class="hero-content">
-    <div class="hero-avatar"><img src="assets/avatar.jpg" alt="Kevin Kuck" width="800" height="800" decoding="async"></div>
-    <p class="hero-label" id="heroGreeting">Hallo, ich bin</p>
+    <div class="hero-id"><div class="hero-avatar"><img src="assets/avatar.jpg" alt="Kevin Kuck" width="800" height="800" decoding="async"></div>
+    <div class="hero-capsule"><p class="hero-label" id="heroGreeting">Hallo, ich bin</p>
     <p class="hero-eyebrow">KKEEY / SYSTEMS IN MOTION</p>
+    </div></div>
     <h1 class="hero-name" id="hero-name">Kevin Kuck</h1>
     <p class="hero-position">AI Architect · Systems Engineer</p>
     <div class="hero-typed-wrap" aria-hidden="true"><span class="hero-typed-text" id="typedOutput"></span><span class="hero-cursor"></span></div>
@@ -72,8 +77,8 @@
     </div>
   </div>
   <div class="signal-field" id="signal-field" aria-hidden="true" data-render="fallback">
-    <div class="signal-poster"></div><canvas class="signal-canvas"></canvas>
-    <div class="signal-caption"><span>01 / AGENT CORE</span><span>IT × AI × AUDIO</span></div>
+    <div class="signal-poster"></div>
+    <div class="signal-caption"><span>01 / AGENT CORE</span><span id="signal-telemetry">STATE: INITIALIZING</span></div>
   </div>
   </div>
   <a class="hero-arrow" href="#about" aria-label="Über mich / About">↓</a>
@@ -90,6 +95,7 @@
   <p class="section-sub" id="projSub">Gebaut. Deployed. Öffentlich.</p>
   <div class="projects-grid" id="projContainer"></div>
 </div></section>
+</div>
 <section id="skills"><div class="container">
   <p class="section-label">Tech Stack</p>
   <h2 class="section-title" id="skillsTitle">Skills & Kompetenzprofil</h2>

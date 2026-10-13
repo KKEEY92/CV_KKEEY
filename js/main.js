@@ -177,7 +177,7 @@ function render() {
     D.i18n.navContact,
   ];
   document.querySelectorAll('#navLinks a').forEach((a, i) => {
-    if (navKeys[i]) a.textContent = t(navKeys[i]);
+    if (navKeys[i]) {a.textContent = t(navKeys[i]);a.removeAttribute('aria-label');}
   });
 
   // Hero
@@ -308,7 +308,7 @@ function renderProjects() {
         ).join('')}</div>`
       : '';
     return `
-    <div class="glass-card project-card reveal" style="background:linear-gradient(135deg,rgba(${rgb},0.04) 0%,var(--kk-card));box-shadow:inset 0 1px 0 var(--kk-inset),0 8px 32px var(--kk-shadow)">
+    <div data-project-id="${p.name.toLowerCase().replace(/[^a-z0-9]+/g,'-')}" class="glass-card project-card reveal" style="background:linear-gradient(135deg,rgba(${rgb},0.04) 0%,var(--kk-card));box-shadow:inset 0 1px 0 var(--kk-inset),0 8px 32px var(--kk-shadow)">
       <div>
         <div class="project-header">
           <h3 class="project-name">${p.name}</h3>
@@ -477,6 +477,7 @@ function initBg() {
     'uniform float u_t,u_i,u_l;',
     'uniform vec3 u_c1,u_c2;',
     'uniform vec2 u_r;',
+    'uniform sampler2D u_n; uniform float u_hasn;',
     'void main(){',
     '  vec2 uv=gl_FragCoord.xy/u_r;',
     '  vec2 p=uv*2.-1.;',
@@ -496,10 +497,16 @@ function initBg() {
     '  col+=pur*m1*w3*(.28+.18*db)*u_i;',
     '  col+=teal*m2*w3*(.16+.1*db)*u_i;',
     '  col+=vec3(.08,.05,.22)*m1*m2*.35*u_i*db;',
-    '  gl_FragColor=vec4(clamp(col,0.,1.),1.);',
+    '  float grain=(texture2D(u_n,gl_FragCoord.xy/64.).r-.5)*u_hasn/255.;',
+    '  gl_FragColor=vec4(clamp(col+grain,0.,1.),1.);',
     '}'
   ].join('\n');
 
+  let noiseImage = new Image(), noiseReady = false;
+  noiseImage.onload = () => {noiseReady=true;if(ready){uploadNoise();motion.refresh();}};
+  noiseImage.src = "assets/noise/blue-noise-64.png";
+  let noiseLocation, hasNoiseLocation, noiseTexture;
+  function uploadNoise(){const tex=noiseTexture||(noiseTexture=gl.createTexture());gl.activeTexture(gl.TEXTURE0);gl.bindTexture(gl.TEXTURE_2D,tex);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MIN_FILTER,gl.NEAREST);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MAG_FILTER,gl.NEAREST);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_S,gl.REPEAT);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_T,gl.REPEAT);if(noiseReady)gl.texImage2D(gl.TEXTURE_2D,0,gl.RGBA,gl.RGBA,gl.UNSIGNED_BYTE,noiseImage);else gl.texImage2D(gl.TEXTURE_2D,0,gl.RGBA,1,1,0,gl.RGBA,gl.UNSIGNED_BYTE,new Uint8Array([128,128,128,255]));gl.uniform1i(noiseLocation,0);gl.uniform1f(hasNoiseLocation,noiseReady?1:0);}
   let ready = false, lastPaint = -1, scale = 1, elapsed = 0, frames = 0;
   const motion = window.KK_MOTION;
   function resize() {
@@ -528,7 +535,7 @@ function initBg() {
       uTime=gl.getUniformLocation(prog,'u_t'); uRes=gl.getUniformLocation(prog,'u_r');
       uIntensity=gl.getUniformLocation(prog,'u_i'); uLight=gl.getUniformLocation(prog,'u_l');
       uC1=gl.getUniformLocation(prog,'u_c1'); uC2=gl.getUniformLocation(prog,'u_c2');
-      gl.uniform1f(uIntensity,.60); ready=true; resize(); updateBgLight();
+      noiseLocation=gl.getUniformLocation(prog,'u_n');hasNoiseLocation=gl.getUniformLocation(prog,'u_hasn');gl.uniform1f(hasNoiseLocation,0);gl.uniform1f(uIntensity,.60); ready=true;uploadNoise(); resize(); updateBgLight();
     } catch(error) { console.warn('Ambient shader fallback:',error.message); c.style.opacity='0'; }
   }
   setup();
@@ -539,7 +546,7 @@ function initBg() {
   }});
   window.addEventListener('resize',()=>{if(ready){resize();motion.refresh();}},{passive:true});
   c.addEventListener('webglcontextlost',e=>{e.preventDefault();ready=false;c.style.opacity='0';motion.refresh();});
-  c.addEventListener('webglcontextrestored',()=>{c.style.opacity='';setup();motion.refresh();});
+  c.addEventListener('webglcontextrestored',()=>{noiseTexture=null;c.style.opacity='';setup();motion.refresh();});
 }
 
 function updateBgLight() {
