@@ -481,7 +481,7 @@ function initBg() {
     '  vec2 uv=gl_FragCoord.xy/u_r;',
     '  vec2 p=uv*2.-1.;',
     '  p.x*=u_r.x/u_r.y;',
-    '  float t=u_t*.2;',
+    '  float t=u_t*.42;',
     '  float w1=sin(p.x*2.5+t)*cos(p.y*1.8-t*.6);',
     '  float w2=cos(p.x*1.5-t*.4)*sin(p.y*2.2+t);',
     '  float w3=sin(length(p)*3.-t*1.2)*.5+.5;',
@@ -528,7 +528,7 @@ function initBg() {
       uTime=gl.getUniformLocation(prog,'u_t'); uRes=gl.getUniformLocation(prog,'u_r');
       uIntensity=gl.getUniformLocation(prog,'u_i'); uLight=gl.getUniformLocation(prog,'u_l');
       uC1=gl.getUniformLocation(prog,'u_c1'); uC2=gl.getUniformLocation(prog,'u_c2');
-      gl.uniform1f(uIntensity,.32); ready=true; resize(); updateBgLight();
+      gl.uniform1f(uIntensity,.60); ready=true; resize(); updateBgLight();
     } catch(error) { console.warn('Ambient shader fallback:',error.message); c.style.opacity='0'; }
   }
   setup();

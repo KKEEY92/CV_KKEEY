@@ -30,7 +30,7 @@ Portfolio: consistent card hierarchy, vertically arranged title/status, wrapping
 - DPR caps: particle low 1.25, other levels 1.75; ambient 1.25 with adaptive scale reduction. ResizeObserver updates hero backing store/camera; ambient updates backing store and viewport.
 - Particle frames stop when its stage is outside the viewport. Ambient remains visible throughout the page and runs at up to ~30fps; both stop on hidden page/user pause. If all clients are inactive the scheduler has no repeating RAF.
 - Ambient's original mathematical shader retained, reduced intensity, compile/link checks and context-loss recovery added. CSS background/core provides the non-WebGL fallback.
-- Interaction ignores touch pointer forces and clicks on links/buttons; no canvas pointer capture, dragging or OrbitControls. No scroll interception.
+- Interaction ignores touch pointer forces and clicks on links/buttons; short touch taps emit ripples while motion/scroll gestures do not; no canvas pointer capture, dragging or OrbitControls. No scroll interception.
 - User-visible pause control stores its preference. OS reduced motion takes precedence over resume.
 
 ## P4 — Functional changes
@@ -45,10 +45,10 @@ Environment: Chromium 153 headless, Linux, SwiftShader/software GPU, localhost, 
 
 | Viewport | Local LCP | Local CLS | Particle tier | Overflow |
 |---|---:|---:|---|---|
-| 390×844 | 740 ms | 0.00891 | Low | None |
-| 768×1024 | 236 ms | 0.00914 | Low | None |
-| 1440×900 | 332 ms | 0.00118 | Medium | None |
-| 2560×1440 | 1940 ms | 0.00256 | Medium | None |
+| 390×844 | 220 ms | 0.00834 | Low | None |
+| 768×1024 | 108 ms | 0.00001 | Low | None |
+| 1440×900 | 116 ms | 0.01322 | Medium | None |
+| 2560×1440 | 576 ms | 0.00287 | Medium | None |
 
 These local samples meet LCP ≤2.5s and CLS ≤0.1. **Production LCP/CLS and INP ≤200ms remain UNVERIFIED.** No INP estimate is substituted for field measurement. Three.js adds ~720 KB uncompressed JS; production gzip/Brotli/cache transfer was not measured. Imports occur only once the decorative stage enters view. Cold slow-network tests and real GPU power measurements remain outstanding.
 
@@ -94,3 +94,16 @@ This is a **draft review candidate**, not production-approved. Real Safari/iPhon
 No DNS/domain/CNAME/workflow updates, main commits, force-pushes or production deployment. No Aria/Claire repository writes. User's explicit GO is required for any production merge.
 
 Rollback before merge: close the draft PR / leave feature branch unmerged. After a separately approved deployment: revert the modernization commit through a new reviewed PR while preserving later data-sync changes; do not reset main or force-push. All runtime effects are isolated to new motion/particle modules and additive CSS plus audited main integration. Original shader formula, data and download assets remain available.
+
+## Revision — larger core and persistent ripple field
+
+User follow-up: approximately double the particle animation, successive water-like waves, stronger ambient motion, more transparent cards.
+
+- Desktop apparent size multiplier ~2.02 (155% canvas stage × camera zoom 1.30); mobile ~2.0 (440px stage instead of 300px × camera zoom 1.36). Extended canvas is clipped by the hero, not by a scrolling container. Text/CTAs keep their higher stacking order. Particle count remains adaptive, not doubled.
+- Eight GPU ripple slots, six-second lifetime. Reuse only expired slots; rapid clicks never overwrite a still-active wave. Radial travelling fronts, trailing crests, damping and capped displacement. At capacity further impulses are skipped until a slot expires. Coordinates account for camera zoom.
+- Short touch taps supported with passive pointer handlers; movement, scroll change and pointer cancellation reject the tap. No preventDefault or pointer capture.
+- Ambient time multiplier 0.20 → 0.42; shader intensity 0.32 → 0.60; canvas opacity 0.45 → 0.70. Existing pauses and quality adaptation retained.
+- Glass alpha reduced in Dark and Light, blur 18px → 10px. Text stays fully opaque.
+- **18 Chromium groups PASS**, including GPU uniform capture proving the initial wave timestamp survives later rapid clicks, two emulated touch taps retaining both waves, all four viewport checks and axe Dark/Light. Updated screenshots/results reflect this revision; local samples are not production performance evidence. Physical iPhone/Safari and production INP remain UNVERIFIED.
+
+- Additional user steering: portrait enlarged from 76px to 144px on desktop and 60px to 112px on mobile; viewport tests assert the new portrait dimensions.
