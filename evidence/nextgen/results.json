@@ -1,0 +1,397 @@
+{
+  "browser": "Chromium 153 headless, Linux, software GPU",
+  "results": [
+    {
+      "name": "viewport 390×844",
+      "status": "PASS",
+      "details": {
+        "overflow": false,
+        "render": "webgl",
+        "quality": "low",
+        "metrics": {
+          "cls": 0.00001192177243928103,
+          "lcp": 244,
+          "shifts": [
+            {
+              "value": 9.070913812496437e-7,
+              "targets": [
+                "hero-cursor"
+              ]
+            },
+            {
+              "value": 7.775068982139802e-7,
+              "targets": [
+                "hero-cursor"
+              ]
+            },
+            {
+              "value": 9.070913812496437e-7,
+              "targets": [
+                "hero-cursor"
+              ]
+            },
+            {
+              "value": 7.775068982139802e-7,
+              "targets": [
+                "hero-cursor"
+              ]
+            },
+            {
+              "value": 9.070913812496437e-7,
+              "targets": [
+                "hero-cursor"
+              ]
+            },
+            {
+              "value": 7.775068982139802e-7,
+              "targets": [
+                "hero-cursor"
+              ]
+            },
+            {
+              "value": 9.070913812496437e-7,
+              "targets": [
+                "hero-cursor"
+              ]
+            },
+            {
+              "value": 9.070913812496437e-7,
+              "targets": [
+                "hero-cursor"
+              ]
+            },
+            {
+              "value": 7.775068982139802e-7,
+              "targets": [
+                "hero-cursor"
+              ]
+            },
+            {
+              "value": 9.070913812496437e-7,
+              "targets": [
+                "hero-cursor"
+              ]
+            },
+            {
+              "value": 7.775068982139802e-7,
+              "targets": [
+                "hero-cursor"
+              ]
+            },
+            {
+              "value": 9.070913812496437e-7,
+              "targets": [
+                "hero-cursor"
+              ]
+            },
+            {
+              "value": 9.070913812496437e-7,
+              "targets": [
+                "hero-cursor"
+              ]
+            },
+            {
+              "value": 7.775068982139802e-7,
+              "targets": [
+                "hero-cursor"
+              ]
+            }
+          ]
+        },
+        "portraitWidth": 112
+      }
+    },
+    {
+      "name": "viewport 768×1024",
+      "status": "PASS",
+      "details": {
+        "overflow": false,
+        "render": "webgl",
+        "quality": "low",
+        "metrics": {
+          "cls": 0.000004157423973083496,
+          "lcp": 120,
+          "shifts": [
+            {
+              "value": 3.129243850708008e-7,
+              "targets": [
+                "hero-cursor"
+              ]
+            },
+            {
+              "value": 2.682209014892578e-7,
+              "targets": [
+                "hero-cursor"
+              ]
+            },
+            {
+              "value": 3.129243850708008e-7,
+              "targets": [
+                "hero-cursor"
+              ]
+            },
+            {
+              "value": 2.682209014892578e-7,
+              "targets": [
+                "hero-cursor"
+              ]
+            },
+            {
+              "value": 3.129243850708008e-7,
+              "targets": [
+                "hero-cursor"
+              ]
+            },
+            {
+              "value": 2.682209014892578e-7,
+              "targets": [
+                "hero-cursor"
+              ]
+            },
+            {
+              "value": 3.129243850708008e-7,
+              "targets": [
+                "hero-cursor"
+              ]
+            },
+            {
+              "value": 6.258487701416016e-7,
+              "targets": [
+                "hero-cursor"
+              ]
+            },
+            {
+              "value": 2.682209014892578e-7,
+              "targets": [
+                "hero-cursor"
+              ]
+            },
+            {
+              "value": 3.129243850708008e-7,
+              "targets": [
+                "hero-cursor"
+              ]
+            },
+            {
+              "value": 2.682209014892578e-7,
+              "targets": [
+                "hero-cursor"
+              ]
+            },
+            {
+              "value": 3.129243850708008e-7,
+              "targets": [
+                "hero-cursor"
+              ]
+            },
+            {
+              "value": 3.129243850708008e-7,
+              "targets": [
+                "hero-cursor"
+              ]
+            }
+          ]
+        },
+        "portraitWidth": 112
+      }
+    },
+    {
+      "name": "viewport 1440×900",
+      "status": "PASS",
+      "details": {
+        "overflow": false,
+        "render": "webgl",
+        "quality": "medium",
+        "metrics": {
+          "cls": 0.0011837381998697917,
+          "lcp": 64,
+          "shifts": [
+            {
+              "value": 0.0011822528603636188,
+              "targets": [
+                "nav-controls",
+                "LI",
+                "LI",
+                "LI",
+                "LI"
+              ]
+            },
+            {
+              "value": 1.8861454046639233e-7,
+              "targets": [
+                "hero-cursor"
+              ]
+            },
+            {
+              "value": 1.8861454046639233e-7,
+              "targets": [
+                "hero-cursor"
+              ]
+            },
+            {
+              "value": 3.536522633744856e-7,
+              "targets": [
+                "hero-cursor"
+              ]
+            },
+            {
+              "value": 3.7722908093278465e-7,
+              "targets": [
+                "hero-cursor"
+              ]
+            },
+            {
+              "value": 3.7722908093278465e-7,
+              "targets": [
+                "hero-cursor"
+              ]
+            }
+          ]
+        },
+        "portraitWidth": 144
+      }
+    },
+    {
+      "name": "viewport 2560×1440",
+      "status": "PASS",
+      "details": {
+        "overflow": false,
+        "render": "webgl",
+        "quality": "medium",
+        "metrics": {
+          "cls": 1.8183390299479168e-7,
+          "lcp": 704,
+          "shifts": [
+            {
+              "value": 3.7299262152777784e-8,
+              "targets": [
+                "hero-cursor"
+              ]
+            },
+            {
+              "value": 3.7299262152777784e-8,
+              "targets": [
+                "hero-cursor"
+              ]
+            },
+            {
+              "value": 3.7299262152777784e-8,
+              "targets": [
+                "hero-cursor"
+              ]
+            },
+            {
+              "value": 3.2636854383680557e-8,
+              "targets": [
+                "hero-cursor"
+              ]
+            },
+            {
+              "value": 3.7299262152777784e-8,
+              "targets": [
+                "hero-cursor"
+              ]
+            }
+          ]
+        },
+        "portraitWidth": 144
+      }
+    },
+    {
+      "name": "successive clicks preserve existing ripple fronts",
+      "status": "PASS",
+      "details": {
+        "firstStart": 0.05000000074505806,
+        "retainedStart": 0.05000000074505806,
+        "secondStart": 0.20000000298023224,
+        "boundedSlots": 8
+      }
+    },
+    {
+      "name": "mobile touch taps accumulate ripples",
+      "status": "PASS",
+      "details": "two real emulated touch taps; first wave retained; physical iPhone UNVERIFIED"
+    },
+    {
+      "name": "transparent portfolio screenshot",
+      "status": "PASS",
+      "details": "actual data-driven cards captured"
+    },
+    {
+      "name": "actual GPU state and cached card topology",
+      "status": "PASS",
+      "details": {
+        "mode": "curl-sim",
+        "stateBytes": "2097152",
+        "anchors": "7"
+      }
+    },
+    {
+      "name": "float framebuffer fallback",
+      "status": "PASS",
+      "details": "curl-deform without state-buffer extension"
+    },
+    {
+      "name": "themes × palettes × languages",
+      "status": "PASS",
+      "details": "de"
+    },
+    {
+      "name": "all local links and PDFs",
+      "status": "PASS",
+      "details": "35 links inspected; external URLs not fetched"
+    },
+    {
+      "name": "mobile keyboard menu",
+      "status": "PASS",
+      "details": "open, Escape close, focus restored"
+    },
+    {
+      "name": "contact success and failure UI (intercepted transport)",
+      "status": "PASS",
+      "details": "UI only; no real message sent; live delivery UNVERIFIED"
+    },
+    {
+      "name": "DPR backing store and offscreen hero pause",
+      "status": "PASS",
+      "details": {
+        "backing": {
+          "width": 1440,
+          "height": 900,
+          "cssWidth": 1440
+        },
+        "heroDrawsDuringPause": 0
+      }
+    },
+    {
+      "name": "user animation pause",
+      "status": "PASS",
+      "details": "both renderers static; toggle resumes"
+    },
+    {
+      "name": "WebGL context loss and recovery",
+      "status": "PASS",
+      "details": "both contexts restored"
+    },
+    {
+      "name": "reduced motion static frames",
+      "status": "PASS",
+      "details": "IT-Administrator · IAM · Systemadministration"
+    },
+    {
+      "name": "WebGL unavailable",
+      "status": "PASS",
+      "details": "semantic page and CSS core remain"
+    },
+    {
+      "name": "axe WCAG 2.2 AA",
+      "status": "PASS",
+      "details": "dark + light; automated scope only"
+    },
+    {
+      "name": "console and local resources",
+      "status": "PASS",
+      "details": "zero errors / local 404s"
+    }
+  ]
+}
