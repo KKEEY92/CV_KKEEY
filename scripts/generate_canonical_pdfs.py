@@ -26,6 +26,30 @@ def load_canonical_data() -> dict[str, Any]:
     return json.loads(CANONICAL_JSON_PATH.read_text(encoding='utf-8'))
 
 
+def _esc(text: str) -> str:
+    return text.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
+
+
+def render_bauhaus_stations(data: dict[str, Any]) -> str:
+    """BAUHAUS in drei Stationen (final 20.10.2026), neueste zuerst, aus canonical_profile.json."""
+    stations = list(reversed(data['employment']['bauhaus']['stations']))
+    out = []
+    for st in stations:
+        bullets = st.get('bullets') or []
+        body = ''
+        if bullets:
+            body = '<ul class="job-bullets">' + ''.join(f'<li>{_esc(b)}</li>' for b in bullets) + '</ul>'
+        out.append(f"""
+    <div class="job-item">
+        <div class="job-head">
+            <span class="job-role">{_esc(st['title'])}</span>
+            <span class="job-period">{_esc(st['period'])}</span>
+        </div>
+        <div class="job-company">{_esc(st.get('location', 'BAUHAUS'))}</div>{body}
+    </div>""")
+    return ''.join(out)
+
+
 BASE_CSS = """
 @page {
     size: A4;
@@ -121,6 +145,12 @@ a {
     margin-top: 2px;
     line-height: 1.45;
 }
+.job-bullets {
+    font-size: 9pt;
+    color: #334155;
+    margin: 2px 0 0 14px;
+    line-height: 1.4;
+}
 .skills-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -213,7 +243,7 @@ def render_master_cv(data: dict[str, Any]) -> str:
 <div class="section">
     <div class="section-title">Kurzprofil</div>
     <p class="summary-text">
-        Ich verbinde langjährige operative Erfahrung mit IT-gestützten Geschäftsprozessen, nachgewiesener Enterprise-Systemadministration und moderner Automatisierungs- und KI-Entwicklung. Zuletzt war ich bei den Johanniter Bundes-IT Services in einem KRITIS-relevanten Umfeld mit Aufgaben in Active Directory, Gruppenrichtlinien, Kerberos, Exchange, Citrix, Software-Deployment, Lizenzmanagement und Automatisierung tätig. Ergänzend entwickle ich Voice-AI-, RAG- und Automatisierungssysteme mit Python, TypeScript und modernen LLM-Plattformen.
+        Ich verbinde rund 14 Jahre Berufserfahrung bei BAUHAUS (Handel, Warenwirtschaft, zuletzt Administration und IT-Koordination) mit nachgewiesener Enterprise-Systemadministration und moderner Automatisierungs- und KI-Entwicklung. Zuletzt war ich bei den Johanniter Bundes-IT Services in einem KRITIS-relevanten Umfeld mit Aufgaben in Active Directory, Gruppenrichtlinien, Kerberos, Exchange, Citrix, Software-Deployment, Lizenzmanagement und Automatisierung tätig. Ergänzend entwickle ich Voice-AI-, RAG- und Automatisierungssysteme mit Python, TypeScript und modernen LLM-Plattformen.
     </p>
 </div>
 
@@ -231,16 +261,7 @@ def render_master_cv(data: dict[str, Any]) -> str:
         </p>
     </div>
 
-    <div class="job-item">
-        <div class="job-head">
-            <span class="job-role">Mitarbeiter Warenwirtschaft (IT-gestützte Prozesse)</span>
-            <span class="job-period">09/2010 – 12/2024 · 14 Jahre</span>
-        </div>
-        <div class="job-company">BAUHAUS</div>
-        <p class="job-desc">
-            Verantwortung für warenwirtschaftliche Abläufe, Bestandsqualität, Disposition, Warenverfügbarkeit und die zuverlässige Ausführung IT-gestützter Geschäftsprozesse. Langjährige operative Erfahrung mit Prozessanalyse, Fehlererkennung und systemgestützter Bestandsführung.
-        </p>
-    </div>
+{render_bauhaus_stations(data)}
 
     <div class="job-item">
         <div class="job-head">
@@ -277,12 +298,12 @@ def render_master_cv(data: dict[str, Any]) -> str:
 </div>
 
 <div class="section">
-    <div class="section-title">Zertifizierungen & Verifizierte Nachweise</div>
+    <div class="section-title">Nachweise, Weiterbildung & Kurse</div>
     <p class="job-desc">
         • <strong>Microsoft Certified:</strong> Bereitstellen & Verwalten AD Domain Services (2026)<br>
         • <strong>Microsoft Certified:</strong> Excel Grundlagen (2026)<br>
-        • <strong>LinkedIn Learning Professional Tracks:</strong> Windows 11 Troubleshooting (3 Kurse), Microsoft 365 Admin (3 Kurse), Microsoft Entra ID, AZ-900 Fundamentals, MS-900 Fundamentals, Active Directory PowerShell-Automatisierung.<br>
-        • <strong>Cisco Networking Academy:</strong> CCST IT Support (100-140) Track.
+        • <strong>Kurse (LinkedIn Learning):</strong> Windows 11 Troubleshooting (3 Kurse), Microsoft 365 Admin (3 Kurse), Microsoft Entra ID, AZ-900 Fundamentals, MS-900 Fundamentals, Active Directory PowerShell-Automatisierung.<br>
+        • <strong>Kurs (Cisco Networking Academy):</strong> CCST IT Support (100-140).
     </p>
 </div>
 
@@ -321,7 +342,7 @@ def render_it_mappe(data: dict[str, Any]) -> str:
 <div class="section">
     <div class="section-title">Profil & Qualifikation</div>
     <p class="summary-text">
-        IT-Systemadministrator mit Schwerpunkt Identity & Access Management, Microsoft-Infrastruktur, Endpoint Operations und PowerShell-Automatisierung. Langjährige operative Erfahrung mit IT-gestützten Geschäftsprozessen und nachgewiesene Enterprise-Systemadministration in einem KRITIS-relevanten Umfeld. Mein Fokus liegt auf stabilen, wartbaren IT-Infrastrukturen und strukturierter Fehlerdiagnose nach dem KKEEY-Standard.
+        IT-Systemadministrator mit Schwerpunkt Identity & Access Management, Microsoft-Infrastruktur, Endpoint Operations und PowerShell-Automatisierung. Rund 14 Jahre Berufserfahrung bei BAUHAUS (Handel, Warenwirtschaft, zuletzt Administration und IT-Koordination) und nachgewiesene Enterprise-Systemadministration in einem KRITIS-relevanten Umfeld. Mein Fokus liegt auf stabilen, wartbaren IT-Infrastrukturen und strukturierter Fehlerdiagnose nach dem KKEEY-Standard. Schnelle Einarbeitung in neue Systeme: Das Ticketsystem OmniTracker bei den Johannitern habe ich mir über Nacht erarbeitet.
     </p>
 </div>
 
@@ -339,16 +360,7 @@ def render_it_mappe(data: dict[str, Any]) -> str:
         </p>
     </div>
 
-    <div class="job-item">
-        <div class="job-head">
-            <span class="job-role">Mitarbeiter Warenwirtschaft (IT-gestützte Geschäftsprozesse)</span>
-            <span class="job-period">09/2010 – 12/2024 · 14 Jahre</span>
-        </div>
-        <div class="job-company">BAUHAUS</div>
-        <p class="job-desc">
-            Verantwortung für warenwirtschaftliche Abläufe, Bestandsqualität, Disposition, Warenverfügbarkeit und die zuverlässige Ausführung IT-gestützter Geschäftsprozesse. 14 Jahre operative Praxis mit Fehlererkennung und systemgestützter Bestandsführung.
-        </p>
-    </div>
+{render_bauhaus_stations(data)}
 </div>
 
 <div class="section">

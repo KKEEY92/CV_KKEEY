@@ -35,11 +35,75 @@
       "company": "Johanniter Bundes-IT Services"
     },
     "bauhaus": {
+      "company": "BAUHAUS",
       "start": "2010-09",
       "end": "2024-12",
-      "title": "Mitarbeiter Warenwirtschaft",
-      "focus": "IT-gestützte Geschäftsprozesse und Prozessqualität",
-      "company": "BAUHAUS"
+      "totalYearsLabel": "rund 14 Jahre (inkl. Ausbildung)",
+      "stations": [
+        {
+          "id": "bauhaus-ausbildung",
+          "start": "2010-09",
+          "end": "2013-06",
+          "period": "09/2010 – 06/2013",
+          "title": "Ausbildung Kaufmann im Einzelhandel (abgeschlossen)",
+          "title_en": "Apprenticeship, Retail Sales Management (completed)",
+          "location": "BAUHAUS",
+          "formalTitle": true
+        },
+        {
+          "id": "bauhaus-verkauf",
+          "start": "2013-10",
+          "end": "2021-01",
+          "period": "10/2013 – 01/2021",
+          "title": "Verkauf & Warenwirtschaft",
+          "title_en": "Sales & Inventory Management",
+          "location": "BAUHAUS Fachcentrum Gießen",
+          "bullets": [
+            "Einsätze in rund neun Niederlassungen bundesweit (u. a. Köln), Mitaufbau von drei Neueröffnungen, Beratung in allen Abteilungen"
+          ],
+          "bullets_en": [
+            "Assignments at around nine branches across Germany (incl. Cologne), helped set up three new store openings, customer advice across all departments"
+          ]
+        },
+        {
+          "id": "bauhaus-wetzlar",
+          "start": "2021-02",
+          "end": "2024-12",
+          "period": "02/2021 – 12/2024",
+          "title": "Warenwirtschaft, Administration & IT-Koordination (Assistenz der Geschäftsleitung)",
+          "title_en": "Inventory Management, Administration & IT Coordination (Assistant to Store Management)",
+          "location": "BAUHAUS Wetzlar (damals Testhaus)",
+          "location_en": "BAUHAUS Wetzlar (test store at the time)",
+          "titleType": "Funktionstitel (beschreibt Aufgaben, kein formaler Jobtitel)",
+          "bullets": [
+            "Maßgebliche Mitwirkung bei der Einführung von Bauhaus-App und Echtzeit-Lagersystem (Live-Bestände, Reservierungen, Min-/Max-Bestand, Abverkaufs- und Retourenanalyse)",
+            "Aufgaben im Bereich Warenwirtschaft und Handelsassistenz: Bestandspflege und -korrektur, Abschriftenkontrolle, Abverkaufsplanung",
+            "Auswertungen in Excel und SAP; Cognos, Lotus Notes",
+            "Assistenz der Geschäftsleitung, Herstellerbestellungen, Koordination von Technikern und Handwerkern",
+            "Abstimmung mit der zentralen IT in Mannheim: Konto- und Ausstattungsanforderungen für Neueinstellungen, Tickets über Jira/Confluence, Entra ID (kein AD-Adminzugriff)",
+            "Hardware vor Ort: PC- und Kassentausch, Drucker, Windows-11-Upgrades"
+          ],
+          "bullets_en": [
+            "Played a key part in rolling out the BAUHAUS app and a real-time inventory system (live stock levels, reservations, min/max stock, sell-through and returns analysis)",
+            "Inventory management and retail assistant tasks: stock upkeep and corrections, markdown control, sell-off planning",
+            "Reporting in Excel and SAP; Cognos, Lotus Notes",
+            "Assistant to store management, manufacturer orders, coordinating technicians and tradespeople",
+            "Liaison with central IT in Mannheim: account and equipment requests for new hires, tickets via Jira/Confluence, Entra ID (no AD admin access)",
+            "On-site hardware: PC and POS replacement, printers, Windows 11 upgrades"
+          ]
+        }
+      ],
+      "claims": {
+        "official_it_title": false,
+        "it_tasks_informal": true,
+        "ad_admin_access": false,
+        "it_years_count_stated": false,
+        "tier_1_3_support": false,
+        "formal_title_warenwirtschaftsbeauftragter_or_handelsassistent": false,
+        "self_reported_not_in_zeugnis": true,
+        "confirmed": "2026-10-20 (Kevin, via Master Chief); Daten S1/S2 abgeglichen mit Job-Scout-Master",
+        "openPoints": "keine"
+      }
     },
     "projects": {
       "start": "2026-06",
@@ -60,5 +124,13 @@
       "artifact": "evidence/benchmarks/claire-latency-001.json",
       "artifactSha256": "e4ab088c7dfc121eb4d60d5a90ca0f475d2c498007701fa455cff61a9a14e044"
     }
+  },
+  "skillClaims": {
+    "intune": "Grundkenntnisse, konzeptionell (keine Praxis, keine Testumgebung)",
+    "proxmox": "keine Praxis – nicht aufführen",
+    "itil4Foundation": "Kurs (keine Zertifizierung)",
+    "english": "Englisch (ohne Niveauangabe)",
+    "fastLearningEvidence": "Schnelle Einarbeitung in neue Systeme: Das Ticketsystem OmniTracker bei den Johannitern habe ich mir über Nacht erarbeitet.",
+    "shiftLead": "nicht bestätigt – nicht aufführen"
   }
 }
