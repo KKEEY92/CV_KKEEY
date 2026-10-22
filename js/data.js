@@ -6,7 +6,7 @@
  */
 window.KK_DATA = {
 
-  // ─── HERO ───────────────────────────────────────────────────────────────────
+  // ─── HERO ─────────────────────────────────────────────────────────────────────
   hero: {
     name: 'Kevin Kuck',
     greeting: {
@@ -81,15 +81,15 @@ window.KK_DATA = {
       pl: 'Dokumenty aplikacyjne (PDF)',
     },
     available: {
-      de: 'Offen für berufliche Möglichkeiten',
-      en: 'Open to professional opportunities',
-      fr: 'Ouvert aux opportunités professionnelles',
-      uk: 'Відкритий до професійних можливостей',
-      pl: 'Otwarty na możliwości zawodowe',
+      de: 'Verfügbar · Remote/Hybrid',
+      en: 'Available · Remote/Hybrid',
+      fr: 'Disponible · Remote/Hybrid',
+      uk: 'Доступний · Remote/Hybrid',
+      pl: 'Dostępny · Remote/Hybrid',
     },
   },
 
-  // ─── TRIO / DIFFERENTIATORS ──────────────────────────────────────────────────
+  // ─── TRIO / DIFFERENTIATORS ─────────────────────────────────────────────────────
   trio: [
     {
       icon: '⚙️',
@@ -101,11 +101,11 @@ window.KK_DATA = {
         pl: 'Doświadczenie Operacyjne',
       },
       sub: {
-        de: '14 J. Inventory & Supply Chain · BAUHAUS',
-        en: '14 Yrs Inventory & Supply Chain · BAUHAUS',
-        fr: '14 ans Gestion des Stocks · BAUHAUS',
-        uk: '14 років Inventory & Supply Chain · BAUHAUS',
-        pl: '14 lat Zarządzanie Magazynem · BAUHAUS',
+        de: '14 J. Warenwirtschaft & IT-Koordination · BAUHAUS',
+        en: '14 Yrs Merchandise & IT Coordination · BAUHAUS',
+        fr: '14 ans Gestion des Stocks & Coordination IT · BAUHAUS',
+        uk: '14 років Warenwirtschaft & IT-Koordination · BAUHAUS',
+        pl: '14 lat Warenwirtschaft & Koordynacja IT · BAUHAUS',
       },
       detail: {
         de: 'Systemdenken aus dem echten Handelsbetrieb. Ich weiß wie operative KMU wirklich funktionieren — nicht aus Büchern, sondern aus 14 Jahren täglicher Praxis.',
@@ -125,11 +125,11 @@ window.KK_DATA = {
         pl: 'Systemy AI & Automatyzacja',
       },
       sub: {
-        de: '100% From Scratch · GitHub Actions · Cloud Run',
-        en: '100% From Scratch · GitHub Actions · Cloud Run',
-        fr: '100% From Scratch · GitHub Actions · Cloud Run',
-        uk: '100% From Scratch · GitHub Actions · Cloud Run',
-        pl: '100% From Scratch · GitHub Actions · Cloud Run',
+        de: 'From Scratch · GitHub Actions · Cloud Run',
+        en: 'From Scratch · GitHub Actions · Cloud Run',
+        fr: 'From Scratch · GitHub Actions · Cloud Run',
+        uk: 'From Scratch · GitHub Actions · Cloud Run',
+        pl: 'From Scratch · GitHub Actions · Cloud Run',
       },
       detail: {
         de: 'Ich baue Agentensysteme komplett ohne Frameworks auf der grünen Wiese – jeder Code-Ordner startet leer mit einer CLAUDE.md oder AGENT.md. Deployments laufen via Docker, GitHub Actions und Google Cloud Run.',
@@ -165,7 +165,7 @@ window.KK_DATA = {
     },
   ],
 
-  // ─── PROJEKTE ───────────────────────────────────────────────────────────────────
+  // ─── PROJEKTE ─────────────────────────────────────────────────────────────────
   projects: [
     {
       id: 'it-praxis-johanniter',
@@ -191,7 +191,7 @@ window.KK_DATA = {
       },
       stack: ['Active Directory', 'IAM', 'Citrix', 'Windows 11', 'PowerShell', 'Omnitracker', 'ITIL'],
       links: [
-        { label: { de: 'IT-Profil ansehen →', en: 'View IT Profile →', fr: 'Voir Profil IT →', uk: 'Переглянути IT-профіль →', pl: 'Zobacz Profil IT →' }, href: 'https://it.kkeey.dev/#praxis' }
+        { label: { de: 'IT-Profil ansehen →', en: 'View IT Profile →', fr: 'Voir Profil IT →', uk: 'Переглянути IT-профіль →', pl: 'Zobacz Profil IT →' }, href: 'https://it.kkeey.dev/#impact' }
       ]
     },
     {
@@ -301,468 +301,4 @@ window.KK_DATA = {
       name: 'AFM-3 Chat',
       color: '#3b82f6',
       colorRgb: '59,130,246',
-      tag: '● Local macOS App · Apple Foundation Model',
-      sub: {
-        de: 'Swift WKWebView · Apple Foundation Model · Offline',
-        en: 'Swift WKWebView · Apple Foundation Model · Offline',
-        fr: 'Swift WKWebView · Apple Foundation Model · Hors-ligne',
-        uk: 'Swift WKWebView · Apple Foundation Model · Офлайн',
-        pl: 'Swift WKWebView · Apple Foundation Model · Offline',
-      },
-      desc: {
-        de: 'Native macOS-App mit Swift WKWebView für das Apple Foundation Model (AFM-3-Core) — 100% lokal ohne Cloud. Matrix Rain UI, Obsidian Vault RAG, macOS say Neural TTS, ComfyUI Bildgenerierung & Push-to-Talk.',
-        en: 'Native macOS app with Swift WKWebView for Apple Foundation Model (AFM-3-Core) — 100% local without cloud. Matrix Rain UI, Obsidian Vault RAG, macOS say Neural TTS, ComfyUI image gen & Push-to-Talk.',
-        fr: 'Application macOS native avec Swift WKWebView pour Apple Foundation Model (AFM-3-Core) — 100% locale sans cloud. UI Matrix Rain, Obsidian Vault RAG, synthèse vocale neuronale macOS, ComfyUI et Push-to-Talk.',
-        uk: 'Нативний застосунок для macOS зі Swift WKWebView для Apple Foundation Model (AFM-3-Core) — 100% локально без хмари. Інтерфейс Matrix Rain, Obsidian Vault RAG, нейронний TTS macOS, генерація ComfyUI та Push-to-Talk.',
-        pl: 'Natywna aplikacja macOS ze Swift WKWebView dla Apple Foundation Model (AFM-3-Core) — 100% lokalna, bez chmury. Interfejs Matrix Rain, Obsidian Vault RAG, neuronowy TTS w macOS, generowanie obrazów ComfyUI i Push-to-Talk.',
-      },
-      stack: ['Swift / WKWebView', 'Python http.server', 'Apple AFM-3-Core', 'ComfyUI API', 'macOS Neural TTS'],
-      link: 'https://github.com/KKEEY92',
-      linkLabel: {
-        de: 'Auf GitHub ansehen →',
-        en: 'View on GitHub →',
-        fr: 'Voir sur GitHub →',
-        uk: 'Переглянути на GitHub →',
-        pl: 'Zobacz na GitHubie →',
-      },
-    },
-    {
-      id: 'architecture-documentation',
-      repo: 'KKEEY92/Claire-V2-Architecture',
-      status: { type: 'documentation', codeVersion: null, latestTag: null },
-      name: 'Architecture Documentation',
-      color: '#94a3b8',
-      colorRgb: '148,163,184',
-      sub: {
-        de: 'C4-Architekturdokumentation zu Claire V2 & AuraTone AI',
-        en: 'C4 architecture documentation for Claire V2 & AuraTone AI',
-        fr: 'Documentation d\'architecture C4 pour Claire V2 & AuraTone AI',
-        uk: 'C4-документація архітектури для Claire V2 & AuraTone AI',
-        pl: 'Dokumentacja architektury C4 dla Claire V2 i AuraTone AI',
-      },
-      desc: {
-        de: 'Öffentliche Architekturdokumentation für private und öffentlich einsehbare Implementierungsvarianten.',
-        en: 'Public architecture documentation for private and publicly accessible implementation variants.',
-        fr: 'Documentation publique d\'architecture pour les variantes d\'implémentation privées et publiques.',
-        uk: 'Публічна архітектурна документація для приватних та відкритих варіантів реалізації.',
-        pl: 'Publiczna dokumentacja architektury dla wariantów implementacji prywatnych oraz open-source.',
-      },
-      stack: ['C4-Modell', 'Mermaid', 'System Context', 'Container Architecture', 'Voice Pipeline', 'Memory Architecture', 'Desktop Architecture'],
-      links: [
-        { href: 'https://github.com/KKEEY92/Claire-V2-Architecture', label: { de: 'Claire V2 Architektur →', en: 'Claire V2 architecture →', fr: 'Architecture Claire V2 →', uk: 'Архітектура Claire V2 →', pl: 'Architektura Claire V2 →' } },
-        { href: 'https://github.com/KKEEY92/AuraTone-Architecture', label: { de: 'AuraTone Architektur →', en: 'AuraTone architecture →', fr: 'Architecture AuraTone →', uk: 'Архітектура AuraTone →', pl: 'Architektura AuraTone →' } },
-      ],
-    },
-    {
-      id: 'sortiere-py',
-      repo: 'KKEEY92/sortiere.py',
-      status: { latestTag: null },
-      name: 'sortiere.py',
-      color: '#22c55e',
-      colorRgb: '34,197,94',
-      tag: '● CLI Utility v1.0 · Open Source',
-      sub: {
-        de: 'Universeller CLI Datei-Organizer · Python 3.12',
-        en: 'Universal CLI File Organizer · Python 3.12',
-        fr: 'Organiseur de Fichiers CLI · Python 3.12',
-        uk: 'Універсальний CLI сортувальник файлів · Python 3.12',
-        pl: 'Uniwersalny Organizer Plików CLI · Python 3.12',
-      },
-      desc: {
-        de: 'Intelligenter Datei-Organizer mit token-basiertem Matching, Dry-Run-Modus und 5-Pillar-Kategorisierung. Sortiert beliebige Verzeichnisse nach konfigurierbaren Regeln.',
-        en: 'Smart file organizer with token-based matching, dry-run mode, and 5-pillar categorization. Sorts any directory by configurable rules.',
-        fr: 'Organiseur de fichiers intelligent avec filtrage par jetons, mode simulation et catégorisation en 5 piliers.',
-        uk: 'Розумний сортувальник файлів із токенним зіставленням, тестовим режимом Dry-Run та категоризацією за 5 стовпами.',
-        pl: 'Inteligentny organizer plików z dopasowywaniem tokenowym, trybem symulacji (dry-run) i 5-filarową kategoryzacją.',
-      },
-      stack: ['Python 3.12', 'CLI / argparse', 'OS / Pathlib', 'Token Matching', 'Dry-Run Mode'],
-      link: 'https://github.com/KKEEY92',
-      linkLabel: {
-        de: 'GitHub-Profil →',
-        en: 'GitHub profile →',
-        fr: 'Profil GitHub →',
-        uk: 'Профіль GitHub →',
-        pl: 'Profil GitHub →',
-      },
-    },
-  ],
-
-  // ─── ZERTIFIZIERUNGEN ─────────────────────────────────────────────────────────────────
-  certifications: [
-    {
-      name: 'Microsoft KI-Grundlagen',
-      color: '#0ea5e9',
-      colorRgb: '14,165,233',
-      tag: '✓ Microsoft Certified',
-      sub: {
-        de: 'Zertifizierung · 2026',
-        en: 'Certification · 2026',
-        fr: 'Certification · 2026',
-        uk: 'Сертифікація · 2026',
-        pl: 'Certyfikacja · 2026',
-      },
-      desc: {
-        de: 'Offizielle Microsoft-Zertifizierung zu KI-Grundlagen — Konzepte, Einsatzbereiche und verantwortungsvoller Umgang mit generativer KI.',
-        en: 'Official Microsoft certification covering AI fundamentals — concepts, use cases, and responsible use of generative AI.',
-        fr: 'Certification Microsoft officielle sur les fondamentaux de l\'IA — concepts, cas d\'usage et IA générative responsable.',
-        uk: 'Офіційна сертифікація Microsoft щодо основ ШІ — концепції, сфери застосування та відповідальне використання генеративного ШІ.',
-        pl: 'Oficjalny certyfikat Microsoft dotyczący podstaw sztucznej inteligencji — koncepcje, zastosowania i odpowiedzialna generatywna sztuczna inteligencja.',
-      },
-      link: 'https://www.linkedin.com/in/kevin-kuck-it/details/certifications/',
-      linkLabel: {
-        de: 'Nachweis auf LinkedIn →',
-        en: 'View credential on LinkedIn →',
-        fr: 'Voir sur LinkedIn →',
-        uk: 'Переглянути на LinkedIn →',
-        pl: 'Zobacz poświadczenie na LinkedIn →',
-      },
-    },
-  ],
-
-  // ─── WEITERBILDUNG ──────────────────────────────────────────────────────────────────
-  education: {
-    label: {
-      de: 'Weiterbildung',
-      en: 'Further education',
-      fr: 'Formations continues',
-      uk: 'Підвищення кваліфікації',
-      pl: 'Kształcenie ustawiczne',
-    },
-    linkedinLink: 'https://www.linkedin.com/in/kevin-kuck-it/details/certifications/',
-    linkedinLabel: {
-      de: 'Alle Nachweise auf LinkedIn ansehen →',
-      en: 'View all credentials on LinkedIn →',
-      fr: 'Voir tous les certificats sur LinkedIn →',
-      uk: 'Усі сертифікати на LinkedIn →',
-      pl: 'Zobacz wszystkie certyfikaty na LinkedIn →',
-    },
-    items: [
-      {
-        de: 'Grundwissen Generative KI · Microsoft & LinkedIn Learning Lernpfad (4 Std. 25 Min.) — Mai 2026',
-        en: 'Generative AI Foundations · Microsoft & LinkedIn Learning path (4h 25min) — May 2026',
-        fr: 'Fondamentaux de l\'IA générative · Microsoft & LinkedIn Learning (4h 25min) — Mai 2026',
-        uk: 'Основи генеративного ШІ · Microsoft & LinkedIn Learning (4 год. 25 хв.) — Трав 2026',
-        pl: 'Podstawy Generatywnej AI · Ścieżka szkoleniowa Microsoft & LinkedIn Learning (4 godz. 25 min.) — Maj 2026',
-      },
-      {
-        de: 'Was ist Generative KI? · LinkedIn Learning + PMI — Mai 2026',
-        en: 'What Is Generative AI? · LinkedIn Learning + PMI — May 2026',
-        fr: 'Qu\'est-ce que l\'IA générative ? · LinkedIn Learning + PMI — Mai 2026',
-        uk: 'Що таке генеративний ШІ? · LinkedIn Learning + PMI — Трав 2026',
-        pl: 'Czym jest Generatywna AI? · LinkedIn Learning + PMI — Maj 2026',
-      },
-      {
-        de: 'Generative KI: Die Entwicklung einer durchdachten Online-Suche · LinkedIn Learning + PMI — Mai 2026',
-        en: 'Generative AI: Developing Thoughtful Online Search · LinkedIn Learning + PMI — May 2026',
-        fr: 'IA générative : recherche en ligne réfléchie · LinkedIn Learning + PMI — Mai 2026',
-        uk: 'Генеративний ШІ: Розвиток продуманого онлайн-пошуку · LinkedIn Learning + PMI — Трав 2026',
-        pl: 'Generatywna AI: Rozwój przemyślanego wyszukiwania online · LinkedIn Learning + PMI — Maj 2026',
-      },
-      {
-        de: 'Künstliche Intelligenz Grundlagen · LinkedIn Learning — 2026',
-        en: 'Artificial Intelligence Foundations · LinkedIn Learning — 2026',
-        fr: 'Fondations de l\'Intelligence Artificielle · LinkedIn Learning — 2026',
-        uk: 'Основи штучного інтелекту · LinkedIn Learning — 2026',
-        pl: 'Podstawy Sztucznej Inteligencji · LinkedIn Learning — 2026',
-      },
-      {
-        de: 'Mit KI zusammenarbeiten · LinkedIn Learning — 2026',
-        en: 'Collaborating with AI · LinkedIn Learning — 2026',
-        fr: 'Collaborer avec l\'IA · LinkedIn Learning — 2026',
-        uk: 'Співпраця зі штучним інтелектом · LinkedIn Learning — 2026',
-        pl: 'Współpraca z AI · LinkedIn Learning — 2026',
-      },
-      {
-        de: 'Medienkompetenz im KI-Zeitalter — 2026',
-        en: 'Media Literacy in the AI Era — 2026',
-        fr: 'Éducation aux médias à l\'ère de l\'IA — 2026',
-        uk: 'Медіаграмотність в епоху ШІ — 2026',
-        pl: 'Edukacja medialna w erze AI — 2026',
-      },
-      {
-        de: 'Active Directory-Verwaltung automatisieren mit PowerShell · LinkedIn Learning — Mai 2026',
-        en: 'Automating Active Directory Management with PowerShell · LinkedIn Learning — May 2026',
-        fr: 'Automatisation d\'Active Directory avec PowerShell · LinkedIn Learning — Mai 2026',
-        uk: 'Автоматизація керування Active Directory за допомогою PowerShell · LinkedIn Learning — Трав 2026',
-        pl: 'Automatyzacja zarządzania Active Directory za pomocą PowerShell · LinkedIn Learning — Maj 2026',
-      },
-    ],
-  },
-
-  // ─── SKILLS ───────────────────────────────────────────────────────────────────────
-  skillGroups: [
-    {
-      label: {
-        de: 'Sprachen & Core Code',
-        en: 'Languages & Core Code',
-        fr: 'Langages & Code Core',
-        uk: 'Мови & Core Code',
-        pl: 'Języki & Główny Kod',
-      },
-      skills: [
-        { name: 'Python 3.12+ (AsyncIO, FastAPI)', pct: 92 },
-        { name: 'TypeScript',                      pct: 85 },
-        { name: 'JavaScript / React 19 / Vite 6',   pct: 82 },
-        { name: 'PowerShell Automatisierung',      pct: 82 },
-        { name: 'HTML5 / Modern Vanilla CSS',      pct: 88 },
-        { name: 'Rust / Tauri 2.0 (Native Core)',   pct: 75 },
-      ],
-    },
-    {
-      label: {
-        de: 'AI, Agents & Voice',
-        en: 'AI, Agents & Voice',
-        fr: 'IA, Agents & Voix',
-        uk: 'AI, Агенти & Voice',
-        pl: 'AI, Agenci & Voice',
-      },
-      skills: [
-        { name: 'From-Scratch Agent Architekturen', pct: 95 },
-        { name: 'Gemini API / Vertex AI',           pct: 94 },
-        { name: 'LiveKit 2.x Agents (Voice AI)',    pct: 92 },
-        { name: 'Local LLMs (LM Studio, Qwen2.5)',  pct: 88 },
-        { name: 'RAG Systems (Drive & Obsidian RAG)', pct: 86 },
-        { name: 'ComfyUI / Multimodal AI',          pct: 82 },
-      ],
-    },
-    {
-      label: {
-        de: 'Systeme, Cloud & DevOps',
-        en: 'Systems, Cloud & DevOps',
-        fr: 'Systèmes, Cloud & DevOps',
-        uk: 'Системи, Cloud & DevOps',
-        pl: 'Systemy, Cloud & DevOps',
-      },
-      skills: [
-        { name: 'Active Directory (IAM)', pct: 88 },
-        { name: 'Docker & Containerization',        pct: 85 },
-        { name: 'Google Cloud Run & Serverless',    pct: 85 },
-        { name: 'GitHub Actions (CI/CD Pipelines)', pct: 84 },
-        { name: 'FastAPI / Node.js Backend',        pct: 80 },
-        { name: 'SQLite / PostgreSQL / Firebase',   pct: 82 },
-      ],
-    },
-    {
-      label: {
-        de: 'Audio DSP & Enterprise Ops',
-        en: 'Audio DSP & Enterprise Ops',
-        fr: 'Audio DSP & Opérations Enterprise',
-        uk: 'Audio DSP & Enterprise Ops',
-        pl: 'Audio DSP & Operacje Enterprise',
-      },
-      skills: [
-        { name: 'Traktor Pro 4 / Rekordbox',        pct: 95 },
-        { name: 'Inventory Management & Supply Chain', pct: 95 },
-        { name: 'Audio DSP (librosa, ffmpeg)',      pct: 85 },
-        { name: 'Apple Metal GPU Acceleration',     pct: 80 },
-        { name: 'Endpoint Security (FortiClient, Sophos)',    pct: 85 },
-      ],
-    },
-  ],
-
-  // ─── KARRIERE TIMELINE ─────────────────────────────────────────────────────────────
-  timeline: [
-    {
-      period: {
-        de: '09/2010 – 06/2013',
-        en: '09/2010 – 06/2013',
-        fr: '09/2010 – 06/2013',
-        uk: '09/2010 – 06/2013',
-        pl: '09/2010 – 06/2013',
-      },
-      role: {
-        de: 'Ausbildung Kaufmann im Einzelhandel (abgeschlossen)',
-        en: 'Apprenticeship, Retail Sales Management (completed)',
-        fr: 'Apprenticeship, Retail Sales Management (completed)',
-        uk: 'Apprenticeship, Retail Sales Management (completed)',
-        pl: 'Apprenticeship, Retail Sales Management (completed)',
-      },
-      company: {
-        de: 'BAUHAUS',
-        en: 'BAUHAUS',
-        fr: 'BAUHAUS',
-        uk: 'BAUHAUS',
-        pl: 'BAUHAUS',
-      },
-      color: '#7c6af7',
-      active: false,
-      desc: {
-        de: 'Abgeschlossene Ausbildung zum Kaufmann im Einzelhandel.',
-        en: 'Completed apprenticeship as a retail salesman (Kaufmann im Einzelhandel).',
-        fr: 'Completed apprenticeship as a retail salesman (Kaufmann im Einzelhandel).',
-        uk: 'Completed apprenticeship as a retail salesman (Kaufmann im Einzelhandel).',
-        pl: 'Completed apprenticeship as a retail salesman (Kaufmann im Einzelhandel).',
-      },
-      tags: ['Ausbildung', 'Einzelhandel'],
-    },
-    {
-      period: {
-        de: '10/2013 – 01/2021',
-        en: '10/2013 – 01/2021',
-        fr: '10/2013 – 01/2021',
-        uk: '10/2013 – 01/2021',
-        pl: '10/2013 – 01/2021',
-      },
-      role: {
-        de: 'Verkauf & Warenwirtschaft',
-        en: 'Sales & Inventory Management',
-        fr: 'Sales & Inventory Management',
-        uk: 'Sales & Inventory Management',
-        pl: 'Sales & Inventory Management',
-      },
-      company: {
-        de: 'BAUHAUS Fachcentrum Gießen',
-        en: 'BAUHAUS Gießen',
-        fr: 'BAUHAUS Gießen',
-        uk: 'BAUHAUS Gießen',
-        pl: 'BAUHAUS Gießen',
-      },
-      color: '#7c6af7',
-      active: false,
-      desc: {
-        de: 'Einsätze in rund neun Niederlassungen bundesweit (u. a. Köln), Mitaufbau von drei Neueröffnungen, Beratung in allen Abteilungen.',
-        en: 'Assignments at around nine branches across Germany (incl. Cologne), helped set up three new store openings, customer advice across all departments.',
-        fr: 'Assignments at around nine branches across Germany (incl. Cologne), helped set up three new store openings, customer advice across all departments.',
-        uk: 'Assignments at around nine branches across Germany (incl. Cologne), helped set up three new store openings, customer advice across all departments.',
-        pl: 'Assignments at around nine branches across Germany (incl. Cologne), helped set up three new store openings, customer advice across all departments.',
-      },
-      tags: ['Verkauf', 'Warenwirtschaft', 'Neueröffnungen'],
-    },
-    {
-      period: {
-        de: '02/2021 – 12/2024',
-        en: '02/2021 – 12/2024',
-        fr: '02/2021 – 12/2024',
-        uk: '02/2021 – 12/2024',
-        pl: '02/2021 – 12/2024',
-      },
-      role: {
-        de: 'Warenwirtschaft, Administration & IT-Koordination (Assistenz der Geschäftsleitung)',
-        en: 'Inventory Management, Administration & IT Coordination (Assistant to Store Management)',
-        fr: 'Inventory Management, Administration & IT Coordination (Assistant to Store Management)',
-        uk: 'Inventory Management, Administration & IT Coordination (Assistant to Store Management)',
-        pl: 'Inventory Management, Administration & IT Coordination (Assistant to Store Management)',
-      },
-      company: {
-        de: 'BAUHAUS Wetzlar (damals Testhaus)',
-        en: 'BAUHAUS Wetzlar (test store at the time)',
-        fr: 'BAUHAUS Wetzlar (test store at the time)',
-        uk: 'BAUHAUS Wetzlar (test store at the time)',
-        pl: 'BAUHAUS Wetzlar (test store at the time)',
-      },
-      color: '#7c6af7',
-      active: false,
-      desc: {
-        de: '• Maßgebliche Mitwirkung bei der Einführung von Bauhaus-App und Echtzeit-Lagersystem (Live-Bestände, Reservierungen, Min-/Max-Bestand, Abverkaufs- und Retourenanalyse)<br>• Aufgaben im Bereich Warenwirtschaft und Handelsassistenz: Bestandspflege und -korrektur, Abschriftenkontrolle, Abverkaufsplanung<br>• Auswertungen in Excel und SAP; Cognos, Lotus Notes<br>• Assistenz der Geschäftsleitung, Herstellerbestellungen, Koordination von Technikern und Handwerkern<br>• Abstimmung mit der zentralen IT in Mannheim: Konto- und Ausstattungsanforderungen für Neueinstellungen, Tickets über Jira/Confluence, Entra ID (kein AD-Adminzugriff)<br>• Hardware vor Ort: PC- und Kassentausch, Drucker, Windows-11-Upgrades',
-        en: '• Played a key part in rolling out the BAUHAUS app and a real-time inventory system (live stock levels, reservations, min/max stock, sell-through and returns analysis)<br>• Inventory management and retail assistant tasks: stock upkeep and corrections, markdown control, sell-off planning<br>• Reporting in Excel and SAP; Cognos, Lotus Notes<br>• Assistant to store management, manufacturer orders, coordinating technicians and tradespeople<br>• Liaison with central IT in Mannheim: account and equipment requests for new hires, tickets via Jira/Confluence, Entra ID (no AD admin access)<br>• On-site hardware: PC and POS replacement, printers, Windows 11 upgrades',
-        fr: '• Played a key part in rolling out the BAUHAUS app and a real-time inventory system (live stock levels, reservations, min/max stock, sell-through and returns analysis)<br>• Inventory management and retail assistant tasks: stock upkeep and corrections, markdown control, sell-off planning<br>• Reporting in Excel and SAP; Cognos, Lotus Notes<br>• Assistant to store management, manufacturer orders, coordinating technicians and tradespeople<br>• Liaison with central IT in Mannheim: account and equipment requests for new hires, tickets via Jira/Confluence, Entra ID (no AD admin access)<br>• On-site hardware: PC and POS replacement, printers, Windows 11 upgrades',
-        uk: '• Played a key part in rolling out the BAUHAUS app and a real-time inventory system (live stock levels, reservations, min/max stock, sell-through and returns analysis)<br>• Inventory management and retail assistant tasks: stock upkeep and corrections, markdown control, sell-off planning<br>• Reporting in Excel and SAP; Cognos, Lotus Notes<br>• Assistant to store management, manufacturer orders, coordinating technicians and tradespeople<br>• Liaison with central IT in Mannheim: account and equipment requests for new hires, tickets via Jira/Confluence, Entra ID (no AD admin access)<br>• On-site hardware: PC and POS replacement, printers, Windows 11 upgrades',
-        pl: '• Played a key part in rolling out the BAUHAUS app and a real-time inventory system (live stock levels, reservations, min/max stock, sell-through and returns analysis)<br>• Inventory management and retail assistant tasks: stock upkeep and corrections, markdown control, sell-off planning<br>• Reporting in Excel and SAP; Cognos, Lotus Notes<br>• Assistant to store management, manufacturer orders, coordinating technicians and tradespeople<br>• Liaison with central IT in Mannheim: account and equipment requests for new hires, tickets via Jira/Confluence, Entra ID (no AD admin access)<br>• On-site hardware: PC and POS replacement, printers, Windows 11 upgrades',
-      },
-      tags: ['Inventory', 'Echtzeit-Lagersystem', 'Prozessoptimierung', 'Systemdenken'],
-    },
-    {
-      period: {
-        de: 'Dez 2025 – Mai 2026',
-        en: 'Dec 2025 – May 2026',
-        fr: 'Déc 2025 – Mai 2026',
-        uk: 'Груд 2025 – Трав 2026',
-        pl: 'Gru 2025 – Maj 2026',
-      },
-      role: {
-        de: 'Junior IT-Support Agent mit Aufgaben der Systemadministration',
-        en: 'Junior IT Support Agent with system administration duties',
-        fr: 'Administrateur IT',
-        uk: 'IT-Адміністратор',
-        pl: 'Administrator IT',
-      },
-      company: 'Johanniter Bundes-IT',
-      color: '#7c6af7',
-      active: false,
-      desc: {
-        de: '553 Tickets und 366 Stunden dokumentierte Bearbeitungszeit für 12 Organisationseinheiten. Benutzer-, Gruppen- und Berechtigungsverwaltung im Active Directory, strukturierte Bearbeitung von Incidents in ITIL-orientierten Supportprozessen. Weiterer Scope: Citrix, Omnitracker, Innovaphone PBX. Windows-11-Rollout für rund 200 Endpoints mit Deskcenter Studio und angepasstem PowerShell-Skript. Endpoint-Security mit FortiClient und Sophos. Eigene Ticket-Automation. <a href="https://it.kkeey.dev/#praxis" target="_blank" rel="noopener" style="color:var(--c-accent); text-decoration:none;">Details im IT-Profil →</a>',
-        en: '553 tickets and 366 hours documented processing time for 12 organizational units. User, group and permission management in Active Directory, structured incident resolution in ITIL-oriented support processes. Additional scope: Citrix, Omnitracker, Innovaphone PBX. Windows 11 rollout for around 200 endpoints with Deskcenter Studio and adapted PowerShell script. Endpoint security with FortiClient and Sophos. Own ticket automation. <a href="https://it.kkeey.dev/#praxis" target="_blank" rel="noopener" style="color:var(--c-accent); text-decoration:none;">Details in IT profile →</a>',
-        fr: 'Gestion des identités, groupes et permissions dans Active Directory et Microsoft Entra ID, résolution structurée d\'incidents ITIL. Citrix (NetScaler), Omnitracker, téléphonie PBX. Déploiements Windows 11 via Deskcenter Studio et PowerShell. Sécurité FortiClient & Sophos. Automatisation des tickets et standard KKEEY.',
-        uk: 'Керування користувачами, групами та правами доступу в Active Directory та Microsoft Entra ID, вирішення інцидентів за процесами ITIL. Citrix (NetScaler), Omnitracker, PBX. Розгортання Windows 11 через Deskcenter Studio та PowerShell. Безпека FortiClient & Sophos. Власна автоматизація тікетів та стандарт KKEEY.',
-        pl: 'Zarządzanie użytkownikami, grupami i uprawnieniami w Active Directory oraz Microsoft Entra ID, strukturalne rozwiązywanie incydentów w procesach ITIL. Citrix (NetScaler), Omnitracker, PBX. Wdrażanie Windows 11 przez Deskcenter Studio i PowerShell. Bezpieczeństwo FortiClient & Sophos. Autorska automatyzacja zgłoszeń i standard KKEEY.',
-      },
-      tags: ['Active Directory', 'IAM', 'Citrix', 'Deskcenter Studio', 'PowerShell', 'KRITIS-Umfeld', 'FortiClient'],
-    },
-    {
-      period: {
-        de: 'seit Juni 2026',
-        en: 'since June 2026',
-        fr: 'depuis Juin 2026',
-        uk: 'з Червня 2026',
-        pl: 'od Czerwca 2026',
-      },
-      role: {
-        de: 'AI-Architektur & Systementwicklung',
-        en: 'AI Architecture & Systems Development',
-        fr: 'Architecture IA & Développement Systèmes',
-        uk: 'AI-архітектура та системна розробка',
-        pl: 'Architektura AI & Rozwój Systemów',
-      },
-      company: {
-        de: 'Weiterbildung & Eigenprojekte · Gründungsvorbereitung',
-        en: 'Professional Development & Independent Projects · Venture Preparation',
-        fr: 'Formation & Projets Personnels · Préparation de Création',
-        uk: 'Професійний розвиток та власні проєкти · Підготовка до запуску',
-        pl: 'Rozwój zawodowy i projekty własne · Przygotowanie działalności',
-      },
-      color: '#00d4aa',
-      active: true,
-      desc: {
-        de: 'Konzeption und Entwicklung von KI-Agentensystemen als Proof of Work. Claire V2.5 und AuraTone AI als öffentlich dokumentierte Referenzprojekte. Vorbereitung eines B2B-Angebots für IT-Administration, IAM und Prozessautomatisierung für KMU.',
-        en: 'Design and development of AI agent systems as proof of work. Claire V2.5 and AuraTone AI serve as publicly documented reference projects. Preparing a future B2B offering for IT administration, IAM and process automation for SMEs.',
-        fr: 'Conception de systèmes d\'agents IA pour PME. Claire V2.5 et AuraTone AI comme projets publics de démonstration.',
-        uk: 'Створення агентних систем ШІ для малого та середнього бізнесу. Claire V2.5 та AuraTone AI як публічні проєкти підтвердження експертизи.',
-        pl: 'Tworzenie systemów agentów AI dla sektora MŚP. Claire V2.5 oraz AuraTone AI jako publiczne projekty potwierdzające kompetencje.',
-      },
-      tags: ['AI Agents', 'Python', 'Gemini API', 'Eigenprojekte', 'Gründungsvorbereitung'],
-    },
-  ],
-
-  // ─── I18N STRINGS ────────────────────────────────────────────────────────────────
-  modules: {
-    m7_eyebrow: { de: 'DOPPELTE EXPERTISE', en: 'DUAL EXPERTISE', fr: 'DOUBLE EXPERTISE', uk: 'ПОДВІЙНА ЕКСПЕРТИЗА', pl: 'PODWÓJNA EKSPERTYZA' },
-    m7_title: { de: 'Systemadministration, IAM & Endpoint Security.', en: 'System Administration, IAM & Endpoint Security.', fr: 'Administration Système, IAM & Sécurité des Endpoints.', uk: 'Системне адміністрування, IAM та безпека кінцевих точок.', pl: 'Administracja systemami, IAM i bezpieczeństwo punktów końcowych.' },
-    m7_p: { de: 'Ich verknüpfe Softwareentwicklung und AI mit tiefem Systemverständnis aus dem operativen IT-Betrieb in regulierten Umgebungen.', en: 'I combine software development and AI with deep system understanding from operational IT in regulated environments.', fr: 'Je combine le développement logiciel et l\'IA avec une compréhension approfondie des systèmes issus de l\'exploitation informatique dans des environnements réglementés.', uk: 'Я поєдную розробку програмного забезпечення та ШІ з глибоким розумінням систем з оперативного ІТ у регульованих середовищах.', pl: 'Łączę rozwój oprogramowania i sztuczną inteligencję z głębokim zrozumieniem systemów z operacyjnego IT w regulowanych środowiskach.' },
-    m7_c_title: { de: 'IT-Fachprofil ansehen', en: 'View IT professional profile', fr: 'Voir le profil professionnel IT', uk: 'Переглянути професійний ІТ-профіль', pl: 'Zobacz profil zawodowy IT' },
-    m7_c_p: { de: 'Detaillierte Einblicke in Praxisprojekte, Nachweise und Kennzahlen aus dem IT-Betrieb.', en: 'Detailed insights into practical projects, credentials and metrics from IT operations.', fr: 'Aperçus détaillés des projets pratiques, certifications et métriques de l\'exploitation informatique.', uk: 'Детальний огляд практичних проєктів, сертифікатів та показників ІТ-операцій.', pl: 'Szczegółowy wgląd w praktyczne projekty, poświadczenia i wskaźniki z operacji IT.' },
-    m7_btn: { de: 'Zum IT-Profil →', en: 'To the IT profile →', fr: 'Vers le profil IT →', uk: 'До ІТ-профілю →', pl: 'Do profilu IT →' },
-  },
-  i18n: {
-    navAbout:      { de: 'Über mich',                   en: 'About',          fr: 'À propos',        uk: 'Про мене',         pl: 'O mnie' },
-    navProjects:   { de: 'Projekte',                    en: 'Projects',       fr: 'Projets',         uk: 'Проєкти',          pl: 'Projekty' },
-    navSkills:     { de: 'Skills',                      en: 'Skills',         fr: 'Compétences',     uk: 'Навички',          pl: 'Umiejętności' },
-    navCerts:      { de: 'Zertifikate',                 en: 'Certifications', fr: 'Certifications',  uk: 'Сертифікати',      pl: 'Certyfikaty' },
-    navCareer:     { de: 'Karriere',                    en: 'Career',         fr: 'Parcours',        uk: 'Кар\'єра',         pl: 'Kariera' },
-    navContact:    { de: 'Kontakt',                     en: 'Contact',        fr: 'Contact',         uk: 'Контакти',         pl: 'Kontakt' },
-    trioLabel:     { de: 'Differenziator',              en: 'Differentiator', fr: 'Différenciateur', uk: 'Відмінна риса',    pl: 'Wyróżnik' },
-    trioTitle:     { de: 'Das seltene Dreierpaket',     en: 'The Rare Trio',  fr: 'Le Trio Unique',  uk: 'Унікальне 3-в-1',  pl: 'Unikalne Trio Kompetencji' },
-    trioSub:       { de: 'Drei Domänen. Eine Person. Diese Kombination gibt es kaum.', en: 'Three domains. One person. Almost no one has this combination.', fr: 'Trois domaines. Une personne. Une combinaison rare.', uk: 'Три домени. Одна людина. Рідкісна комбінація експертизи.', pl: 'Trzy domeny. Jedna osoba. Niezwykle rzadkie połączenie.' },
-    projTitle:     { de: 'Projekte & Showcase',         en: 'Projects & Showcase', fr: 'Projets & Showcase', uk: 'Проєкти & Showcase', pl: 'Projekty & Portfolio' },
-    projSub:       { de: 'Gebaut. Deployed. Evidence öffentlich, wo der Code es ist.', en: 'Built. Deployed. Public.', fr: 'Conçu. Déployé. Public.', uk: 'Створено. Розгорнуто. Публічно.', pl: 'Zbudowane. Wdrożone. Publiczne.' },
-    skillsTitle:   { de: 'Skills & Kompetenzprofil',   en: 'Skills & Expertise', fr: 'Compétences & Profil', uk: 'Навички & Профіль', pl: 'Umiejętności & Profil Ekspercki' },
-    certLabel:     { de: 'Verifiziert',                 en: 'Verified',       fr: 'Vérifié',         uk: 'Перевірено',       pl: 'Zweryfikowano' },
-    certTitle:     { de: 'Zertifizierungen',            en: 'Certifications', fr: 'Certifications',  uk: 'Сертифікації',     pl: 'Certyfikaty' },
-    certEmpty:     { de: 'Zertifizierungen werden aktuell ergänzt — schau bald wieder vorbei.', en: 'Certifications are being added soon — check back shortly.', fr: 'Les certifications sont en cours d\'ajout.', uk: 'Сертифікати оновлюються — завітайте незабаром.', pl: 'Certyfikaty są obecnie aktualizowane — sprawdź wkrótce.' },
-    careerLabel:   { de: 'Karriere',                    en: 'Career',         fr: 'Parcours',        uk: 'Кар\'єра',         pl: 'Kariera' },
-    careerTitle:   { de: 'Beruflicher Werdegang',       en: 'Career Story',   fr: 'Parcours Professionnel', uk: 'Професійний шлях', pl: 'Ścieżka Zawodowa' },
-    contactLabel:  { de: 'Kontakt',                     en: 'Contact',        fr: 'Contact',         uk: 'Контакти',         pl: 'Kontakt' },
-    contactTitle:  { de: 'Lass uns sprechen.',          en: "Let's talk.",    fr: 'Échangeons ensemble.', uk: 'Почнімо діалог.', pl: 'Porozmawiajmy.' },
-    contactDesc:   { de: 'Offen für Festanstellungen, zukünftige Projekte und Kollaborationen. Remote · Hybrid · Arbeitssprachen: Deutsch & Englisch.', en: 'Open to full-time roles, future projects and collaborations. Remote · Hybrid · Working languages: German & English.', fr: 'Ouvert aux postes permanents, futurs projets et collaborations. Télétravail · Hybride · Langues de travail : allemand et anglais.', uk: 'Відкритий до постійної роботи, майбутніх проєктів і співпраці. Віддалено · Гібрид · Робочі мови: німецька та англійська.', pl: 'Otwarty na stałe zatrudnienie, przyszłe projekty i współpracę. Remote · Hybrydowo · Języki robocze: niemiecki i angielski.' },
-    namePH:        { de: 'Dein Name',                   en: 'Your name',      fr: 'Votre nom',       uk: 'Ваше ім\'я',       pl: 'Twoje imię i nazwisko' },
-    emailPH:       { de: 'Deine E-Mail',                en: 'Your email',     fr: 'Votre e-mail',    uk: 'Ваш Email',        pl: 'Twój adres e-mail' },
-    msgPH:         { de: 'Deine Nachricht...',          en: 'Your message...',fr: 'Votre message...',uk: 'Ваше повідомлення...', pl: 'Twoja wiadomość...' },
-    submitLabel:   { de: 'Nachricht senden →',          en: 'Send message →', fr: 'Envoyer le message →', uk: 'Надіслати повідомлення →', pl: 'Wyślij wiadomość →' },
-    sentMsg:       { de: '✓ Nachricht gesendet — ich melde mich.', en: "✓ Message sent — I'll get back to you.", fr: '✓ Message envoyé — réponse rapide.', uk: '✓ Повідомлення надіслано — я зв\'яжуся з вами.', pl: '✓ Wiadomość wysłana — odpowiem wkrótce.' },
-    sendingLabel:  { de: 'Wird gesendet…',              en: 'Sending…',       fr: 'Envoi en cours…', uk: 'Надсилається…',     pl: 'Wysyłanie…' },
-    sendErr:       { de: 'Fehler — bitte direkt mailen', en: 'Error — please email directly', fr: 'Erreur — écrivez directement', uk: 'Помилка — напишіть напряму', pl: 'Błąd — prosimy o bezpośredni kontakt' },
-    darkBtnLight:  { de: 'Hellmodus aktivieren',        en: 'Switch to light mode', fr: 'Activer le mode clair', uk: 'Увімкнути світлу тему', pl: 'Włącz tryb jasny' },
-    darkBtnDark:   { de: 'Dunkelmodus aktivieren',      en: 'Switch to dark mode', fr: 'Activer le mode sombre', uk: 'Увімкнути темну тему', pl: 'Włącz tryb ciemny' },
-    footerCross:   { de: 'IT-Profil ansehen: Systemadministration · IAM →', en: 'View IT profile: system administration · IAM →', fr: 'Voir le profil IT : administration système · IAM →', uk: 'Переглянути IT-профіль: системне адміністрування · IAM →', pl: 'Zobacz profil IT: administracja systemami · IAM →' },
-  },
-
-};
+      tag: '● Local macOS App · Apple Fo
