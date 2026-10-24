@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="de" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KKEEY Agent OS — Architektur &amp; Governance · Kevin Kuck</title>
+  <meta name="description" content="Ein Team aus 30+ spezialisierten KI-Agenten, geführt nach den Regeln eines echten IT-Betriebs. Architektur, Governance und Fallstudien von Kevin Kuck.">
+  <link rel="canonical" href="https://kkeey.dev/agent-os.html">
+  <meta property="og:title" content="KKEEY Agent OS · Kevin Kuck">
+  <meta property="og:description" content="Architektur, Governance und Fallstudien eines Multi-Agenten-Betriebs mit menschlicher Freigabe.">
+  <meta property="og:url" content="https://kkeey.dev/agent-os.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="de_DE">
+  <link rel="icon" href="assets/kkeey-logo.jpg">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/style.css?v=20261013-topology">
+  <link rel="stylesheet" href="css/agent-os.css?v=20261024">
+</head>
+<body class="agent-os-page">
+<a class="skip-link" href="#main" data-os="skip">Zum Inhalt</a>
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" aria-label="Kevin Kuck — Portfolio"><img src="assets/kkeey-logo.jpg" class="nav-logo-img" alt="KKEEY Logo"></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html#about">Über mich</a></li>
+      <li><a href="index.html#projects">Projekte</a></li>
+      <li><a href="index.html#skills">Skills</a></li>
+      <li><a href="index.html#certifications">Zertifikate</a></li>
+      <li><a href="index.html#career">Karriere</a></li>
+      <li><a href="index.html#contact">Kontakt</a></li>
+    </ul>
+    <div class="nav-controls">
+      <div class="available-badge"><span class="available-dot"></span><span id="availableText">Verfügbar ab sofort</span></div>
+      <button class="nav-btn nav-btn-icon" id="darkToggle" aria-label="Theme"></button>
+      <button class="nav-btn nav-btn-color" id="colorToggle" aria-label="Farbthema wechseln"><span class="nav-color-indicator"></span></button>
+      <button class="nav-btn nav-btn-icon" id="motionToggle" aria-label="Animation pausieren / Pause animation" aria-pressed="false">Ⅱ</button>
+      <button class="nav-btn" id="langToggle" aria-label="Sprache wechseln">DE</button>
+      <button class="hamburger" id="hamburger" aria-label="Menü" aria-expanded="false" aria-controls="navLinks">☰</button>
+    </div>
+  </div>
+</nav>
+<main id="main">
+  <section class="os-hero" aria-labelledby="os-title"><div class="container">
+    <div class="os-eyebrow"><span class="os-signal" aria-hidden="true"></span><span data-os="eyebrow">ARCHITEKTUR / AGENTENBETRIEB</span></div>
+    <h1 id="os-title">KKEEY <span>Agent OS</span><span class="os-title-mark" aria-hidden="true">↗</span></h1>
+    <p class="os-subtitle" data-os="subtitle">Ein Team aus 30+ spezialisierten KI-Agenten, geführt nach den Regeln eines echten IT-Betriebs.</p>
+    <p class="os-intro" data-os="intro">Klare Zuständigkeiten. Kontrollierte Ausführung. Die letzte Entscheidung bleibt beim Menschen.</p>
+    <div class="os-actions"><a class="btn-primary" href="#architecture" data-os="explore">Architektur erkunden</a><a class="os-text-link" href="#principles" data-os="principlesLink">Betriebsprinzipien</a></div>
+    <div class="os-hero-rule"><span>KEVIN KUCK / KKEEY</span><span>HUMAN-IN-THE-LOOP</span></div>
+  </div></section>
+  <section class="os-architecture" id="architecture" aria-labelledby="architecture-title"><div class="container">
+    <p class="section-label">SYSTEM DESIGN</p>
+    <h2 class="section-title" id="architecture-title" data-os="architectureTitle">Ein System. Klare Verantwortung.</h2>
+    <p class="section-sub" data-os="architectureSub">Von der Entscheidung bis zur Ausführung: Jede Ebene hat ihren Auftrag und ihre Grenzen.</p>
+    <figure class="os-diagram-shell">
+      <figcaption class="os-diagram-caption"><span data-os="hint">Abteilung auswählen — per Maus, Tastatur oder Touch.</span><span class="os-flow-key"><i aria-hidden="true"></i><span data-os="flow">Delegation &amp; kontrollierter Datenfluss</span></span></figcaption>
+      <div id="os-diagram"></div>
+    </figure>
+    <noscript><p>JavaScript ist für das interaktive Diagramm und den Sprachwechsel erforderlich. / JavaScript is required for the interactive diagram and language switching.</p></noscript>
+  </div></section>
+  <section id="principles" aria-labelledby="principles-title"><div class="container">
+    <p class="section-label">GOVERNANCE</p><h2 class="section-title" id="principles-title" data-os="principlesTitle">Vertrauen braucht Regeln.</h2>
+    <p class="section-sub" data-os="principlesSub">Betriebsregeln, die aus Erfahrung entstanden sind und im Code verankert werden.</p><div class="os-principles" id="os-principles"></div>
+  </div></section>
+  <section class="os-cases-section" id="cases" aria-labelledby="cases-title"><div class="container">
+    <p class="section-label" data-os="casesLabel">AUS DER PRAXIS</p><h2 class="section-title" id="cases-title" data-os="casesTitle">Was passiert, wenn es zählt.</h2>
+    <p class="section-sub" data-os="casesSub">Konkrete Fälle aus dem Betrieb. Probleme sichtbar machen, Ursachen beheben, Ergebnisse prüfen.</p><div class="os-cases" id="os-cases"></div>
+  </div></section>
+  <section class="os-closing" aria-labelledby="closing-title"><div class="container">
+    <p class="section-label">TOOLING &amp; INFRASTRUCTURE</p>
+    <ul class="os-stack" aria-label="Tech stack"><li>Codex CLI</li><li>LM Studio</li><li>Claude / ChatGPT</li><li>GitHub</li><li>Cloudflare</li><li>macOS launchd</li></ul>
+    <h2 class="section-title" id="closing-title" data-os="closingTitle">Systemdenken trifft Umsetzung.</h2><p class="section-sub" data-os="closingSub">Mehr Einblicke in die Projekte hinter dem System — oder direkt ins Gespräch kommen.</p>
+    <div class="os-actions"><a class="btn-primary" href="index.html#projects" data-os="projects">Zurück zu Projekten →</a><a class="btn-outline" href="index.html#contact" data-os="contact">Kontakt aufnehmen →</a></div>
+  </div></section>
+</main>
+<footer class="footer">
+  <p>&copy; 2026 Kevin Kuck · kkeey.dev</p>
+  <p class="footer-legal"><a data-os="legal" href="impressum.html">Impressum</a> | <a data-os="privacy" href="datenschutz.html">Datenschutzerklärung</a> | <a data-os="conditions" href="agb.html">AGB</a></p>
+  <p class="footer-cross"><a href="https://it.kkeey.dev/" id="footerCross">IT-Profil ansehen: Systemadministration · IAM →</a></p>
+</footer>
+<script src="js/data.js?v=20261024-agent-os"></script>
+<script src="js/motion.js?v=20261024-fix"></script>
+<script src="js/main.js?v=20261024-fix"></script>
+<script src="js/agent-os-content.js?v=20261024"></script>
+<script src="js/agent-os.js?v=20261024"></script>
+</body>
+</html>

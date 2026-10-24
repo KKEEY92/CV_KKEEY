@@ -195,6 +195,47 @@ window.KK_DATA = {
       ]
     },
     {
+      "id": "kkeey-agent-os",
+      "name": "KKEEY Agent OS",
+      "color": "#7c6af7",
+      "colorRgb": "124,106,247",
+      "status": {
+        "type": "documentation"
+      },
+      "sub": {
+        "de": "Multi-Agenten-Betrieb · Architektur & Governance",
+        "en": "Multi-agent operations · Architecture & governance",
+        "fr": "Opérations multi-agents · Architecture et gouvernance",
+        "uk": "Робота мультиагентної системи · Архітектура та управління",
+        "pl": "Praca systemu wieloagentowego · Architektura i zarządzanie"
+      },
+      "desc": {
+        "de": "Ein Team aus 30+ spezialisierten KI-Agenten, geführt nach den Regeln eines echten IT-Betriebs.",
+        "en": "A team of 30+ specialized AI agents, managed by the rules of real IT operations.",
+        "fr": "Une équipe de plus de 30 agents IA spécialisés, pilotée selon les règles d’une véritable exploitation informatique.",
+        "uk": "Команда з понад 30 спеціалізованих ШІ-агентів, керована за правилами реальної ІТ-експлуатації.",
+        "pl": "Zespół ponad 30 wyspecjalizowanych agentów AI, zarządzany zgodnie z zasadami rzeczywistej eksploatacji IT."
+      },
+      "stack": [
+        "Human-in-the-Loop",
+        "Codex CLI",
+        "LM Studio",
+        "SHA-256"
+      ],
+      "links": [
+        {
+          "href": "agent-os.html",
+          "label": {
+            "de": "Architektur ansehen →",
+            "en": "View architecture →",
+            "fr": "Voir l’architecture →",
+            "uk": "Переглянути архітектуру →",
+            "pl": "Zobacz architekturę →"
+          }
+        }
+      ]
+    },
+    {
       id: 'claire-v25-native-audio',
       repo: 'KKEEY92/claire-v2-native',
       status: { latestTag: 'v2.5.0' },
