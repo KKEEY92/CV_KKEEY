@@ -17,7 +17,7 @@
   <link rel="preload" href="assets/fonts/V8mDoQDjQSkFtoMM3T6r8E7mPbF4Cw.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/tDbv2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKwBNntkaToggR7BYRbKPxDcwg.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/fonts.css">
-  <link rel="stylesheet" href="css/style.css?v=20261013-topology">
+  <link rel="stylesheet" href="css/style.css?v=20261027-rc2">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -30,6 +30,7 @@
     "sameAs": ["https://github.com/KKEEY92", "https://www.linkedin.com/in/kevin-kuck-it/", "https://www.freelancermap.de/profil/kevin-kuck"]
   }
   </script>
+<link rel="stylesheet" href="css/engineering-cases.css?v=20261027-rc2">
 </head>
 <body>
 <a class="skip-link" href="#main">Zum Inhalt / Skip to content</a>
@@ -56,9 +57,9 @@
     </div>
   </div>
 </nav>
-<main id="main">
 <div id="signal-scope">
 <div class="signal-layer" aria-hidden="true"><canvas class="signal-canvas"></canvas></div>
+<main id="main">
 <section class="hero" id="hero" aria-labelledby="hero-name">
   <div class="hero-stage">
   <div class="hero-content">
@@ -94,8 +95,9 @@
   <h2 class="section-title" id="projTitle">Projekte & Showcase</h2>
   <p class="section-sub" id="projSub">Gebaut. Deployed. Öffentlich.</p>
   <div class="projects-grid" id="projContainer"></div>
+  <p class="engineering-entry"><a href="#engineering" class="project-link">Engineering Case Studies →</a></p>
 </div></section>
-</div>
+<section id="engineering" class="engineering" aria-labelledby="engineering-title"><div class="container"><p class="section-label">Engineering / Deep Dive</p><h2 class="section-title" id="engineering-title">Systeme verstehen. Entscheidungen nachvollziehen.</h2><p class="section-sub">Drei Projekte. Konkrete technische Entscheidungen. Architektur, Codebelege und offene Prüfungen.</p><article class="glass-card case-panel" id="engineering-job-scout"><h3>Job-Scout — Dokumente mit klaren Freigabegrenzen.</h3><p>Ein lokales Python/FastAPI-System für Karriere-Workflows. Der Engineering-Fokus: PDF-Validierung, explizite Fehlerzustände und nachvollziehbare Regressionstestlogik.</p><p>Code vorhanden · Laufzeitprüfung offen</p><p>Der Review belegt PDF-Kontrolllogik und Testdesign. Ein erfolgreicher End-to-End-Export oder produktiver Betrieb wurde nicht verifiziert.</p><details><summary>Workflow · Dokumentiert</summary><p>Die README beschreibt FastAPI, lokale Vault-Ablage und optionale LM-Studio-Anbindung. Diese Einordnung stammt aus Dokumentation; der Gesamtablauf wurde im Report nicht ausgeführt.</p></details><details><summary>Verifikationsstatus · Implementiert · nicht getestet</summary><p>is_draft prüft den Verifikationsstatus von Nachweisen und Profilbestandteilen. Damit lässt sich fachlich erklären, warum ein Dokument Entwurfsstatus behalten muss.</p></details><details><summary>PDF-Fehlerschranken · Implementiert · nicht getestet</summary><p>DocumentLayoutError und PdfEngineError machen Layout- und Engine-Probleme explizit. Ein erfolgreicher produktiver Export ist damit noch nicht belegt.</p></details><details><summary>Regressionen · Code geprüft · Testdesign</summary><p>Testfälle behandeln fehlendes Chrome, Seitenüberlauf, Dokumentreihenfolge und das Verbot eines stillen ReportLab-Fallbacks bei Chrome-Fehlern. Mocks und synthetische PDFs; Testausführung offen.</p></details><p>Code-Review v0.2 · 27.10.2026 · J1–J3. PDF-Kontrolllogik und Testdesign sind im Code festgestellt.</p></article><article class="glass-card case-panel" id="engineering-claire-v2"><h3>Claire V2 — Streaming bis zur Sprachausgabe durchdenken.</h3><p>Ein LiveKit-basierter Voice-Agent mit Stream-Filterlogik und zustandsabhängiger Prosodie. Im Mittelpunkt stehen Integrationsgrenzen und das Verhalten über Chunk-Grenzen hinweg.</p><p>Claire V2 · V2.5 separat</p><p>Der Code-Review betrifft claire-v2. Die bestehende V2.5-Karte ist eine andere Variante. Providerkonfiguration und End-to-End-Verhalten bleiben zu prüfen.</p><details><summary>AgentSession · Implementiert · nicht getestet</summary><p>agent.py integriert LiveKit Agent und AgentSession sowie Persona- und Memory-Module. Das belegt Integrationscode, keinen erfolgreichen Voice-Lauf.</p></details><details><summary>ThinkTagFilter · Implementiert · nicht getestet</summary><p>Der Filter verarbeitet think-Blöcke über mehrere Chunks hinweg vor der Sprachausgabe. Diese Stelle zeigt eine konkrete Streaming-Randbedingung.</p></details><details><summary>Prosodie · Implementiert · nicht getestet</summary><p>_prosody_for_energy bildet numerische Energie auf Sprechrate und Lautstärke ab. Grenzen und konkrete Ausgabewirkung sind separat zu testen.</p></details><details><summary>Providergrenzen · Offene Prüfung</summary><p>Kommentare zu lokaler bzw. Cloud-STT/TTS und Silero sind widersprüchlich. Tatsächlich ausgeführte Providerzweige und Konfiguration müssen abgeglichen werden.</p></details><p>Code-Review v0.2 · 27.10.2026 · C1–C3. Architektur-README ist dokumentarische Evidenz; kein Runtime-Beweis.</p></article><article class="glass-card case-panel" id="engineering-auratone"><h3>AuraTone — Audioverarbeitung über Prozessgrenzen.</h3><p>Rust/Tauri orchestriert einen lokalen DSP-Sidecar und eine asynchrone Audio-Pipeline. Die Case Study macht Prozesssteuerung, Protokoll und Deduplizierung nachvollziehbar.</p><p>Implementiert · E2E offen</p><p>GPU-Beschleunigung und sichere Prozessbereinigung wurden nicht verifiziert. Aus der Architekturerklärung folgt kein gemessener Audio-Benchmark.</p><details><summary>Fingerprint · Implementiert · nicht getestet</summary><p>pipeline.rs berechnet einen SHA-256-Dateifingerprint und fragt die Datenbank zur Hash-Deduplizierung ab.</p></details><details><summary>Async Worker · Implementiert · nicht getestet</summary><p>Ein asynchroner Worker und PipelineStage modellieren Verarbeitungsschritte und binden die DSP-Analyse an.</p></details><details><summary>DSP-Sidecar · Implementiert · nicht getestet</summary><p>dsp_supervisor.rs startet im Debug-Modus Python und außerhalb davon einen Sidecar. Methoden: analyze, master und tag.</p></details><details><summary>JSON &amp; Timeout · Offene Prüfung</summary><p>Code verarbeitet stdout/stderr, JSON-Antworten, Exit-Fehler und Timeouts. Ein Future-Timeout allein belegt kein Kill/Wait des Kindprozesses.</p></details><p>Code-Review v0.2 · 27.10.2026 · A1–A3. Supervisor und Pipeline sind Codebelege; GPU-Messung wurde nicht durchgeführt.</p></article></div></section>
 <section id="skills"><div class="container">
   <p class="section-label">Tech Stack</p>
   <h2 class="section-title" id="skillsTitle">Skills & Kompetenzprofil</h2>
@@ -116,6 +118,26 @@
   <h2 class="section-title" id="careerTitle">Beruflicher Werdegang</h2>
   <div class="timeline" id="timelineContainer"><div class="timeline-line"></div></div>
 </div></section>
+
+<div class="kk-bridge">
+  <div class="container">
+    <div class="kk-b-grid">
+      <div class="kk-b-content">
+        <p class="kk-b-eyebrow" data-i18n="modules.m7_eyebrow">DOPPELTE EXPERTISE</p>
+        <h2 data-i18n="modules.m7_title">Systemadministration, IAM & Endpoint Security.</h2>
+        <p data-i18n="modules.m7_p">Ich verknüpfe Softwareentwicklung und AI mit tiefem Systemverständnis aus dem operativen IT-Betrieb in regulierten Umgebungen.</p>
+        <div class="kk-b-tags"><span>Active Directory</span><span>Citrix</span><span>Windows 11 Rollouts</span><span>FortiClient</span><span>Sophos</span></div>
+      </div>
+      <div class="kk-b-action">
+        <div class="kk-b-card">
+          <h4 data-i18n="modules.m7_c_title">IT-Fachprofil ansehen</h4>
+          <p data-i18n="modules.m7_c_p">Detaillierte Einblicke in Praxisprojekte, Nachweise und Kennzahlen aus dem IT-Betrieb.</p>
+          <a href="https://it.kkeey.dev/" class="kk-b-btn" data-i18n="modules.m7_btn">Zum IT-Profil →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 <section id="contact"><div class="contact-inner">
   <p class="section-label" id="contactLabel">Kontakt</p>
   <h2 class="section-title" id="contactTitle">Lass uns sprechen.</h2>
@@ -139,34 +161,17 @@
     <a href="https://www.freelancermap.de/profil/kevin-kuck" target="_blank" rel="noopener">freelancermap</a>
   </div>
 </div></section>
-<div class="kk-bridge">
-  <div class="container">
-    <div class="kk-b-grid">
-      <div class="kk-b-content">
-        <p class="kk-b-eyebrow" data-i18n="modules.m7_eyebrow">DOPPELTE EXPERTISE</p>
-        <h2 data-i18n="modules.m7_title">Systemadministration, IAM & Endpoint Security.</h2>
-        <p data-i18n="modules.m7_p">Ich verknüpfe Softwareentwicklung und AI mit tiefem Systemverständnis aus dem operativen IT-Betrieb in regulierten Umgebungen.</p>
-        <div class="kk-b-tags"><span>Active Directory</span><span>Citrix</span><span>Windows 11 Rollouts</span><span>FortiClient</span><span>Sophos</span></div>
-      </div>
-      <div class="kk-b-action">
-        <div class="kk-b-card">
-          <h4 data-i18n="modules.m7_c_title">IT-Fachprofil ansehen</h4>
-          <p data-i18n="modules.m7_c_p">Detaillierte Einblicke in Praxisprojekte, Nachweise und Kennzahlen aus dem IT-Betrieb.</p>
-          <a href="https://it.kkeey.dev/" class="kk-b-btn" data-i18n="modules.m7_btn">Zum IT-Profil →</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 </main>
 <footer class="footer">
   <p>&copy; 2026 Kevin Kuck · kkeey.dev</p>
   <p class="footer-legal"><a href="impressum.html">Impressum</a> | <a href="datenschutz.html">Datenschutzerklärung</a> | <a href="agb.html">AGB</a></p>
   <p class="footer-cross"><a href="https://it.kkeey.dev/" id="footerCross">IT-Profil ansehen: Systemadministration · IAM →</a></p>
 </footer>
+</div>
 <script src="js/data.js?v=20261024-fix-agent-os"></script>
-<script src="js/motion.js?v=20261024-fix"></script>
+<script src="js/motion.js?v=20261027-rc1"></script>
 <script src="js/main.js?v=20261024-fix"></script>
-<script type="module" src="js/particle-hero.js?v=20261024-fix"></script>
+<script type="module" src="js/particle-hero.js?v=20261027-rc2"></script>
+<script src="js/engineering-cases.js?v=20261027-rc1" defer></script>
 </body>
 </html>
