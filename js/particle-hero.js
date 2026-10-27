@@ -1,6 +1,6 @@
 import { FIELD } from './signal/field.js';
 import { createSimulation } from './signal/simulation.js';
-import { createTopology } from './signal/topology.js';
+import { createTopology } from './signal/topology.js?v=20261027-rc2';
 import { initSignalInterface } from './signal/interface.js';
 /** Neural Topology: actual half-float GPU state, differentiable curl noise, semantic DOM anchors. */
 const host=document.getElementById('signal-field'),hero=document.getElementById('hero'),scope=document.getElementById('signal-scope');
@@ -61,7 +61,10 @@ async function init(){
  const counts=[16000,36000,60000];
  function resize(){const r=canvas.getBoundingClientRect();const ratio=Math.min(devicePixelRatio||1,[1,1.25,1.5][level]);renderer.setPixelRatio(ratio);renderer.setSize(r.width,r.height,false);camera.aspect=r.width/Math.max(1,r.height);camera.zoom=innerWidth<=768?1.10:1.05;camera.updateProjectionMatrix();u.dpr.value=ratio;u.pointLimit.value=[6,8,12][level];geometry.setDrawRange(0,Math.min(capacity,motion.media.matches?16000:counts[level]));if(simulation)simulation.uniforms.activeCount.value=geometry.drawRange.count;glowPoints.visible=!u.light.value&&level>0;host.dataset.quality=['low','medium','high'][level];motion.refresh();}
  function theme(){const css=getComputedStyle(document.documentElement);u.warm.value.set(css.getPropertyValue('--accent-1').trim());u.cool.value.set(css.getPropertyValue('--accent-2').trim());u.light.value=document.documentElement.dataset.theme==='light'?1:0;glowPoints.visible=!u.light.value&&level>0;motion.refresh();}
- new ResizeObserver(resize).observe(canvas.parentElement);new MutationObserver(theme).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme','data-color-theme']});
+ // The existing observer updates drawing buffer and camera when the layer resizes.
+ new ResizeObserver(resize).observe(canvas.parentElement);
+ // A paused simulation still needs a static reprojection when the document scrolls.
+ window.addEventListener('scroll',()=>{if(motion.media.matches)motion.refresh();},{passive:true});new MutationObserver(theme).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme','data-color-theme']});
  motion.media.addEventListener('change',()=>{accumulator=0;pointerInside=false;resize();});document.addEventListener('visibilitychange',()=>{accumulator=0;});
  canvas.addEventListener('webglcontextlost',e=>{e.preventDefault();lost=true;host.dataset.render='fallback';hud.textContent='STATE: CONTEXT LOST';motion.refresh();});
  canvas.addEventListener('webglcontextrestored',()=>{lost=false;failed=false;simTime=0;accumulator=0;ripples.forEach(v=>v.set(0,0,-99));makeSimulation();resize();theme();});

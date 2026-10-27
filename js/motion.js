@@ -13,6 +13,7 @@
   let frame = 0, last = 0, time = 0;
   function loop(now) {
     frame = 0;
+    if (document.hidden || media.matches) { refresh(); return; }
     const dt = last ? Math.min(now - last, 100) : 16.7;
     last = now; time += dt / 1000;
     for (const client of clients) if (client.visible()) client.draw(time, dt);
