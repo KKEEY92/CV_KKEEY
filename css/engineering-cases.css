@@ -28,3 +28,12 @@
 .engineering[id],.engineering [id]{scroll-margin-top:100px}
 @media(max-width:768px){.engineering-teasers{grid-template-columns:1fr}.engineering .arch-flow{grid-template-columns:1fr 1fr}.engineering .case-top h3{font-size:30px}.engineering .case-panel{padding:24px}.engineering .case-tabs{gap:10px}}
 @media(prefers-reduced-motion:reduce){.engineering *{animation:none!important;transition:none!important}}
+
+/* Context architecture extends existing cases without changing card topology. */
+.engineering-context-link{margin-top:28px;padding:24px;border-left:2px solid var(--accent-2);color:var(--kk-text);line-height:1.8;overflow-wrap:anywhere}
+.engineering-context-link a{display:inline-block;padding-block:10px;color:var(--kk-text-bright);text-decoration:underline;text-underline-offset:4px}
+.engineering .arch-flow summary::after{content:" +";font-weight:700}
+.engineering .arch-flow details[open]>summary::after{content:" −"}
+
+.engineering[data-enhanced] #engineering-contextnexus .arch-native{display:block}
+#engineering-contextnexus .arch-flow{align-items:start}

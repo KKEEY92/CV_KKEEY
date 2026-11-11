@@ -38,7 +38,7 @@ from pathlib import Path
 # Machine-readable registry: id -> GitHub "owner/repo". Independent of the
 # visible card name and status label in js/data.js.
 PROJECT_REGISTRY = {
-    'claire-v25-native-audio': 'KKEEY92/claire-v2.5-native-audio',
+    # Claire V2.5 is reviewed manually: a release tag cannot establish runtime acceptance.
     'auratone-ai': 'KKEEY92/AuraTone-AI-by-KKEEy',
     'ai-virtual-calling': 'KKEEY92/AI-Virtual-Calling-and-Write-a-friend',
     'afm-3-chat': 'KKEEY92/afm-chat',

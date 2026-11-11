@@ -104,13 +104,17 @@ ids.get('motionToggle').click();assert.ok(root.classList.contains('os-motion-pau
 ids.get('hamburger').click();assert.equal(ids.get('hamburger').getAttribute('aria-expanded'),'true');
 const escapeEvent=new Event('keydown');escapeEvent.key='Escape';document.dispatchEvent(escapeEvent);assert.equal(ids.get('hamburger').getAttribute('aria-expanded'),'false');
 results.push('Shared language cycle/persistence, theme and palette controls, motion preference/pause and menu Escape integration pass.');
-const original=execFileSync('git',['show','7657c70:js/data.js']);
-const current=fs.readFileSync('js/data.js');
-assert.ok(current.length>original.length);
-const marker=Buffer.from("    {\n      id: 'claire-v25-native-audio',");
-const before=original.indexOf(marker);const after=current.indexOf(marker);
-assert.ok(before>0&&after>before);
-assert.ok(current.subarray(0,before).equals(original.subarray(0,before)));
-assert.ok(current.subarray(after).equals(original.subarray(before)));
-results.push(`data.js insertion only: ${original.length} -> ${current.length} bytes; original prefix/suffix byte-identical.`);
+// Guard against the historical data truncation: all other profile data and cards survive.
+const baseline={window:{}};
+vm.runInNewContext(execFileSync('git',['show','3ce81a414cd342f1451a3c100eb1c45b18fa7f21:js/data.js']).toString(),baseline);
+const previous=baseline.window.KK_DATA;
+const current=JSON.parse(JSON.stringify(window.KK_DATA));
+assert.deepEqual(current.projects.map(p=>p.id),Array.from(previous.projects,p=>p.id));
+for(let i=0;i<previous.projects.length;i++) {
+  const before=JSON.parse(JSON.stringify(previous.projects[i]));
+  if(!['kkeey-agent-os','claire-v25-native-audio'].includes(before.id)) assert.deepEqual(current.projects[i],before);
+}
+delete current.projects;delete previous.projects;
+assert.deepEqual(current,JSON.parse(JSON.stringify(previous)));
+results.push('All eight project IDs/order and every unrelated card/profile field match the approved October baseline.');
 console.log(JSON.stringify({scope:'Node VM integration with DOM shim; no browser layout assertions',results},null,2));

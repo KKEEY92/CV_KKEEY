@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>KKEEY Agent OS — Architektur &amp; Governance · Kevin Kuck</title>
-  <meta name="description" content="Ein Team aus 30+ spezialisierten KI-Agenten, geführt nach den Regeln eines echten IT-Betriebs. Architektur, Governance und Fallstudien von Kevin Kuck.">
+  <meta name="description" content="Betriebsmodell mit 30+ spezialisierten Agentenrollen und menschlichen Freigaben. Der Roster ist kein Nachweis ständig laufender produktiver Agenten. Architektur, Governance und Fallstudien von Kevin Kuck.">
   <link rel="canonical" href="https://kkeey.dev/agent-os.html">
   <meta property="og:title" content="KKEEY Agent OS · Kevin Kuck">
   <meta property="og:description" content="Architektur, Governance und Fallstudien eines Multi-Agenten-Betriebs mit menschlicher Freigabe.">
@@ -14,7 +14,7 @@
   <link rel="icon" href="assets/kkeey-logo.jpg">
   <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="css/style.css?v=20261013-topology">
-  <link rel="stylesheet" href="css/agent-os.css?v=20261024">
+  <link rel="stylesheet" href="css/agent-os.css?v=20261111">
 </head>
 <body class="agent-os-page">
 <a class="skip-link" href="#main" data-os="skip">Zum Inhalt</a>
@@ -43,7 +43,7 @@
   <section class="os-hero" aria-labelledby="os-title"><div class="container">
     <div class="os-eyebrow"><span class="os-signal" aria-hidden="true"></span><span data-os="eyebrow">ARCHITEKTUR / AGENTENBETRIEB</span></div>
     <h1 id="os-title">KKEEY <span>Agent OS</span><span class="os-title-mark" aria-hidden="true">↗</span></h1>
-    <p class="os-subtitle" data-os="subtitle">Ein Team aus 30+ spezialisierten KI-Agenten, geführt nach den Regeln eines echten IT-Betriebs.</p>
+    <p class="os-subtitle" data-os="subtitle">Betriebsmodell mit 30+ spezialisierten Agentenrollen und menschlichen Freigaben. Der Roster ist kein Nachweis ständig laufender produktiver Agenten.</p>
     <p class="os-intro" data-os="intro">Klare Zuständigkeiten. Kontrollierte Ausführung. Die letzte Entscheidung bleibt beim Menschen.</p>
     <div class="os-actions"><a class="btn-primary" href="#architecture" data-os="explore">Architektur erkunden</a><a class="os-text-link" href="#principles" data-os="principlesLink">Betriebsprinzipien</a></div>
     <div class="os-hero-rule"><span>KEVIN KUCK / KKEEY</span><span>HUMAN-IN-THE-LOOP</span></div>
@@ -62,9 +62,10 @@
     <p class="section-label">GOVERNANCE</p><h2 class="section-title" id="principles-title" data-os="principlesTitle">Vertrauen braucht Regeln.</h2>
     <p class="section-sub" data-os="principlesSub">Betriebsregeln, die aus Erfahrung entstanden sind und im Code verankert werden.</p><div class="os-principles" id="os-principles"></div>
   </div></section>
+<section class="os-cases-section" id="system-boundaries" aria-labelledby="system-boundaries-title"><div class="container"><h2 class="section-title" id="system-boundaries-title" data-os="boundaryTitle">Rollen, Anwendungen und Übergaben.</h2><p class="section-sub" data-os="boundaryIntro">Architekturmodell und belegter Entwicklungsstand — keine Anzeige aktuell verbundener Systeme.</p><ol class="os-boundary-flow"><li data-os="boundaryOS">Agent OS → ContextNexus: organisatorische Zuständigkeit. Agent OS ist das Governance- und Delegationsmodell; ContextNexus ist eine eigenständige lokale Kontext-/Graph-Anwendung.</li><li data-os="boundaryBridge">ContextNexus → Context Bridge M4: implementiertes Teilmodul auf Entwicklungsbranches. Ausgewählte Quellen → versioniertes Kontextpaket; Quellenhashes und Signaturen werden geprüft.</li><li data-os="boundaryConsumer">Bridge M4 → potenzielle Consumer: pro Laufzeit gesondert freizugeben. Authentizität, separate menschliche Freigabe, autorisierter Consumer und effektiver Originaldatei-Lesezugriff sind eigene Schranken. Verifikation und Nutzung haben getrennte Nachweise.</li></ol><p class="os-boundary-note" data-os="boundaryProducts">Job-Scout bleibt eine separate Career-Ops-Anwendung und ein potenzieller Consumer für technischen Projektstatus. Aria ist ein Companion-Produktstrang mit eigenem Voice-Code. Claire V2 und V2.5 sind separate Voice-/Runtime-Varianten; Persona OS bezeichnet die Persona-Modellierung. Gemeinsamer Produktbetrieb und Bridge-Anbindung sind offen.</p><p class="os-boundary-note" data-os="boundaryEvidence">Stand 11.11.2026: Dokumentierte Build-/TypeScript-Prüfungen und 69 synthetische M4-Fälle belegen einen Entwicklungsstand. Ein begrenzter Transport-Readback ist keine vollständige signierte Abnahme. Keine pauschale Aussage über aktive Consumer oder dauerhafte Synchronisation. Private Kontextinhalte bleiben außerhalb dieses Showcases.</p><p><a class="btn-outline" href="index.html#engineering-contextnexus" data-os="boundaryLink">ContextNexus-Case-Study erkunden →</a></p></div></section>
   <section class="os-cases-section" id="cases" aria-labelledby="cases-title"><div class="container">
     <p class="section-label" data-os="casesLabel">AUS DER PRAXIS</p><h2 class="section-title" id="cases-title" data-os="casesTitle">Was passiert, wenn es zählt.</h2>
-    <p class="section-sub" data-os="casesSub">Konkrete Fälle aus dem Betrieb. Probleme sichtbar machen, Ursachen beheben, Ergebnisse prüfen.</p><div class="os-cases" id="os-cases"></div>
+    <p class="section-sub" data-os="casesSub">Historische Fallberichte aus dem Showcase. Genannte Ergebnisse und Kontrollen beziehen sich auf den jeweiligen Fall; keine neue Live-Abnahme oder allgemeine Sicherheitsgarantie.</p><div class="os-cases" id="os-cases"></div>
   </div></section>
   <section class="os-closing" aria-labelledby="closing-title"><div class="container">
     <p class="section-label">TOOLING &amp; INFRASTRUCTURE</p>
@@ -78,10 +79,10 @@
   <p class="footer-legal"><a data-os="legal" href="impressum.html">Impressum</a> | <a data-os="privacy" href="datenschutz.html">Datenschutzerklärung</a> | <a data-os="conditions" href="agb.html">AGB</a></p>
   <p class="footer-cross"><a href="https://it.kkeey.dev/" id="footerCross">IT-Profil ansehen: Systemadministration · IAM →</a></p>
 </footer>
-<script src="js/data.js?v=20261024-agent-os"></script>
+<script src="js/data.js?v=20261111"></script>
 <script src="js/motion.js?v=20261024-fix"></script>
 <script src="js/main.js?v=20261024-fix"></script>
-<script src="js/agent-os-content.js?v=20261024"></script>
+<script src="js/agent-os-content.js?v=20261111"></script>
 <script src="js/agent-os.js?v=20261024"></script>
 </body>
 </html>

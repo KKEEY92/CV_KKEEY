@@ -1,6 +1,62 @@
 /* Showcase content. Role and product names are stable identifiers. */
 window.KK_AGENT_OS = {
   "copy": {
+    "boundaryTitle": {
+      "de": "Rollen, Anwendungen und Übergaben.",
+      "en": "Roles, applications and handovers.",
+      "fr": "Rôles, applications et transferts.",
+      "uk": "Ролі, застосунки та передавання.",
+      "pl": "Role, aplikacje i przekazania."
+    },
+    "boundaryIntro": {
+      "de": "Architekturmodell und belegter Entwicklungsstand — keine Anzeige aktuell verbundener Systeme.",
+      "en": "Architecture model and evidenced development status — not a display of currently connected systems.",
+      "fr": "Modèle d’architecture et état de développement documenté — pas un affichage des systèmes actuellement connectés.",
+      "uk": "Модель архітектури та підтверджений стан розробки — не показник поточних з’єднань.",
+      "pl": "Model architektury i udokumentowany stan rozwoju — nie wskaźnik bieżących połączeń."
+    },
+    "boundaryOS": {
+      "de": "Agent OS → ContextNexus: organisatorische Zuständigkeit. Agent OS ist das Governance- und Delegationsmodell; ContextNexus ist eine eigenständige lokale Kontext-/Graph-Anwendung.",
+      "en": "Agent OS → ContextNexus: organizational ownership. Agent OS is the governance and delegation model; ContextNexus is a separate local context/graph application.",
+      "fr": "Agent OS → ContextNexus : responsabilité organisationnelle. Agent OS est le modèle de gouvernance et de délégation ; ContextNexus est une application locale distincte de contexte/graphe.",
+      "uk": "Agent OS → ContextNexus: організаційна відповідальність. Agent OS — модель управління й делегування; ContextNexus — окремий локальний застосунок контексту та графів.",
+      "pl": "Agent OS → ContextNexus: odpowiedzialność organizacyjna. Agent OS to model zarządzania i delegowania; ContextNexus to odrębna lokalna aplikacja kontekstu/grafu."
+    },
+    "boundaryBridge": {
+      "de": "ContextNexus → Context Bridge M4: implementiertes Teilmodul auf Entwicklungsbranches. Ausgewählte Quellen → versioniertes Kontextpaket; Quellenhashes und Signaturen werden geprüft.",
+      "en": "ContextNexus → Context Bridge M4: implemented module on development branches. Selected sources → versioned context package; source hashes and signatures are checked.",
+      "fr": "ContextNexus → Context Bridge M4 : module implémenté sur des branches de développement. Sources sélectionnées → paquet de contexte versionné ; empreintes des sources et signatures vérifiées.",
+      "uk": "ContextNexus → Context Bridge M4: реалізований модуль у гілках розробки. Обрані джерела → версійований пакет контексту; перевіряються хеші джерел і підписи.",
+      "pl": "ContextNexus → Context Bridge M4: zaimplementowany moduł w gałęziach rozwojowych. Wybrane źródła → wersjonowany pakiet kontekstu; sprawdzane są skróty źródeł i podpisy."
+    },
+    "boundaryConsumer": {
+      "de": "Bridge M4 → potenzielle Consumer: pro Laufzeit gesondert freizugeben. Authentizität, separate menschliche Freigabe, autorisierter Consumer und effektiver Originaldatei-Lesezugriff sind eigene Schranken. Verifikation und Nutzung haben getrennte Nachweise.",
+      "en": "Bridge M4 → potential consumers: separate acceptance per runtime. Authenticity, separate human approval, an authorized consumer and effective read access to original files are distinct gates. Verification and use have separate receipts.",
+      "fr": "Bridge M4 → consommateurs potentiels : validation distincte par runtime. Authenticité, autorisation humaine séparée, consommateur autorisé et accès effectif aux originaux sont des contrôles distincts. Vérification et utilisation ont des preuves séparées.",
+      "uk": "Bridge M4 → потенційні споживачі: окреме приймання для кожного середовища. Автентичність, окремий дозвіл людини, авторизований споживач і фактичний доступ до оригіналів — різні перевірки. Перевірка й використання мають окремі докази.",
+      "pl": "Bridge M4 → potencjalni odbiorcy: osobny odbiór dla każdego runtime. Autentyczność, odrębna zgoda człowieka, autoryzowany odbiorca i skuteczny odczyt oryginałów to oddzielne warunki. Weryfikacja i wykorzystanie mają osobne dowody."
+    },
+    "boundaryProducts": {
+      "de": "Job-Scout bleibt eine separate Career-Ops-Anwendung und ein potenzieller Consumer für technischen Projektstatus. Aria ist ein Companion-Produktstrang mit eigenem Voice-Code. Claire V2 und V2.5 sind separate Voice-/Runtime-Varianten; Persona OS bezeichnet die Persona-Modellierung. Gemeinsamer Produktbetrieb und Bridge-Anbindung sind offen.",
+      "en": "Job-Scout remains a separate career-operations application and a potential consumer of technical project status. Aria is a companion product strand with its own voice code. Claire V2 and V2.5 are separate voice/runtime variants; Persona OS names persona modeling. Joint product operation and Bridge integration remain pending.",
+      "fr": "Job-Scout reste une application distincte de gestion de carrière et un consommateur potentiel de statut technique. Aria est une branche produit compagnon avec son propre code vocal. Claire V2 et V2.5 sont des variantes vocales/runtime distinctes ; Persona OS désigne la modélisation des personas. Exploitation commune et intégration Bridge restent ouvertes.",
+      "uk": "Job-Scout — окремий застосунок кар’єрних процесів і потенційний споживач технічного статусу. Aria — продуктовий напрям компаньйона з власним голосовим кодом. Claire V2 і V2.5 — різні голосові варіанти; Persona OS — моделювання персон. Спільна продуктивна робота та інтеграція Bridge залишаються відкритими.",
+      "pl": "Job-Scout pozostaje odrębną aplikacją procesów kariery i potencjalnym odbiorcą statusu technicznego. Aria to kierunek produktu towarzyszącego z własnym kodem głosowym. Claire V2 i V2.5 to odrębne warianty głosu/runtime; Persona OS oznacza modelowanie person. Wspólne działanie i integracja Bridge pozostają otwarte."
+    },
+    "boundaryEvidence": {
+      "de": "Stand 11.11.2026: Dokumentierte Build-/TypeScript-Prüfungen und 69 synthetische M4-Fälle belegen einen Entwicklungsstand. Ein begrenzter Transport-Readback ist keine vollständige signierte Abnahme. Keine pauschale Aussage über aktive Consumer oder dauerhafte Synchronisation. Private Kontextinhalte bleiben außerhalb dieses Showcases.",
+      "en": "As of 11 Nov 2026: documented build/TypeScript checks and 69 synthetic M4 cases establish a development revision. A limited transport readback is not full signed acceptance. No blanket claim of active consumers or continuous synchronization. Private context stays outside this showcase.",
+      "fr": "Au 11.11.2026 : contrôles de compilation/TypeScript et 69 cas M4 synthétiques documentent une révision de développement. Une relecture de transport limitée ne vaut pas validation signée complète. Aucune affirmation générale de consommateurs actifs ou de synchronisation permanente. Le contexte privé reste hors de cette présentation.",
+      "uk": "Стан на 11.11.2026: документовані перевірки збірки/TypeScript і 69 синтетичних тестів M4 підтверджують версію розробки. Обмежене зворотне читання не є повним підписаним прийманням. Активність усіх споживачів або постійна синхронізація не стверджуються. Приватний контекст сюди не потрапляє.",
+      "pl": "Stan na 11.11.2026: udokumentowane kontrole kompilacji/TypeScript i 69 syntetycznych przypadków M4 potwierdzają wersję rozwojową. Ograniczony odczyt transportu nie jest pełnym podpisanym odbiorem. Brak ogólnej deklaracji aktywnych odbiorców lub ciągłej synchronizacji. Prywatny kontekst pozostaje poza prezentacją."
+    },
+    "boundaryLink": {
+      "de": "ContextNexus-Case-Study erkunden →",
+      "en": "Explore the ContextNexus case study →",
+      "fr": "Explorer l’étude ContextNexus →",
+      "uk": "Переглянути приклад ContextNexus →",
+      "pl": "Poznaj studium ContextNexus →"
+    },
     "eyebrow": {
       "de": "ARCHITEKTUR / AGENTENBETRIEB",
       "en": "ARCHITECTURE / AGENT OPERATIONS",
@@ -9,11 +65,11 @@ window.KK_AGENT_OS = {
       "pl": "ARCHITEKTURA / PRACA AGENTÓW"
     },
     "subtitle": {
-      "de": "Ein Team aus 30+ spezialisierten KI-Agenten, geführt nach den Regeln eines echten IT-Betriebs.",
-      "en": "A team of 30+ specialized AI agents, managed by the rules of real IT operations.",
-      "fr": "Une équipe de plus de 30 agents IA spécialisés, pilotée selon les règles d’une véritable exploitation informatique.",
-      "uk": "Команда з понад 30 спеціалізованих ШІ-агентів, керована за правилами реальної ІТ-експлуатації.",
-      "pl": "Zespół ponad 30 wyspecjalizowanych agentów AI, zarządzany zgodnie z zasadami rzeczywistej eksploatacji IT."
+      "de": "Betriebsmodell mit 30+ spezialisierten Agentenrollen und menschlichen Freigaben. Der Roster ist kein Nachweis ständig laufender produktiver Agenten.",
+      "en": "Operating model with 30+ specialized agent roles and human approvals. The roster does not establish continuously running production agents.",
+      "fr": "Modèle de fonctionnement avec plus de 30 rôles d’agents spécialisés et autorisations humaines. Ce répertoire ne prouve pas une activité continue en production.",
+      "uk": "Модель роботи з понад 30 спеціалізованими ролями агентів і дозволами людини. Перелік ролей не доводить безперервну продуктивну роботу агентів.",
+      "pl": "Model działania z ponad 30 wyspecjalizowanymi rolami agentów i zgodami człowieka. Lista ról nie dowodzi ciągłej pracy agentów w produkcji."
     },
     "intro": {
       "de": "Klare Zuständigkeiten. Kontrollierte Ausführung. Die letzte Entscheidung bleibt beim Menschen.",
@@ -191,11 +247,11 @@ window.KK_AGENT_OS = {
       "pl": "Gdy zasady spotykają rzeczywistość."
     },
     "casesSub": {
-      "de": "Konkrete Fälle aus dem Betrieb. Probleme sichtbar machen, Ursachen beheben, Ergebnisse prüfen.",
-      "en": "Real cases from operations. Surface problems, fix causes, verify outcomes.",
-      "fr": "Des cas concrets : rendre les problèmes visibles, corriger les causes, vérifier les résultats.",
-      "uk": "Реальні випадки: виявляти проблеми, усувати причини, перевіряти результати.",
-      "pl": "Przypadki z praktyki: ujawniać problemy, usuwać przyczyny, weryfikować wyniki."
+      "de": "Historische Fallberichte aus dem Showcase. Genannte Ergebnisse und Kontrollen beziehen sich auf den jeweiligen Fall; keine neue Live-Abnahme oder allgemeine Sicherheitsgarantie.",
+      "en": "Historical case reports from the showcase. Results and controls refer to each specific case; this is no new live acceptance or general security guarantee.",
+      "fr": "Comptes rendus historiques de cette présentation. Résultats et contrôles concernent chaque cas précis ; ni nouvelle validation en ligne, ni garantie générale de sécurité.",
+      "uk": "Історичні звіти цієї презентації. Результати й перевірки стосуються відповідного випадку; це не нове продуктивне приймання чи загальна гарантія безпеки.",
+      "pl": "Historyczne opisy przypadków z prezentacji. Wyniki i kontrole dotyczą konkretnego przypadku; nie są nowym odbiorem produkcyjnym ani ogólną gwarancją bezpieczeństwa."
     },
     "problem": {
       "de": "Problem",

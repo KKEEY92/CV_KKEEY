@@ -210,11 +210,11 @@ window.KK_DATA = {
         "pl": "Praca systemu wieloagentowego · Architektura i zarządzanie"
       },
       "desc": {
-        "de": "Ein Team aus 30+ spezialisierten KI-Agenten, geführt nach den Regeln eines echten IT-Betriebs.",
-        "en": "A team of 30+ specialized AI agents, managed by the rules of real IT operations.",
-        "fr": "Une équipe de plus de 30 agents IA spécialisés, pilotée selon les règles d’une véritable exploitation informatique.",
-        "uk": "Команда з понад 30 спеціалізованих ШІ-агентів, керована за правилами реальної ІТ-експлуатації.",
-        "pl": "Zespół ponad 30 wyspecjalizowanych agentów AI, zarządzany zgodnie z zasadami rzeczywistej eksploatacji IT."
+        "de": "Betriebsmodell mit 30+ spezialisierten Agentenrollen und menschlichen Freigaben. Der Roster ist kein Nachweis ständig laufender produktiver Agenten.",
+        "en": "Operating model with 30+ specialized agent roles and human approvals. The roster does not establish continuously running production agents.",
+        "fr": "Modèle de fonctionnement avec plus de 30 rôles d’agents spécialisés et autorisations humaines. Ce répertoire ne prouve pas une activité continue en production.",
+        "uk": "Модель роботи з понад 30 спеціалізованими ролями агентів і дозволами людини. Перелік ролей не доводить безперервну продуктивну роботу агентів.",
+        "pl": "Model działania z ponad 30 wyspecjalizowanymi rolami agentów i zgodami człowieka. Lista ról nie dowodzi ciągłej pracy agentów w produkcji."
       },
       "stack": [
         "Human-in-the-Loop",
@@ -237,34 +237,33 @@ window.KK_DATA = {
     },
     {
       id: 'claire-v25-native-audio',
-      repo: 'KKEEY92/claire-v2-native',
-      status: { latestTag: 'v2.5.0' },
+      status: { type: 'development' },
       name: 'Claire V2.5 Native Audio',
       color: '#00d4aa',
       colorRgb: '0,212,170',
-      tag: '● v2.5 · öffentlich · LiveKit 2.x',
+      tag: '● V2.5 · Voice Runtime',
       sub: {
-        de: 'Voice AI Agent · Full-Duplex · Local LLM Switch',
-        en: 'Voice AI Agent · Full-Duplex · Local LLM Switch',
-        fr: 'Agent Vocal IA · Full-Duplex · Switch LLM Local',
-        uk: 'Голосовий AI-агент · Full-Duplex · Затримка ~200мс · Локальний LLM Switch',
-        pl: 'Głosowy Agent AI · Full-Duplex · Przełącznik Lokalnego LLM',
+        "de": "Native-Audio-Variante · Entwicklungsstand",
+        "en": "Native-audio variant · in development",
+        "fr": "Variante audio native · en développement",
+        "uk": "Варіант native audio · у розробці",
+        "pl": "Wariant native audio · w rozwoju"
       },
       desc: {
-        de: 'Echtzeit Voice AI Agent auf LiveKit 2.x Agents Basis. Unterstützt Google Speech/TTS, Gemini 2.5 Flash sowie per .env Switch ein lokales LM Studio LLM (Qwen2.5-7B). Enthält EmotionEngine v2 (±0.08 Energy Clamp), Silero VAD, Google Drive RAG Gedächtnis und WebGL Audio Visualizer.',
-        en: 'Real-time voice AI agent built on LiveKit 2.x Agents framework. Supports Google Speech/TTS, Gemini 2.5 Flash, and a .env switch to local LM Studio (Qwen2.5-7B). Features EmotionEngine v2 (±0.08 energy clamp), Silero VAD, Google Drive RAG memory, and WebGL audio visualizer.',
-        fr: 'Agent vocal en temps réel basé sur LiveKit 2.x Agents. Prend en charge Google Speech/TTS, Gemini 2.5 Flash et un basculement .env vers LM Studio local (Qwen2.5-7B). Comprend EmotionEngine v2, Silero VAD, mémoire RAG Google Drive et visualiseur WebGL.',
-        uk: 'Голосовий AI-агент реального часу на базі LiveKit 2.x Agents. Підтримує Google Speech/TTS, Gemini 2.5 Flash та перемикання на локальний LM Studio (Qwen2.5-7B). Містить EmotionEngine v2, Silero VAD, пам\'ять RAG на Google Drive та WebGL аудіо-візуалізатор.',
-        pl: 'Agent głosowy AI czasu rzeczywistego oparty na frameworku LiveKit 2.x Agents. Obsługuje Google Speech/TTS, Gemini 2.5 Flash oraz przełącznik .env na lokalne LM Studio (Qwen2.5-7B). Zawiera EmotionEngine v2, Silero VAD, pamięć RAG w Google Drive i wizualizator WebGL.',
+        "de": "Separater Voice-/Runtime-Entwicklungsstrang; Claire V2 und Aria sind eigenständige Varianten bzw. Produkte. Provider-, Memory- und End-to-End-Verhalten dieser V2.5-Variante sind nicht aktuell abgenommen.",
+        "en": "A separate voice/runtime development strand; Claire V2 and Aria are distinct variants or products. Provider, memory and end-to-end behavior of this V2.5 variant have no current acceptance evidence.",
+        "fr": "Branche de développement vocale/runtime distincte ; Claire V2 et Aria sont des variantes ou produits séparés. Fournisseurs, mémoire et fonctionnement de bout en bout de V2.5 ne disposent pas d’une validation actuelle.",
+        "uk": "Окремий голосовий напрям розробки; Claire V2 та Aria — інші варіанти або продукти. Провайдери, пам’ять і наскрізна робота V2.5 не мають актуального приймання.",
+        "pl": "Odrębny kierunek rozwoju głosu/runtime; Claire V2 i Aria to osobne warianty lub produkty. Dostawcy, pamięć i działanie V2.5 od początku do końca nie mają aktualnego odbioru."
       },
-      stack: ['Python 3.13', 'LiveKit Agents 2.x', 'Gemini 2.5 Flash', 'LM Studio (Local LLM)', 'Silero VAD', 'Google Drive RAG', 'React / Vite'],
-      link: 'https://github.com/KKEEY92/claire-v2-native',
+      stack: ['Voice AI', 'Native Audio'],
+      link: '#engineering-claire-v2',
       linkLabel: {
-        de: 'Auf GitHub ansehen →',
-        en: 'View on GitHub →',
-        fr: 'Voir sur GitHub →',
-        uk: 'Переглянути на GitHub →',
-        pl: 'Zobacz na GitHubie →',
+        "de": "Einordnung: V2 und V2.5 →",
+        "en": "V2 and V2.5 explained →",
+        "fr": "Distinguer V2 et V2.5 →",
+        "uk": "Відмінність V2 та V2.5 →",
+        "pl": "Różnice V2 i V2.5 →"
       },
     },
     {

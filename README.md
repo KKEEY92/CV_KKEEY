@@ -8,22 +8,22 @@
   [![Bewerbungsmappe](https://img.shields.io/badge/📄_Bewerbungsmappe_AI_(PDF)-Download-FF7A00?style=for-the-badge)](https://kkeey.dev/assets/Kevin_Kuck_Bewerbungsmappe_AI_2026.pdf)
   [![Master CV](https://img.shields.io/badge/📄_Master_CV_(PDF)-Download-00E5FF?style=for-the-badge)](https://kkeey.dev/assets/Kevin_Kuck_Master_CV_2026.pdf)
   [![LinkedIn](https://img.shields.io/badge/LinkedIn-kevin--kuck--it-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/kevin-kuck-it/)
-  [![Verfügbar](https://img.shields.io/badge/Status-Verfügbar_·_Remote_%2F_DACH-00C853?style=for-the-badge)]()
+  [![Verfügbar](https://img.shields.io/badge/Status-Offen_für_berufliche_Möglichkeiten-00C853?style=for-the-badge)]()
 </div>
 
 ---
 
 ## 🇩🇪 Über dieses Profil
 
-Dieses Repository beherbergt das offizielle interaktive Web-Portfolio von **Kevin Kuck** — IT-Administrator · Systems Engineer · AI mit **15 Jahren operativer Praxiserfahrung** an der Schnittstelle zwischen Enterprise-IT (Active Directory, IAM, KRITIS) und modernster KI-Entwicklung (Voice AI Agents, RAG, LiveKit, Python).
+Dieses Repository beherbergt das offizielle interaktive Web-Portfolio von **Kevin Kuck** — IT-Administrator · Systems Engineer · AI mit **14 Jahren Gesamtberufspraxis in Handel und IT** an der Schnittstelle zwischen Enterprise-IT (Active Directory, IAM, KRITIS) und modernster KI-Entwicklung (Voice AI Agents, RAG, LiveKit, Python).
 
-Verfügbar ab sofort — Remote & Hybrid.
+Offen für berufliche Möglichkeiten — Remote & Hybrid.
 
 ## 🇬🇧 About This Portfolio
 
-Official interactive portfolio of **Kevin Kuck** — IT-Administrator · Systems Engineer · AI with 15 years of operational experience bridging enterprise IT foundations (Active Directory, IAM, KRITIS) and state-of-the-art AI systems engineering (Voice AI, LiveKit, RAG, Local-First Architecture).
+Official interactive portfolio of **Kevin Kuck** — IT-Administrator · Systems Engineer · AI with 14 years of total professional experience across retail and IT bridging enterprise IT foundations (Active Directory, IAM, KRITIS) and state-of-the-art AI systems engineering (Voice AI, LiveKit, RAG, Local-First Architecture).
 
-Available now — Remote & Hybrid.
+Open to professional opportunities — remote and hybrid.
 
 ---
 
@@ -58,22 +58,27 @@ Available now — Remote & Hybrid.
 
 ## 🚀 Flagship Projects
 
-### 🌌 Claire V2.5 — Enterprise Voice AI Agent
-> Autonomes, emotionales Voice-AI-System mit ~200ms Latenz über WebRTC.
+### 🌌 Claire — getrennte Voice-/Runtime-Varianten
+> Claire V2 und V2.5 sind eigenständige Entwicklungsvarianten. Aria ist ein eigener Companion-Produktstrang; Persona OS beschreibt die Persona-Modellierung.
 
-- **Stack:** Python 3.12+ · LiveKit 2.x · Gemini 2.5 Flash · Silero VAD · FastAPI · Google STT/TTS Chirp3-HD
-- **Features:** Hybride Cloud/Local-Inferenz · Drive & Obsidian RAG · EmotionEngine · Multi-Modal
-- **Repo:** [claire-v2-native](https://github.com/KKEEY92/claire-v2-native)
+- **Nachweise:** [Claire V2 Engineering-Case](https://kkeey.dev/#engineering-claire-v2). Der Code-Review von V2 ist kein Runtime-Nachweis für V2.5.
+- **Offen:** aktueller Provider-/Memory-/End-to-End-Nachweis je Variante; kein pauschaler Latenz- oder Produktivclaim.
+
+### ContextNexus und Context Bridge M4
+> Lokale Kontext-/Graph-Anwendung mit kontrollierter, versionierter Kontextübergabe als Teilmodul. M4 ist Entwicklungsstand; signierte Consumerabnahme und produktive Aktivierung bleiben offen.
+
+- [Architektur-Case-Study](https://kkeey.dev/#engineering-contextnexus) · [Rollen und Systemgrenzen](https://kkeey.dev/agent-os.html#system-boundaries)
+- Agent OS ist das Governance-Modell; Job-Scout bleibt ein separates Produkt. Keine dauerhafte Vollsynchronisation behauptet.
 
 ### 🎚️ AuraTone AI v2.0 — Native Audio Processing Engine
-> Lokale macOS-Workstation für KI-gestützte Musik-Analyse & Metadaten-Management.
+> Implementierte macOS-Audio-Anwendung; E2E-/GPU-Nachweis offen, kein öffentlicher Binärrelease.
 
 - **Stack:** Rust · Tauri 2.0 · SQLite Triade · Apple Metal GPU · Python DSP (librosa/ffmpeg) · Gemini 1.5 Pro
-- **Features:** 120Hz Waveform-Visualisierung · Privacy-first (100% lokal) · Hermetische DSP-Sidecars
+- **Features:** DSP-Sidecars und lokale Pipeline im Code; GPU-Benchmark und Prozess-Cleanup separat zu prüfen
 - **Repo:** [AuraTone-Architecture](https://github.com/KKEEY92/AuraTone-Architecture) *(Architecture Showcase)*
 
 ### 🏢 Johanniter KRITIS IAM — Enterprise Identity Management
-> Administration von 90.000+ Benutzer-Identitäten & AD-Objekten in KRITIS-Infrastruktur für die gesamte Organisation.
+> Frühere Enterprise-IT-/IAM-Praxis bei Johanniter Bundes-IT Services; konkrete Tätigkeitsnachweise im IT-Portfolio.
 
 - **Stack:** Active Directory · Microsoft Entra ID · PowerShell · LAPS · Deskcenter MDM · Exchange Admin
 - **Scope:** Windows 11 Bundesrollout · OUs & Berechtigungsgruppen · Automatisierte Audit-Workflows
@@ -86,7 +91,7 @@ Available now — Remote & Hybrid.
 graph TD
     subgraph Client["🖥️ Client Browser"]
         UI["KKI Liquid Glass UI\n(Neon Orange / Cyan)"]
-        LANG["DE ⇄ EN Language FSM"]
+        LANG["DE / EN / FR / UK / PL"]
         THEME["Dark / Light / Accent Theme"]
     end
 
@@ -156,9 +161,9 @@ python3 scripts/sync_projects.py
 
 ---
 
-## 📜 Zertifizierungen / Certifications
+## 📜 Kurs- und Weiterbildungsnachweise / Course evidence
 
-| Zertifikat | Aussteller | Jahr |
+| Kurs-/Weiterbildungsnachweis | Anbieter | Jahr |
 |---|---|---|
 | Cisco Certified Support Technician IT Support | Pearson / Coursera | 2026 |
 | Microsoft Generative AI Fundamentals (PMI®) | Microsoft | 2026 |
@@ -169,11 +174,11 @@ python3 scripts/sync_projects.py
 
 ---
 
-## 💼 Freelance & Contact
+## 💼 Berufliche Möglichkeiten & Kontakt
 
 **Kevin Kuck** — *IT-Administrator · Systems Engineer · AI Agent Architekt*  
 📍 Butzbach, DE · Remote verfügbar · DACH-Raum  
-💶 Stundensatz: ab **70 EUR/h** · verhandelbar
+Offen für Festanstellungen, zukünftige Projekte und Kollaborationen; keine aktive Selbstständigkeit behauptet.
 
 | Kanal | Link |
 |---|---|
