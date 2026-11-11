@@ -96,3 +96,8 @@
 }
 @media(prefers-reduced-motion:reduce) { .os-flow {animation:none;} }
 @media print { .os-flow {animation:none;} .os-diagram-shell {break-inside:auto;} .os-principles {grid-template-columns:repeat(2,1fr);} .os-principle,.os-case {break-inside:avoid;} }
+
+.os-boundary-flow{padding-inline-start:24px;line-height:1.8;color:var(--kk-text)}
+.os-boundary-flow li{padding:16px 8px;overflow-wrap:anywhere}
+.os-boundary-note{margin-block:24px;max-width:900px;line-height:1.8;color:var(--kk-text)}
+#system-boundaries{scroll-margin-top:100px}
